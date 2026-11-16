@@ -123,7 +123,8 @@ Se suma a P1–P5 sin cambiar lo que ya hacen. Reglas: "Toques de nostalgia" en 
 
 **Datos nuevos (sin tocar el contrato de la API):**
 - Sprite animado, ilustración shiny y grito: sus URL se arman con el `idPokedex` en `lib/recursos-pokemon.ts` (rutas fijas de los repos de la PokeAPI; ver la tabla "Recursos" de la identidad).
-- Mapas y capturas: `datos/imagenes.json` asocia cada imagen al nombre de la región o al `idPokeapi` del lugar, con su archivo en `public/imagenes/`, su URL de origen, la fuente y el autor si lo hay.
+- Mapas y capturas: `datos/imagenes.json` asocia cada imagen al nombre de la región o al `idPokeapi` del lugar, con su archivo en `public/imagenes/`, su tamaño, su texto alternativo, la fuente (WikiDex), el archivo original y su URL de origen. Lo genera `scripts/imagenes.mjs` a partir de la lista elegida en `scripts/imagenes-fuentes.json`.
+- Criterio de calidad de las capturas de lugares: nada de GIF ni minimapas; ancho de 700 px o más, o capturas de *Pokémon: Let's Go* de 396 × 228 (nítidas, y se muestran como mucho a ese tamaño). Primera tanda: 28 de los 88 lugares de Kanto.
 - Enlaces a WikiDex: `datos/enlaces-wikidex.json`, generado por `scripts/enlaces-wikidex.mjs`, con un enlace por Pokémon (`idPokedex`), lugar (`idPokeapi`) y región, y si es `exacto` (artículo verificado) o `busqueda`.
 
 ### Qué aparece en cada pantalla
