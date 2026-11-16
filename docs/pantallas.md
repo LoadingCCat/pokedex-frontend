@@ -13,6 +13,8 @@ Una spec por pantalla, con criterios de aceptación. Cada pantalla usa las funci
 - El estado de filtros, orden y página vive en la URL: recargar o compartir el enlace muestra lo mismo.
 - Funciona a 375 px sin scroll horizontal y se puede recorrer solo con el teclado, con el foco visible.
 - Cada página tiene su título (`<title>`): "Catálogo · Pokedex+", "Pikachu · Pokedex+"…
+- El pie enlaza a **Créditos** (P6).
+- Los "toques de nostalgia", las imágenes de lugares y regiones y los enlaces a WikiDex se describen en "Ampliación: nostalgia, imágenes y WikiDex", al final, y siguen las reglas de `identidad-visual.md`.
 
 ---
 
@@ -112,3 +114,49 @@ Una spec por pantalla, con criterios de aceptación. Cada pantalla usa las funci
 - [x] La ruta "Viridian Forest" (Kanto) muestra a Pikachu entre sus Pokémon. Muchas rutas conservan el nombre en inglés porque la PokeAPI no tiene el español; se muestran tal cual.
 - [x] Desde la ficha de Pikachu (P2), el enlace de una ruta lleva a esta pantalla y Pikachu aparece en ella.
 - [x] `/rutas/99999` muestra la página 404 propia.
+
+---
+
+## Ampliación: nostalgia, imágenes y WikiDex (FE.14–FE.22)
+
+Se suma a P1–P5 sin cambiar lo que ya hacen. Reglas: "Toques de nostalgia" en `docs/diseno/identidad-visual.md` (un efecto destacado por pantalla, menos de 300 ms, nada con `prefers-reduced-motion`, las imágenes nunca tapan el dato).
+
+**Datos nuevos (sin tocar el contrato de la API):**
+- Sprite animado, ilustración shiny y grito: sus URL se arman con el `idPokedex` en `lib/recursos-pokemon.ts` (rutas fijas de los repos de la PokeAPI; ver la tabla "Recursos" de la identidad).
+- Mapas y capturas: `datos/imagenes.json` asocia cada imagen al nombre de la región o al `idPokeapi` del lugar, con su archivo en `public/imagenes/`, su URL de origen, la fuente y el autor si lo hay.
+- Enlaces a WikiDex: `datos/enlaces-wikidex.json`, generado por `scripts/enlaces-wikidex.mjs`, con un enlace por Pokémon (`idPokedex`), lugar (`idPokeapi`) y región, y si es `exacto` (artículo verificado) o `busqueda`.
+
+### Qué aparece en cada pantalla
+
+| Pantalla | Qué se agrega | Si falta |
+|---|---|---|
+| P1 Catálogo (y tarjetas de P5) | Al pasar el ratón por una tarjeta, el sprite animado de Negro/Blanco (2×, pixelado) reemplaza a la ilustración con un fundido de 150 ms. Solo con ratón, no en táctil | #650 en adelante, sin ratón o con movimiento reducido: se queda la ilustración |
+| P2 Ficha | Bajo la ilustración, botón **Escuchar** (grito) e interruptor **Shiny** (cambia la ilustración y su `alt`). Las barras de estadísticas se llenan en 280 ms la primera vez que se ven. En la cabecera, **Ver en WikiDex ↗** | Navegador sin OGG: no hay botón Escuchar. Sin ilustración shiny: no hay interruptor. Movimiento reducido: barras ya llenas. Sin artículo verificado: el enlace va a la búsqueda de WikiDex |
+| P4 `/regiones` | Miniatura del mapa en cada tarjeta de región, encima del nombre | Región sin mapa: la tarjeta queda como ahora |
+| P4 `/regiones/[region]` | Mapa grande de la región entre la cabecera y la lista de lugares, con su crédito corto. En cada lugar de la lista, un enlace secundario **WikiDex ↗** | Sin mapa: no hay bloque. Sin artículo verificado: el enlace va a la búsqueda |
+| P5 `/rutas/[id]` | Captura del lugar junto a la cabecera (al lado en escritorio, debajo en móvil), con su crédito corto. **Ver en WikiDex ↗** en la cabecera | Sin captura: la cabecera queda como ahora. Lugar creado a mano (`idPokeapi` en `null`): enlace a la búsqueda |
+| P6 `/creditos` | Página nueva (abajo) | — |
+
+### Criterios de aceptación
+- [ ] En `/`, al pasar el ratón por Pikachu se ve su sprite animado; por Chespin (#650) se queda la ilustración.
+- [ ] Con `prefers-reduced-motion: reduce`, no hay sprite animado y las barras de la ficha aparecen llenas.
+- [ ] En `/pokemon/25`, "Escuchar" reproduce el grito de Pikachu solo al pulsarlo; "Shiny" cambia la ilustración y su `alt`, y se puede volver atrás.
+- [ ] Los controles nuevos se manejan con el teclado y tienen nombre accesible ("Escuchar el grito de Pikachu", interruptor "Shiny" con su estado).
+- [ ] `/regiones` y `/regiones/kanto` muestran el mapa de Kanto; una región sin mapa se ve como antes.
+- [ ] `/rutas/62` (Viridian Forest) muestra su captura si se consiguió; un lugar sin captura se ve como antes.
+- [ ] Todos los enlaces a WikiDex abren en otra pestaña con `rel="noopener noreferrer"`, el lector de pantalla anuncia que salen del sitio y ninguno lleva a un artículo inexistente.
+- [ ] Ninguna imagen nueva tapa nombre, número, tipos ni estadísticas, y a 390 px no hay scroll horizontal.
+- [ ] El build sigue funcionando sin backend y no crece de forma desproporcionada (se compara antes y después).
+
+## P6 · Créditos — `/creditos`
+**Historia:** como evaluador o usuario, quiero saber de dónde salen los datos, las imágenes y los enlaces, y bajo qué condiciones se usan.
+
+**Comportamiento**
+1. Enlazada desde el pie de todas las páginas.
+2. Secciones: **Datos** (PokeAPI, con enlace), **Imágenes** (sprites, ilustraciones y gritos de los repos de la PokeAPI; mapas y capturas con su fuente, autor si lo hay y enlace al original, generadas desde `datos/imagenes.json`), **Enlaces** (WikiDex) y el aviso "Pokémon © Nintendo / Game Freak / Creatures. Proyecto universitario sin fines de lucro".
+3. Página estática, sin efectos.
+
+**Criterios de aceptación**
+- [ ] `/creditos` lista cada mapa y captura usados, con un enlace a su origen; ninguno falta respecto a `datos/imagenes.json`.
+- [ ] Aparece el aviso de Nintendo / Game Freak / Creatures y el de uso sin fines de lucro.
+- [ ] El pie de todas las páginas enlaza a `/creditos`.

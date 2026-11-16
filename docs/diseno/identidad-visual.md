@@ -108,7 +108,56 @@ Escala (rem, base 16 px): 0,75 · 0,875 · **1** (cuerpo) · 1,25 · 1,5 · 2 ·
 
 Las fuentes se cargan con `next/font/google` (`Space_Grotesk`, `Inter`, `JetBrains_Mono`) y se exponen como `--font-titulo`, `--font-texto` y `--font-datos`.
 
+## Toques de nostalgia
+
+Un guiño a quien creció con los juegos (el sprite pixelado que se mueve, el grito del Pokémon, la versión shiny, el mapa de la región) sin cambiar la base «Laboratorio»: los mismos colores, tipografías, tarjetas y tono. **El dato manda y la nostalgia lo acompaña.** Lo nostálgico sale del contenido real de los juegos, no de disfrazar la interfaz: no hay tipografías pixeladas, marcos de Game Boy ni colores "retro".
+
+### Reglas
+
+1. **Máximo un efecto destacado por pantalla.** "Efecto destacado" es un movimiento que llama la atención por sí solo. Los controles que activa el usuario ("Escuchar", "Shiny") no cuentan como efecto, pero su resultado sigue las demás reglas.
+
+   | Pantalla | Su efecto |
+   |---|---|
+   | P1 Catálogo (y las tarjetas de P5) | Sprite animado al pasar el ratón por una tarjeta |
+   | P2 Ficha | Barras de estadísticas que se llenan al aparecer |
+   | P3, P4, P5, Créditos | Ninguno: los mapas y capturas son contenido, no efecto |
+
+2. **Animaciones de menos de 300 ms**, con `ease-out`. Nada en bucle salvo el propio GIF del sprite.
+3. **Todo se desactiva con `prefers-reduced-motion`:** el sprite animado no aparece (se queda la ilustración), las barras se muestran ya llenas y no hay transiciones.
+4. **Nada de 3D real:** ni Three.js ni WebGL. Tampoco inclinaciones 3D con CSS (descartadas: competían con el sprite animado en la misma tarjeta).
+5. **Las imágenes nunca tapan el dato principal.** Nombre, número, tipos y estadísticas siempre visibles. Nunca hay texto encima de una imagen, ni imágenes de fondo detrás de texto. Los mapas y capturas van en su propio bloque, con proporción fija y `alt` descriptivo.
+6. **El sonido nunca suena solo:** únicamente al pulsar "Escuchar", a volumen moderado (50 %), y se puede volver a pulsar.
+7. **Pixel art nítido:** los sprites de la Gen 5 se muestran con `image-rendering: pixelated` y escalados por un número entero (2×), para que no se vean borrosos.
+8. **Si falta el recurso, no queda hueco:** se mantiene la imagen normal, el control no aparece o el bloque no se muestra. Nunca un icono de imagen rota.
+
+### Recursos
+
+| Recurso | De dónde sale | Disponible |
+|---|---|---|
+| Sprite animado (Pokémon Negro/Blanco) | Repo `PokeAPI/sprites`: `…/versions/generation-v/black-white/animated/{id}.gif` | #001–#649 |
+| Ilustración shiny | Repo `PokeAPI/sprites`: `…/other/official-artwork/shiny/{id}.png` | #001–#1025 |
+| Grito | Repo `PokeAPI/cries`: `…/cries/pokemon/latest/{id}.ogg` (OGG) | #001–#1025 |
+| Mapas de región y capturas de lugares | WikiDex o Bulbagarden Archives, descargadas a `public/` en WebP | Los que se consigan (Fase 2) |
+
+### Imágenes oficiales
+
+Se pueden usar imágenes oficiales de los juegos (sprites, ilustraciones, mapas, capturas) con fines informativos y sin fines de lucro, siempre que:
+- Las de terceros (mapas, capturas) se **descarguen a `public/`** en WebP y se sirvan con `next/image`, sin enlazar a otras páginas. Los sprites y gritos se siguen sirviendo desde los repos de la PokeAPI, como `imagenUrl`.
+- Cada imagen tenga su **fuente registrada** en un archivo de datos y aparezca en `/creditos`.
+- Se respete la política de uso de cada fuente.
+
+Lo que sigue fuera: el **logo de Pokémon** y su **tipografía oficial**. La marca del sitio es «Pokedex+» en Space Grotesk.
+
+### Estilo de los componentes nuevos
+
+- **Botón "Escuchar":** botón secundario con un icono de altavoz de trazo y el texto "Escuchar". Mientras suena dice "Sonando…" (`aria-live`). No aparece si el navegador no reproduce OGG.
+- **Interruptor "Shiny":** `button` con `role="switch"` y `aria-checked`, con la etiqueta "Shiny" visible. Apagado: borde `borde`. Encendido: fondo `acento` y texto blanco. Cambia solo la ilustración grande de la ficha y su `alt` ("Pikachu shiny").
+- **Sprite animado:** encima de la ilustración, en la misma caja y con fundido de 150 ms. Solo con puntero fino (`@media (hover: hover)`), no en táctil.
+- **Mapas y capturas:** dentro de una tarjeta, con radio de 8 px, borde `borde-suave` y su crédito corto debajo ("Imagen: WikiDex"), en `texto-secundario`.
+- **Enlace externo "Ver en WikiDex ↗":** enlace de texto en `acento`, subrayado. Abre en pestaña nueva y su nombre accesible termina en "(se abre en otra pestaña, sitio externo)".
+
 ## Fuera de esta identidad
 
 - Modo oscuro: no entra en el MVP.
-- Logos, imágenes o tipografías oficiales de la franquicia: solo se usan los sprites que entrega la API (`imagenUrl`).
+- El logo y la tipografía oficiales de Pokémon (ver "Imágenes oficiales").
+- Tipografías pixeladas, marcos de consola y efectos 3D.
