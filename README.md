@@ -2,7 +2,9 @@
 
 Pokédex web en español con los 1025 Pokémon de las 9 generaciones: catálogo con búsqueda y filtros combinados, ficha con estadísticas, dónde y cómo se obtiene cada Pokémon, cadena evolutiva y movimientos, y las regiones con sus lugares.
 
-Proyecto universitario en equipo (Universidad Santo Tomás, USTA). Consume la API REST de [`pokedex-backend`](../pokedex-backend). La versión publicada usa datos mock con la misma forma que la API.
+Proyecto universitario en equipo (Universidad Santo Tomás, USTA). Consume la API REST de [`pokedex-backend`](https://github.com/LoadingCCat/pokedex-backend). La versión publicada usa datos mock con la misma forma que la API.
+
+**Publicado en Vercel:** <https://pokedex-frontend-seven.vercel.app/> (cada push a `master` vuelve a desplegar).
 
 Next.js 16 · React 19 · TypeScript · Tailwind CSS 4 · Vitest
 
