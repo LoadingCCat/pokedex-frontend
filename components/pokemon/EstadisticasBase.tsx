@@ -1,3 +1,4 @@
+import AnimarAlAparecer from "@/components/ui/AnimarAlAparecer";
 import type { Pokemon } from "@/lib/api/tipos";
 
 const ESTADISTICAS = [
@@ -15,6 +16,8 @@ const MAXIMO = 255;
 /** Las 6 estadísticas base en barras horizontales, con el valor en número y el total aparte. */
 export default function EstadisticasBase({ pokemon }: { pokemon: Pokemon }) {
   return (
+    // Toque de nostalgia de P2: las barras se llenan la primera vez que se ven (app/globals.css)
+    <AnimarAlAparecer selector=".barra-estadistica">
     <dl className="flex flex-col gap-2">
       {ESTADISTICAS.map(({ campo, etiqueta }) => {
         const valor = pokemon[campo];
@@ -24,7 +27,7 @@ export default function EstadisticasBase({ pokemon }: { pokemon: Pokemon }) {
             <dd className="text-right font-datos text-sm font-medium tabular-nums">{valor ?? "—"}</dd>
             <dd aria-hidden="true" className="h-2 overflow-hidden rounded-full bg-borde-suave">
               {valor != null && (
-                <div className="h-full rounded-full bg-acento" style={{ width: `${Math.min(100, (valor / MAXIMO) * 100)}%` }} />
+                <div className="barra-estadistica h-full rounded-full bg-acento" style={{ width: `${Math.min(100, (valor / MAXIMO) * 100)}%` }} />
               )}
             </dd>
           </div>
@@ -35,5 +38,6 @@ export default function EstadisticasBase({ pokemon }: { pokemon: Pokemon }) {
         <dd className="text-right font-datos text-sm font-bold tabular-nums">{pokemon.totalEstadisticas ?? "—"}</dd>
       </div>
     </dl>
+    </AnimarAlAparecer>
   );
 }

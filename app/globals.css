@@ -55,3 +55,19 @@
     }
   }
 }
+
+/*
+ * Toque de nostalgia de P2: las barras de estadísticas se llenan (280 ms) la primera vez que
+ * se ven. `html[data-js]` lo pone un script en línea antes de pintar (app/layout.tsx), así que
+ * sin JavaScript las barras se ven llenas. `data-visible` lo pone AnimarAlAparecer.
+ */
+@media (prefers-reduced-motion: no-preference) {
+  .barra-estadistica {
+    transform-origin: left;
+    transition: transform 280ms ease-out;
+  }
+
+  html[data-js] .barra-estadistica:not([data-visible]) {
+    transform: scaleX(0);
+  }
+}

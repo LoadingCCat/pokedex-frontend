@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, JetBrains_Mono, Space_Grotesk } from "next/font/google";
 import Cabecera from "@/components/ui/Cabecera";
 import Pie from "@/components/ui/Pie";
+import ScriptEnLinea from "@/components/ui/ScriptEnLinea";
 import "./globals.css";
 
 const fuenteTitulo = Space_Grotesk({
@@ -33,8 +34,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html
       lang="es"
       className={`${fuenteTitulo.variable} ${fuenteTexto.variable} ${fuenteDatos.variable} h-full antialiased`}
+      // El script de abajo agrega data-js antes de hidratar
+      suppressHydrationWarning
     >
       <body className="flex min-h-full flex-col">
+        {/* Marca que hay JavaScript antes de pintar: permite animar sin parpadeo (globals.css) */}
+        <ScriptEnLinea html="document.documentElement.setAttribute('data-js','')" />
         <Cabecera />
         <main
           id="contenido"
