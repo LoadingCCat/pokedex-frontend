@@ -2,7 +2,9 @@ import Link from "next/link";
 import Esqueleto from "@/components/ui/Esqueleto";
 import type { Pokemon } from "@/lib/api/tipos";
 import { nombreVisible, numeroPokedex } from "@/lib/formato";
+import { spriteAnimadoUrl } from "@/lib/recursos-pokemon";
 import ImagenPokemon from "./ImagenPokemon";
+import SpriteAnimado from "./SpriteAnimado";
 import { ListaTipos } from "./InsigniaTipo";
 
 type DatosTarjeta = Pick<Pokemon, "idPokedex" | "nombre" | "nombreEs" | "imagenUrl" | "tipos">;
@@ -10,15 +12,18 @@ type DatosTarjeta = Pick<Pokemon, "idPokedex" | "nombre" | "nombreEs" | "imagenU
 /** Tarjeta del catálogo: imagen, #número, nombre y tipos. Toda la tarjeta enlaza a la ficha. */
 export default function TarjetaPokemon({ pokemon, prioridad = false }: { pokemon: DatosTarjeta; prioridad?: boolean }) {
   const nombre = nombreVisible(pokemon);
+  const sprite = spriteAnimadoUrl(pokemon.idPokedex);
   return (
     <article className="group relative flex h-full flex-col gap-2 rounded-lg border border-borde-suave bg-superficie p-3 transition-shadow hover:shadow-sm focus-within:shadow-sm">
-      <div className="rounded-md bg-fondo p-2">
+      <div className="relative rounded-md bg-fondo p-2">
         <ImagenPokemon
           src={pokemon.imagenUrl}
           alt={nombre}
           sizes="(min-width: 1024px) 180px, (min-width: 640px) 25vw, 45vw"
           prioridad={prioridad}
         />
+        {/* Toque de nostalgia: sprite animado de Negro/Blanco al pasar el ratón (#001–#649) */}
+        {sprite && <SpriteAnimado src={sprite} />}
       </div>
       <p className="font-datos text-xs text-texto-secundario tabular-nums">{numeroPokedex(pokemon.idPokedex)}</p>
       <h3 className="text-base font-semibold">
