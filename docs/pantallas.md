@@ -107,6 +107,6 @@ Una spec por pantalla, con criterios de aceptación. Cada pantalla usa las funci
 3. Un id inexistente muestra la página 404 propia.
 
 **Criterios de aceptación**
-- [ ] La ruta del Bosque Verde muestra a Pikachu entre sus Pokémon.
+- [ ] La ruta "Viridian Forest" (Kanto) muestra a Pikachu entre sus Pokémon. Muchas rutas conservan el nombre en inglés porque la PokeAPI no tiene el español; se muestran tal cual.
 - [ ] Desde la ficha de Pikachu (P2), el enlace de una ruta lleva a esta pantalla y Pikachu aparece en ella.
 - [ ] `/rutas/99999` muestra la página 404 propia.
