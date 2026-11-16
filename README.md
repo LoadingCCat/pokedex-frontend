@@ -1,36 +1,76 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Pokedex+ · Frontend
 
-## Getting Started
+Pokédex web en español con los 1025 Pokémon de las 9 generaciones: catálogo con búsqueda y filtros combinados, ficha con estadísticas, dónde y cómo se obtiene cada Pokémon, cadena evolutiva y movimientos, y las regiones con sus lugares.
 
-First, run the development server:
+Proyecto universitario en equipo (Universidad Santo Tomás, USTA). Consume la API REST de [`pokedex-backend`](../pokedex-backend). La versión publicada usa datos mock con la misma forma que la API.
+
+Next.js 16 · React 19 · TypeScript · Tailwind CSS 4 · Vitest
+
+## Instalación
+
+Requiere Node.js 20 o superior.
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abre <http://localhost:3000>. No hace falta el backend: por defecto los datos salen de `datos/mock/`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Con la API real
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Con el backend arrancado en `http://localhost:8080` (ver su README), define `API_URL` antes de arrancar:
 
-## Learn More
+```powershell
+$env:API_URL = "http://localhost:8080/api"; npm run dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Comandos
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| Comando | Qué hace |
+|---|---|
+| `npm run dev` | Servidor de desarrollo en el puerto 3000 |
+| `npm run build` | Build de producción (genera las 1025 fichas; funciona sin backend) |
+| `npm run start` | Sirve el build de producción |
+| `npm run lint` | ESLint |
+| `npm run test` | Pruebas con Vitest: el mock cumple los criterios de las specs y los parámetros de la URL se leen bien |
+| `node scripts/generar-mock.mjs` | Regenera `datos/mock/` desde el backend local (debe estar arrancado con los datos importados) |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Con `API_URL` definida, `npm run test` también compara el mock con la API real (`lib/api/contrato.test.ts`).
 
-## Deploy on Vercel
+## Pantallas
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+| Ruta | Pantalla |
+|---|---|
+| `/` | Catálogo: búsqueda sin tildes, filtros (generación, tipo, región, obtención), orden y paginación en la URL |
+| `/pokemon/[id]` | Ficha: datos, estadísticas base, dónde se obtiene, cadena evolutiva y movimientos que aprende |
+| `/movimientos` | Movimientos: búsqueda y vistas por categoría o competitivos |
+| `/regiones` | Las 9 regiones de origen |
+| `/regiones/[region]` | Lugares de una región |
+| `/rutas/[id]` | Pokémon que aparecen en un lugar |
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Documentación
+
+El proyecto sigue Spec-Driven Development: primero el documento, después el código.
+
+| Documento | Contenido |
+|---|---|
+| [`CLAUDE.md`](CLAUDE.md) | Contexto, reglas de trabajo y convenciones (para el equipo y el agente) |
+| [`docs/pantallas.md`](docs/pantallas.md) | Spec de cada pantalla con sus criterios de aceptación |
+| [`docs/diseno/identidad-visual.md`](docs/diseno/identidad-visual.md) | Identidad visual «Laboratorio»: tono, paleta AA, tipografía y componentes |
+| [`.claude/skills/ui-componentes`](.claude/skills/ui-componentes/SKILL.md) | Cómo se crea un componente o una pantalla |
+| [`../pokedex-backend/docs/`](../pokedex-backend/docs) | Producto, specs F1–F10, contrato de la API, tareas y decisiones (compartidos con el backend) |
+
+## Estructura
+
+```
+app/                  páginas (rutas en español), error.tsx y not-found.tsx
+components/ui/        piezas genéricas (Boton, Tarjeta, Chip, Paginacion, EstadoVacio…)
+components/pokemon/   piezas del dominio (TarjetaPokemon, CadenaEvolutiva, TablaMovimientos…)
+lib/api/              único acceso a datos: mock o API real según API_URL
+lib/                  formato, colores de los tipos y lectura de parámetros de la URL
+datos/mock/           volcado JSON del backend
+scripts/              generar-mock.mjs
+```
+
+Datos de la [PokeAPI](https://pokeapi.co). Pokémon y sus nombres son marcas de sus respectivos dueños.

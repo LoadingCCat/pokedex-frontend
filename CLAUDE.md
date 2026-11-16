@@ -62,7 +62,7 @@ node scripts/generar-mock.mjs   # regenera datos/mock/ desde el backend local (d
 ## Estructura
 
 ```
-app/                  # páginas y layouts (rutas en español: /pokemon/[id], /movimientos, /regiones…)
+app/                  # páginas y layouts (rutas en español: /pokemon/[id], /movimientos, /regiones…), error.tsx y not-found.tsx globales
 components/ui/        # piezas genéricas (Boton, Tarjeta, Chip, Paginacion, EstadoVacio, Esqueleto)
 components/pokemon/   # piezas del dominio (InsigniaTipo, TarjetaPokemon, CadenaEvolutiva…)
 lib/api/              # único acceso a datos: tipos.ts, index.ts, mock.ts, http.ts
