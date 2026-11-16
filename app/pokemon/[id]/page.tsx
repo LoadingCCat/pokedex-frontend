@@ -19,6 +19,7 @@ import {
   type Pokemon,
 } from "@/lib/api";
 import { formatoAltura, formatoPeso, nombreVisible, numeroPokedex } from "@/lib/formato";
+import { leerId } from "@/lib/parametros-url";
 
 const PRIMERO = 1;
 const ULTIMO = 1025;
@@ -26,11 +27,6 @@ const ULTIMO = 1025;
 /** Las 1025 fichas se generan al compilar (datos del mock); un id inválido da 404. */
 export function generateStaticParams() {
   return Array.from({ length: ULTIMO }, (_, i) => ({ id: String(i + PRIMERO) }));
-}
-
-/** "25" → 25; cualquier otra cosa ("abc", "025", "0") → null. */
-function leerId(texto: string): number | null {
-  return /^[1-9]\d*$/.test(texto) ? Number(texto) : null;
 }
 
 export async function generateMetadata({ params }: PageProps<"/pokemon/[id]">): Promise<Metadata> {

@@ -87,15 +87,16 @@ Una spec por pantalla, con criterios de aceptación. Cada pantalla usa las funci
 **Historia:** como fan de Pokémon, quiero explorar las regiones y sus lugares para saber qué hay en cada una.
 
 **Comportamiento**
-1. `/regiones`: las 9 regiones en orden de generación, cada una enlazada a su página.
-2. `/regiones/[region]`: las rutas de la región, paginadas (20, por nombre), cada una enlazada a P5. También un enlace "Ver Pokémon de {región}" a P1 con `?region=`.
-3. Una región que no existe muestra la página 404 propia.
+1. `/regiones`: las 9 regiones en orden de generación, con su número de lugares, cada una enlazada a su página.
+2. `/regiones/[region]`: las rutas de la región, paginadas (24 por página, para llenar la cuadrícula de 2 y 3 columnas; por nombre), cada una enlazada a P5. También un enlace "Ver Pokémon de {región}" a P1 con `?region=`.
+3. Una región sin lugares (Paldea) explica que la PokeAPI no los tiene y remite a «Dónde se obtiene» de cada ficha.
+4. Una región que no existe muestra la página 404 propia.
 
 **Criterios de aceptación**
-- [ ] `/regiones` muestra las 9 regiones, de Kanto a Paldea.
-- [ ] `/regiones/kanto` muestra las rutas de Kanto paginadas, con el mismo total que `GET /api/rutas/region/kanto`.
-- [ ] "Ver Pokémon de Kanto" abre el catálogo con el filtro de Kanto aplicado.
-- [ ] `/regiones/narnia` muestra la página 404 propia.
+- [x] `/regiones` muestra las 9 regiones, de Kanto a Paldea.
+- [x] `/regiones/kanto` muestra las rutas de Kanto paginadas, con el mismo total que `GET /api/rutas/region/kanto` (88, 4 páginas).
+- [x] "Ver Pokémon de Kanto" abre el catálogo con el filtro de Kanto aplicado.
+- [x] `/regiones/narnia` muestra la página 404 propia.
 
 ## P5 · Ruta — `/rutas/[id]`
 **Usa:** F2, F5 · `obtenerRuta`, `pokemonsDeRuta`
@@ -103,11 +104,11 @@ Una spec por pantalla, con criterios de aceptación. Cada pantalla usa las funci
 **Historia:** como fan de Pokémon, quiero ver qué Pokémon aparecen en un lugar para saber dónde capturarlos.
 
 **Comportamiento**
-1. Nombre, región (enlazada a P4) y descripción de la ruta.
-2. Cuadrícula paginada de los Pokémon que aparecen en ella, con las mismas tarjetas de P1.
+1. Nombre, región (enlazada a P4) y descripción de la ruta. Hay rutas de regiones que no son de origen (Orre, de los juegos de GameCube): su región se muestra sin enlace.
+2. Cuadrícula paginada de los Pokémon que aparecen en ella (20 por página), con las mismas tarjetas de P1.
 3. Un id inexistente muestra la página 404 propia.
 
 **Criterios de aceptación**
-- [ ] La ruta "Viridian Forest" (Kanto) muestra a Pikachu entre sus Pokémon. Muchas rutas conservan el nombre en inglés porque la PokeAPI no tiene el español; se muestran tal cual.
-- [ ] Desde la ficha de Pikachu (P2), el enlace de una ruta lleva a esta pantalla y Pikachu aparece en ella.
-- [ ] `/rutas/99999` muestra la página 404 propia.
+- [x] La ruta "Viridian Forest" (Kanto) muestra a Pikachu entre sus Pokémon. Muchas rutas conservan el nombre en inglés porque la PokeAPI no tiene el español; se muestran tal cual.
+- [x] Desde la ficha de Pikachu (P2), el enlace de una ruta lleva a esta pantalla y Pikachu aparece en ella.
+- [x] `/rutas/99999` muestra la página 404 propia.
