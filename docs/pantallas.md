@@ -48,20 +48,20 @@ Una spec por pantalla, con criterios de aceptación. Cada pantalla usa las funci
 1. Cabecera: imagen grande, `#id`, nombre, tipos, generación y región de origen.
 2. Descripción, altura (m) y peso (kg).
 3. Estadísticas base: las 6 en barras horizontales (escala 0–255) con su valor, y el total aparte.
-4. "Dónde se obtiene": `tipoObtencion` como etiqueta, `formaObtencion` como texto y la lista de rutas (nombre y región) enlazadas a P5. Si no hay rutas: "Este Pokémon no aparece en estado salvaje."
+4. "Dónde se obtiene": `tipoObtencion` como etiqueta, `formaObtencion` como texto y la lista de rutas agrupadas por región, enlazadas a P5. Si no hay rutas: "Este Pokémon no aparece en estado salvaje." (salvo que `formaObtencion` ya lo diga).
 5. "Cadena evolutiva": el árbol completo desde la etapa base, con la condición en cada paso. El Pokémon actual se resalta y los demás nodos enlazan a su ficha. Un nodo sin datos importados (`nombreEs` e `imagenUrl` en `null`) muestra una silueta y el slug formateado.
 6. "Movimientos que aprende": tabla (nombre, categoría, potencia, competitivo) en una sección desplegable.
 7. Enlaces "← #024" y "#026 →" a los Pokémon vecinos (sin "anterior" en el #001 ni "siguiente" en el #1025).
-8. Un id inexistente o no numérico muestra la página 404 propia, con un enlace al catálogo.
+8. Un id inexistente o no numérico muestra la página 404 propia, con un enlace al catálogo. Las 1025 fichas se generan al compilar; un id inválido llega después de empezar el streaming, así que responde 200 con `noindex` (lo hace Next.js) y la página 404.
 
 **Criterios de aceptación**
-- [ ] `/pokemon/25` muestra a Pikachu: tipo Eléctrico, Kanto, PS 35 … Velocidad 90 y total 320.
-- [ ] `/pokemon/1` muestra la cadena Bulbasaur → Ivysaur ("Nivel 16") → Venusaur ("Nivel 32").
-- [ ] `/pokemon/133` muestra a Eevee con sus 8 evoluciones en ramas, ordenadas por número.
-- [ ] `/pokemon/128` (Tauros) muestra una sola etapa, sin flechas.
-- [ ] Un Pokémon sin rutas (Mew, `/pokemon/151`) muestra su `formaObtencion` y el texto de "no aparece en estado salvaje".
-- [ ] La tabla de movimientos de `/pokemon/25` tiene tantas filas como `GET /api/pokemons/25/movimientos`, ordenadas por nombre.
-- [ ] `/pokemon/99999` y `/pokemon/abc` muestran la página 404 propia.
+- [x] `/pokemon/25` muestra a Pikachu: tipo Eléctrico, Kanto, PS 35 … Velocidad 90 y total 320.
+- [x] `/pokemon/1` muestra la cadena Bulbasaur → Ivysaur ("Nivel 16") → Venusaur ("Nivel 32").
+- [x] `/pokemon/133` muestra a Eevee con sus 8 evoluciones en ramas, ordenadas por número.
+- [x] `/pokemon/128` (Tauros) muestra una sola etapa, sin flechas.
+- [x] Un Pokémon sin rutas (Meganium, `/pokemon/154`) muestra su `formaObtencion` y que no aparece en estado salvaje. (Mew sí tiene una ruta en la PokeAPI: Faraway Island.)
+- [ ] La tabla de movimientos de `/pokemon/25` tiene tantas filas como `GET /api/pokemons/25/movimientos`, ordenadas por nombre. *(FE.10)*
+- [x] `/pokemon/99999` y `/pokemon/abc` muestran la página 404 propia.
 
 ## P3 · Movimientos — `/movimientos`
 **Usa:** F4, F6, F9 · `listarMovimientos`
