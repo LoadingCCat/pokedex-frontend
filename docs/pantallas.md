@@ -27,16 +27,17 @@ Una spec por pantalla, con criterios de aceptación. Cada pantalla usa las funci
 3. Orden: número (por defecto), nombre, y cada estadística base de mayor a menor. `totalEstadisticas` no se ofrece: lo calcula el servidor y no se puede ordenar por él.
 4. 20 por página. Cambiar un filtro o el orden vuelve a la página 1.
 5. Los filtros activos se ven como chips con "×" para quitarlos, y hay un botón "Quitar filtros".
-6. Parámetros de la URL: `nombre`, `generacion`, `tipo`, `region`, `obtencion`, `sort`, `page` (los mismos nombres que la API).
+6. Parámetros de la URL: `nombre`, `generacion`, `tipo`, `region`, `obtencion`, `sort`, `page` (los mismos nombres que la API). En la URL `page` empieza en 1 (`page=2` es la segunda página), `region` va en minúsculas y `obtencion` sin tildes y con guiones (`fosil`, `sin-datos`). Se leen y validan en `lib/parametros-catalogo.ts`.
+7. Una página fuera de rango (`?page=99`) muestra "La página 99 no existe" con un enlace a la página 1.
 
 **Criterios de aceptación**
-- [ ] `/` muestra 20 Pokémon empezando por Bulbasaur (#001) y "Página 1 de 52".
-- [ ] Buscar `pikachú` (con tilde) muestra a Pikachu; buscar `PIKA` también.
-- [ ] `/?tipo=fire&generacion=1` muestra solo Pokémon de tipo fuego de la generación 1, con el mismo total que `GET /api/pokemons?tipo=fire&generacion=1`.
-- [ ] Ordenar por velocidad muestra primero al Pokémon más rápido del resultado.
-- [ ] Un filtro sin resultados muestra el estado vacío con la sugerencia de quitar un filtro.
-- [ ] Recargar `/?region=kanto&page=2` muestra la misma página con el filtro de Kanto marcado.
-- [ ] Un valor inválido en la URL (`?generacion=12`) no rompe la página: se ignora o se muestra el estado vacío.
+- [x] `/` muestra 20 Pokémon empezando por Bulbasaur (#001) y "Página 1 de 52".
+- [x] Buscar `pikachú` (con tilde) muestra a Pikachu; buscar `PIKA` también.
+- [x] `/?tipo=fire&generacion=1` muestra solo Pokémon de tipo fuego de la generación 1, con el mismo total que `GET /api/pokemons?tipo=fire&generacion=1` (12).
+- [x] Ordenar por velocidad muestra primero al Pokémon más rápido del resultado.
+- [x] Un filtro sin resultados muestra el estado vacío con la sugerencia de quitar un filtro.
+- [x] Recargar `/?region=kanto&page=2` muestra la misma página con el filtro de Kanto marcado.
+- [x] Un valor inválido en la URL (`?generacion=12`) no rompe la página: se ignora o se muestra el estado vacío.
 
 ## P2 · Ficha — `/pokemon/[id]`
 **Usa:** F1, F4, F5, F6, F7 · `obtenerPokemon`, `evolucionesDe`, `movimientosDePokemon`
