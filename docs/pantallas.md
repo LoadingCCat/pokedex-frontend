@@ -50,7 +50,7 @@ Una spec por pantalla, con criterios de aceptación. Cada pantalla usa las funci
 3. Estadísticas base: las 6 en barras horizontales (escala 0–255) con su valor, y el total aparte.
 4. "Dónde se obtiene": `tipoObtencion` como etiqueta, `formaObtencion` como texto y la lista de rutas agrupadas por región, enlazadas a P5. Si no hay rutas: "Este Pokémon no aparece en estado salvaje." (salvo que `formaObtencion` ya lo diga).
 5. "Cadena evolutiva": el árbol completo desde la etapa base, con la condición en cada paso. El Pokémon actual se resalta y los demás nodos enlazan a su ficha. Un nodo sin datos importados (`nombreEs` e `imagenUrl` en `null`) muestra una silueta y el slug formateado.
-6. "Movimientos que aprende": tabla (nombre, categoría, potencia, competitivo) en una sección desplegable.
+6. "Movimientos que aprende (N)": tabla (nombre, categoría, potencia, competitivo) en una sección desplegable (`<details>`, cerrada al cargar), ordenada por el nombre en español que se muestra.
 7. Enlaces "← #024" y "#026 →" a los Pokémon vecinos (sin "anterior" en el #001 ni "siguiente" en el #1025).
 8. Un id inexistente o no numérico muestra la página 404 propia, con un enlace al catálogo. Las 1025 fichas se generan al compilar; un id inválido llega después de empezar el streaming, así que responde 200 con `noindex` (lo hace Next.js) y la página 404.
 
@@ -60,7 +60,7 @@ Una spec por pantalla, con criterios de aceptación. Cada pantalla usa las funci
 - [x] `/pokemon/133` muestra a Eevee con sus 8 evoluciones en ramas, ordenadas por número.
 - [x] `/pokemon/128` (Tauros) muestra una sola etapa, sin flechas.
 - [x] Un Pokémon sin rutas (Meganium, `/pokemon/154`) muestra su `formaObtencion` y que no aparece en estado salvaje. (Mew sí tiene una ruta en la PokeAPI: Faraway Island.)
-- [ ] La tabla de movimientos de `/pokemon/25` tiene tantas filas como `GET /api/pokemons/25/movimientos`, ordenadas por nombre. *(FE.10)*
+- [x] La tabla de movimientos de `/pokemon/25` tiene tantas filas como `GET /api/pokemons/25/movimientos` (109), ordenadas por nombre.
 - [x] `/pokemon/99999` y `/pokemon/abc` muestran la página 404 propia.
 
 ## P3 · Movimientos — `/movimientos`
@@ -69,17 +69,17 @@ Una spec por pantalla, con criterios de aceptación. Cada pantalla usa las funci
 **Historia:** como fan de Pokémon, quiero buscar movimientos y filtrar por categoría o por los competitivos para conocer las opciones de combate.
 
 **Comportamiento**
-1. Tabla paginada (20 por página, orden por nombre): nombre, categoría, potencia y competitivo.
+1. Tabla paginada (20 por página, ordenada por el nombre en español: `sort=nombreEs`): nombre, categoría, potencia y competitivo.
 2. Buscador por nombre (sin tildes, en `nombre` y `nombreEs`) y un selector de vista: Todos, Físico, Especial, Estado o Competitivos (potencia > 80).
 3. La API tiene un endpoint por cada caso y no los combina. Por eso, al escribir un nombre, el selector vuelve a "Todos", y al elegir otra vista se borra el nombre.
 4. Parámetros de la URL: `nombre` o `vista` (`fisico`, `especial`, `estado`, `competitivos`), y `page`.
 
 **Criterios de aceptación**
-- [ ] `/movimientos` muestra 20 movimientos ordenados por nombre y el total de páginas.
-- [ ] Buscar `puno` encuentra "Puño Trueno"; buscar `psiquico` encuentra "Psíquico".
-- [ ] Filtrar por "Especial" muestra solo movimientos de esa categoría.
-- [ ] La vista "Competitivos" muestra solo movimientos con potencia mayor a 80.
-- [ ] La categoría y el "competitivo" se leen como texto, no solo por color.
+- [x] `/movimientos` muestra 20 movimientos ordenados por nombre y el total de páginas (797 movimientos, 40 páginas).
+- [x] Buscar `puno` encuentra "Puño Trueno"; buscar `psiquico` encuentra "Psíquico".
+- [x] Filtrar por "Especial" muestra solo movimientos de esa categoría.
+- [x] La vista "Competitivos" muestra solo movimientos con potencia mayor a 80.
+- [x] La categoría y el "competitivo" se leen como texto, no solo por color.
 
 ## P4 · Regiones — `/regiones` y `/regiones/[region]`
 **Usa:** F2, F5 · `listarRegiones`, `rutasDeRegion`

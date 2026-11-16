@@ -9,7 +9,15 @@ import EstadisticasBase from "@/components/pokemon/EstadisticasBase";
 import ImagenPokemon from "@/components/pokemon/ImagenPokemon";
 import { ListaTipos } from "@/components/pokemon/InsigniaTipo";
 import Tarjeta from "@/components/ui/Tarjeta";
-import { evolucionesDe, listarRegiones, obtenerPokemon, type Pokemon } from "@/lib/api";
+import TablaMovimientos from "@/components/pokemon/TablaMovimientos";
+import {
+  evolucionesDe,
+  listarRegiones,
+  movimientosDePokemon,
+  obtenerPokemon,
+  type Movimiento,
+  type Pokemon,
+} from "@/lib/api";
 import { formatoAltura, formatoPeso, nombreVisible, numeroPokedex } from "@/lib/formato";
 
 const PRIMERO = 1;
@@ -51,7 +59,12 @@ export default function Ficha({ params }: PageProps<"/pokemon/[id]">) {
 async function ContenidoFicha({ params }: Pick<PageProps<"/pokemon/[id]">, "params">) {
   const id = leerId((await params).id);
   if (!id) notFound();
-  const [pokemon, cadena, regiones] = await Promise.all([obtenerPokemon(id), evolucionesDe(id), listarRegiones()]);
+  const [pokemon, cadena, regiones, movimientos] = await Promise.all([
+    obtenerPokemon(id),
+    evolucionesDe(id),
+    listarRegiones(),
+    movimientosDePokemon(id),
+  ]);
   if (!pokemon) notFound();
 
   const nombre = nombreVisible(pokemon);
@@ -91,7 +104,36 @@ async function ContenidoFicha({ params }: Pick<PageProps<"/pokemon/[id]">, "para
       <Seccion id="evoluciones" titulo="Cadena evolutiva">
         <CadenaEvolutiva cadena={cadena ?? etapaSola(pokemon)} idActual={pokemon.idPokedex} />
       </Seccion>
+
+      <MovimientosQueAprende movimientos={movimientos ?? []} nombre={nombre} />
     </article>
+  );
+}
+
+/** Sección desplegable (cerrada al cargar: son ~100 filas). Ordenados por el nombre que se muestra. */
+function MovimientosQueAprende({ movimientos, nombre }: { movimientos: Movimiento[]; nombre: string }) {
+  const ordenados = [...movimientos].sort((a, b) => nombreVisible(a).localeCompare(nombreVisible(b), "es"));
+  return (
+    <section aria-labelledby="titulo-movimientos">
+      <details className="group rounded-lg border border-borde-suave bg-superficie">
+        <summary className="flex min-h-14 cursor-pointer list-none items-center justify-between gap-3 rounded-lg px-4 sm:px-6 [&::-webkit-details-marker]:hidden">
+          <h2 id="titulo-movimientos" className="text-xl font-bold">
+            Movimientos que aprende{" "}
+            <span className="font-datos text-base font-medium text-texto-secundario tabular-nums">({movimientos.length})</span>
+          </h2>
+          <span aria-hidden="true" className="text-texto-secundario transition-transform group-open:rotate-180">
+            ▾
+          </span>
+        </summary>
+        <div className="px-4 pb-4 sm:px-6 sm:pb-6">
+          {movimientos.length === 0 ? (
+            <p className="text-texto-secundario">No hay movimientos registrados para este Pokémon.</p>
+          ) : (
+            <TablaMovimientos movimientos={ordenados} titulo={`Movimientos que aprende ${nombre}`} />
+          )}
+        </div>
+      </details>
+    </section>
   );
 }
 
