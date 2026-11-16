@@ -1,7 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  images: {
+    // Sprites de los Pokémon (imagenUrl de la API)
+    remotePatterns: [new URL("https://raw.githubusercontent.com/PokeAPI/sprites/**")],
+  },
   experimental: {
     agentFeedback: true,
   },

@@ -1,26 +1,57 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Identidad visual «Laboratorio» (docs/diseno/identidad-visual.md). Solo modo claro. */
+@theme {
+  --color-fondo: #F6F7F9;
+  --color-superficie: #FFFFFF;
+  --color-texto: #14171F;
+  --color-texto-secundario: #4A5366;
+  --color-primario: #B3122E;
+  --color-acento: #1F4FD1;
+  --color-exito: #1E7A3E;
+  --color-error: #B42318;
+  --color-borde: #8A93A6;
+  --color-borde-suave: #E3E6EC;
 }
 
+/* Las variables --fuente-* las define next/font en app/layout.tsx */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-titulo: var(--fuente-titulo), ui-sans-serif, system-ui, sans-serif;
+  --font-texto: var(--fuente-texto), ui-sans-serif, system-ui, sans-serif;
+  --font-datos: var(--fuente-datos), ui-monospace, monospace;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  html {
+    color-scheme: light;
   }
-}
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    font-family: var(--font-texto);
+    line-height: 1.5;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-titulo);
+    line-height: 1.2;
+  }
+
+  /* Foco visible por defecto en todo lo interactivo */
+  :focus-visible {
+    outline: 2px solid var(--color-acento);
+    outline-offset: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      transition-duration: 0.01ms !important;
+      animation-duration: 0.01ms !important;
+    }
+  }
 }
