@@ -40,7 +40,8 @@ El proyecto sigue Spec-Driven Development (SDD): primero el documento, después 
 npm run dev        # http://localhost:3000
 npm run build      # build de producción (debe funcionar sin backend)
 npm run lint
-npm run test       # vitest (lib/api y helpers), desde FE.6
+npm run test       # vitest: el mock cumple los criterios de F1–F9 (lib/api/mock.test.ts)
+$env:API_URL = "http://localhost:8080/api"; npm run test   # además compara el mock con la API real (contrato.test.ts)
 node scripts/generar-mock.mjs   # regenera datos/mock/ desde el backend local (debe estar arrancado)
 ```
 
