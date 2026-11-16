@@ -6,7 +6,6 @@ import Esqueleto from "@/components/ui/Esqueleto";
 import CadenaEvolutiva from "@/components/pokemon/CadenaEvolutiva";
 import DondeSeObtiene from "@/components/pokemon/DondeSeObtiene";
 import EstadisticasBase from "@/components/pokemon/EstadisticasBase";
-import ImagenPokemon from "@/components/pokemon/ImagenPokemon";
 import { ListaTipos } from "@/components/pokemon/InsigniaTipo";
 import Tarjeta from "@/components/ui/Tarjeta";
 import TablaMovimientos from "@/components/pokemon/TablaMovimientos";
@@ -20,8 +19,9 @@ import {
 } from "@/lib/api";
 import { formatoAltura, formatoPeso, nombreVisible, numeroPokedex } from "@/lib/formato";
 import { leerId } from "@/lib/parametros-url";
-import { gritoUrl } from "@/lib/recursos-pokemon";
+import { gritoUrl, ilustracionShinyUrl } from "@/lib/recursos-pokemon";
 import BotonGrito from "@/components/pokemon/BotonGrito";
+import IlustracionFicha from "@/components/pokemon/IlustracionFicha";
 
 const PRIMERO = 1;
 const ULTIMO = 1025;
@@ -73,14 +73,9 @@ async function ContenidoFicha({ params }: Pick<PageProps<"/pokemon/[id]">, "para
 
       <Tarjeta className="grid gap-6 p-4 sm:p-6 md:grid-cols-[minmax(0,18rem)_1fr]">
         <div className="mx-auto flex w-full max-w-72 flex-col gap-3">
-          <div className="rounded-lg bg-fondo p-4">
-            <ImagenPokemon src={pokemon.imagenUrl} alt={nombre} sizes="(min-width: 768px) 288px, 80vw" prioridad />
-          </div>
-          {grito && (
-            <div className="flex flex-wrap items-start gap-2">
-              <BotonGrito src={grito} nombre={nombre} />
-            </div>
-          )}
+          <IlustracionFicha normal={pokemon.imagenUrl} shiny={ilustracionShinyUrl(pokemon.idPokedex)} nombre={nombre}>
+            {grito && <BotonGrito src={grito} nombre={nombre} />}
+          </IlustracionFicha>
         </div>
         <div className="flex flex-col gap-4">
           <header className="flex flex-col gap-2">
