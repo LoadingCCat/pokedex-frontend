@@ -145,7 +145,7 @@ Se suma a P1–P5 sin cambiar lo que ya hacen. Reglas: "Toques de nostalgia" en 
 | P4 `/regiones` | Miniatura del mapa en cada tarjeta de región, encima del nombre | Región sin mapa: la tarjeta queda como ahora |
 | P4 `/regiones/[region]` | Mapa grande de la región entre la cabecera y la lista de lugares, con su crédito corto. En cada lugar de la lista, un enlace secundario **WikiDex ↗** | Sin mapa: no hay bloque. Sin artículo verificado: el enlace va a la búsqueda |
 | P5 `/rutas/[id]` | Captura del lugar junto a la cabecera (al lado en escritorio, debajo en móvil), con su crédito corto. **Ver en WikiDex ↗** en la cabecera | Sin captura: la cabecera queda como ahora. Lugar creado a mano (`idPokeapi` en `null`): enlace a la búsqueda |
-| P2 y P3 · tablas de movimientos (Fase 6) | Delante del nombre de cada movimiento, un **disco de MT** pequeño (SVG propio, 20 px) del color de su tipo. Nueva columna **Tipo** con la insignia del tipo; en móvil, el tipo va en texto pequeño bajo el nombre para no ensanchar la tabla. El disco es decorativo: el tipo siempre se lee en texto | Movimiento sin `tipo` (creado a mano o sin reimportar): disco gris y "—" |
+| P2 y P3 · tablas de movimientos (Fase 6) | Delante del nombre de cada movimiento, un **disco de MT** pequeño (SVG propio, 20 px; 16 en móvil) del color de su tipo. Nueva columna **Tipo** con la insignia del tipo. En móvil, las columnas Tipo y Competitivo se ocultan y van en texto pequeño bajo el nombre ("Eléctrico · Competitivo") para que la tabla quepa sin desplazarse. El disco es decorativo: el tipo siempre se lee en texto | Movimiento sin `tipo` (creado a mano o sin reimportar): disco gris y "—" |
 | P6 `/creditos` | Página nueva (abajo) | — |
 
 ### Criterios de aceptación
