@@ -4,7 +4,8 @@
 
 Frontend de la Pokédex+ (proyecto universitario en equipo, USTA): una Pokédex web en español con los 1025 Pokémon de las 9 generaciones. Consume la API REST del backend (`../pokedex-backend`). **Solo consulta:** no hay pantallas para crear, editar ni borrar.
 
-- Next.js 16.4 (App Router, `cacheComponents` y `partialPrefetching` activos) · React 19 · TypeScript · Tailwind CSS 4
+- Next.js 16.4 (App Router, `cacheComponents` y `partialPrefetching` activos) · React 19 · TypeScript · Tailwind CSS 4 · Vitest
+- `sharp` (devDependency) solo lo usa `scripts/imagenes.mjs` para convertir las imágenes a WebP; la app no lo importa.
 - Publicado en Vercel con datos mock con la misma forma que la API. El backend corre solo en `localhost` hasta la U6.
 
 ## Documentación (léela antes de cualquier cambio)
@@ -12,7 +13,8 @@ Frontend de la Pokédex+ (proyecto universitario en equipo, USTA): una Pokédex 
 El proyecto sigue Spec-Driven Development (SDD): primero el documento, después el código.
 
 - Pantallas y criterios de aceptación: `docs/pantallas.md`
-- Identidad visual (colores, tipografía, tono, componentes): `docs/diseno/identidad-visual.md`
+- Identidad visual (colores, tipografía, tono, componentes y "Toques de nostalgia"): `docs/diseno/identidad-visual.md`
+- Capturas de referencia y evaluación con la rúbrica: `docs/diseno/referencias/README.md`
 - Procedimiento para crear componentes y pantallas: skill `ui-componentes` (`.claude/skills/`)
 - Producto, funcionalidades F1–F10 y contrato de la API (en el backend):
   - `../pokedex-backend/docs/producto.md`
@@ -40,10 +42,15 @@ El proyecto sigue Spec-Driven Development (SDD): primero el documento, después 
 npm run dev        # http://localhost:3000
 npm run build      # build de producción (debe funcionar sin backend)
 npm run lint
-npm run test       # vitest: el mock cumple los criterios de F1–F9 (lib/api/mock.test.ts)
+npm run test       # vitest: el mock cumple F1–F9 (lib/api/mock.test.ts) y las funciones de lib/ (parámetros, imágenes, enlaces, créditos)
 $env:API_URL = "http://localhost:8080/api"; npm run test   # además compara el mock con la API real (contrato.test.ts)
-node scripts/generar-mock.mjs   # regenera datos/mock/ desde el backend local (debe estar arrancado)
+node scripts/generar-mock.mjs        # regenera datos/mock/ desde el backend local (debe estar arrancado)
+node scripts/imagenes.mjs           # descarga de WikiDex lo de scripts/imagenes-fuentes.json → public/imagenes/*.webp y datos/imagenes.json
+node scripts/enlaces-wikidex.mjs    # verifica los artículos de WikiDex → datos/enlaces-wikidex.json
+node scripts/nombres-lugares-es.mjs # nombres en español de los lugares → ../pokedex-backend/src/main/resources/lugares-es.properties
 ```
+
+- Los tres scripts de WikiDex respetan la wiki: lotes de 50 títulos, como mucho una petición por segundo y un User-Agent que dice quiénes somos. Si responde otra cosa que JSON (un desafío anti-bots), paran: no se intenta saltar. Sus salidas se suben al repositorio; el build no los ejecuta.
 
 - El servidor de desarrollo se arranca en la terminal de la app, no desde el Bash del agente.
 
@@ -59,18 +66,48 @@ node scripts/generar-mock.mjs   # regenera datos/mock/ desde el backend local (d
 - `http.ts` solo puede pedir lo que la API ofrece. Por eso `mock.ts` no debe combinar más de lo que permite el contrato (por ejemplo, en movimientos: o búsqueda, o categoría, o competitivos).
 - `nombre` es el slug en inglés (identificador). Para mostrar se usa `nombreEs` y, si viene en `null`, el slug formateado (`lib/formato.ts`).
 
+## Toques de nostalgia (FE.14–FE.32)
+
+Reglas completas en `docs/diseno/identidad-visual.md`. **El dato manda y la nostalgia lo acompaña.** Al tocar cualquiera de estas piezas:
+
+1. **Un solo efecto destacado por pantalla:** el sprite animado al pasar el ratón por una tarjeta (P1 y tarjetas de P5) y las barras de estadísticas en la ficha (P2). P3, P4, P5 y Créditos no tienen ninguno: mapas, capturas, discos de MT y el sprite clásico son contenido, no efecto. Los controles que activa el usuario (Escuchar, Shiny) no cuentan.
+2. **Menos de 300 ms**, con `ease-out`, y nada en bucle salvo el GIF del sprite.
+3. **Todo se apaga con `prefers-reduced-motion`**: sin sprite animado, barras ya llenas, sin transiciones.
+4. **Nada de 3D real** (ni Three.js, ni WebGL, ni inclinaciones 3D con CSS) y nada de disfrazar la interfaz: sin tipografías pixeladas, marcos de Game Boy ni colores "retro".
+5. **Las imágenes nunca tapan el dato:** nombre, número, tipos y estadísticas siempre visibles; nunca texto sobre una imagen. Mapas y capturas van en su propio bloque (`FiguraCreditada`), con proporción fija, `alt` y crédito corto debajo.
+6. **El sonido solo suena al pulsar "Escuchar"**, al 50 %.
+7. **Pixel art nítido:** `image-rendering: pixelated`, escala entera (2× el sprite clásico y las capturas de hasta 256 px) y `next/image` con `unoptimized`, para que no se reescale.
+8. **Si falta el recurso, no queda hueco:** el control o el bloque no aparece. Nunca una imagen rota.
+
+**Imágenes de terceros:**
+- Los sprites, ilustraciones y gritos se sirven desde los repos de la PokeAPI (`lib/recursos-pokemon.ts`).
+- Los mapas y capturas de WikiDex se **descargan** a `public/imagenes/` en WebP (nunca se enlazan desde otra web). Nunca se agrega una a mano: se elige en `scripts/imagenes-fuentes.json` y se regenera con `imagenes.mjs`, que registra su origen en `datos/imagenes.json`; `/creditos` la lista sola.
+- El pixel art se guarda sin pérdida solo si el original es PNG (un JPG sin pérdida se inflaría).
+- Fuera: el logo de Pokémon y su tipografía oficial.
+
+**Enlaces a WikiDex:** salen de `datos/enlaces-wikidex.json` por `lib/enlaces-wikidex.ts` y se pintan con `EnlaceExterno` (otra pestaña, `rel="noopener noreferrer"`, aviso para el lector de pantalla). "Exacto" → "Ver en WikiDex ↗"; si no hay artículo verificado → su búsqueda ("Buscar en WikiDex ↗"; en la lista de lugares, la versión corta "WikiDex ↗" / "Buscar ↗"). Nunca un enlace a un artículo sin verificar.
+
 ## Estructura
 
 ```
-app/                  # páginas y layouts (rutas en español: /pokemon/[id], /movimientos, /regiones…), error.tsx y not-found.tsx globales
-components/ui/        # piezas genéricas (Boton, Tarjeta, Chip, Paginacion, EstadoVacio, Esqueleto)
-components/pokemon/   # piezas del dominio (InsigniaTipo, TarjetaPokemon, CadenaEvolutiva…)
-lib/api/              # único acceso a datos: tipos.ts, index.ts, mock.ts, http.ts
-lib/formato.ts        # #025, nombre a mostrar, m / kg
-lib/tipos-pokemon.ts  # los 18 tipos: etiqueta en español y colores AA
-datos/mock/           # volcado JSON del backend
-scripts/              # generar-mock.mjs
-docs/                 # pantallas.md, diseno/
+app/                      # páginas y layouts (rutas en español: /pokemon/[id], /movimientos, /regiones, /rutas/[id], /creditos), error.tsx y not-found.tsx
+components/ui/            # piezas genéricas (Boton, Tarjeta, Chip, Paginacion, EstadoVacio, Esqueleto, EnlaceExterno, FiguraCreditada)
+components/pokemon/       # piezas del dominio (InsigniaTipo, TarjetaPokemon, SpriteAnimado, IlustracionFicha, BotonGrito,
+                          #   EstadisticasBase, CapturasDelJuego, CadenaEvolutiva, TablaMovimientos, DiscoMovimiento…)
+lib/api/                  # único acceso a datos: tipos.ts, index.ts, mock.ts, http.ts
+lib/formato.ts            # #025, nombre a mostrar, m / kg
+lib/tipos-pokemon.ts      # los 18 tipos: etiqueta en español y colores AA
+lib/recursos-pokemon.ts   # URL de sprite animado, sprite clásico, ilustración shiny y grito
+lib/imagenes.ts           # lee datos/imagenes.json (mapas, lugares, capturas de Pokémon)
+lib/capturas-ficha.ts     # qué capturas muestra la ficha: las propias o hasta 2 de lugares
+lib/enlaces-wikidex.ts    # enlace exacto o de búsqueda por Pokémon, lugar y región
+lib/creditos.ts           # filas de /creditos a partir de datos/imagenes.json
+datos/mock/               # volcado JSON del backend
+datos/imagenes.json       # generado por scripts/imagenes.mjs: archivo, tamaño, alt, pie, juego y origen de cada imagen
+datos/enlaces-wikidex.json  # generado por scripts/enlaces-wikidex.mjs
+public/imagenes/          # WebP de regiones/, lugares/ (por idPokeapi) y pokemon/ (idPokedex-n)
+scripts/                  # generar-mock, imagenes (+ imagenes-fuentes.json, la lista elegida a mano), enlaces-wikidex, nombres-lugares-es
+docs/                     # pantallas.md, diseno/ (identidad-visual.md, referencias/)
 ```
 
 ## Convenciones de código
