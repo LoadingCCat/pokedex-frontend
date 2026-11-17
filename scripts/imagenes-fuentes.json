@@ -1,0 +1,285 @@
+{
+  "descripcion": "Imágenes elegidas para la Fase 2 (FE.19-FE.20): archivo en WikiDex y juego. scripts/imagenes.mjs las descarga, las convierte a WebP y escribe datos/imagenes.json. Criterio de calidad en docs/pantallas.md.",
+  "regiones": [
+    {
+      "region": "Kanto",
+      "archivoWikidex": "Mapa_de_Kanto_LGPE.png",
+      "juego": "Pokémon: Let's Go, Pikachu! y Let's Go, Eevee!",
+      "anchoMaximo": 1600
+    },
+    {
+      "region": "Johto",
+      "archivoWikidex": "Johto_HGSS.png",
+      "juego": "Pokémon Oro HeartGold y Plata SoulSilver",
+      "anchoMaximo": 1600
+    },
+    {
+      "region": "Hoenn",
+      "archivoWikidex": "Mapa_de_Hoenn_ROZA.png",
+      "juego": "Pokémon Rubí Omega y Zafiro Alfa",
+      "anchoMaximo": 1600
+    },
+    {
+      "region": "Sinnoh",
+      "archivoWikidex": "Sinnoh_DBPR.png",
+      "juego": "Pokémon Diamante Brillante y Perla Reluciente",
+      "anchoMaximo": 1600
+    },
+    {
+      "region": "Teselia",
+      "archivoWikidex": "Teselia_N2B2.png",
+      "juego": "Pokémon Negro 2 y Blanco 2",
+      "anchoMaximo": 1600
+    },
+    {
+      "region": "Kalos",
+      "archivoWikidex": "Mapa_Kalos.png",
+      "juego": "Pokémon X e Y",
+      "anchoMaximo": 1600
+    },
+    {
+      "region": "Alola",
+      "archivoWikidex": "Alola_USUL.png",
+      "juego": "Pokémon Ultrasol y Ultraluna",
+      "anchoMaximo": 1600
+    },
+    {
+      "region": "Galar",
+      "archivoWikidex": "Galar.png",
+      "juego": "Pokémon Espada y Escudo",
+      "anchoMaximo": 1600
+    },
+    {
+      "region": "Paldea",
+      "archivoWikidex": "Paldea.jpg",
+      "juego": "Pokémon Escarlata y Púrpura",
+      "anchoMaximo": 1600
+    }
+  ],
+  "lugares": [
+    {
+      "idPokeapi": 67,
+      "lugar": "Ciudad Azulona",
+      "archivoWikidex": "Ciudad_Azulona_LGPE.png",
+      "juego": "Pokémon: Let's Go, Pikachu! y Let's Go, Eevee!",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 68,
+      "lugar": "Ciudad Celeste",
+      "archivoWikidex": "Ciudad_Celeste_LGPE.png",
+      "juego": "Pokémon: Let's Go, Pikachu! y Let's Go, Eevee!",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 71,
+      "lugar": "Isla Canela",
+      "archivoWikidex": "Isla_Canela_LGPE.png",
+      "juego": "Pokémon: Let's Go, Pikachu! y Let's Go, Eevee!",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 73,
+      "lugar": "Cueva Diglett",
+      "archivoWikidex": "Cueva_Diglett_LGPE_(2).png",
+      "juego": "Pokémon: Let's Go, Pikachu! y Let's Go, Eevee!",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 76,
+      "lugar": "Ciudad Fucsia",
+      "archivoWikidex": "Ciudad_Fucsia_LGPE.png",
+      "juego": "Pokémon: Let's Go, Pikachu! y Let's Go, Eevee!",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 80,
+      "lugar": "Monte Moon",
+      "archivoWikidex": "Monte_Moon_LGPE.png",
+      "juego": "Pokémon: Let's Go, Pikachu! y Let's Go, Eevee!",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 86,
+      "lugar": "Pueblo Paleta",
+      "archivoWikidex": "Pueblo_Paleta_LGPE.png",
+      "juego": "Pokémon: Let's Go, Pikachu! y Let's Go, Eevee!",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 231,
+      "lugar": "Ciudad Plateada",
+      "archivoWikidex": "Ciudad_Plateada_LGPE.png",
+      "juego": "Pokémon: Let's Go, Pikachu! y Let's Go, Eevee!",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 87,
+      "lugar": "Túnel Roca",
+      "archivoWikidex": "Túnel_Roca_LGPE.png",
+      "juego": "Pokémon: Let's Go, Pikachu! y Let's Go, Eevee!",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 88,
+      "lugar": "Ruta 1 de Kanto",
+      "archivoWikidex": "Ruta_1_LGPE.png",
+      "juego": "Pokémon: Let's Go, Pikachu! y Let's Go, Eevee!",
+      "vista": "desde arriba",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 90,
+      "lugar": "Ruta 11 de Kanto",
+      "archivoWikidex": "Ruta_11_HGSS.png",
+      "juego": "Pokémon Oro HeartGold y Plata SoulSilver",
+      "vista": "desde arriba",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 92,
+      "lugar": "Ruta 13 de Kanto",
+      "archivoWikidex": "Ruta_13_HGSS.png",
+      "juego": "Pokémon Oro HeartGold y Plata SoulSilver",
+      "vista": "desde arriba",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 94,
+      "lugar": "Ruta 15 de Kanto",
+      "archivoWikidex": "HGSS_Ruta_15.png",
+      "juego": "Pokémon Oro HeartGold y Plata SoulSilver",
+      "vista": "desde arriba",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 95,
+      "lugar": "Ruta 16 de Kanto",
+      "archivoWikidex": "Ruta_16_HGSS.png",
+      "juego": "Pokémon Oro HeartGold y Plata SoulSilver",
+      "vista": "desde arriba",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 97,
+      "lugar": "Ruta 18 de Kanto",
+      "archivoWikidex": "Ruta_18_HGSS.png",
+      "juego": "Pokémon Oro HeartGold y Plata SoulSilver",
+      "vista": "desde arriba",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 102,
+      "lugar": "Ruta 22 de Kanto",
+      "archivoWikidex": "HGSS_Ruta_22.png",
+      "juego": "Pokémon Oro HeartGold y Plata SoulSilver",
+      "vista": "desde arriba",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 103,
+      "lugar": "Ruta 24 de Kanto",
+      "archivoWikidex": "Ruta_24_HGSS.png",
+      "juego": "Pokémon Oro HeartGold y Plata SoulSilver",
+      "vista": "desde arriba",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 107,
+      "lugar": "Ruta 28 de Kanto",
+      "archivoWikidex": "Ruta_28_HGSS.png",
+      "juego": "Pokémon Oro HeartGold y Plata SoulSilver",
+      "vista": "desde arriba",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 109,
+      "lugar": "Ruta 3 de Kanto",
+      "archivoWikidex": "Ruta_3_HGSS.png",
+      "juego": "Pokémon Oro HeartGold y Plata SoulSilver",
+      "vista": "desde arriba",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 120,
+      "lugar": "Ruta 4 de Kanto",
+      "archivoWikidex": "Ruta_4_HGSS.png",
+      "juego": "Pokémon Oro HeartGold y Plata SoulSilver",
+      "vista": "desde arriba",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 134,
+      "lugar": "Ruta 9 de Kanto",
+      "archivoWikidex": "Ruta_9_HGSS.png",
+      "juego": "Pokémon Oro HeartGold y Plata SoulSilver",
+      "vista": "desde arriba",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 498,
+      "lugar": "S. S. Anne",
+      "archivoWikidex": "S.S._Anne_LGPE.png",
+      "juego": "Pokémon: Let's Go, Pikachu! y Let's Go, Eevee!",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 234,
+      "lugar": "Ciudad Azafrán",
+      "archivoWikidex": "Ciudad_Azafrán_LGPE.png",
+      "juego": "Pokémon: Let's Go, Pikachu! y Let's Go, Eevee!",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 136,
+      "lugar": "Islas Espuma",
+      "archivoWikidex": "Islas_Espuma_LGPE.png",
+      "juego": "Pokémon: Let's Go, Pikachu! y Let's Go, Eevee!",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 518,
+      "lugar": "Torre Desafío",
+      "archivoWikidex": "Torre_Desafío.png",
+      "juego": "Pokémon Rojo Fuego y Verde Hoja",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 151,
+      "lugar": "Ciudad Carmín",
+      "archivoWikidex": "Ciudad_Carmín_LGPE.png",
+      "juego": "Pokémon: Let's Go, Pikachu! y Let's Go, Eevee!",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 154,
+      "lugar": "Ciudad Verde",
+      "archivoWikidex": "Ciudad_Verde_LGPE.png",
+      "juego": "Pokémon: Let's Go, Pikachu! y Let's Go, Eevee!",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 155,
+      "lugar": "Bosque Verde",
+      "archivoWikidex": "Bosque_Verde_LGPE_(2).png",
+      "juego": "Pokémon: Let's Go, Pikachu! y Let's Go, Eevee!",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    }
+  ]
+}
