@@ -62,8 +62,10 @@ async function procesar(info, anchoMaximo, rutaPublica, pixelArt = false) {
     redimensionada.clone().webp({ quality: CALIDAD }).toBuffer({ resolveWithObject: true }),
     redimensionada.clone().webp({ lossless: true, effort: 6 }).toBuffer({ resolveWithObject: true }),
   ]);
-  // El pixel art va siempre sin pérdida (docs/pantallas.md), aunque el WebP con pérdida pese menos
-  const webp = pixelArt || sinPerdida.data.length <= conPerdida.data.length ? sinPerdida : conPerdida;
+  // El pixel art en PNG va siempre sin pérdida (docs/pantallas.md), aunque el WebP con pérdida pese
+  // menos; si el original ya es un JPG (con pérdida), sin pérdida solo lo inflaría: se queda el menor
+  const pngOriginal = /\.png$/i.test(fuente.split("?")[0]);
+  const webp = (pixelArt && pngOriginal) || sinPerdida.data.length <= conPerdida.data.length ? sinPerdida : conPerdida;
   const destino = join(RAIZ, "public", rutaPublica);
   await mkdir(dirname(destino), { recursive: true });
   await writeFile(destino, webp.data);

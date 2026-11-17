@@ -648,6 +648,2198 @@
       "juego": "Pokémon: Let's Go, Pikachu! y Let's Go, Eevee!",
       "vista": "captura",
       "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 919,
+      "lugar": "Afueras de Pistón",
+      "archivoWikidex": "Afueras_de_Pistón_1.jpg",
+      "juego": "Pokémon Espada y Escudo",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 759,
+      "lugar": "Aldea Tapu",
+      "archivoWikidex": "Aldea_Tapu_Ruinas_SL.png",
+      "juego": "Pokémon Sol y Luna",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 378,
+      "lugar": "Almacenes Frigoríficos",
+      "archivoWikidex": "Almacenes_Frigorificos_BN.png",
+      "juego": "Pokémon Negro y Blanco",
+      "vista": "captura",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 743,
+      "lugar": "Avenida Royale",
+      "archivoWikidex": "Avenida_Royale_(principal).png",
+      "juego": "Pokémon Sol y Luna",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 1044,
+      "lugar": "Avenida Royale",
+      "archivoWikidex": "Avenida_Royale_(principal).png",
+      "juego": "Pokémon Sol y Luna",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 413,
+      "lugar": "Bahía Arenisca",
+      "archivoWikidex": "Bahía_Arenisca_NB.png",
+      "juego": "Pokémon Negro y Blanco",
+      "vista": "desde arriba",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 915,
+      "lugar": "Bahía Circular",
+      "archivoWikidex": "Bahía_Circular_EpEc.png",
+      "juego": "Pokémon Espada y Escudo",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 403,
+      "lugar": "Boquete Gigante",
+      "archivoWikidex": "Boquete_Gigante_(bosque).jpg",
+      "juego": "Pokémon Negro y Blanco",
+      "vista": "desde arriba",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 704,
+      "lugar": "Boquete Irregular",
+      "archivoWikidex": "Boquete_Irregular_ROZA.png",
+      "juego": "Pokémon Rubí Omega y Zafiro Alfa",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 375,
+      "lugar": "Bosque Azulejo",
+      "archivoWikidex": "Bosque_azulejo.png",
+      "juego": "Pokémon Negro y Blanco",
+      "vista": "desde arriba",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 894,
+      "lugar": "Bosque Concentración",
+      "archivoWikidex": "Bosque_Concentración_EpEc.png",
+      "juego": "Pokémon Espada y Escudo",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 697,
+      "lugar": "Bosque Espejismo",
+      "archivoWikidex": "Bosque_espejismo_Ciudad_Algaria.png",
+      "juego": "Pokémon Rubí Omega y Zafiro Alfa",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 904,
+      "lugar": "Bosque Lumirinto",
+      "archivoWikidex": "Bosque_Lumirinto_(2)_EpEc.png",
+      "juego": "Pokémon Espada y Escudo",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 930,
+      "lugar": "Bosque Oniria",
+      "archivoWikidex": "Bosque_Oniria_EpEc.jpg",
+      "juego": "Pokémon Espada y Escudo",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 414,
+      "lugar": "Bosque Perdidos",
+      "archivoWikidex": "Bosque_de_los_Perdidos_N2B2.png",
+      "juego": "Pokémon Negro 2 y Blanco 2",
+      "vista": "desde arriba",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 8,
+      "lugar": "Bosque Vetusto",
+      "archivoWikidex": "Bosque_Vetusto_DBPR.jpg",
+      "juego": "Pokémon Diamante Brillante y Perla Reluciente",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 700,
+      "lugar": "Bosque Virgen",
+      "archivoWikidex": "Bosque_Virgen_ROZA.png",
+      "juego": "Pokémon Rubí Omega y Zafiro Alfa",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 444,
+      "lugar": "Calle Victoria",
+      "archivoWikidex": "Calle_Victoria_RZE.png",
+      "juego": "Pokémon Rubí, Zafiro y Esmeralda",
+      "vista": "desde arriba",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 382,
+      "lugar": "Calle Victoria",
+      "archivoWikidex": "Salida_de_la_calle_victoria_NB.png",
+      "juego": "Pokémon Negro y Blanco",
+      "vista": "captura",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 13,
+      "lugar": "Calle Victoria",
+      "archivoWikidex": "Calle_Victoria_Entrada_DBPR.jpg",
+      "juego": "Pokémon Diamante Brillante y Perla Reluciente",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 548,
+      "lugar": "Calle Victoria",
+      "archivoWikidex": "Salida_de_la_calle_victoria_NB.png",
+      "juego": "Pokémon Negro y Blanco",
+      "vista": "captura",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 415,
+      "lugar": "Cámara de Pruebas",
+      "archivoWikidex": "Entrada_a_camara_de_pruebas.jpg",
+      "juego": "Pokémon Negro y Blanco",
+      "vista": "captura",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 897,
+      "lugar": "Campo Bajocero",
+      "archivoWikidex": "Campo_Bajocero_EpEc.jpg",
+      "juego": "Pokémon Espada y Escudo",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 929,
+      "lugar": "Campo Deslizante",
+      "archivoWikidex": "Campo_Deslizante.jpg",
+      "juego": "Pokémon Espada y Escudo",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 435,
+      "lugar": "Cascada Meteoro",
+      "archivoWikidex": "Cascada_Meteoro_en_ROZA.png",
+      "juego": "Pokémon Rubí Omega y Zafiro Alfa",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 140,
+      "lugar": "Cataratas Tohjo",
+      "archivoWikidex": "Introducción_Cataratas_Tohjo_HGSS.png",
+      "juego": "Pokémon Oro HeartGold y Plata SoulSilver",
+      "vista": "captura",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 442,
+      "lugar": "Caverna Abisal",
+      "archivoWikidex": "Caverna_Abisal_ROZA.png",
+      "juego": "Pokémon Rubí Omega y Zafiro Alfa",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 1055,
+      "lugar": "Centro Espacial de Algaria",
+      "archivoWikidex": "Centro_Espacial_de_Algaria_ROZA.png",
+      "juego": "Pokémon Rubí Omega y Zafiro Alfa",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 905,
+      "lugar": "Ciudad Artejo",
+      "archivoWikidex": "Ciudad_Artejo_EpEc.png",
+      "juego": "Pokémon Espada y Escudo",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 1,
+      "lugar": "Ciudad Canal",
+      "archivoWikidex": "Ciudad_Canal_DBPR.jpg",
+      "juego": "Pokémon Diamante Brillante y Perla Reluciente",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 69,
+      "lugar": "Ciudad Cerezo",
+      "archivoWikidex": "Ciudad_Cerezo_HGSS_(2).png",
+      "juego": "Pokémon Oro HeartGold y Plata SoulSilver",
+      "vista": "captura",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 169,
+      "lugar": "Ciudad Corazón",
+      "archivoWikidex": "Ciudad_Corazón_DBPR.jpg",
+      "juego": "Pokémon Diamante Brillante y Perla Reluciente",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 531,
+      "lugar": "Ciudad Engobe",
+      "archivoWikidex": "Mirador_de_ciudad_engobe.png",
+      "juego": "Pokémon Negro 2 y Blanco 2",
+      "vista": "captura",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 349,
+      "lugar": "Ciudad Esmalte",
+      "archivoWikidex": "Ciudad_Esmalte_N2B2.png",
+      "juego": "Pokémon Negro 2 y Blanco 2",
+      "vista": "desde arriba",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 352,
+      "lugar": "Ciudad Fayenza",
+      "archivoWikidex": "Mercado_de_Ciudad_Fayenza.png",
+      "juego": "Pokémon Negro y Blanco",
+      "vista": "captura",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 348,
+      "lugar": "Ciudad Gres",
+      "archivoWikidex": "Ciudad_Gres_Zinc.png",
+      "juego": "Pokémon Negro y Blanco",
+      "vista": "captura",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 532,
+      "lugar": "Ciudad Hormigón",
+      "archivoWikidex": "Ciudad_Hormigón.png",
+      "juego": "Pokémon Negro 2 y Blanco 2",
+      "vista": "desde arriba",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 75,
+      "lugar": "Ciudad Iris",
+      "archivoWikidex": "Ciudad_Iris_OPC.png",
+      "juego": "Pokémon Oro, Plata y Cristal",
+      "vista": "desde arriba",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 741,
+      "lugar": "Ciudad Kantai",
+      "archivoWikidex": "Puerto_de_Ciudad_Kantai_SL.png",
+      "juego": "Pokémon Sol y Luna",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 742,
+      "lugar": "Ciudad Konikoni",
+      "archivoWikidex": "Ciudad_Konikoni_SL.png",
+      "juego": "Pokémon Sol y Luna",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 533,
+      "lugar": "Ciudad Marga",
+      "archivoWikidex": "Ciudad_Marga.png",
+      "juego": "Pokémon Negro 2 y Blanco 2",
+      "vista": "desde arriba",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 4,
+      "lugar": "Ciudad Marina",
+      "archivoWikidex": "Ciudad_Marina_DBPR.jpg",
+      "juego": "Pokémon Diamante Brillante y Perla Reluciente",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 70,
+      "lugar": "Ciudad Orquídea",
+      "archivoWikidex": "Ciudad_Orquídea_HGSS.png",
+      "juego": "Pokémon Oro HeartGold y Plata SoulSilver",
+      "vista": "desde arriba",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 168,
+      "lugar": "Ciudad Pirita",
+      "archivoWikidex": "Museo_Minero_de_Ciudad_Pirita.png",
+      "juego": "Pokémon Diamante y Perla",
+      "vista": "captura",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 918,
+      "lugar": "Ciudad Pistón",
+      "archivoWikidex": "Ciudad_Pistón_EpEc.png",
+      "juego": "Pokémon Espada y Escudo",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 3,
+      "lugar": "Ciudad Pradera",
+      "archivoWikidex": "Ciudad_Pradera_DBPR.png",
+      "juego": "Pokémon Diamante Brillante y Perla Reluciente",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 171,
+      "lugar": "Ciudad Puntaneva",
+      "archivoWikidex": "Ciudad_Puntaneva_DBPR.jpg",
+      "juego": "Pokémon Diamante Brillante y Perla Reluciente",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 951,
+      "lugar": "Ciudad Puntera",
+      "archivoWikidex": "Calle_de_tiendas_de_Ciudad_Puntera_EpEc.jpg",
+      "juego": "Pokémon Espada y Escudo",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 170,
+      "lugar": "Ciudad Rocavelo",
+      "archivoWikidex": "Ciudad_Rocavelo_DBPR.png",
+      "juego": "Pokémon Diamante Brillante y Perla Reluciente",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 354,
+      "lugar": "Ciudad Teja",
+      "archivoWikidex": "Ciudad_Teja-Grupo_de_Baile.png",
+      "juego": "Pokémon Negro y Blanco",
+      "vista": "captura",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 229,
+      "lugar": "Ciudad Trigal",
+      "archivoWikidex": "Ciudad_Trigal_HGSS.png",
+      "juego": "Pokémon Oro HeartGold y Plata SoulSilver",
+      "vista": "desde arriba",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 2,
+      "lugar": "Ciudad Vetusta",
+      "archivoWikidex": "Ciudad_Vetusta_DBPR.jpg",
+      "juego": "Pokémon Diamante Brillante y Perla Reluciente",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 543,
+      "lugar": "Cloacas Porcelana",
+      "archivoWikidex": "Cloacas_Porcelana_con_agua_N2B2.png",
+      "juego": "Pokémon Negro 2 y Blanco 2",
+      "vista": "desde arriba",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 891,
+      "lugar": "Colina del Maxiárbol",
+      "archivoWikidex": "Colina_del_Maxiárbol_EpEc.jpg",
+      "juego": "Pokémon Espada y Escudo",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 172,
+      "lugar": "Columnas Lanza",
+      "archivoWikidex": "Columnas_Lanza_DBPR.jpg",
+      "juego": "Pokémon Diamante Brillante y Perla Reluciente",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 925,
+      "lugar": "Cuenca Arenosa",
+      "archivoWikidex": "Cuenca_Arenosa_EpEc.png",
+      "juego": "Pokémon Espada y Escudo",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 443,
+      "lugar": "Cueva Ancestral",
+      "archivoWikidex": "Cámara_submarina_de_la_Cueva_Ancestral_ZA.png",
+      "juego": "Pokémon Rubí Omega y Zafiro Alfa",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 490,
+      "lugar": "Cueva Cambiante",
+      "archivoWikidex": "Introducción_a_la_Cueva_Cambiante.png",
+      "juego": "Pokémon Rojo Fuego y Verde Hoja",
+      "vista": "captura",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 445,
+      "lugar": "Cueva Cardumen",
+      "archivoWikidex": "Cueva_cardumen_marea_baja.png",
+      "juego": "Pokémon Rubí, Zafiro y Esmeralda",
+      "vista": "captura",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 882,
+      "lugar": "Cueva Contienda",
+      "archivoWikidex": "Cueva_Contienda_EpEc.png",
+      "juego": "Pokémon Espada y Escudo",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 676,
+      "lugar": "Cueva Desenlace",
+      "archivoWikidex": "Cueva_Desenlace.png",
+      "juego": "Pokémon X e Y",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 379,
+      "lugar": "Cueva Electrorroca",
+      "archivoWikidex": "Cueva_Electrorroca_BN.png",
+      "juego": "Pokémon Negro y Blanco",
+      "vista": "captura",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 698,
+      "lugar": "Cueva Espejismo",
+      "archivoWikidex": "Cueva_espejismo_Ciudad_Arborada.png",
+      "juego": "Pokémon Rubí Omega y Zafiro Alfa",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 20,
+      "lugar": "Cueva Extravío",
+      "archivoWikidex": "Cueva_Extravío_2.jpg",
+      "juego": "Pokémon Diamante y Perla",
+      "vista": "desde arriba",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 437,
+      "lugar": "Cueva Granito",
+      "archivoWikidex": "Cueva_Granito_ROZA.png",
+      "juego": "Pokémon Rubí Omega y Zafiro Alfa",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 702,
+      "lugar": "Cueva Ignota",
+      "archivoWikidex": "Cueva_Ignota_ROZA.png",
+      "juego": "Pokémon Rubí Omega y Zafiro Alfa",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 703,
+      "lugar": "Cueva Incierta",
+      "archivoWikidex": "Cueva_Incierta_ROZA.png",
+      "juego": "Pokémon Rubí Omega y Zafiro Alfa",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 581,
+      "lugar": "Cueva Insular",
+      "archivoWikidex": "Cueva_Insular_ROZA.png",
+      "juego": "Pokémon Rubí Omega y Zafiro Alfa",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 396,
+      "lugar": "Cueva Loza",
+      "archivoWikidex": "Cueva_Loza_N2B2_P1.png",
+      "juego": "Pokémon Negro 2 y Blanco 2",
+      "vista": "desde arriba",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 395,
+      "lugar": "Cueva Manantial",
+      "archivoWikidex": "Cueva_manantial.png",
+      "juego": "Pokémon Negro y Blanco",
+      "vista": "captura",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 804,
+      "lugar": "Cueva Marina",
+      "archivoWikidex": "Cueva_Marina_Int_1.png",
+      "juego": "Pokémon Rubí, Zafiro y Esmeralda",
+      "vista": "desde arriba",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 623,
+      "lugar": "Cueva Reflejos",
+      "archivoWikidex": "Cueva_Reflejos.png",
+      "juego": "Pokémon X e Y",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 18,
+      "lugar": "Cueva Retorno",
+      "archivoWikidex": "Cueva_retorno.png",
+      "juego": "Pokémon Diamante y Perla",
+      "vista": "captura",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 489,
+      "lugar": "Cueva Taller",
+      "archivoWikidex": "Cueva_Taller_Int_1.png",
+      "juego": "Pokémon Rubí, Zafiro y Esmeralda",
+      "vista": "desde arriba",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 887,
+      "lugar": "Cueva Tenacidad",
+      "archivoWikidex": "Cueva_Tenacidad_EpEc.png",
+      "juego": "Pokémon Espada y Escudo",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 803,
+      "lugar": "Cueva Terrena",
+      "archivoWikidex": "Cueva_terrena_por_afuera.png",
+      "juego": "Pokémon Rubí, Zafiro y Esmeralda",
+      "vista": "captura",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 141,
+      "lugar": "Cueva Unión",
+      "archivoWikidex": "Cueva_Unión_HGSS.png",
+      "juego": "Pokémon Oro HeartGold y Plata SoulSilver",
+      "vista": "captura",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 439,
+      "lugar": "Desfiladero",
+      "archivoWikidex": "Desfiladero.png",
+      "juego": "Pokémon Rubí, Zafiro y Esmeralda",
+      "vista": "captura",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 931,
+      "lugar": "Desfiladero Nevado",
+      "archivoWikidex": "Desfiladero_Nevado_EpEc.jpg",
+      "juego": "Pokémon Espada y Escudo",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 764,
+      "lugar": "Desierto de Haina",
+      "archivoWikidex": "Desierto_de_Haina_SL.png",
+      "juego": "Pokémon Sol y Luna",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 916,
+      "lugar": "Dojo Maestro",
+      "archivoWikidex": "Dojo_Maestro_EpEc.jpg",
+      "juego": "Pokémon Espada y Escudo",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 78,
+      "lugar": "Encinar",
+      "archivoWikidex": "Introducción_Encinar_HGSS.png",
+      "juego": "Pokémon Oro HeartGold y Plata SoulSilver",
+      "vista": "captura",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 940,
+      "lugar": "Encrucijada Tresvías",
+      "archivoWikidex": "Encrucijada_Tresvías_EpEc.jpg",
+      "juego": "Pokémon Espada y Escudo",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 243,
+      "lugar": "Entrada Safari",
+      "archivoWikidex": "Entrada_Safari.png",
+      "juego": "Pokémon Oro HeartGold y Plata SoulSilver",
+      "vista": "desde arriba",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 9,
+      "lugar": "Forja Fuego",
+      "archivoWikidex": "Forja_fuego_DBPR.jpg",
+      "juego": "Pokémon Diamante Brillante y Perla Reluciente",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 178,
+      "lugar": "Fuente Despedida",
+      "archivoWikidex": "Fuente_Despedida_DBPR.jpg",
+      "juego": "Pokémon Diamante Brillante y Perla Reluciente",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 11,
+      "lugar": "Gran Pantano",
+      "archivoWikidex": "Gran_Pantano_Pt.png",
+      "juego": "Pokémon Platino",
+      "vista": "desde arriba",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 946,
+      "lugar": "Gruta Calentamiento",
+      "archivoWikidex": "Gruta_Calentamiento_EpEc.png",
+      "juego": "Pokémon Espada y Escudo",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 914,
+      "lugar": "Gruta del Lago",
+      "archivoWikidex": "Gruta_del_Lago_EpEc.jpg",
+      "juego": "Pokémon Espada y Escudo",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 488,
+      "lugar": "Gruta Desértica",
+      "archivoWikidex": "Gruta_Desertica.png",
+      "juego": "Pokémon Rubí, Zafiro y Esmeralda",
+      "vista": "desde arriba",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 640,
+      "lugar": "Gruta Helada",
+      "archivoWikidex": "Gruta_Helada_XY.png",
+      "juego": "Pokémon X e Y",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 580,
+      "lugar": "Gruta Solar",
+      "archivoWikidex": "Gruta_Solar_ROZA.png",
+      "juego": "Pokémon Rubí Omega y Zafiro Alfa",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 401,
+      "lugar": "Gruta Superación",
+      "archivoWikidex": "Gruta_superación.png",
+      "juego": "Pokémon Negro y Blanco",
+      "vista": "captura",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 926,
+      "lugar": "Grutas Sonamar",
+      "archivoWikidex": "Grutas_Sonamar_EpEc.jpg",
+      "juego": "Pokémon Espada y Escudo",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 74,
+      "lugar": "Guarida Dragón",
+      "archivoWikidex": "Introducción_Guarida_Dragón_HGSS.png",
+      "juego": "Pokémon Oro HeartGold y Plata SoulSilver",
+      "vista": "captura",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 932,
+      "lugar": "Humedal Frescor",
+      "archivoWikidex": "Humedal_Frescor_EpEc.png",
+      "juego": "Pokémon Espada y Escudo",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 578,
+      "lugar": "Isla del Sur",
+      "archivoWikidex": "Claro_Isla_del_Sur_RO.png",
+      "juego": "Pokémon Rubí Omega y Zafiro Alfa",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 24,
+      "lugar": "Isla Hierro",
+      "archivoWikidex": "Exterior_Isla_Hierro_DBPR.jpg",
+      "juego": "Pokémon Diamante Brillante y Perla Reluciente",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 404,
+      "lugar": "Isla Libertad",
+      "archivoWikidex": "Muelle_1_de_la_isla_libertad.jpg",
+      "juego": "Pokémon Negro y Blanco",
+      "vista": "captura",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 183,
+      "lugar": "Isla Lunanueva",
+      "archivoWikidex": "Isla_Lunanueva_DBPR.jpg",
+      "juego": "Pokémon Diamante Brillante y Perla Reluciente",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 907,
+      "lugar": "Isla Melosa",
+      "archivoWikidex": "Isla_Melosa_EpEc.png",
+      "juego": "Pokémon Espada y Escudo",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 812,
+      "lugar": "Isla Suprema",
+      "archivoWikidex": "Isla_Suprema_Esmeralda_(bosque).png",
+      "juego": "Pokémon Rubí, Zafiro y Esmeralda",
+      "vista": "desde arriba",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 156,
+      "lugar": "Islas Remolino",
+      "archivoWikidex": "Islas_Remolino_HGSS.png",
+      "juego": "Pokémon Oro HeartGold y Plata SoulSilver",
+      "vista": "captura",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 23,
+      "lugar": "Jardín Trofeo",
+      "archivoWikidex": "Jardín_Trofeo.png",
+      "juego": "Pokémon Platino",
+      "vista": "desde arriba",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 405,
+      "lugar": "Laboratorio P+P",
+      "archivoWikidex": "Laboratorio_P+P_(Exterior)BN2.jpg",
+      "juego": "Pokémon Negro 2 y Blanco 2",
+      "vista": "desde arriba",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 774,
+      "lugar": "Lago Coroluna",
+      "archivoWikidex": "Interior_lago_corosol.jpg",
+      "juego": "Pokémon Sol y Luna",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 773,
+      "lugar": "Lago Corosol",
+      "archivoWikidex": "Interior_lago_corosol.jpg",
+      "juego": "Pokémon Sol y Luna",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 900,
+      "lugar": "Lecho del Gigante",
+      "archivoWikidex": "Lecho_del_Gigante_EpEc.jpg",
+      "juego": "Pokémon Espada y Escudo",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 943,
+      "lugar": "Llano Entrenamiento",
+      "archivoWikidex": "Llano_Entrenamiento_EpEc.png",
+      "juego": "Pokémon Espada y Escudo",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 701,
+      "lugar": "Llanura Sinnombre",
+      "archivoWikidex": "Llanura_Sinnombre_ROZA.png",
+      "juego": "Pokémon Rubí Omega y Zafiro Alfa",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 446,
+      "lugar": "Malvalanova",
+      "archivoWikidex": "Exterior_Malvalanova.png",
+      "juego": "Pokémon Rubí, Zafiro y Esmeralda",
+      "vista": "captura",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 693,
+      "lugar": "Malvamar",
+      "archivoWikidex": "Almacén_Malvamar_ROZA.png",
+      "juego": "Pokémon Rubí Omega y Zafiro Alfa",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 937,
+      "lugar": "Mar Andana",
+      "archivoWikidex": "Mar_Andana_EpEc.png",
+      "juego": "Pokémon Espada y Escudo",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 896,
+      "lugar": "Mar Gélido",
+      "archivoWikidex": "Mar_Gélido_EpEc.jpg",
+      "juego": "Pokémon Espada y Escudo",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 950,
+      "lugar": "Mar Gimnástico",
+      "archivoWikidex": "Mar_Gimnástico_EpEc.png",
+      "juego": "Pokémon Espada y Escudo",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 911,
+      "lugar": "Mar Islejos",
+      "archivoWikidex": "Mar_Islejos_EpEc.png",
+      "juego": "Pokémon Espada y Escudo",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 908,
+      "lugar": "Mar Meloso",
+      "archivoWikidex": "Mar_Meloso_EpEc.png",
+      "juego": "Pokémon Espada y Escudo",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 898,
+      "lugar": "Mina de Galar",
+      "archivoWikidex": "Mina_de_Galar_EpEc.jpg",
+      "juego": "Pokémon Espada y Escudo",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 899,
+      "lugar": "Mina de Galar n.º 2",
+      "archivoWikidex": "Mina_de_Galar_n.º_2_EpEc.jpg",
+      "juego": "Pokémon Espada y Escudo",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 6,
+      "lugar": "Mina Pirita",
+      "archivoWikidex": "Mina_Pirita_Entrada_DP.png",
+      "juego": "Pokémon Diamante y Perla",
+      "vista": "desde arriba",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 16,
+      "lugar": "Montaña Dura",
+      "archivoWikidex": "Montaña_Dura_DBPR.jpg",
+      "juego": "Pokémon Diamante Brillante y Perla Reluciente",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 546,
+      "lugar": "Montaña Reversia",
+      "archivoWikidex": "Montaña_Reversia_B2N2_exterior.png",
+      "juego": "Pokémon Negro 2 y Blanco 2",
+      "vista": "desde arriba",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 699,
+      "lugar": "Monte Espejismo",
+      "archivoWikidex": "Monte_Espejismo_ROZA.png",
+      "juego": "Pokémon Rubí Omega y Zafiro Alfa",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 81,
+      "lugar": "Monte Mortero",
+      "archivoWikidex": "Introducción_Monte_Mortero_HGSS.png",
+      "juego": "Pokémon Oro HeartGold y Plata SoulSilver",
+      "vista": "captura",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 82,
+      "lugar": "Monte Plateado",
+      "archivoWikidex": "Cueva_Monte_Plateado_HGSS.png",
+      "juego": "Pokémon Oro HeartGold y Plata SoulSilver",
+      "vista": "captura",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 380,
+      "lugar": "Monte Tuerca",
+      "archivoWikidex": "Monte_Tuerca_NB.png",
+      "juego": "Pokémon Negro y Blanco",
+      "vista": "captura",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 219,
+      "lugar": "Mundo Distorsión",
+      "archivoWikidex": "Mundo_Distorsión.jpg",
+      "juego": "Pokémon Platino",
+      "vista": "desde arriba",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 447,
+      "lugar": "Nao Abandonada",
+      "archivoWikidex": "Nao_Abandonada.png",
+      "juego": "Pokémon Rubí, Zafiro y Esmeralda",
+      "vista": "captura",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 29,
+      "lugar": "Orilla Valor",
+      "archivoWikidex": "Orilla_Valor_DBPR.jpg",
+      "juego": "Pokémon Diamante Brillante y Perla Reluciente",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 387,
+      "lugar": "Palacio de N",
+      "archivoWikidex": "Castillo_de_N-2.png",
+      "juego": "Pokémon Negro y Blanco",
+      "vista": "captura",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 399,
+      "lugar": "Pantano Teja",
+      "archivoWikidex": "Pantano_Teja_otoño.png",
+      "juego": "Pokémon Negro y Blanco",
+      "vista": "captura",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 179,
+      "lugar": "Paraíso Floral",
+      "archivoWikidex": "Paraíso_floral_DBPR.jpg",
+      "juego": "Pokémon Diamante Brillante y Perla Reluciente",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 769,
+      "lugar": "Parque de Malíe",
+      "archivoWikidex": "Parque_de_Malie_GeneralSL.png",
+      "juego": "Pokémon Sol y Luna",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 83,
+      "lugar": "Parque Nacional",
+      "archivoWikidex": "Parque_Nacional_HGSS_Día.png",
+      "juego": "Pokémon Oro HeartGold y Plata SoulSilver",
+      "vista": "desde arriba",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 448,
+      "lugar": "Pilar Celeste",
+      "archivoWikidex": "Pilar_Celeste_ROZA.png",
+      "juego": "Pokémon Rubí Omega y Zafiro Alfa",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 1047,
+      "lugar": "Playa de Kantai",
+      "archivoWikidex": "Playa_de_Kantai.png",
+      "juego": "Pokémon Ultrasol y Ultraluna",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 884,
+      "lugar": "Playa Desafío",
+      "archivoWikidex": "Playa_Desafío_EpEc.png",
+      "juego": "Pokémon Espada y Escudo",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 893,
+      "lugar": "Prado Reverencia",
+      "archivoWikidex": "Prado_Reverencia_EpEc.png",
+      "juego": "Pokémon Espada y Escudo",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 909,
+      "lugar": "Pueblo Amura",
+      "archivoWikidex": "Estación_del_pueblo_Amura_EpEc.jpg",
+      "juego": "Pokémon Espada y Escudo",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 346,
+      "lugar": "Pueblo Arcilla",
+      "archivoWikidex": "Pueblo_Arcilla.png",
+      "juego": "Pokémon Negro y Blanco",
+      "vista": "desde arriba",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 384,
+      "lugar": "Pueblo Arenisca",
+      "archivoWikidex": "Pueblo_Arenisca_N2B2.png",
+      "juego": "Pokémon Negro 2 y Blanco 2",
+      "vista": "desde arriba",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 886,
+      "lugar": "Pueblo Auriga",
+      "archivoWikidex": "Escultura_de_Pueblo_Auriga_EpEc.png",
+      "juego": "Pokémon Espada y Escudo",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 228,
+      "lugar": "Pueblo Azalea",
+      "archivoWikidex": "Pueblo_Azalea_HGSS.png",
+      "juego": "Pokémon Oro HeartGold y Plata SoulSilver",
+      "vista": "desde arriba",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 59,
+      "lugar": "Pueblo Caelestis",
+      "archivoWikidex": "Pueblo_CAelestis_DBPR.jpg",
+      "juego": "Pokémon Diamante Brillante y Perla Reluciente",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 934,
+      "lugar": "Pueblo Crampón",
+      "archivoWikidex": "Pueblo_Crampón_EpEc.png",
+      "juego": "Pokémon Espada y Escudo",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 58,
+      "lugar": "Pueblo Hojaverde",
+      "archivoWikidex": "Pueblo_Hojaverde_DBPR.jpg",
+      "juego": "Pokémon Diamante Brillante y Perla Reluciente",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 945,
+      "lugar": "Pueblo Hoyuelo",
+      "archivoWikidex": "Pueblo_Hoyuelo_EpEc.png",
+      "juego": "Pokémon Espada y Escudo",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 939,
+      "lugar": "Pueblo Ladera",
+      "archivoWikidex": "Pueblo_Ladera_Calle_EpEc.png",
+      "juego": "Pokémon Espada y Escudo",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 740,
+      "lugar": "Pueblo Ohana",
+      "archivoWikidex": "Calles_de_Pueblo_Ohana_SL.jpg",
+      "juego": "Pokémon Sol y Luna",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 880,
+      "lugar": "Pueblo Plié",
+      "archivoWikidex": "Pueblo_Plié_EpEc.png",
+      "juego": "Pokémon Espada y Escudo",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 84,
+      "lugar": "Pueblo Primavera",
+      "archivoWikidex": "Pueblo_Primavera_HGSS.png",
+      "juego": "Pokémon Oro HeartGold y Plata SoulSilver",
+      "vista": "desde arriba",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 347,
+      "lugar": "Pueblo Terracota",
+      "archivoWikidex": "Pueblo_Terracota.jpg",
+      "juego": "Pokémon Negro y Blanco",
+      "vista": "desde arriba",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 924,
+      "lugar": "Pueblo Yarda",
+      "archivoWikidex": "Pueblo_Yarda_EpEc.jpg",
+      "juego": "Pokémon Espada y Escudo",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 407,
+      "lugar": "Puente de Fayenza",
+      "archivoWikidex": "Puente_de_Fayenza_BN.png",
+      "juego": "Pokémon Negro y Blanco",
+      "vista": "captura",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 410,
+      "lugar": "Puente Progreso",
+      "archivoWikidex": "Puente_Progreso_NB.png",
+      "juego": "Pokémon Negro y Blanco",
+      "vista": "captura",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 409,
+      "lugar": "Puente Villa",
+      "archivoWikidex": "Puente_villa_centro.png",
+      "juego": "Pokémon Negro 2 y Blanco 2",
+      "vista": "captura",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 15,
+      "lugar": "Puerta Pirita",
+      "archivoWikidex": "Salida_de_la_Puerta_Pirita.png",
+      "juego": "Pokémon Platino",
+      "vista": "captura",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 544,
+      "lugar": "Rancho Ocre",
+      "archivoWikidex": "Rancho_Ocre.png",
+      "juego": "Pokémon Negro 2 y Blanco 2",
+      "vista": "desde arriba",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 695,
+      "lugar": "Resort Batalla",
+      "archivoWikidex": "Resort_Batalla.png",
+      "juego": "Pokémon Rubí Omega y Zafiro Alfa",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 135,
+      "lugar": "Ruinas Alfa",
+      "archivoWikidex": "Introducción_Ruinas_Alfa_HGSS.png",
+      "juego": "Pokémon Oro HeartGold y Plata SoulSilver",
+      "vista": "captura",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 582,
+      "lugar": "Ruinas del Desierto",
+      "archivoWikidex": "Ruinas_del_Desierto_ROZA.png",
+      "juego": "Pokémon Rubí Omega y Zafiro Alfa",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 935,
+      "lugar": "Ruinas del Dilema",
+      "archivoWikidex": "Ruinas_del_Dilema_EpEc.jpg",
+      "juego": "Pokémon Espada y Escudo",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 912,
+      "lugar": "Ruinas Hierro",
+      "archivoWikidex": "Ruinas_Hierro_EpEc.jpg",
+      "juego": "Pokémon Espada y Escudo",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 910,
+      "lugar": "Ruinas Iceberg",
+      "archivoWikidex": "Ruinas_Iceberg_EpEc.jpg",
+      "juego": "Pokémon Espada y Escudo",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 927,
+      "lugar": "Ruinas Pico Roca",
+      "archivoWikidex": "Ruinas_Pico_Roca_EpEc.jpg",
+      "juego": "Pokémon Espada y Escudo",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 12,
+      "lugar": "Ruinas Sosiego",
+      "archivoWikidex": "Ruinas_Sosiego_DBPR.jpg",
+      "juego": "Pokémon Diamante Brillante y Perla Reluciente",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 562,
+      "lugar": "Ruinas Subterráneas",
+      "archivoWikidex": "Ruinas_Subterráneas_N2B2.jpg",
+      "juego": "Pokémon Negro y Blanco",
+      "vista": "captura",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 356,
+      "lugar": "Ruta 1",
+      "archivoWikidex": "Ruta_1_(Teselia)_en_otoño.png",
+      "juego": "Pokémon Negro y Blanco",
+      "vista": "captura",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 868,
+      "lugar": "Ruta 1",
+      "archivoWikidex": "Ruta_1_EpEc.png",
+      "juego": "Pokémon Espada y Escudo",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 877,
+      "lugar": "Ruta 10",
+      "archivoWikidex": "Ruta_10_EpEc.png",
+      "juego": "Pokémon Espada y Escudo",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 449,
+      "lugar": "Ruta 101",
+      "archivoWikidex": "Ruta_101.png",
+      "juego": "Pokémon Rubí, Zafiro y Esmeralda",
+      "vista": "desde arriba",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 450,
+      "lugar": "Ruta 102",
+      "archivoWikidex": "Ruta_102.png",
+      "juego": "Pokémon Rubí, Zafiro y Esmeralda",
+      "vista": "desde arriba",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 451,
+      "lugar": "Ruta 103",
+      "archivoWikidex": "Ruta_103.png",
+      "juego": "Pokémon Rubí, Zafiro y Esmeralda",
+      "vista": "desde arriba",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 452,
+      "lugar": "Ruta 104",
+      "archivoWikidex": "Ruta_104.png",
+      "juego": "Pokémon Rubí, Zafiro y Esmeralda",
+      "vista": "desde arriba",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 453,
+      "lugar": "Ruta 105",
+      "archivoWikidex": "Ruta_105.png",
+      "juego": "Pokémon Rubí, Zafiro y Esmeralda",
+      "vista": "desde arriba",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 454,
+      "lugar": "Ruta 106",
+      "archivoWikidex": "Ruta_106.png",
+      "juego": "Pokémon Rubí, Zafiro y Esmeralda",
+      "vista": "desde arriba",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 455,
+      "lugar": "Ruta 107",
+      "archivoWikidex": "Ruta_107_Hoenn_ROZA.png",
+      "juego": "Pokémon Rubí Omega y Zafiro Alfa",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 456,
+      "lugar": "Ruta 108",
+      "archivoWikidex": "Ruta_108.png",
+      "juego": "Pokémon Rubí, Zafiro y Esmeralda",
+      "vista": "desde arriba",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 457,
+      "lugar": "Ruta 109",
+      "archivoWikidex": "Ruta_109.png",
+      "juego": "Pokémon Rubí, Zafiro y Esmeralda",
+      "vista": "desde arriba",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 458,
+      "lugar": "Ruta 110",
+      "archivoWikidex": "Ruta_110.png",
+      "juego": "Pokémon Rubí, Zafiro y Esmeralda",
+      "vista": "desde arriba",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 459,
+      "lugar": "Ruta 111",
+      "archivoWikidex": "Ruta_111.png",
+      "juego": "Pokémon Rubí, Zafiro y Esmeralda",
+      "vista": "desde arriba",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 465,
+      "lugar": "Ruta 117",
+      "archivoWikidex": "Ruta_117.png",
+      "juego": "Pokémon Rubí, Zafiro y Esmeralda",
+      "vista": "desde arriba",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 470,
+      "lugar": "Ruta 122",
+      "archivoWikidex": "Ruta_122_ROZA.png",
+      "juego": "Pokémon Rubí Omega y Zafiro Alfa",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 472,
+      "lugar": "Ruta 124",
+      "archivoWikidex": "Ruta_124_-_Submarina.png",
+      "juego": "Pokémon Rubí, Zafiro y Esmeralda",
+      "vista": "desde arriba",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 474,
+      "lugar": "Ruta 126",
+      "archivoWikidex": "Ruta_126_-_Submarina.png",
+      "juego": "Pokémon Rubí, Zafiro y Esmeralda",
+      "vista": "desde arriba",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 475,
+      "lugar": "Ruta 127",
+      "archivoWikidex": "Ruta_127_-_Submarina.png",
+      "juego": "Pokémon Rubí, Zafiro y Esmeralda",
+      "vista": "desde arriba",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 476,
+      "lugar": "Ruta 128",
+      "archivoWikidex": "Ruta_128_ROZA.png",
+      "juego": "Pokémon Rubí Omega y Zafiro Alfa",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 477,
+      "lugar": "Ruta 129",
+      "archivoWikidex": "Ruta_129_-_Submarina.png",
+      "juego": "Pokémon Rubí, Zafiro y Esmeralda",
+      "vista": "desde arriba",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 482,
+      "lugar": "Ruta 134",
+      "archivoWikidex": "Ruta_134_-_Cueva_submarina.png",
+      "juego": "Pokémon Rubí, Zafiro y Esmeralda",
+      "vista": "desde arriba",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 869,
+      "lugar": "Ruta 2",
+      "archivoWikidex": "Ruta_2_EpEc.jpg",
+      "juego": "Pokémon Espada y Escudo",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 31,
+      "lugar": "Ruta 201",
+      "archivoWikidex": "Ruta_201_DBPR.jpg",
+      "juego": "Pokémon Diamante Brillante y Perla Reluciente",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 32,
+      "lugar": "Ruta 202",
+      "archivoWikidex": "Ruta_202_DBPR.jpg",
+      "juego": "Pokémon Diamante Brillante y Perla Reluciente",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 33,
+      "lugar": "Ruta 203",
+      "archivoWikidex": "Ruta_203_DBPR.jpg",
+      "juego": "Pokémon Diamante Brillante y Perla Reluciente",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 34,
+      "lugar": "Ruta 204",
+      "archivoWikidex": "Ruta_204_DBPR.jpg",
+      "juego": "Pokémon Diamante Brillante y Perla Reluciente",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 35,
+      "lugar": "Ruta 205",
+      "archivoWikidex": "Ruta_205_DBPR.jpg",
+      "juego": "Pokémon Diamante Brillante y Perla Reluciente",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 36,
+      "lugar": "Ruta 206",
+      "archivoWikidex": "Ruta_206_DBPR.jpg",
+      "juego": "Pokémon Diamante Brillante y Perla Reluciente",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 37,
+      "lugar": "Ruta 207",
+      "archivoWikidex": "Ruta_207_DBPR.jpg",
+      "juego": "Pokémon Diamante Brillante y Perla Reluciente",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 38,
+      "lugar": "Ruta 208",
+      "archivoWikidex": "Ruta_208_DBPR.jpg",
+      "juego": "Pokémon Diamante Brillante y Perla Reluciente",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 39,
+      "lugar": "Ruta 209",
+      "archivoWikidex": "Ruta_209_DBPR.jpg",
+      "juego": "Pokémon Diamante Brillante y Perla Reluciente",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 540,
+      "lugar": "Ruta 21",
+      "archivoWikidex": "Ruta_21_Teselia.png",
+      "juego": "Pokémon Negro 2 y Blanco 2",
+      "vista": "desde arriba",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 41,
+      "lugar": "Ruta 210",
+      "archivoWikidex": "Ruta_210_DBPR.jpg",
+      "juego": "Pokémon Diamante Brillante y Perla Reluciente",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 42,
+      "lugar": "Ruta 211",
+      "archivoWikidex": "Ruta_211_DBPR.jpg",
+      "juego": "Pokémon Diamante Brillante y Perla Reluciente",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 43,
+      "lugar": "Ruta 212",
+      "archivoWikidex": "Ruta_212_DBPR.jpg",
+      "juego": "Pokémon Diamante Brillante y Perla Reluciente",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 44,
+      "lugar": "Ruta 213",
+      "archivoWikidex": "Ruta_213_DBPR.jpg",
+      "juego": "Pokémon Diamante Brillante y Perla Reluciente",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 45,
+      "lugar": "Ruta 214",
+      "archivoWikidex": "Ruta_214_DBPR.jpg",
+      "juego": "Pokémon Diamante Brillante y Perla Reluciente",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 46,
+      "lugar": "Ruta 215",
+      "archivoWikidex": "Ruta_215_DBPR.jpg",
+      "juego": "Pokémon Diamante Brillante y Perla Reluciente",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 47,
+      "lugar": "Ruta 216",
+      "archivoWikidex": "Ruta_216_DBPR.jpg",
+      "juego": "Pokémon Diamante Brillante y Perla Reluciente",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 49,
+      "lugar": "Ruta 218",
+      "archivoWikidex": "Ruta_218_DBPR.jpg",
+      "juego": "Pokémon Diamante Brillante y Perla Reluciente",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 50,
+      "lugar": "Ruta 219",
+      "archivoWikidex": "Ruta_219_DBPR.jpg",
+      "juego": "Pokémon Diamante Brillante y Perla Reluciente",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 61,
+      "lugar": "Ruta 220",
+      "archivoWikidex": "Ruta_220_DBPR.jpg",
+      "juego": "Pokémon Diamante Brillante y Perla Reluciente",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 51,
+      "lugar": "Ruta 221",
+      "archivoWikidex": "Ruta_221_DBPR.jpg",
+      "juego": "Pokémon Diamante Brillante y Perla Reluciente",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 52,
+      "lugar": "Ruta 222",
+      "archivoWikidex": "Ruta_222_DBPR.jpg",
+      "juego": "Pokémon Diamante Brillante y Perla Reluciente",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 54,
+      "lugar": "Ruta 225",
+      "archivoWikidex": "Ruta_225_DBPR.jpg",
+      "juego": "Pokémon Diamante Brillante y Perla Reluciente",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 63,
+      "lugar": "Ruta 226",
+      "archivoWikidex": "Ruta_226_DBPR.jpg",
+      "juego": "Pokémon Diamante Brillante y Perla Reluciente",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 55,
+      "lugar": "Ruta 227",
+      "archivoWikidex": "Ruta_227_DBPR.jpg",
+      "juego": "Pokémon Diamante Brillante y Perla Reluciente",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 56,
+      "lugar": "Ruta 228",
+      "archivoWikidex": "Ruta_228_DBPR.jpg",
+      "juego": "Pokémon Diamante Brillante y Perla Reluciente",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 542,
+      "lugar": "Ruta 23",
+      "archivoWikidex": "Ruta_23_(Teselia).jpg",
+      "juego": "Pokémon Negro 2 y Blanco 2",
+      "vista": "desde arriba",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 108,
+      "lugar": "Ruta 29",
+      "archivoWikidex": "Ruta_29_OPC.png",
+      "juego": "Pokémon Oro, Plata y Cristal",
+      "vista": "desde arriba",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 870,
+      "lugar": "Ruta 3",
+      "archivoWikidex": "Ruta_3_EpEc.png",
+      "juego": "Pokémon Espada y Escudo",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 110,
+      "lugar": "Ruta 30",
+      "archivoWikidex": "Antídoto_ruta_30_HGSS.png",
+      "juego": "Pokémon Oro HeartGold y Plata SoulSilver",
+      "vista": "captura",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 111,
+      "lugar": "Ruta 31",
+      "archivoWikidex": "Bonguri_negro_ruta_31_HGSS.png",
+      "juego": "Pokémon Oro HeartGold y Plata SoulSilver",
+      "vista": "captura",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 112,
+      "lugar": "Ruta 32",
+      "archivoWikidex": "HGSS_Ruta_32.png",
+      "juego": "Pokémon Oro, Plata y Cristal",
+      "vista": "desde arriba",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 113,
+      "lugar": "Ruta 33",
+      "archivoWikidex": "Ruta_33.png",
+      "juego": "Pokémon Oro, Plata y Cristal",
+      "vista": "desde arriba",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 114,
+      "lugar": "Ruta 34",
+      "archivoWikidex": "Ruta_34_OPC.png",
+      "juego": "Pokémon Oro, Plata y Cristal",
+      "vista": "desde arriba",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 115,
+      "lugar": "Ruta 35",
+      "archivoWikidex": "Ruta_35_HGSS.png",
+      "juego": "Pokémon Oro HeartGold y Plata SoulSilver",
+      "vista": "desde arriba",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 116,
+      "lugar": "Ruta 36",
+      "archivoWikidex": "Ruta_36.png",
+      "juego": "Pokémon Oro, Plata y Cristal",
+      "vista": "desde arriba",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 117,
+      "lugar": "Ruta 37",
+      "archivoWikidex": "HGSS_Ruta_37.png",
+      "juego": "Pokémon Oro HeartGold y Plata SoulSilver",
+      "vista": "desde arriba",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 118,
+      "lugar": "Ruta 38",
+      "archivoWikidex": "Ruta_38.png",
+      "juego": "Pokémon Oro, Plata y Cristal",
+      "vista": "desde arriba",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 119,
+      "lugar": "Ruta 39",
+      "archivoWikidex": "HGSS_Ruta_39.png",
+      "juego": "Pokémon Oro HeartGold y Plata SoulSilver",
+      "vista": "desde arriba",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 359,
+      "lugar": "Ruta 4",
+      "archivoWikidex": "Ruta_4_B2.png",
+      "juego": "Pokémon Negro 2 y Blanco 2",
+      "vista": "desde arriba",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 871,
+      "lugar": "Ruta 4",
+      "archivoWikidex": "Ruta_4_EpEc.png",
+      "juego": "Pokémon Espada y Escudo",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 121,
+      "lugar": "Ruta 40",
+      "archivoWikidex": "Ruta_40_HGSS.png",
+      "juego": "Pokémon Oro HeartGold y Plata SoulSilver",
+      "vista": "desde arriba",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 122,
+      "lugar": "Ruta 41",
+      "archivoWikidex": "Ruta_41_HGSS.png",
+      "juego": "Pokémon Oro HeartGold y Plata SoulSilver",
+      "vista": "desde arriba",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 123,
+      "lugar": "Ruta 42",
+      "archivoWikidex": "Ruta_42_HGSS.png",
+      "juego": "Pokémon Oro HeartGold y Plata SoulSilver",
+      "vista": "desde arriba",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 124,
+      "lugar": "Ruta 43",
+      "archivoWikidex": "Ruta_43_HGSS.png",
+      "juego": "Pokémon Oro HeartGold y Plata SoulSilver",
+      "vista": "desde arriba",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 125,
+      "lugar": "Ruta 44",
+      "archivoWikidex": "Ruta_44_HGSS.png",
+      "juego": "Pokémon Oro HeartGold y Plata SoulSilver",
+      "vista": "desde arriba",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 126,
+      "lugar": "Ruta 45",
+      "archivoWikidex": "Ruta_45.png",
+      "juego": "Pokémon Oro, Plata y Cristal",
+      "vista": "desde arriba",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 127,
+      "lugar": "Ruta 46",
+      "archivoWikidex": "Ruta_46.png",
+      "juego": "Pokémon Oro, Plata y Cristal",
+      "vista": "desde arriba",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 128,
+      "lugar": "Ruta 47",
+      "archivoWikidex": "Ruta_47_HGSS.png",
+      "juego": "Pokémon Oro HeartGold y Plata SoulSilver",
+      "vista": "desde arriba",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 129,
+      "lugar": "Ruta 48",
+      "archivoWikidex": "Ruta_48_HGSS.png",
+      "juego": "Pokémon Oro HeartGold y Plata SoulSilver",
+      "vista": "desde arriba",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 872,
+      "lugar": "Ruta 5",
+      "archivoWikidex": "Ruta_5_EpEc.png",
+      "juego": "Pokémon Espada y Escudo",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 873,
+      "lugar": "Ruta 6",
+      "archivoWikidex": "Ruta_6_Galar_EpEc.png",
+      "juego": "Pokémon Espada y Escudo",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 874,
+      "lugar": "Ruta 7",
+      "archivoWikidex": "Ruta_7_EpEc.png",
+      "juego": "Pokémon Espada y Escudo",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 609,
+      "lugar": "Ruta 7",
+      "archivoWikidex": "Ruta_7_artistas.png",
+      "juego": "Pokémon X e Y",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 875,
+      "lugar": "Ruta 8",
+      "archivoWikidex": "Ruta_8_EpEc.png",
+      "juego": "Pokémon Espada y Escudo",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 876,
+      "lugar": "Ruta 9",
+      "archivoWikidex": "Ruta_9_EpEc.png",
+      "juego": "Pokémon Espada y Escudo",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 885,
+      "lugar": "Ruta Desafío",
+      "archivoWikidex": "Ruta_Desafío_EpEc.png",
+      "juego": "Pokémon Espada y Escudo",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 77,
+      "lugar": "Ruta Helada",
+      "archivoWikidex": "Introducción_Ruta_Helada_HGSS.png",
+      "juego": "Pokémon Oro HeartGold y Plata SoulSilver",
+      "vista": "captura",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 680,
+      "lugar": "Safari Amistad",
+      "archivoWikidex": "Safari_Amistad_XY.png",
+      "juego": "Pokémon X e Y",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 412,
+      "lugar": "Santuario Abundancia",
+      "archivoWikidex": "Santuario_Abundancia.png",
+      "juego": "Pokémon Negro y Blanco",
+      "vista": "captura",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 923,
+      "lugar": "Senda Blancacima",
+      "archivoWikidex": "Senda_Blancacima_EpEc.jpg",
+      "juego": "Pokémon Espada y Escudo",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 14,
+      "lugar": "Senda Desolada",
+      "archivoWikidex": "Entrada_a_la_Senda_Desolada.png",
+      "juego": "Pokémon Platino",
+      "vista": "captura",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 440,
+      "lugar": "Senda Ígnea",
+      "archivoWikidex": "Senda_Ígnea.png",
+      "juego": "Pokémon Rubí, Zafiro y Esmeralda",
+      "vista": "desde arriba",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 374,
+      "lugar": "Solar de los Sueños",
+      "archivoWikidex": "Solar_de_los_Sueños_N2B2.png",
+      "juego": "Pokémon Negro 2 y Blanco 2",
+      "vista": "desde arriba",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 901,
+      "lugar": "Suela del Gigante",
+      "archivoWikidex": "Suela_del_Gigante_EpEc.jpg",
+      "juego": "Pokémon Espada y Escudo",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 917,
+      "lugar": "Supernido Dinamax",
+      "archivoWikidex": "Supernido_Dinamax_EpEc.jpg",
+      "juego": "Pokémon Espada y Escudo",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 888,
+      "lugar": "Templo Corona",
+      "archivoWikidex": "Templo_Corona_EpEc.jpg",
+      "juego": "Pokémon Espada y Escudo",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 19,
+      "lugar": "Templo Puntaneva",
+      "archivoWikidex": "Templo_Puntaneva_DBPR.jpg",
+      "juego": "Pokémon Diamante Brillante y Perla Reluciente",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 881,
+      "lugar": "Torre Batalla",
+      "archivoWikidex": "Torre_Batalla_EpEc.jpg",
+      "juego": "Pokémon Espada y Escudo",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 139,
+      "lugar": "Torre Campana",
+      "archivoWikidex": "Introducción_Torre_Campana_HGSS.png",
+      "juego": "Pokémon Oro HeartGold y Plata SoulSilver",
+      "vista": "captura",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 398,
+      "lugar": "Torre de los Cielos",
+      "archivoWikidex": "Torre_de_los_Cielos_NB.png",
+      "juego": "Pokémon Negro y Blanco",
+      "vista": "desde arriba",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 381,
+      "lugar": "Torre Duodraco",
+      "archivoWikidex": "Torre_Duodraco_BN.png",
+      "juego": "Pokémon Negro y Blanco",
+      "vista": "captura",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 487,
+      "lugar": "Torre Espejismo",
+      "archivoWikidex": "Fósiles_en_Torre_Espejismo_E.png",
+      "juego": "Pokémon Rubí, Zafiro y Esmeralda",
+      "vista": "captura",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 625,
+      "lugar": "Torre Maestra",
+      "archivoWikidex": "Interior_de_la_torre_maestra.jpg",
+      "juego": "Pokémon X e Y",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 66,
+      "lugar": "Torre Quemada",
+      "archivoWikidex": "Torre_Quemada_HGSS.png",
+      "juego": "Pokémon Oro HeartGold y Plata SoulSilver",
+      "vista": "desde arriba",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 583,
+      "lugar": "Tumba Antigua",
+      "archivoWikidex": "Tumba_Antigua_ROZA.png",
+      "juego": "Pokémon Rubí Omega y Zafiro Alfa",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 944,
+      "lugar": "Túnel Ascensión",
+      "archivoWikidex": "Túnel_Ascensión_EpEc.jpg",
+      "juego": "Pokémon Espada y Escudo",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 180,
+      "lugar": "Túnel del Ruinamaníaco",
+      "archivoWikidex": "Túnel_del_Ruinamaníaco_DBPR.jpg",
+      "juego": "Pokémon Diamante Brillante y Perla Reluciente",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 551,
+      "lugar": "Túnel Yakón",
+      "archivoWikidex": "Túnel_Yakón.png",
+      "juego": "Pokémon Negro y Blanco",
+      "vista": "captura",
+      "pixelArt": true
+    },
+    {
+      "idPokeapi": 7,
+      "lugar": "Valle Eólico",
+      "archivoWikidex": "Valle_Eólico_DBPR.jpg",
+      "juego": "Pokémon Diamante Brillante y Perla Reluciente",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 25,
+      "lugar": "Vieja Mansión",
+      "archivoWikidex": "Vieja_Mansión_DBPR.jpg",
+      "juego": "Pokémon Diamante Brillante y Perla Reluciente",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 922,
+      "lugar": "Viejo Cementerio",
+      "archivoWikidex": "Viejo_Cementerio_EpEc.jpg",
+      "juego": "Pokémon Espada y Escudo",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 895,
+      "lugar": "Villa Helada",
+      "archivoWikidex": "Villa_Helada_EpEc.png",
+      "juego": "Pokémon Espada y Escudo",
+      "vista": "captura",
+      "anchoMaximo": 1200
+    },
+    {
+      "idPokeapi": 814,
+      "lugar": "Zona Safari",
+      "archivoWikidex": "Zona_Safari_Bosque_HGSS.png",
+      "juego": "Pokémon Oro HeartGold y Plata SoulSilver",
+      "vista": "desde arriba",
+      "pixelArt": true
     }
   ],
   "pokemon": [
