@@ -24,6 +24,8 @@ import BotonGrito from "@/components/pokemon/BotonGrito";
 import IlustracionFicha from "@/components/pokemon/IlustracionFicha";
 import EnlaceExterno from "@/components/ui/EnlaceExterno";
 import { enlaceDePokemon } from "@/lib/enlaces-wikidex";
+import CapturasDelJuego from "@/components/pokemon/CapturasDelJuego";
+import { capturasDePokemon } from "@/lib/imagenes";
 
 const PRIMERO = 1;
 const ULTIMO = 1025;
@@ -69,6 +71,7 @@ async function ContenidoFicha({ params }: Pick<PageProps<"/pokemon/[id]">, "para
 
   const nombre = nombreVisible(pokemon);
   const grito = gritoUrl(pokemon.idPokedex);
+  const capturas = capturasDePokemon(pokemon.idPokedex);
   return (
     <article className="flex flex-col gap-6">
       <Vecinos id={id} />
@@ -106,6 +109,12 @@ async function ContenidoFicha({ params }: Pick<PageProps<"/pokemon/[id]">, "para
           <DondeSeObtiene pokemon={pokemon} regiones={regiones} />
         </Seccion>
       </div>
+
+      {capturas.length > 0 && (
+        <Seccion id="en-el-juego" titulo="Cómo se consigue en el juego">
+          <CapturasDelJuego capturas={capturas} />
+        </Seccion>
+      )}
 
       <Seccion id="evoluciones" titulo="Cadena evolutiva">
         <CadenaEvolutiva cadena={cadena ?? etapaSola(pokemon)} idActual={pokemon.idPokedex} />
