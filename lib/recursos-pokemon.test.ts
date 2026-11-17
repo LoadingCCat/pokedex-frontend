@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { gritoUrl, ilustracionShinyUrl, spriteAnimadoUrl } from "./recursos-pokemon";
+import { gritoUrl, ilustracionShinyUrl, spriteAnimadoUrl, spriteClasicoUrl } from "./recursos-pokemon";
 
 describe("Recursos de nostalgia", () => {
   it("sprite animado solo del #1 al #649", () => {
@@ -9,6 +9,13 @@ describe("Recursos de nostalgia", () => {
     expect(spriteAnimadoUrl(649)).not.toBeNull();
     expect(spriteAnimadoUrl(650)).toBeNull();
     expect(spriteAnimadoUrl(0)).toBeNull();
+  });
+
+  it("sprite clásico normal y shiny del #1 al #1025", () => {
+    expect(spriteClasicoUrl(382)).toBe("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/382.png");
+    expect(spriteClasicoUrl(382, true)).toBe("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/382.png");
+    expect(spriteClasicoUrl(1025)).not.toBeNull();
+    expect(spriteClasicoUrl(1026)).toBeNull();
   });
 
   it("shiny y grito del #1 al #1025", () => {

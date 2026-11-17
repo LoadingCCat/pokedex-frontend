@@ -20,6 +20,15 @@ export function spriteAnimadoUrl(id: number): string | null {
     : null;
 }
 
+/**
+ * Sprite clásico pixelado de 96 × 96 (FE.32), normal o shiny. Los 1025 tienen las dos versiones en
+ * el repo de la PokeAPI (comprobado el 2026-11-17 con una petición HEAD por archivo).
+ */
+export function spriteClasicoUrl(id: number, shiny = false): string | null {
+  if (!valido(id, ULTIMO_POKEMON)) return null;
+  return shiny ? `${SPRITES}/shiny/${id}.png` : `${SPRITES}/${id}.png`;
+}
+
 /** Ilustración oficial shiny (#001–#1025) o null. */
 export function ilustracionShinyUrl(id: number): string | null {
   return valido(id, ULTIMO_POKEMON) ? `${SPRITES}/other/official-artwork/shiny/${id}.png` : null;

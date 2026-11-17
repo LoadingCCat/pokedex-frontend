@@ -19,7 +19,7 @@ import {
 } from "@/lib/api";
 import { formatoAltura, formatoPeso, nombreVisible, numeroPokedex } from "@/lib/formato";
 import { leerId } from "@/lib/parametros-url";
-import { gritoUrl, ilustracionShinyUrl } from "@/lib/recursos-pokemon";
+import { gritoUrl, ilustracionShinyUrl, spriteClasicoUrl } from "@/lib/recursos-pokemon";
 import BotonGrito from "@/components/pokemon/BotonGrito";
 import IlustracionFicha from "@/components/pokemon/IlustracionFicha";
 import EnlaceExterno from "@/components/ui/EnlaceExterno";
@@ -78,9 +78,16 @@ async function ContenidoFicha({ params }: Pick<PageProps<"/pokemon/[id]">, "para
     <article className="flex flex-col gap-6">
       <Vecinos id={id} />
 
-      <Tarjeta className="grid gap-6 p-4 sm:p-6 md:grid-cols-[minmax(0,18rem)_1fr]">
-        <div className="mx-auto flex w-full max-w-72 flex-col gap-3">
-          <IlustracionFicha normal={pokemon.imagenUrl} shiny={ilustracionShinyUrl(pokemon.idPokedex)} nombre={nombre}>
+      {/* En escritorio, la columna de la ilustración se ensancha para el sprite clásico al lado (FE.32) */}
+      <Tarjeta className="grid gap-6 p-4 sm:p-6 md:grid-cols-[minmax(0,18rem)_1fr] lg:grid-cols-[auto_1fr]">
+        <div className="mx-auto flex w-full max-w-72 flex-col gap-3 lg:max-w-none">
+          <IlustracionFicha
+            normal={pokemon.imagenUrl}
+            shiny={ilustracionShinyUrl(pokemon.idPokedex)}
+            nombre={nombre}
+            sprite={spriteClasicoUrl(pokemon.idPokedex)}
+            spriteShiny={spriteClasicoUrl(pokemon.idPokedex, true)}
+          >
             {grito && <BotonGrito src={grito} nombre={nombre} />}
           </IlustracionFicha>
         </div>
