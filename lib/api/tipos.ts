@@ -43,6 +43,8 @@ export type Movimiento = {
   idMovimiento: number;
   nombre: string;
   nombreEs: string | null;
+  /** Tipo del movimiento en inglés ("electric"); null si se creó a mano o aún no se reimportó */
+  tipo: string | null;
   categoria: string;
   potencia: number | null;
   esCompetitivo: boolean;
