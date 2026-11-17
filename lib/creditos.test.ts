@@ -14,7 +14,7 @@ describe("créditos de mapas y capturas", () => {
   it("las capturas del juego van al final, enlazadas a su ficha", () => {
     const ultimo = agruparCreditos(imagenes, rutas).at(-1)!;
     expect(ultimo.titulo).toBe("Capturas de Pokémon");
-    expect(ultimo.filas).toHaveLength(15);
+    expect(ultimo.filas).toHaveLength(imagenes.pokemon.length);
     expect(ultimo.filas.find((f) => f.href === "/pokemon/151")?.muestra).toBe("Mew: Encuentro con Mew en la Isla Suprema");
   });
 

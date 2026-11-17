@@ -3,14 +3,15 @@ import type { CapturaJuego } from "@/lib/imagenes";
 
 /**
  * "Cómo se consigue en el juego" (Fase 5): hasta 3 capturas, dos por fila en escritorio. El pixel
- * art (GB, GBA, DS) se muestra a 2× exacto y sin suavizar; las capturas en HD, a 512 px de ancho.
+ * art (GB, GBA, DS) se muestra a 2× exacto y sin suavizar; las capturas en HD, a 512 px de ancho, y las de 3DS (400 px), a su tamaño.
  * Es contenido, no un efecto: sin animación ni zoom (identidad, "Toques de nostalgia").
  */
 export default function CapturasDelJuego({ capturas }: { capturas: CapturaJuego[] }) {
   return (
     <ul className="grid gap-4 lg:grid-cols-2">
       {capturas.map((c) => {
-        const ancho = c.pixelArt ? c.ancho * 2 : 512;
+        // Las de 3DS (400 px) se quedan a su tamaño; las HD se muestran a 512 px
+        const ancho = c.pixelArt ? c.ancho * 2 : Math.min(c.ancho, 512);
         return (
           <li key={c.archivo}>
             <figure className="flex flex-col gap-2">

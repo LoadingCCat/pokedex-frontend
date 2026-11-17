@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-17T04:18:01.645Z",
+  "generado": "2026-11-17T06:18:04.787Z",
   "regiones": {
     "Kanto": {
       "archivo": "/imagenes/regiones/kanto.webp",
@@ -657,6 +657,1108 @@
         "fuente": "WikiDex",
         "archivoOriginal": "Mew_captura_Isla_Suprema.png",
         "origen": "https://www.wikidex.net/wiki/Archivo:Mew_captura_Isla_Suprema.png",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      }
+    ],
+    "243": [
+      {
+        "archivo": "/imagenes/pokemon/243-1.webp",
+        "ancho": 1024,
+        "alto": 576,
+        "pixelArt": false,
+        "pokemon": "Raikou",
+        "pie": "La Sala de Johto del Parque Hansa",
+        "alt": "La Sala de Johto del Parque Hansa",
+        "juego": "Pokémon Diamante Brillante y Perla Reluciente",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Sala_de_Johto_DBPR.jpg",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Sala_de_Johto_DBPR.jpg",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      },
+      {
+        "archivo": "/imagenes/pokemon/243-2.webp",
+        "ancho": 1024,
+        "alto": 576,
+        "pixelArt": false,
+        "pokemon": "Raikou",
+        "pie": "Raikou salvaje en Paldea",
+        "alt": "Raikou salvaje en Paldea",
+        "juego": "Pokémon Escarlata y Púrpura",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Raikou_salvaje_EP.jpg",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Raikou_salvaje_EP.jpg",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      }
+    ],
+    "244": [
+      {
+        "archivo": "/imagenes/pokemon/244-1.webp",
+        "ancho": 1024,
+        "alto": 576,
+        "pixelArt": false,
+        "pokemon": "Entei",
+        "pie": "La Sala de Johto del Parque Hansa",
+        "alt": "La Sala de Johto del Parque Hansa",
+        "juego": "Pokémon Diamante Brillante y Perla Reluciente",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Sala_de_Johto_DBPR.jpg",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Sala_de_Johto_DBPR.jpg",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      },
+      {
+        "archivo": "/imagenes/pokemon/244-2.webp",
+        "ancho": 1024,
+        "alto": 576,
+        "pixelArt": false,
+        "pokemon": "Entei",
+        "pie": "Entei salvaje en Paldea",
+        "alt": "Entei salvaje en Paldea",
+        "juego": "Pokémon Escarlata y Púrpura",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Entei_salvaje_EP.jpg",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Entei_salvaje_EP.jpg",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      }
+    ],
+    "245": [
+      {
+        "archivo": "/imagenes/pokemon/245-1.webp",
+        "ancho": 1024,
+        "alto": 576,
+        "pixelArt": false,
+        "pokemon": "Suicune",
+        "pie": "La Sala de Johto del Parque Hansa",
+        "alt": "La Sala de Johto del Parque Hansa",
+        "juego": "Pokémon Diamante Brillante y Perla Reluciente",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Sala_de_Johto_DBPR.jpg",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Sala_de_Johto_DBPR.jpg",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      },
+      {
+        "archivo": "/imagenes/pokemon/245-2.webp",
+        "ancho": 1024,
+        "alto": 576,
+        "pixelArt": false,
+        "pokemon": "Suicune",
+        "pie": "Suicune salvaje en Paldea",
+        "alt": "Suicune salvaje en Paldea",
+        "juego": "Pokémon Escarlata y Púrpura",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Suicune_salvaje_EP.jpg",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Suicune_salvaje_EP.jpg",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      }
+    ],
+    "249": [
+      {
+        "archivo": "/imagenes/pokemon/249-1.webp",
+        "ancho": 160,
+        "alto": 144,
+        "pixelArt": true,
+        "pokemon": "Lugia",
+        "pie": "¡Un Lugia salvaje!",
+        "alt": "¡Un Lugia salvaje!",
+        "juego": "Pokémon Oro, Plata y Cristal",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Lugia_Salvaje.png",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Lugia_Salvaje.png",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      },
+      {
+        "archivo": "/imagenes/pokemon/249-2.webp",
+        "ancho": 1024,
+        "alto": 576,
+        "pixelArt": false,
+        "pokemon": "Lugia",
+        "pie": "Lugia salvaje en Paldea",
+        "alt": "Lugia salvaje en Paldea",
+        "juego": "Pokémon Escarlata y Púrpura",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Lugia_salvaje_EP.jpg",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Lugia_salvaje_EP.jpg",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      }
+    ],
+    "250": [
+      {
+        "archivo": "/imagenes/pokemon/250-1.webp",
+        "ancho": 256,
+        "alto": 192,
+        "pixelArt": true,
+        "pokemon": "Ho-Oh",
+        "pie": "Ho-Oh en la cima de la Torre Campana",
+        "alt": "Ho-Oh en la cima de la Torre Campana",
+        "juego": "Pokémon Oro HeartGold y Plata SoulSilver",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Ho-Oh_en_la_cima_de_la_Torre_Campana_HGSS.png",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Ho-Oh_en_la_cima_de_la_Torre_Campana_HGSS.png",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      },
+      {
+        "archivo": "/imagenes/pokemon/250-2.webp",
+        "ancho": 1024,
+        "alto": 576,
+        "pixelArt": false,
+        "pokemon": "Ho-Oh",
+        "pie": "La Sala del Arcoíris del Parque Hansa",
+        "alt": "La Sala del Arcoíris del Parque Hansa",
+        "juego": "Pokémon Diamante Brillante y Perla Reluciente",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Sala_del_Arcoíris_DBPR.jpg",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Sala_del_Arco%C3%ADris_DBPR.jpg",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      },
+      {
+        "archivo": "/imagenes/pokemon/250-3.webp",
+        "ancho": 1024,
+        "alto": 576,
+        "pixelArt": false,
+        "pokemon": "Ho-Oh",
+        "pie": "Ho-Oh salvaje en Paldea",
+        "alt": "Ho-Oh salvaje en Paldea",
+        "juego": "Pokémon Escarlata y Púrpura",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Ho-Oh_salvaje_EP.jpg",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Ho-Oh_salvaje_EP.jpg",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      }
+    ],
+    "377": [
+      {
+        "archivo": "/imagenes/pokemon/377-1.webp",
+        "ancho": 1024,
+        "alto": 576,
+        "pixelArt": false,
+        "pokemon": "Regirock",
+        "pie": "La Sala del Inicio, con las estatuas de Regirock, Regice y Registeel",
+        "alt": "La Sala del Inicio, con las estatuas de Regirock, Regice y Registeel",
+        "juego": "Pokémon Diamante Brillante y Perla Reluciente",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Sala_del_Inicio_DBPR.jpg",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Sala_del_Inicio_DBPR.jpg",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      }
+    ],
+    "378": [
+      {
+        "archivo": "/imagenes/pokemon/378-1.webp",
+        "ancho": 1024,
+        "alto": 576,
+        "pixelArt": false,
+        "pokemon": "Regice",
+        "pie": "La Sala del Inicio, con las estatuas de Regirock, Regice y Registeel",
+        "alt": "La Sala del Inicio, con las estatuas de Regirock, Regice y Registeel",
+        "juego": "Pokémon Diamante Brillante y Perla Reluciente",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Sala_del_Inicio_DBPR.jpg",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Sala_del_Inicio_DBPR.jpg",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      }
+    ],
+    "379": [
+      {
+        "archivo": "/imagenes/pokemon/379-1.webp",
+        "ancho": 1024,
+        "alto": 576,
+        "pixelArt": false,
+        "pokemon": "Registeel",
+        "pie": "La Sala del Inicio, con las estatuas de Regirock, Regice y Registeel",
+        "alt": "La Sala del Inicio, con las estatuas de Regirock, Regice y Registeel",
+        "juego": "Pokémon Diamante Brillante y Perla Reluciente",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Sala_del_Inicio_DBPR.jpg",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Sala_del_Inicio_DBPR.jpg",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      }
+    ],
+    "380": [
+      {
+        "archivo": "/imagenes/pokemon/380-1.webp",
+        "ancho": 240,
+        "alto": 160,
+        "pixelArt": true,
+        "pokemon": "Latias",
+        "pie": "Latias en la Isla del Sur",
+        "alt": "Latias en la Isla del Sur",
+        "juego": "Pokémon Rubí, Zafiro y Esmeralda",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Latias_en_la_Isla_del_Sur.png",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Latias_en_la_Isla_del_Sur.png",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      },
+      {
+        "archivo": "/imagenes/pokemon/380-2.webp",
+        "ancho": 400,
+        "alto": 240,
+        "pixelArt": false,
+        "pokemon": "Latias",
+        "pie": "Latias en el claro de la Isla del Sur",
+        "alt": "Latias en el claro de la Isla del Sur",
+        "juego": "Pokémon Rubí Omega y Zafiro Alfa",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Claro_Isla_del_Sur_RO.png",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Claro_Isla_del_Sur_RO.png",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      },
+      {
+        "archivo": "/imagenes/pokemon/380-3.webp",
+        "ancho": 1024,
+        "alto": 576,
+        "pixelArt": false,
+        "pokemon": "Latias",
+        "pie": "Latias salvaje en Paldea",
+        "alt": "Latias salvaje en Paldea",
+        "juego": "Pokémon Escarlata y Púrpura",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Latias_salvaje_EP.jpg",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Latias_salvaje_EP.jpg",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      }
+    ],
+    "381": [
+      {
+        "archivo": "/imagenes/pokemon/381-1.webp",
+        "ancho": 240,
+        "alto": 160,
+        "pixelArt": true,
+        "pokemon": "Latios",
+        "pie": "Latios en la Isla del Sur",
+        "alt": "Latios en la Isla del Sur",
+        "juego": "Pokémon Rubí, Zafiro y Esmeralda",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Latios_en_la_Isla_del_Sur.png",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Latios_en_la_Isla_del_Sur.png",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      },
+      {
+        "archivo": "/imagenes/pokemon/381-2.webp",
+        "ancho": 400,
+        "alto": 240,
+        "pixelArt": false,
+        "pokemon": "Latios",
+        "pie": "Latios en el claro de la Isla del Sur",
+        "alt": "Latios en el claro de la Isla del Sur",
+        "juego": "Pokémon Rubí Omega y Zafiro Alfa",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Claro_Isla_del_Sur_ZA.png",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Claro_Isla_del_Sur_ZA.png",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      },
+      {
+        "archivo": "/imagenes/pokemon/381-3.webp",
+        "ancho": 1024,
+        "alto": 576,
+        "pixelArt": false,
+        "pokemon": "Latios",
+        "pie": "Latios salvaje en Paldea",
+        "alt": "Latios salvaje en Paldea",
+        "juego": "Pokémon Escarlata y Púrpura",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Latios_salvaje_EP.jpg",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Latios_salvaje_EP.jpg",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      }
+    ],
+    "382": [
+      {
+        "archivo": "/imagenes/pokemon/382-1.webp",
+        "ancho": 400,
+        "alto": 240,
+        "pixelArt": false,
+        "pokemon": "Kyogre",
+        "pie": "Combate contra Kyogre Primigenio",
+        "alt": "Combate contra Kyogre Primigenio",
+        "juego": "Pokémon Rubí Omega y Zafiro Alfa",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Kyogre_Primigenio_en_combate.png",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Kyogre_Primigenio_en_combate.png",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      },
+      {
+        "archivo": "/imagenes/pokemon/382-2.webp",
+        "ancho": 1024,
+        "alto": 576,
+        "pixelArt": false,
+        "pokemon": "Kyogre",
+        "pie": "La Sala del Mar del Parque Hansa",
+        "alt": "La Sala del Mar del Parque Hansa",
+        "juego": "Pokémon Diamante Brillante y Perla Reluciente",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Sala_del_Mar_DBPR.jpg",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Sala_del_Mar_DBPR.jpg",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      },
+      {
+        "archivo": "/imagenes/pokemon/382-3.webp",
+        "ancho": 1024,
+        "alto": 576,
+        "pixelArt": false,
+        "pokemon": "Kyogre",
+        "pie": "Kyogre salvaje en Paldea",
+        "alt": "Kyogre salvaje en Paldea",
+        "juego": "Pokémon Escarlata y Púrpura",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Kyogre_salvaje_EP.jpg",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Kyogre_salvaje_EP.jpg",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      }
+    ],
+    "383": [
+      {
+        "archivo": "/imagenes/pokemon/383-1.webp",
+        "ancho": 400,
+        "alto": 240,
+        "pixelArt": false,
+        "pokemon": "Groudon",
+        "pie": "Combate contra Groudon Primigenio",
+        "alt": "Combate contra Groudon Primigenio",
+        "juego": "Pokémon Rubí Omega y Zafiro Alfa",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Groudon_Primigenio_en_combate.png",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Groudon_Primigenio_en_combate.png",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      },
+      {
+        "archivo": "/imagenes/pokemon/383-2.webp",
+        "ancho": 1024,
+        "alto": 576,
+        "pixelArt": false,
+        "pokemon": "Groudon",
+        "pie": "La Sala de la Tierra del Parque Hansa",
+        "alt": "La Sala de la Tierra del Parque Hansa",
+        "juego": "Pokémon Diamante Brillante y Perla Reluciente",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Sala_de_la_Tierra_DBPR.jpg",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Sala_de_la_Tierra_DBPR.jpg",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      },
+      {
+        "archivo": "/imagenes/pokemon/383-3.webp",
+        "ancho": 1024,
+        "alto": 576,
+        "pixelArt": false,
+        "pokemon": "Groudon",
+        "pie": "Groudon salvaje en Paldea",
+        "alt": "Groudon salvaje en Paldea",
+        "juego": "Pokémon Escarlata y Púrpura",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Groudon_salvaje_EP.jpg",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Groudon_salvaje_EP.jpg",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      }
+    ],
+    "384": [
+      {
+        "archivo": "/imagenes/pokemon/384-1.webp",
+        "ancho": 400,
+        "alto": 240,
+        "pixelArt": false,
+        "pokemon": "Rayquaza",
+        "pie": "Rayquaza en la cima del Pilar Celeste",
+        "alt": "Rayquaza en la cima del Pilar Celeste",
+        "juego": "Pokémon Rubí Omega y Zafiro Alfa",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Rayquaza_Pilar_Celeste_ROZA.png",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Rayquaza_Pilar_Celeste_ROZA.png",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      },
+      {
+        "archivo": "/imagenes/pokemon/384-2.webp",
+        "ancho": 1024,
+        "alto": 576,
+        "pixelArt": false,
+        "pokemon": "Rayquaza",
+        "pie": "Rayquaza salvaje en Paldea",
+        "alt": "Rayquaza salvaje en Paldea",
+        "juego": "Pokémon Escarlata y Púrpura",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Rayquaza_salvaje_EP.jpg",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Rayquaza_salvaje_EP.jpg",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      }
+    ],
+    "386": [
+      {
+        "archivo": "/imagenes/pokemon/386-1.webp",
+        "ancho": 240,
+        "alto": 160,
+        "pixelArt": true,
+        "pokemon": "Deoxys",
+        "pie": "Deoxys en la Isla Origen",
+        "alt": "Deoxys en la Isla Origen",
+        "juego": "Pokémon Rojo Fuego y Verde Hoja",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Deoxys_en_Isla_Origen_RFVH.png",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Deoxys_en_Isla_Origen_RFVH.png",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      }
+    ],
+    "480": [
+      {
+        "archivo": "/imagenes/pokemon/480-1.webp",
+        "ancho": 256,
+        "alto": 192,
+        "pixelArt": true,
+        "pokemon": "Uxie",
+        "pie": "Uxie en la caverna del Lago Agudeza",
+        "alt": "Uxie en la caverna del Lago Agudeza",
+        "juego": "Pokémon Diamante y Perla",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Caverna_Agudeza_DPPt.png",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Caverna_Agudeza_DPPt.png",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      }
+    ],
+    "481": [
+      {
+        "archivo": "/imagenes/pokemon/481-1.webp",
+        "ancho": 256,
+        "alto": 192,
+        "pixelArt": true,
+        "pokemon": "Mesprit",
+        "pie": "Combate contra Mesprit",
+        "alt": "Combate contra Mesprit",
+        "juego": "Pokémon Platino",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Mesprit_en_batalla.png",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Mesprit_en_batalla.png",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      },
+      {
+        "archivo": "/imagenes/pokemon/481-2.webp",
+        "ancho": 256,
+        "alto": 192,
+        "pixelArt": true,
+        "pokemon": "Mesprit",
+        "pie": "Mesprit en la cima de la Torre Celestial",
+        "alt": "Mesprit en la cima de la Torre Celestial",
+        "juego": "Pokémon Negro 2 y Blanco 2",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Mesprit_Torre_Celestial.png",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Mesprit_Torre_Celestial.png",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      }
+    ],
+    "482": [
+      {
+        "archivo": "/imagenes/pokemon/482-1.webp",
+        "ancho": 256,
+        "alto": 192,
+        "pixelArt": true,
+        "pokemon": "Azelf",
+        "pie": "Azelf en la Ruta 23",
+        "alt": "Azelf en la Ruta 23",
+        "juego": "Pokémon Negro 2 y Blanco 2",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Azelf_ruta_23.png",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Azelf_ruta_23.png",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      }
+    ],
+    "483": [
+      {
+        "archivo": "/imagenes/pokemon/483-1.webp",
+        "ancho": 256,
+        "alto": 192,
+        "pixelArt": true,
+        "pokemon": "Dialga",
+        "pie": "Dialga aparece en las Columnas Lanza",
+        "alt": "Dialga aparece en las Columnas Lanza",
+        "juego": "Pokémon Diamante y Perla",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Dialga_aparece_DP.png",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Dialga_aparece_DP.png",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      }
+    ],
+    "484": [
+      {
+        "archivo": "/imagenes/pokemon/484-1.webp",
+        "ancho": 256,
+        "alto": 192,
+        "pixelArt": true,
+        "pokemon": "Palkia",
+        "pie": "Palkia aparece en las Columnas Lanza",
+        "alt": "Palkia aparece en las Columnas Lanza",
+        "juego": "Pokémon Diamante y Perla",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Palkia_aparece_DP.png",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Palkia_aparece_DP.png",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      }
+    ],
+    "485": [
+      {
+        "archivo": "/imagenes/pokemon/485-1.webp",
+        "ancho": 240,
+        "alto": 271,
+        "pixelArt": true,
+        "pokemon": "Heatran",
+        "pie": "La cámara de Heatran en la Montaña Dura",
+        "alt": "La cámara de Heatran en la Montaña Dura",
+        "juego": "Pokémon Platino",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Cámara_de_Heatran_Pt.png",
+        "origen": "https://www.wikidex.net/wiki/Archivo:C%C3%A1mara_de_Heatran_Pt.png",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      }
+    ],
+    "487": [
+      {
+        "archivo": "/imagenes/pokemon/487-1.webp",
+        "ancho": 256,
+        "alto": 192,
+        "pixelArt": true,
+        "pokemon": "Giratina",
+        "pie": "Giratina al fondo de la Cueva Retorno",
+        "alt": "Giratina al fondo de la Cueva Retorno",
+        "juego": "Pokémon Diamante y Perla",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Cueva_retorno_Giratina.png",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Cueva_retorno_Giratina.png",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      },
+      {
+        "archivo": "/imagenes/pokemon/487-2.webp",
+        "ancho": 256,
+        "alto": 192,
+        "pixelArt": true,
+        "pokemon": "Giratina",
+        "pie": "Giratina aparece en las Columnas Lanza",
+        "alt": "Giratina aparece en las Columnas Lanza",
+        "juego": "Pokémon Platino",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Giratina_aparece_Pt.png",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Giratina_aparece_Pt.png",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      },
+      {
+        "archivo": "/imagenes/pokemon/487-3.webp",
+        "ancho": 1024,
+        "alto": 576,
+        "pixelArt": false,
+        "pokemon": "Giratina",
+        "pie": "La Sala de la Distorsión del Parque Hansa",
+        "alt": "La Sala de la Distorsión del Parque Hansa",
+        "juego": "Pokémon Diamante Brillante y Perla Reluciente",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Sala_de_la_Distorsión_DBPR.jpg",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Sala_de_la_Distorsi%C3%B3n_DBPR.jpg",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      }
+    ],
+    "488": [
+      {
+        "archivo": "/imagenes/pokemon/488-1.webp",
+        "ancho": 256,
+        "alto": 192,
+        "pixelArt": true,
+        "pokemon": "Cresselia",
+        "pie": "Cresselia en la Isla Plenilunio",
+        "alt": "Cresselia en la Isla Plenilunio",
+        "juego": "Pokémon Diamante y Perla",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Cresselia_en_Isla_Plenilunio.png",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Cresselia_en_Isla_Plenilunio.png",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      },
+      {
+        "archivo": "/imagenes/pokemon/488-2.webp",
+        "ancho": 1024,
+        "alto": 576,
+        "pixelArt": false,
+        "pokemon": "Cresselia",
+        "pie": "Cresselia en el interior de la Isla Plenilunio",
+        "alt": "Cresselia en el interior de la Isla Plenilunio",
+        "juego": "Pokémon Diamante Brillante y Perla Reluciente",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Isla_Plenilunio_(interior)_DBPR.png",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Isla_Plenilunio_(interior)_DBPR.png",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      }
+    ],
+    "491": [
+      {
+        "archivo": "/imagenes/pokemon/491-1.webp",
+        "ancho": 1024,
+        "alto": 576,
+        "pixelArt": false,
+        "pokemon": "Darkrai",
+        "pie": "Darkrai aparece en la Isla Lunanueva",
+        "alt": "Darkrai aparece en la Isla Lunanueva",
+        "juego": "Pokémon Diamante Brillante y Perla Reluciente",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Darkrai_aparece_DBPR.jpg",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Darkrai_aparece_DBPR.jpg",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      }
+    ],
+    "492": [
+      {
+        "archivo": "/imagenes/pokemon/492-1.webp",
+        "ancho": 1024,
+        "alto": 576,
+        "pixelArt": false,
+        "pokemon": "Shaymin",
+        "pie": "Shaymin en el Paraíso Floral",
+        "alt": "Shaymin en el Paraíso Floral",
+        "juego": "Pokémon Diamante Brillante y Perla Reluciente",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Paraíso_floral_DBPR.jpg",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Para%C3%ADso_floral_DBPR.jpg",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      }
+    ],
+    "493": [
+      {
+        "archivo": "/imagenes/pokemon/493-1.webp",
+        "ancho": 256,
+        "alto": 192,
+        "pixelArt": true,
+        "pokemon": "Arceus",
+        "pie": "Arceus aparece al tocar la Flauta Azur",
+        "alt": "Arceus aparece al tocar la Flauta Azur",
+        "juego": "Pokémon Diamante y Perla",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Capturando_a_Arceus_18.png",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Capturando_a_Arceus_18.png",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      },
+      {
+        "archivo": "/imagenes/pokemon/493-2.webp",
+        "ancho": 1024,
+        "alto": 576,
+        "pixelArt": false,
+        "pokemon": "Arceus",
+        "pie": "La escalera hacia la Sala del Origen",
+        "alt": "La escalera hacia la Sala del Origen",
+        "juego": "Pokémon Diamante Brillante y Perla Reluciente",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Sala_del_Origen_DBPR.png",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Sala_del_Origen_DBPR.png",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      }
+    ],
+    "494": [
+      {
+        "archivo": "/imagenes/pokemon/494-1.webp",
+        "ancho": 256,
+        "alto": 192,
+        "pixelArt": true,
+        "pokemon": "Victini",
+        "pie": "El cuarto de Victini en la Isla Libertad",
+        "alt": "El cuarto de Victini en la Isla Libertad",
+        "juego": "Pokémon Negro y Blanco",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Cuarto_de_Victini.png",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Cuarto_de_Victini.png",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      }
+    ],
+    "638": [
+      {
+        "archivo": "/imagenes/pokemon/638-1.webp",
+        "ancho": 680,
+        "alto": 383,
+        "pixelArt": false,
+        "pokemon": "Cobalion",
+        "pie": "Cobalion en Las nieves de la corona",
+        "alt": "Cobalion en Las nieves de la corona",
+        "juego": "Pokémon Espada y Escudo",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Localización_de_Cobalion_EpEc.jpg",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Localizaci%C3%B3n_de_Cobalion_EpEc.jpg",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      },
+      {
+        "archivo": "/imagenes/pokemon/638-2.webp",
+        "ancho": 1024,
+        "alto": 576,
+        "pixelArt": false,
+        "pokemon": "Cobalion",
+        "pie": "Cobalion salvaje en Paldea",
+        "alt": "Cobalion salvaje en Paldea",
+        "juego": "Pokémon Escarlata y Púrpura",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Cobalion_salvaje_EP.jpg",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Cobalion_salvaje_EP.jpg",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      }
+    ],
+    "639": [
+      {
+        "archivo": "/imagenes/pokemon/639-1.webp",
+        "ancho": 1024,
+        "alto": 576,
+        "pixelArt": false,
+        "pokemon": "Terrakion",
+        "pie": "Terrakion en Las nieves de la corona",
+        "alt": "Terrakion en Las nieves de la corona",
+        "juego": "Pokémon Espada y Escudo",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Localización_de_Terrakion_EpEc.jpg",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Localizaci%C3%B3n_de_Terrakion_EpEc.jpg",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      },
+      {
+        "archivo": "/imagenes/pokemon/639-2.webp",
+        "ancho": 1024,
+        "alto": 576,
+        "pixelArt": false,
+        "pokemon": "Terrakion",
+        "pie": "Terrakion salvaje en Paldea",
+        "alt": "Terrakion salvaje en Paldea",
+        "juego": "Pokémon Escarlata y Púrpura",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Terrakion_salvaje_EP.jpg",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Terrakion_salvaje_EP.jpg",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      }
+    ],
+    "640": [
+      {
+        "archivo": "/imagenes/pokemon/640-1.webp",
+        "ancho": 1024,
+        "alto": 576,
+        "pixelArt": false,
+        "pokemon": "Virizion",
+        "pie": "Virizion en Las nieves de la corona",
+        "alt": "Virizion en Las nieves de la corona",
+        "juego": "Pokémon Espada y Escudo",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Localización_de_Virizion_EpEc.jpg",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Localizaci%C3%B3n_de_Virizion_EpEc.jpg",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      },
+      {
+        "archivo": "/imagenes/pokemon/640-2.webp",
+        "ancho": 1024,
+        "alto": 576,
+        "pixelArt": false,
+        "pokemon": "Virizion",
+        "pie": "Virizion salvaje en Paldea",
+        "alt": "Virizion salvaje en Paldea",
+        "juego": "Pokémon Escarlata y Púrpura",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Virizion_salvaje_EP.jpg",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Virizion_salvaje_EP.jpg",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      }
+    ],
+    "641": [
+      {
+        "archivo": "/imagenes/pokemon/641-1.webp",
+        "ancho": 256,
+        "alto": 192,
+        "pixelArt": true,
+        "pokemon": "Tornadus",
+        "pie": "Tornadus en la Ruta 7",
+        "alt": "Tornadus en la Ruta 7",
+        "juego": "Pokémon Negro y Blanco",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Tornadus_en_la_ruta_7.png",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Tornadus_en_la_ruta_7.png",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      }
+    ],
+    "642": [
+      {
+        "archivo": "/imagenes/pokemon/642-1.webp",
+        "ancho": 256,
+        "alto": 192,
+        "pixelArt": true,
+        "pokemon": "Thundurus",
+        "pie": "Thundurus en la Ruta 7",
+        "alt": "Thundurus en la Ruta 7",
+        "juego": "Pokémon Negro y Blanco",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Thundurus_en_la_ruta_7.png",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Thundurus_en_la_ruta_7.png",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      }
+    ],
+    "643": [
+      {
+        "archivo": "/imagenes/pokemon/643-1.webp",
+        "ancho": 1024,
+        "alto": 576,
+        "pixelArt": false,
+        "pokemon": "Reshiram",
+        "pie": "Reshiram salvaje en Paldea",
+        "alt": "Reshiram salvaje en Paldea",
+        "juego": "Pokémon Escarlata y Púrpura",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Reshiram_salvaje_EP.jpg",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Reshiram_salvaje_EP.jpg",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      }
+    ],
+    "644": [
+      {
+        "archivo": "/imagenes/pokemon/644-1.webp",
+        "ancho": 1024,
+        "alto": 576,
+        "pixelArt": false,
+        "pokemon": "Zekrom",
+        "pie": "Zekrom salvaje en Paldea",
+        "alt": "Zekrom salvaje en Paldea",
+        "juego": "Pokémon Escarlata y Púrpura",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Zekrom_salvaje_EP.jpg",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Zekrom_salvaje_EP.jpg",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      }
+    ],
+    "646": [
+      {
+        "archivo": "/imagenes/pokemon/646-1.webp",
+        "ancho": 1024,
+        "alto": 576,
+        "pixelArt": false,
+        "pokemon": "Kyurem",
+        "pie": "Kyurem salvaje en Paldea",
+        "alt": "Kyurem salvaje en Paldea",
+        "juego": "Pokémon Escarlata y Púrpura",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Kyurem_salvaje_EP.jpg",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Kyurem_salvaje_EP.jpg",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      }
+    ],
+    "648": [
+      {
+        "archivo": "/imagenes/pokemon/648-1.webp",
+        "ancho": 1024,
+        "alto": 576,
+        "pixelArt": false,
+        "pokemon": "Meloetta",
+        "pie": "Meloetta salvaje en Paldea",
+        "alt": "Meloetta salvaje en Paldea",
+        "juego": "Pokémon Escarlata y Púrpura",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Meloetta_salvaje_EP.jpg",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Meloetta_salvaje_EP.jpg",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      }
+    ],
+    "716": [
+      {
+        "archivo": "/imagenes/pokemon/716-1.webp",
+        "ancho": 400,
+        "alto": 240,
+        "pixelArt": false,
+        "pokemon": "Xerneas",
+        "pie": "Xerneas despierta en la Guarida del Team Flare",
+        "alt": "Xerneas despierta en la Guarida del Team Flare",
+        "juego": "Pokémon X e Y",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Xerneas_despierto_X.png",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Xerneas_despierto_X.png",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      }
+    ],
+    "791": [
+      {
+        "archivo": "/imagenes/pokemon/791-1.webp",
+        "ancho": 1024,
+        "alto": 576,
+        "pixelArt": false,
+        "pokemon": "Solgaleo",
+        "pie": "Solgaleo salvaje en Paldea",
+        "alt": "Solgaleo salvaje en Paldea",
+        "juego": "Pokémon Escarlata y Púrpura",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Solgaleo_salvaje_EP.jpg",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Solgaleo_salvaje_EP.jpg",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      }
+    ],
+    "792": [
+      {
+        "archivo": "/imagenes/pokemon/792-1.webp",
+        "ancho": 400,
+        "alto": 240,
+        "pixelArt": false,
+        "pokemon": "Lunala",
+        "pie": "Lunala aparece en el Altar de la Luna",
+        "alt": "Lunala aparece en el Altar de la Luna",
+        "juego": "Pokémon Sol y Luna",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Aparece_Lunala_Pokémon_SL.png",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Aparece_Lunala_Pok%C3%A9mon_SL.png",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      },
+      {
+        "archivo": "/imagenes/pokemon/792-2.webp",
+        "ancho": 1024,
+        "alto": 576,
+        "pixelArt": false,
+        "pokemon": "Lunala",
+        "pie": "Lunala salvaje en Paldea",
+        "alt": "Lunala salvaje en Paldea",
+        "juego": "Pokémon Escarlata y Púrpura",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Lunala_salvaje_EP.jpg",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Lunala_salvaje_EP.jpg",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      }
+    ],
+    "800": [
+      {
+        "archivo": "/imagenes/pokemon/800-1.webp",
+        "ancho": 1024,
+        "alto": 576,
+        "pixelArt": false,
+        "pokemon": "Necrozma",
+        "pie": "Necrozma salvaje en Paldea",
+        "alt": "Necrozma salvaje en Paldea",
+        "juego": "Pokémon Escarlata y Púrpura",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Necrozma_salvaje_EP.jpg",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Necrozma_salvaje_EP.jpg",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      }
+    ],
+    "891": [
+      {
+        "archivo": "/imagenes/pokemon/891-1.webp",
+        "ancho": 1024,
+        "alto": 576,
+        "pixelArt": false,
+        "pokemon": "Kubfu",
+        "pie": "Kubfu salvaje en Paldea",
+        "alt": "Kubfu salvaje en Paldea",
+        "juego": "Pokémon Escarlata y Púrpura",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Kubfu_salvaje_EP.jpg",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Kubfu_salvaje_EP.jpg",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      }
+    ],
+    "896": [
+      {
+        "archivo": "/imagenes/pokemon/896-1.webp",
+        "ancho": 1024,
+        "alto": 576,
+        "pixelArt": false,
+        "pokemon": "Glastrier",
+        "pie": "Glastrier en Las nieves de la corona",
+        "alt": "Glastrier en Las nieves de la corona",
+        "juego": "Pokémon Espada y Escudo",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Glastrier_en_el_templo_EpEc.jpg",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Glastrier_en_el_templo_EpEc.jpg",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      },
+      {
+        "archivo": "/imagenes/pokemon/896-2.webp",
+        "ancho": 1024,
+        "alto": 576,
+        "pixelArt": false,
+        "pokemon": "Glastrier",
+        "pie": "Glastrier salvaje en la Sierra Napada",
+        "alt": "Glastrier salvaje en la Sierra Napada",
+        "juego": "Pokémon Escarlata y Púrpura",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Glastrier_salvaje_EP.jpg",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Glastrier_salvaje_EP.jpg",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      }
+    ],
+    "897": [
+      {
+        "archivo": "/imagenes/pokemon/897-1.webp",
+        "ancho": 1024,
+        "alto": 576,
+        "pixelArt": false,
+        "pokemon": "Spectrier",
+        "pie": "Spectrier salvaje en Paldea",
+        "alt": "Spectrier salvaje en Paldea",
+        "juego": "Pokémon Escarlata y Púrpura",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Spectrier_salvaje_EP.jpg",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Spectrier_salvaje_EP.jpg",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      }
+    ],
+    "898": [
+      {
+        "archivo": "/imagenes/pokemon/898-1.webp",
+        "ancho": 848,
+        "alto": 480,
+        "pixelArt": false,
+        "pokemon": "Calyrex",
+        "pie": "El interior del Templo Corona",
+        "alt": "El interior del Templo Corona",
+        "juego": "Pokémon Espada y Escudo",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Interior_del_templo_EpEc.png",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Interior_del_templo_EpEc.png",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      }
+    ],
+    "1014": [
+      {
+        "archivo": "/imagenes/pokemon/1014-1.webp",
+        "ancho": 1024,
+        "alto": 576,
+        "pixelArt": false,
+        "pokemon": "Okidogi",
+        "pie": "Okidogi en Noroteo",
+        "alt": "Okidogi en Noroteo",
+        "juego": "Pokémon Escarlata y Púrpura",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Ubicación_de_Okidogi_EP.jpg",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Ubicaci%C3%B3n_de_Okidogi_EP.jpg",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      }
+    ],
+    "1015": [
+      {
+        "archivo": "/imagenes/pokemon/1015-1.webp",
+        "ancho": 1024,
+        "alto": 576,
+        "pixelArt": false,
+        "pokemon": "Munkidori",
+        "pie": "Munkidori en Noroteo",
+        "alt": "Munkidori en Noroteo",
+        "juego": "Pokémon Escarlata y Púrpura",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Ubicación_de_Munkidori_EP.jpg",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Ubicaci%C3%B3n_de_Munkidori_EP.jpg",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      }
+    ],
+    "1016": [
+      {
+        "archivo": "/imagenes/pokemon/1016-1.webp",
+        "ancho": 1024,
+        "alto": 576,
+        "pixelArt": false,
+        "pokemon": "Fezandipiti",
+        "pie": "Fezandipiti en Noroteo",
+        "alt": "Fezandipiti en Noroteo",
+        "juego": "Pokémon Escarlata y Púrpura",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Ubicación_de_Fezandipiti_EP.jpg",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Ubicaci%C3%B3n_de_Fezandipiti_EP.jpg",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      }
+    ],
+    "1025": [
+      {
+        "archivo": "/imagenes/pokemon/1025-1.webp",
+        "ancho": 1024,
+        "alto": 576,
+        "pixelArt": false,
+        "pokemon": "Pecharunt",
+        "pie": "Una figura cubierta de polvo en el Bazar Meloc",
+        "alt": "Una figura cubierta de polvo en el Bazar Meloc",
+        "juego": "Pokémon Escarlata y Púrpura",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Pecharunt_en_el_Bazar_Meloc_EP.jpg",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Pecharunt_en_el_Bazar_Meloc_EP.jpg",
         "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
       }
     ]

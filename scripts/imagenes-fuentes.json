@@ -387,6 +387,648 @@
           "pie": "Mew aparece al nivel 30"
         }
       ]
+    },
+    {
+      "idPokedex": 243,
+      "nombre": "Raikou",
+      "capturas": [
+        {
+          "archivoWikidex": "Sala_de_Johto_DBPR.jpg",
+          "juego": "Pokémon Diamante Brillante y Perla Reluciente",
+          "pie": "La Sala de Johto del Parque Hansa"
+        },
+        {
+          "archivoWikidex": "Raikou_salvaje_EP.jpg",
+          "juego": "Pokémon Escarlata y Púrpura",
+          "pie": "Raikou salvaje en Paldea"
+        }
+      ]
+    },
+    {
+      "idPokedex": 244,
+      "nombre": "Entei",
+      "capturas": [
+        {
+          "archivoWikidex": "Sala_de_Johto_DBPR.jpg",
+          "juego": "Pokémon Diamante Brillante y Perla Reluciente",
+          "pie": "La Sala de Johto del Parque Hansa"
+        },
+        {
+          "archivoWikidex": "Entei_salvaje_EP.jpg",
+          "juego": "Pokémon Escarlata y Púrpura",
+          "pie": "Entei salvaje en Paldea"
+        }
+      ]
+    },
+    {
+      "idPokedex": 245,
+      "nombre": "Suicune",
+      "capturas": [
+        {
+          "archivoWikidex": "Sala_de_Johto_DBPR.jpg",
+          "juego": "Pokémon Diamante Brillante y Perla Reluciente",
+          "pie": "La Sala de Johto del Parque Hansa"
+        },
+        {
+          "archivoWikidex": "Suicune_salvaje_EP.jpg",
+          "juego": "Pokémon Escarlata y Púrpura",
+          "pie": "Suicune salvaje en Paldea"
+        }
+      ]
+    },
+    {
+      "idPokedex": 249,
+      "nombre": "Lugia",
+      "capturas": [
+        {
+          "archivoWikidex": "Lugia_Salvaje.png",
+          "juego": "Pokémon Oro, Plata y Cristal",
+          "pie": "¡Un Lugia salvaje!"
+        },
+        {
+          "archivoWikidex": "Lugia_salvaje_EP.jpg",
+          "juego": "Pokémon Escarlata y Púrpura",
+          "pie": "Lugia salvaje en Paldea"
+        }
+      ]
+    },
+    {
+      "idPokedex": 250,
+      "nombre": "Ho-Oh",
+      "capturas": [
+        {
+          "archivoWikidex": "Ho-Oh_en_la_cima_de_la_Torre_Campana_HGSS.png",
+          "juego": "Pokémon Oro HeartGold y Plata SoulSilver",
+          "pie": "Ho-Oh en la cima de la Torre Campana"
+        },
+        {
+          "archivoWikidex": "Sala_del_Arcoíris_DBPR.jpg",
+          "juego": "Pokémon Diamante Brillante y Perla Reluciente",
+          "pie": "La Sala del Arcoíris del Parque Hansa"
+        },
+        {
+          "archivoWikidex": "Ho-Oh_salvaje_EP.jpg",
+          "juego": "Pokémon Escarlata y Púrpura",
+          "pie": "Ho-Oh salvaje en Paldea"
+        }
+      ]
+    },
+    {
+      "idPokedex": 377,
+      "nombre": "Regirock",
+      "capturas": [
+        {
+          "archivoWikidex": "Sala_del_Inicio_DBPR.jpg",
+          "juego": "Pokémon Diamante Brillante y Perla Reluciente",
+          "pie": "La Sala del Inicio, con las estatuas de Regirock, Regice y Registeel"
+        }
+      ]
+    },
+    {
+      "idPokedex": 378,
+      "nombre": "Regice",
+      "capturas": [
+        {
+          "archivoWikidex": "Sala_del_Inicio_DBPR.jpg",
+          "juego": "Pokémon Diamante Brillante y Perla Reluciente",
+          "pie": "La Sala del Inicio, con las estatuas de Regirock, Regice y Registeel"
+        }
+      ]
+    },
+    {
+      "idPokedex": 379,
+      "nombre": "Registeel",
+      "capturas": [
+        {
+          "archivoWikidex": "Sala_del_Inicio_DBPR.jpg",
+          "juego": "Pokémon Diamante Brillante y Perla Reluciente",
+          "pie": "La Sala del Inicio, con las estatuas de Regirock, Regice y Registeel"
+        }
+      ]
+    },
+    {
+      "idPokedex": 380,
+      "nombre": "Latias",
+      "capturas": [
+        {
+          "archivoWikidex": "Latias_en_la_Isla_del_Sur.png",
+          "juego": "Pokémon Rubí, Zafiro y Esmeralda",
+          "pie": "Latias en la Isla del Sur"
+        },
+        {
+          "archivoWikidex": "Claro_Isla_del_Sur_RO.png",
+          "juego": "Pokémon Rubí Omega y Zafiro Alfa",
+          "pie": "Latias en el claro de la Isla del Sur"
+        },
+        {
+          "archivoWikidex": "Latias_salvaje_EP.jpg",
+          "juego": "Pokémon Escarlata y Púrpura",
+          "pie": "Latias salvaje en Paldea"
+        }
+      ]
+    },
+    {
+      "idPokedex": 381,
+      "nombre": "Latios",
+      "capturas": [
+        {
+          "archivoWikidex": "Latios_en_la_Isla_del_Sur.png",
+          "juego": "Pokémon Rubí, Zafiro y Esmeralda",
+          "pie": "Latios en la Isla del Sur"
+        },
+        {
+          "archivoWikidex": "Claro_Isla_del_Sur_ZA.png",
+          "juego": "Pokémon Rubí Omega y Zafiro Alfa",
+          "pie": "Latios en el claro de la Isla del Sur"
+        },
+        {
+          "archivoWikidex": "Latios_salvaje_EP.jpg",
+          "juego": "Pokémon Escarlata y Púrpura",
+          "pie": "Latios salvaje en Paldea"
+        }
+      ]
+    },
+    {
+      "idPokedex": 382,
+      "nombre": "Kyogre",
+      "capturas": [
+        {
+          "archivoWikidex": "Kyogre_Primigenio_en_combate.png",
+          "juego": "Pokémon Rubí Omega y Zafiro Alfa",
+          "pie": "Combate contra Kyogre Primigenio"
+        },
+        {
+          "archivoWikidex": "Sala_del_Mar_DBPR.jpg",
+          "juego": "Pokémon Diamante Brillante y Perla Reluciente",
+          "pie": "La Sala del Mar del Parque Hansa"
+        },
+        {
+          "archivoWikidex": "Kyogre_salvaje_EP.jpg",
+          "juego": "Pokémon Escarlata y Púrpura",
+          "pie": "Kyogre salvaje en Paldea"
+        }
+      ]
+    },
+    {
+      "idPokedex": 383,
+      "nombre": "Groudon",
+      "capturas": [
+        {
+          "archivoWikidex": "Groudon_Primigenio_en_combate.png",
+          "juego": "Pokémon Rubí Omega y Zafiro Alfa",
+          "pie": "Combate contra Groudon Primigenio"
+        },
+        {
+          "archivoWikidex": "Sala_de_la_Tierra_DBPR.jpg",
+          "juego": "Pokémon Diamante Brillante y Perla Reluciente",
+          "pie": "La Sala de la Tierra del Parque Hansa"
+        },
+        {
+          "archivoWikidex": "Groudon_salvaje_EP.jpg",
+          "juego": "Pokémon Escarlata y Púrpura",
+          "pie": "Groudon salvaje en Paldea"
+        }
+      ]
+    },
+    {
+      "idPokedex": 384,
+      "nombre": "Rayquaza",
+      "capturas": [
+        {
+          "archivoWikidex": "Rayquaza_Pilar_Celeste_ROZA.png",
+          "juego": "Pokémon Rubí Omega y Zafiro Alfa",
+          "pie": "Rayquaza en la cima del Pilar Celeste"
+        },
+        {
+          "archivoWikidex": "Rayquaza_salvaje_EP.jpg",
+          "juego": "Pokémon Escarlata y Púrpura",
+          "pie": "Rayquaza salvaje en Paldea"
+        }
+      ]
+    },
+    {
+      "idPokedex": 386,
+      "nombre": "Deoxys",
+      "capturas": [
+        {
+          "archivoWikidex": "Deoxys_en_Isla_Origen_RFVH.png",
+          "juego": "Pokémon Rojo Fuego y Verde Hoja",
+          "pie": "Deoxys en la Isla Origen"
+        }
+      ]
+    },
+    {
+      "idPokedex": 480,
+      "nombre": "Uxie",
+      "capturas": [
+        {
+          "archivoWikidex": "Caverna_Agudeza_DPPt.png",
+          "juego": "Pokémon Diamante y Perla",
+          "pie": "Uxie en la caverna del Lago Agudeza"
+        }
+      ]
+    },
+    {
+      "idPokedex": 481,
+      "nombre": "Mesprit",
+      "capturas": [
+        {
+          "archivoWikidex": "Mesprit_en_batalla.png",
+          "juego": "Pokémon Platino",
+          "pie": "Combate contra Mesprit"
+        },
+        {
+          "archivoWikidex": "Mesprit_Torre_Celestial.png",
+          "juego": "Pokémon Negro 2 y Blanco 2",
+          "pie": "Mesprit en la cima de la Torre Celestial"
+        }
+      ]
+    },
+    {
+      "idPokedex": 482,
+      "nombre": "Azelf",
+      "capturas": [
+        {
+          "archivoWikidex": "Azelf_ruta_23.png",
+          "juego": "Pokémon Negro 2 y Blanco 2",
+          "pie": "Azelf en la Ruta 23"
+        }
+      ]
+    },
+    {
+      "idPokedex": 483,
+      "nombre": "Dialga",
+      "capturas": [
+        {
+          "archivoWikidex": "Dialga_aparece_DP.png",
+          "juego": "Pokémon Diamante y Perla",
+          "pie": "Dialga aparece en las Columnas Lanza"
+        }
+      ]
+    },
+    {
+      "idPokedex": 484,
+      "nombre": "Palkia",
+      "capturas": [
+        {
+          "archivoWikidex": "Palkia_aparece_DP.png",
+          "juego": "Pokémon Diamante y Perla",
+          "pie": "Palkia aparece en las Columnas Lanza"
+        }
+      ]
+    },
+    {
+      "idPokedex": 485,
+      "nombre": "Heatran",
+      "capturas": [
+        {
+          "archivoWikidex": "Cámara_de_Heatran_Pt.png",
+          "juego": "Pokémon Platino",
+          "pie": "La cámara de Heatran en la Montaña Dura"
+        }
+      ]
+    },
+    {
+      "idPokedex": 487,
+      "nombre": "Giratina",
+      "capturas": [
+        {
+          "archivoWikidex": "Cueva_retorno_Giratina.png",
+          "juego": "Pokémon Diamante y Perla",
+          "pie": "Giratina al fondo de la Cueva Retorno"
+        },
+        {
+          "archivoWikidex": "Giratina_aparece_Pt.png",
+          "juego": "Pokémon Platino",
+          "pie": "Giratina aparece en las Columnas Lanza"
+        },
+        {
+          "archivoWikidex": "Sala_de_la_Distorsión_DBPR.jpg",
+          "juego": "Pokémon Diamante Brillante y Perla Reluciente",
+          "pie": "La Sala de la Distorsión del Parque Hansa"
+        }
+      ]
+    },
+    {
+      "idPokedex": 488,
+      "nombre": "Cresselia",
+      "capturas": [
+        {
+          "archivoWikidex": "Cresselia_en_Isla_Plenilunio.png",
+          "juego": "Pokémon Diamante y Perla",
+          "pie": "Cresselia en la Isla Plenilunio"
+        },
+        {
+          "archivoWikidex": "Isla_Plenilunio_(interior)_DBPR.png",
+          "juego": "Pokémon Diamante Brillante y Perla Reluciente",
+          "pie": "Cresselia en el interior de la Isla Plenilunio"
+        }
+      ]
+    },
+    {
+      "idPokedex": 491,
+      "nombre": "Darkrai",
+      "capturas": [
+        {
+          "archivoWikidex": "Darkrai_aparece_DBPR.jpg",
+          "juego": "Pokémon Diamante Brillante y Perla Reluciente",
+          "pie": "Darkrai aparece en la Isla Lunanueva"
+        }
+      ]
+    },
+    {
+      "idPokedex": 492,
+      "nombre": "Shaymin",
+      "capturas": [
+        {
+          "archivoWikidex": "Paraíso_floral_DBPR.jpg",
+          "juego": "Pokémon Diamante Brillante y Perla Reluciente",
+          "pie": "Shaymin en el Paraíso Floral"
+        }
+      ]
+    },
+    {
+      "idPokedex": 493,
+      "nombre": "Arceus",
+      "capturas": [
+        {
+          "archivoWikidex": "Capturando_a_Arceus_18.png",
+          "juego": "Pokémon Diamante y Perla",
+          "pie": "Arceus aparece al tocar la Flauta Azur"
+        },
+        {
+          "archivoWikidex": "Sala_del_Origen_DBPR.png",
+          "juego": "Pokémon Diamante Brillante y Perla Reluciente",
+          "pie": "La escalera hacia la Sala del Origen"
+        }
+      ]
+    },
+    {
+      "idPokedex": 494,
+      "nombre": "Victini",
+      "capturas": [
+        {
+          "archivoWikidex": "Cuarto_de_Victini.png",
+          "juego": "Pokémon Negro y Blanco",
+          "pie": "El cuarto de Victini en la Isla Libertad"
+        }
+      ]
+    },
+    {
+      "idPokedex": 638,
+      "nombre": "Cobalion",
+      "capturas": [
+        {
+          "archivoWikidex": "Localización_de_Cobalion_EpEc.jpg",
+          "juego": "Pokémon Espada y Escudo",
+          "pie": "Cobalion en Las nieves de la corona"
+        },
+        {
+          "archivoWikidex": "Cobalion_salvaje_EP.jpg",
+          "juego": "Pokémon Escarlata y Púrpura",
+          "pie": "Cobalion salvaje en Paldea"
+        }
+      ]
+    },
+    {
+      "idPokedex": 639,
+      "nombre": "Terrakion",
+      "capturas": [
+        {
+          "archivoWikidex": "Localización_de_Terrakion_EpEc.jpg",
+          "juego": "Pokémon Espada y Escudo",
+          "pie": "Terrakion en Las nieves de la corona"
+        },
+        {
+          "archivoWikidex": "Terrakion_salvaje_EP.jpg",
+          "juego": "Pokémon Escarlata y Púrpura",
+          "pie": "Terrakion salvaje en Paldea"
+        }
+      ]
+    },
+    {
+      "idPokedex": 640,
+      "nombre": "Virizion",
+      "capturas": [
+        {
+          "archivoWikidex": "Localización_de_Virizion_EpEc.jpg",
+          "juego": "Pokémon Espada y Escudo",
+          "pie": "Virizion en Las nieves de la corona"
+        },
+        {
+          "archivoWikidex": "Virizion_salvaje_EP.jpg",
+          "juego": "Pokémon Escarlata y Púrpura",
+          "pie": "Virizion salvaje en Paldea"
+        }
+      ]
+    },
+    {
+      "idPokedex": 641,
+      "nombre": "Tornadus",
+      "capturas": [
+        {
+          "archivoWikidex": "Tornadus_en_la_ruta_7.png",
+          "juego": "Pokémon Negro y Blanco",
+          "pie": "Tornadus en la Ruta 7"
+        }
+      ]
+    },
+    {
+      "idPokedex": 642,
+      "nombre": "Thundurus",
+      "capturas": [
+        {
+          "archivoWikidex": "Thundurus_en_la_ruta_7.png",
+          "juego": "Pokémon Negro y Blanco",
+          "pie": "Thundurus en la Ruta 7"
+        }
+      ]
+    },
+    {
+      "idPokedex": 643,
+      "nombre": "Reshiram",
+      "capturas": [
+        {
+          "archivoWikidex": "Reshiram_salvaje_EP.jpg",
+          "juego": "Pokémon Escarlata y Púrpura",
+          "pie": "Reshiram salvaje en Paldea"
+        }
+      ]
+    },
+    {
+      "idPokedex": 644,
+      "nombre": "Zekrom",
+      "capturas": [
+        {
+          "archivoWikidex": "Zekrom_salvaje_EP.jpg",
+          "juego": "Pokémon Escarlata y Púrpura",
+          "pie": "Zekrom salvaje en Paldea"
+        }
+      ]
+    },
+    {
+      "idPokedex": 646,
+      "nombre": "Kyurem",
+      "capturas": [
+        {
+          "archivoWikidex": "Kyurem_salvaje_EP.jpg",
+          "juego": "Pokémon Escarlata y Púrpura",
+          "pie": "Kyurem salvaje en Paldea"
+        }
+      ]
+    },
+    {
+      "idPokedex": 648,
+      "nombre": "Meloetta",
+      "capturas": [
+        {
+          "archivoWikidex": "Meloetta_salvaje_EP.jpg",
+          "juego": "Pokémon Escarlata y Púrpura",
+          "pie": "Meloetta salvaje en Paldea"
+        }
+      ]
+    },
+    {
+      "idPokedex": 716,
+      "nombre": "Xerneas",
+      "capturas": [
+        {
+          "archivoWikidex": "Xerneas_despierto_X.png",
+          "juego": "Pokémon X e Y",
+          "pie": "Xerneas despierta en la Guarida del Team Flare"
+        }
+      ]
+    },
+    {
+      "idPokedex": 791,
+      "nombre": "Solgaleo",
+      "capturas": [
+        {
+          "archivoWikidex": "Solgaleo_salvaje_EP.jpg",
+          "juego": "Pokémon Escarlata y Púrpura",
+          "pie": "Solgaleo salvaje en Paldea"
+        }
+      ]
+    },
+    {
+      "idPokedex": 792,
+      "nombre": "Lunala",
+      "capturas": [
+        {
+          "archivoWikidex": "Aparece_Lunala_Pokémon_SL.png",
+          "juego": "Pokémon Sol y Luna",
+          "pie": "Lunala aparece en el Altar de la Luna"
+        },
+        {
+          "archivoWikidex": "Lunala_salvaje_EP.jpg",
+          "juego": "Pokémon Escarlata y Púrpura",
+          "pie": "Lunala salvaje en Paldea"
+        }
+      ]
+    },
+    {
+      "idPokedex": 800,
+      "nombre": "Necrozma",
+      "capturas": [
+        {
+          "archivoWikidex": "Necrozma_salvaje_EP.jpg",
+          "juego": "Pokémon Escarlata y Púrpura",
+          "pie": "Necrozma salvaje en Paldea"
+        }
+      ]
+    },
+    {
+      "idPokedex": 891,
+      "nombre": "Kubfu",
+      "capturas": [
+        {
+          "archivoWikidex": "Kubfu_salvaje_EP.jpg",
+          "juego": "Pokémon Escarlata y Púrpura",
+          "pie": "Kubfu salvaje en Paldea"
+        }
+      ]
+    },
+    {
+      "idPokedex": 896,
+      "nombre": "Glastrier",
+      "capturas": [
+        {
+          "archivoWikidex": "Glastrier_en_el_templo_EpEc.jpg",
+          "juego": "Pokémon Espada y Escudo",
+          "pie": "Glastrier en Las nieves de la corona"
+        },
+        {
+          "archivoWikidex": "Glastrier_salvaje_EP.jpg",
+          "juego": "Pokémon Escarlata y Púrpura",
+          "pie": "Glastrier salvaje en la Sierra Napada"
+        }
+      ]
+    },
+    {
+      "idPokedex": 897,
+      "nombre": "Spectrier",
+      "capturas": [
+        {
+          "archivoWikidex": "Spectrier_salvaje_EP.jpg",
+          "juego": "Pokémon Escarlata y Púrpura",
+          "pie": "Spectrier salvaje en Paldea"
+        }
+      ]
+    },
+    {
+      "idPokedex": 898,
+      "nombre": "Calyrex",
+      "capturas": [
+        {
+          "archivoWikidex": "Interior_del_templo_EpEc.png",
+          "juego": "Pokémon Espada y Escudo",
+          "pie": "El interior del Templo Corona"
+        }
+      ]
+    },
+    {
+      "idPokedex": 1014,
+      "nombre": "Okidogi",
+      "capturas": [
+        {
+          "archivoWikidex": "Ubicación_de_Okidogi_EP.jpg",
+          "juego": "Pokémon Escarlata y Púrpura",
+          "pie": "Okidogi en Noroteo"
+        }
+      ]
+    },
+    {
+      "idPokedex": 1015,
+      "nombre": "Munkidori",
+      "capturas": [
+        {
+          "archivoWikidex": "Ubicación_de_Munkidori_EP.jpg",
+          "juego": "Pokémon Escarlata y Púrpura",
+          "pie": "Munkidori en Noroteo"
+        }
+      ]
+    },
+    {
+      "idPokedex": 1016,
+      "nombre": "Fezandipiti",
+      "capturas": [
+        {
+          "archivoWikidex": "Ubicación_de_Fezandipiti_EP.jpg",
+          "juego": "Pokémon Escarlata y Púrpura",
+          "pie": "Fezandipiti en Noroteo"
+        }
+      ]
+    },
+    {
+      "idPokedex": 1025,
+      "nombre": "Pecharunt",
+      "capturas": [
+        {
+          "archivoWikidex": "Pecharunt_en_el_Bazar_Meloc_EP.jpg",
+          "juego": "Pokémon Escarlata y Púrpura",
+          "pie": "Una figura cubierta de polvo en el Bazar Meloc"
+        }
+      ]
     }
   ]
 }
