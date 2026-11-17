@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Pie() {
   return (
     <footer className="border-t border-borde-suave bg-superficie">
@@ -11,7 +13,11 @@ export default function Pie() {
           >
             PokeAPI
           </a>
-          . Pokémon y sus nombres son marcas de sus respectivos dueños.
+          . Fuentes de las imágenes y aviso legal en{" "}
+          <Link href="/creditos" className="text-acento underline underline-offset-2 hover:no-underline">
+            Créditos y avisos
+          </Link>
+          .
         </p>
       </div>
     </footer>
