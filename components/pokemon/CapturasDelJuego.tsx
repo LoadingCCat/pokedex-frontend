@@ -6,7 +6,7 @@ import type { CapturasFicha } from "@/lib/capturas-ficha";
  * "Cómo se consigue en el juego" (Fase 5, FE.29–FE.30): hasta 3 capturas propias del Pokémon o, si
  * no tiene, hasta 2 de lugares donde aparece (con el pie enlazado a su página). Dos por fila en
  * escritorio. El pixel art de hasta 256 px se muestra a 2× exacto y sin suavizar, el más grande a
- * su tamaño (las vistas muy altas, recortadas a 24rem); las capturas en HD, a 512 px, y las de
+ * su tamaño (las vistas muy altas de pixel art, recortadas a 24rem); las capturas en HD, a 512 px, y las de
  * 3DS (400 px), a su tamaño. Es contenido, no un efecto: sin animación ni zoom.
  */
 export default function CapturasDelJuego({ seleccion }: { seleccion: CapturasFicha }) {
@@ -36,7 +36,7 @@ export default function CapturasDelJuego({ seleccion }: { seleccion: CapturasFic
                     unoptimized={c.pixelArt}
                     sizes={c.pixelArt ? undefined : "(min-width: 640px) 512px, 100vw"}
                     style={{ width: ancho }}
-                    className={`h-auto max-h-[24rem] max-w-full object-cover object-top ${pixelado ? "[image-rendering:pixelated]" : ""}`}
+                    className={`h-auto max-w-full ${c.pixelArt ? "max-h-[24rem] object-cover object-top" : ""} ${pixelado ? "[image-rendering:pixelated]" : ""}`}
                   />
                 </div>
                 <figcaption className="flex flex-col text-sm">

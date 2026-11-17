@@ -652,6 +652,50 @@
   ],
   "pokemon": [
     {
+      "idPokedex": 1,
+      "nombre": "Bulbasaur",
+      "capturas": [
+        {
+          "archivoWikidex": "Pokémon_iniciales_de_Kanto_XY.png",
+          "juego": "Pokémon X e Y",
+          "pie": "El profesor Ciprés ofrece los iniciales de Kanto"
+        }
+      ]
+    },
+    {
+      "idPokedex": 4,
+      "nombre": "Charmander",
+      "capturas": [
+        {
+          "archivoWikidex": "Pokémon_iniciales_de_Kanto_XY.png",
+          "juego": "Pokémon X e Y",
+          "pie": "El profesor Ciprés ofrece los iniciales de Kanto"
+        }
+      ]
+    },
+    {
+      "idPokedex": 7,
+      "nombre": "Squirtle",
+      "capturas": [
+        {
+          "archivoWikidex": "Pokémon_iniciales_de_Kanto_XY.png",
+          "juego": "Pokémon X e Y",
+          "pie": "El profesor Ciprés ofrece los iniciales de Kanto"
+        }
+      ]
+    },
+    {
+      "idPokedex": 133,
+      "nombre": "Eevee",
+      "capturas": [
+        {
+          "archivoWikidex": "Mesa_de_Eevee.png",
+          "juego": "Pokémon Rojo Fuego y Verde Hoja",
+          "pie": "Eevee se recibe como regalo"
+        }
+      ]
+    },
+    {
       "idPokedex": 144,
       "nombre": "Articuno",
       "capturas": [
@@ -757,6 +801,39 @@
       ]
     },
     {
+      "idPokedex": 152,
+      "nombre": "Chikorita",
+      "capturas": [
+        {
+          "archivoWikidex": "Iniciales_de_Johto_ROZA.png",
+          "juego": "Pokémon Rubí Omega y Zafiro Alfa",
+          "pie": "El profesor Abedul ofrece los iniciales de Johto"
+        }
+      ]
+    },
+    {
+      "idPokedex": 155,
+      "nombre": "Cyndaquil",
+      "capturas": [
+        {
+          "archivoWikidex": "Iniciales_de_Johto_ROZA.png",
+          "juego": "Pokémon Rubí Omega y Zafiro Alfa",
+          "pie": "El profesor Abedul ofrece los iniciales de Johto"
+        }
+      ]
+    },
+    {
+      "idPokedex": 158,
+      "nombre": "Totodile",
+      "capturas": [
+        {
+          "archivoWikidex": "Iniciales_de_Johto_ROZA.png",
+          "juego": "Pokémon Rubí Omega y Zafiro Alfa",
+          "pie": "El profesor Abedul ofrece los iniciales de Johto"
+        }
+      ]
+    },
+    {
       "idPokedex": 243,
       "nombre": "Raikou",
       "capturas": [
@@ -838,6 +915,54 @@
           "archivoWikidex": "Ho-Oh_salvaje_EP.jpg",
           "juego": "Pokémon Escarlata y Púrpura",
           "pie": "Ho-Oh salvaje en Paldea"
+        }
+      ]
+    },
+    {
+      "idPokedex": 252,
+      "nombre": "Treecko",
+      "capturas": [
+        {
+          "archivoWikidex": "Iniciales_de_Hoenn_ROZA.png",
+          "juego": "Pokémon Rubí Omega y Zafiro Alfa",
+          "pie": "Treecko, Torchic y Mudkip, los iniciales de Hoenn"
+        },
+        {
+          "archivoWikidex": "Elección_de_Pokémon_inicial_ROZA.png",
+          "juego": "Pokémon Rubí Omega y Zafiro Alfa",
+          "pie": "Se elige un Pokémon de la mochila del profesor Abedul"
+        }
+      ]
+    },
+    {
+      "idPokedex": 255,
+      "nombre": "Torchic",
+      "capturas": [
+        {
+          "archivoWikidex": "Iniciales_de_Hoenn_ROZA.png",
+          "juego": "Pokémon Rubí Omega y Zafiro Alfa",
+          "pie": "Treecko, Torchic y Mudkip, los iniciales de Hoenn"
+        },
+        {
+          "archivoWikidex": "Elección_de_Pokémon_inicial_ROZA.png",
+          "juego": "Pokémon Rubí Omega y Zafiro Alfa",
+          "pie": "Se elige un Pokémon de la mochila del profesor Abedul"
+        }
+      ]
+    },
+    {
+      "idPokedex": 258,
+      "nombre": "Mudkip",
+      "capturas": [
+        {
+          "archivoWikidex": "Iniciales_de_Hoenn_ROZA.png",
+          "juego": "Pokémon Rubí Omega y Zafiro Alfa",
+          "pie": "Treecko, Torchic y Mudkip, los iniciales de Hoenn"
+        },
+        {
+          "archivoWikidex": "Elección_de_Pokémon_inicial_ROZA.png",
+          "juego": "Pokémon Rubí Omega y Zafiro Alfa",
+          "pie": "Se elige un Pokémon de la mochila del profesor Abedul"
         }
       ]
     },
@@ -982,6 +1107,39 @@
           "archivoWikidex": "Deoxys_en_Isla_Origen_RFVH.png",
           "juego": "Pokémon Rojo Fuego y Verde Hoja",
           "pie": "Deoxys en la Isla Origen"
+        }
+      ]
+    },
+    {
+      "idPokedex": 387,
+      "nombre": "Turtwig",
+      "capturas": [
+        {
+          "archivoWikidex": "Iniciales_de_Sinnoh_ROZA.png",
+          "juego": "Pokémon Rubí Omega y Zafiro Alfa",
+          "pie": "El profesor Abedul ofrece los iniciales de Sinnoh"
+        }
+      ]
+    },
+    {
+      "idPokedex": 390,
+      "nombre": "Chimchar",
+      "capturas": [
+        {
+          "archivoWikidex": "Iniciales_de_Sinnoh_ROZA.png",
+          "juego": "Pokémon Rubí Omega y Zafiro Alfa",
+          "pie": "El profesor Abedul ofrece los iniciales de Sinnoh"
+        }
+      ]
+    },
+    {
+      "idPokedex": 393,
+      "nombre": "Piplup",
+      "capturas": [
+        {
+          "archivoWikidex": "Iniciales_de_Sinnoh_ROZA.png",
+          "juego": "Pokémon Rubí Omega y Zafiro Alfa",
+          "pie": "El profesor Abedul ofrece los iniciales de Sinnoh"
         }
       ]
     },
@@ -1143,6 +1301,39 @@
       ]
     },
     {
+      "idPokedex": 495,
+      "nombre": "Snivy",
+      "capturas": [
+        {
+          "archivoWikidex": "Iniciales_de_Teselia_ROZA.png",
+          "juego": "Pokémon Rubí Omega y Zafiro Alfa",
+          "pie": "El profesor Abedul ofrece los iniciales de Teselia"
+        }
+      ]
+    },
+    {
+      "idPokedex": 498,
+      "nombre": "Tepig",
+      "capturas": [
+        {
+          "archivoWikidex": "Iniciales_de_Teselia_ROZA.png",
+          "juego": "Pokémon Rubí Omega y Zafiro Alfa",
+          "pie": "El profesor Abedul ofrece los iniciales de Teselia"
+        }
+      ]
+    },
+    {
+      "idPokedex": 501,
+      "nombre": "Oshawott",
+      "capturas": [
+        {
+          "archivoWikidex": "Iniciales_de_Teselia_ROZA.png",
+          "juego": "Pokémon Rubí Omega y Zafiro Alfa",
+          "pie": "El profesor Abedul ofrece los iniciales de Teselia"
+        }
+      ]
+    },
+    {
       "idPokedex": 638,
       "nombre": "Cobalion",
       "capturas": [
@@ -1268,6 +1459,44 @@
       ]
     },
     {
+      "idPokedex": 722,
+      "nombre": "Rowlet",
+      "capturas": [
+        {
+          "archivoWikidex": "Elección_de_Pokémon_inicial_SL.png",
+          "juego": "Pokémon Sol y Luna",
+          "pie": "Rowlet, Litten y Popplio, los iniciales de Alola"
+        }
+      ]
+    },
+    {
+      "idPokedex": 725,
+      "nombre": "Litten",
+      "capturas": [
+        {
+          "archivoWikidex": "Elección_de_Pokémon_inicial_SL.png",
+          "juego": "Pokémon Sol y Luna",
+          "pie": "Rowlet, Litten y Popplio, los iniciales de Alola"
+        },
+        {
+          "archivoWikidex": "Eligiendo_inicial_SL.jpg",
+          "juego": "Pokémon Sol y Luna",
+          "pie": "Litten, recién elegido como inicial"
+        }
+      ]
+    },
+    {
+      "idPokedex": 728,
+      "nombre": "Popplio",
+      "capturas": [
+        {
+          "archivoWikidex": "Elección_de_Pokémon_inicial_SL.png",
+          "juego": "Pokémon Sol y Luna",
+          "pie": "Rowlet, Litten y Popplio, los iniciales de Alola"
+        }
+      ]
+    },
+    {
       "idPokedex": 791,
       "nombre": "Solgaleo",
       "capturas": [
@@ -1302,6 +1531,39 @@
           "archivoWikidex": "Necrozma_salvaje_EP.jpg",
           "juego": "Pokémon Escarlata y Púrpura",
           "pie": "Necrozma salvaje en Paldea"
+        }
+      ]
+    },
+    {
+      "idPokedex": 810,
+      "nombre": "Grookey",
+      "capturas": [
+        {
+          "archivoWikidex": "Pokémon_iniciales_de_Galar_EpEc.png",
+          "juego": "Pokémon Espada y Escudo",
+          "pie": "Grookey, Scorbunny y Sobble, los iniciales de Galar"
+        }
+      ]
+    },
+    {
+      "idPokedex": 813,
+      "nombre": "Scorbunny",
+      "capturas": [
+        {
+          "archivoWikidex": "Pokémon_iniciales_de_Galar_EpEc.png",
+          "juego": "Pokémon Espada y Escudo",
+          "pie": "Grookey, Scorbunny y Sobble, los iniciales de Galar"
+        }
+      ]
+    },
+    {
+      "idPokedex": 816,
+      "nombre": "Sobble",
+      "capturas": [
+        {
+          "archivoWikidex": "Pokémon_iniciales_de_Galar_EpEc.png",
+          "juego": "Pokémon Espada y Escudo",
+          "pie": "Grookey, Scorbunny y Sobble, los iniciales de Galar"
         }
       ]
     },
@@ -1351,6 +1613,39 @@
           "archivoWikidex": "Interior_del_templo_EpEc.png",
           "juego": "Pokémon Espada y Escudo",
           "pie": "El interior del Templo Corona"
+        }
+      ]
+    },
+    {
+      "idPokedex": 906,
+      "nombre": "Sprigatito",
+      "capturas": [
+        {
+          "archivoWikidex": "Pokémon_iniciales_de_Paldea_EP.png",
+          "juego": "Pokémon Escarlata y Púrpura",
+          "pie": "Sprigatito, Fuecoco y Quaxly, los iniciales de Paldea"
+        }
+      ]
+    },
+    {
+      "idPokedex": 909,
+      "nombre": "Fuecoco",
+      "capturas": [
+        {
+          "archivoWikidex": "Pokémon_iniciales_de_Paldea_EP.png",
+          "juego": "Pokémon Escarlata y Púrpura",
+          "pie": "Sprigatito, Fuecoco y Quaxly, los iniciales de Paldea"
+        }
+      ]
+    },
+    {
+      "idPokedex": 912,
+      "nombre": "Quaxly",
+      "capturas": [
+        {
+          "archivoWikidex": "Pokémon_iniciales_de_Paldea_EP.png",
+          "juego": "Pokémon Escarlata y Púrpura",
+          "pie": "Sprigatito, Fuecoco y Quaxly, los iniciales de Paldea"
         }
       ]
     },

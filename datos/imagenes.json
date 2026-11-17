@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-17T08:35:03.553Z",
+  "generado": "2026-11-17T09:42:36.036Z",
   "regiones": {
     "Kanto": {
       "archivo": "/imagenes/regiones/kanto.webp",
@@ -1031,6 +1031,70 @@
     }
   },
   "pokemon": {
+    "1": [
+      {
+        "archivo": "/imagenes/pokemon/1-1.webp",
+        "ancho": 400,
+        "alto": 240,
+        "pixelArt": false,
+        "pokemon": "Bulbasaur",
+        "pie": "El profesor Ciprés ofrece los iniciales de Kanto",
+        "alt": "El profesor Ciprés ofrece los iniciales de Kanto",
+        "juego": "Pokémon X e Y",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Pokémon_iniciales_de_Kanto_XY.png",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Pok%C3%A9mon_iniciales_de_Kanto_XY.png",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      }
+    ],
+    "4": [
+      {
+        "archivo": "/imagenes/pokemon/4-1.webp",
+        "ancho": 400,
+        "alto": 240,
+        "pixelArt": false,
+        "pokemon": "Charmander",
+        "pie": "El profesor Ciprés ofrece los iniciales de Kanto",
+        "alt": "El profesor Ciprés ofrece los iniciales de Kanto",
+        "juego": "Pokémon X e Y",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Pokémon_iniciales_de_Kanto_XY.png",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Pok%C3%A9mon_iniciales_de_Kanto_XY.png",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      }
+    ],
+    "7": [
+      {
+        "archivo": "/imagenes/pokemon/7-1.webp",
+        "ancho": 400,
+        "alto": 240,
+        "pixelArt": false,
+        "pokemon": "Squirtle",
+        "pie": "El profesor Ciprés ofrece los iniciales de Kanto",
+        "alt": "El profesor Ciprés ofrece los iniciales de Kanto",
+        "juego": "Pokémon X e Y",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Pokémon_iniciales_de_Kanto_XY.png",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Pok%C3%A9mon_iniciales_de_Kanto_XY.png",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      }
+    ],
+    "133": [
+      {
+        "archivo": "/imagenes/pokemon/133-1.webp",
+        "ancho": 240,
+        "alto": 160,
+        "pixelArt": true,
+        "pokemon": "Eevee",
+        "pie": "Eevee se recibe como regalo",
+        "alt": "Eevee se recibe como regalo",
+        "juego": "Pokémon Rojo Fuego y Verde Hoja",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Mesa_de_Eevee.png",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Mesa_de_Eevee.png",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      }
+    ],
     "144": [
       {
         "archivo": "/imagenes/pokemon/144-1.webp",
@@ -1251,6 +1315,54 @@
         "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
       }
     ],
+    "152": [
+      {
+        "archivo": "/imagenes/pokemon/152-1.webp",
+        "ancho": 400,
+        "alto": 240,
+        "pixelArt": false,
+        "pokemon": "Chikorita",
+        "pie": "El profesor Abedul ofrece los iniciales de Johto",
+        "alt": "El profesor Abedul ofrece los iniciales de Johto",
+        "juego": "Pokémon Rubí Omega y Zafiro Alfa",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Iniciales_de_Johto_ROZA.png",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Iniciales_de_Johto_ROZA.png",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      }
+    ],
+    "155": [
+      {
+        "archivo": "/imagenes/pokemon/155-1.webp",
+        "ancho": 400,
+        "alto": 240,
+        "pixelArt": false,
+        "pokemon": "Cyndaquil",
+        "pie": "El profesor Abedul ofrece los iniciales de Johto",
+        "alt": "El profesor Abedul ofrece los iniciales de Johto",
+        "juego": "Pokémon Rubí Omega y Zafiro Alfa",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Iniciales_de_Johto_ROZA.png",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Iniciales_de_Johto_ROZA.png",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      }
+    ],
+    "158": [
+      {
+        "archivo": "/imagenes/pokemon/158-1.webp",
+        "ancho": 400,
+        "alto": 240,
+        "pixelArt": false,
+        "pokemon": "Totodile",
+        "pie": "El profesor Abedul ofrece los iniciales de Johto",
+        "alt": "El profesor Abedul ofrece los iniciales de Johto",
+        "juego": "Pokémon Rubí Omega y Zafiro Alfa",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Iniciales_de_Johto_ROZA.png",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Iniciales_de_Johto_ROZA.png",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      }
+    ],
     "243": [
       {
         "archivo": "/imagenes/pokemon/243-1.webp",
@@ -1412,6 +1524,96 @@
         "fuente": "WikiDex",
         "archivoOriginal": "Ho-Oh_salvaje_EP.jpg",
         "origen": "https://www.wikidex.net/wiki/Archivo:Ho-Oh_salvaje_EP.jpg",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      }
+    ],
+    "252": [
+      {
+        "archivo": "/imagenes/pokemon/252-1.webp",
+        "ancho": 400,
+        "alto": 240,
+        "pixelArt": false,
+        "pokemon": "Treecko",
+        "pie": "Treecko, Torchic y Mudkip, los iniciales de Hoenn",
+        "alt": "Treecko, Torchic y Mudkip, los iniciales de Hoenn",
+        "juego": "Pokémon Rubí Omega y Zafiro Alfa",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Iniciales_de_Hoenn_ROZA.png",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Iniciales_de_Hoenn_ROZA.png",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      },
+      {
+        "archivo": "/imagenes/pokemon/252-2.webp",
+        "ancho": 400,
+        "alto": 480,
+        "pixelArt": false,
+        "pokemon": "Treecko",
+        "pie": "Se elige un Pokémon de la mochila del profesor Abedul",
+        "alt": "Se elige un Pokémon de la mochila del profesor Abedul",
+        "juego": "Pokémon Rubí Omega y Zafiro Alfa",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Elección_de_Pokémon_inicial_ROZA.png",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Elecci%C3%B3n_de_Pok%C3%A9mon_inicial_ROZA.png",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      }
+    ],
+    "255": [
+      {
+        "archivo": "/imagenes/pokemon/255-1.webp",
+        "ancho": 400,
+        "alto": 240,
+        "pixelArt": false,
+        "pokemon": "Torchic",
+        "pie": "Treecko, Torchic y Mudkip, los iniciales de Hoenn",
+        "alt": "Treecko, Torchic y Mudkip, los iniciales de Hoenn",
+        "juego": "Pokémon Rubí Omega y Zafiro Alfa",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Iniciales_de_Hoenn_ROZA.png",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Iniciales_de_Hoenn_ROZA.png",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      },
+      {
+        "archivo": "/imagenes/pokemon/255-2.webp",
+        "ancho": 400,
+        "alto": 480,
+        "pixelArt": false,
+        "pokemon": "Torchic",
+        "pie": "Se elige un Pokémon de la mochila del profesor Abedul",
+        "alt": "Se elige un Pokémon de la mochila del profesor Abedul",
+        "juego": "Pokémon Rubí Omega y Zafiro Alfa",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Elección_de_Pokémon_inicial_ROZA.png",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Elecci%C3%B3n_de_Pok%C3%A9mon_inicial_ROZA.png",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      }
+    ],
+    "258": [
+      {
+        "archivo": "/imagenes/pokemon/258-1.webp",
+        "ancho": 400,
+        "alto": 240,
+        "pixelArt": false,
+        "pokemon": "Mudkip",
+        "pie": "Treecko, Torchic y Mudkip, los iniciales de Hoenn",
+        "alt": "Treecko, Torchic y Mudkip, los iniciales de Hoenn",
+        "juego": "Pokémon Rubí Omega y Zafiro Alfa",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Iniciales_de_Hoenn_ROZA.png",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Iniciales_de_Hoenn_ROZA.png",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      },
+      {
+        "archivo": "/imagenes/pokemon/258-2.webp",
+        "ancho": 400,
+        "alto": 480,
+        "pixelArt": false,
+        "pokemon": "Mudkip",
+        "pie": "Se elige un Pokémon de la mochila del profesor Abedul",
+        "alt": "Se elige un Pokémon de la mochila del profesor Abedul",
+        "juego": "Pokémon Rubí Omega y Zafiro Alfa",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Elección_de_Pokémon_inicial_ROZA.png",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Elecci%C3%B3n_de_Pok%C3%A9mon_inicial_ROZA.png",
         "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
       }
     ],
@@ -1685,6 +1887,54 @@
         "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
       }
     ],
+    "387": [
+      {
+        "archivo": "/imagenes/pokemon/387-1.webp",
+        "ancho": 400,
+        "alto": 240,
+        "pixelArt": false,
+        "pokemon": "Turtwig",
+        "pie": "El profesor Abedul ofrece los iniciales de Sinnoh",
+        "alt": "El profesor Abedul ofrece los iniciales de Sinnoh",
+        "juego": "Pokémon Rubí Omega y Zafiro Alfa",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Iniciales_de_Sinnoh_ROZA.png",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Iniciales_de_Sinnoh_ROZA.png",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      }
+    ],
+    "390": [
+      {
+        "archivo": "/imagenes/pokemon/390-1.webp",
+        "ancho": 400,
+        "alto": 240,
+        "pixelArt": false,
+        "pokemon": "Chimchar",
+        "pie": "El profesor Abedul ofrece los iniciales de Sinnoh",
+        "alt": "El profesor Abedul ofrece los iniciales de Sinnoh",
+        "juego": "Pokémon Rubí Omega y Zafiro Alfa",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Iniciales_de_Sinnoh_ROZA.png",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Iniciales_de_Sinnoh_ROZA.png",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      }
+    ],
+    "393": [
+      {
+        "archivo": "/imagenes/pokemon/393-1.webp",
+        "ancho": 400,
+        "alto": 240,
+        "pixelArt": false,
+        "pokemon": "Piplup",
+        "pie": "El profesor Abedul ofrece los iniciales de Sinnoh",
+        "alt": "El profesor Abedul ofrece los iniciales de Sinnoh",
+        "juego": "Pokémon Rubí Omega y Zafiro Alfa",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Iniciales_de_Sinnoh_ROZA.png",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Iniciales_de_Sinnoh_ROZA.png",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      }
+    ],
     "480": [
       {
         "archivo": "/imagenes/pokemon/480-1.webp",
@@ -1947,6 +2197,54 @@
         "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
       }
     ],
+    "495": [
+      {
+        "archivo": "/imagenes/pokemon/495-1.webp",
+        "ancho": 400,
+        "alto": 240,
+        "pixelArt": false,
+        "pokemon": "Snivy",
+        "pie": "El profesor Abedul ofrece los iniciales de Teselia",
+        "alt": "El profesor Abedul ofrece los iniciales de Teselia",
+        "juego": "Pokémon Rubí Omega y Zafiro Alfa",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Iniciales_de_Teselia_ROZA.png",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Iniciales_de_Teselia_ROZA.png",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      }
+    ],
+    "498": [
+      {
+        "archivo": "/imagenes/pokemon/498-1.webp",
+        "ancho": 400,
+        "alto": 240,
+        "pixelArt": false,
+        "pokemon": "Tepig",
+        "pie": "El profesor Abedul ofrece los iniciales de Teselia",
+        "alt": "El profesor Abedul ofrece los iniciales de Teselia",
+        "juego": "Pokémon Rubí Omega y Zafiro Alfa",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Iniciales_de_Teselia_ROZA.png",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Iniciales_de_Teselia_ROZA.png",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      }
+    ],
+    "501": [
+      {
+        "archivo": "/imagenes/pokemon/501-1.webp",
+        "ancho": 400,
+        "alto": 240,
+        "pixelArt": false,
+        "pokemon": "Oshawott",
+        "pie": "El profesor Abedul ofrece los iniciales de Teselia",
+        "alt": "El profesor Abedul ofrece los iniciales de Teselia",
+        "juego": "Pokémon Rubí Omega y Zafiro Alfa",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Iniciales_de_Teselia_ROZA.png",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Iniciales_de_Teselia_ROZA.png",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      }
+    ],
     "638": [
       {
         "archivo": "/imagenes/pokemon/638-1.webp",
@@ -2149,6 +2447,68 @@
         "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
       }
     ],
+    "722": [
+      {
+        "archivo": "/imagenes/pokemon/722-1.webp",
+        "ancho": 400,
+        "alto": 240,
+        "pixelArt": false,
+        "pokemon": "Rowlet",
+        "pie": "Rowlet, Litten y Popplio, los iniciales de Alola",
+        "alt": "Rowlet, Litten y Popplio, los iniciales de Alola",
+        "juego": "Pokémon Sol y Luna",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Elección_de_Pokémon_inicial_SL.png",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Elecci%C3%B3n_de_Pok%C3%A9mon_inicial_SL.png",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      }
+    ],
+    "725": [
+      {
+        "archivo": "/imagenes/pokemon/725-1.webp",
+        "ancho": 400,
+        "alto": 240,
+        "pixelArt": false,
+        "pokemon": "Litten",
+        "pie": "Rowlet, Litten y Popplio, los iniciales de Alola",
+        "alt": "Rowlet, Litten y Popplio, los iniciales de Alola",
+        "juego": "Pokémon Sol y Luna",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Elección_de_Pokémon_inicial_SL.png",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Elecci%C3%B3n_de_Pok%C3%A9mon_inicial_SL.png",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      },
+      {
+        "archivo": "/imagenes/pokemon/725-2.webp",
+        "ancho": 626,
+        "alto": 352,
+        "pixelArt": false,
+        "pokemon": "Litten",
+        "pie": "Litten, recién elegido como inicial",
+        "alt": "Litten, recién elegido como inicial",
+        "juego": "Pokémon Sol y Luna",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Eligiendo_inicial_SL.jpg",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Eligiendo_inicial_SL.jpg",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      }
+    ],
+    "728": [
+      {
+        "archivo": "/imagenes/pokemon/728-1.webp",
+        "ancho": 400,
+        "alto": 240,
+        "pixelArt": false,
+        "pokemon": "Popplio",
+        "pie": "Rowlet, Litten y Popplio, los iniciales de Alola",
+        "alt": "Rowlet, Litten y Popplio, los iniciales de Alola",
+        "juego": "Pokémon Sol y Luna",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Elección_de_Pokémon_inicial_SL.png",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Elecci%C3%B3n_de_Pok%C3%A9mon_inicial_SL.png",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      }
+    ],
     "791": [
       {
         "archivo": "/imagenes/pokemon/791-1.webp",
@@ -2208,6 +2568,54 @@
         "fuente": "WikiDex",
         "archivoOriginal": "Necrozma_salvaje_EP.jpg",
         "origen": "https://www.wikidex.net/wiki/Archivo:Necrozma_salvaje_EP.jpg",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      }
+    ],
+    "810": [
+      {
+        "archivo": "/imagenes/pokemon/810-1.webp",
+        "ancho": 1024,
+        "alto": 574,
+        "pixelArt": false,
+        "pokemon": "Grookey",
+        "pie": "Grookey, Scorbunny y Sobble, los iniciales de Galar",
+        "alt": "Grookey, Scorbunny y Sobble, los iniciales de Galar",
+        "juego": "Pokémon Espada y Escudo",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Pokémon_iniciales_de_Galar_EpEc.png",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Pok%C3%A9mon_iniciales_de_Galar_EpEc.png",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      }
+    ],
+    "813": [
+      {
+        "archivo": "/imagenes/pokemon/813-1.webp",
+        "ancho": 1024,
+        "alto": 574,
+        "pixelArt": false,
+        "pokemon": "Scorbunny",
+        "pie": "Grookey, Scorbunny y Sobble, los iniciales de Galar",
+        "alt": "Grookey, Scorbunny y Sobble, los iniciales de Galar",
+        "juego": "Pokémon Espada y Escudo",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Pokémon_iniciales_de_Galar_EpEc.png",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Pok%C3%A9mon_iniciales_de_Galar_EpEc.png",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      }
+    ],
+    "816": [
+      {
+        "archivo": "/imagenes/pokemon/816-1.webp",
+        "ancho": 1024,
+        "alto": 574,
+        "pixelArt": false,
+        "pokemon": "Sobble",
+        "pie": "Grookey, Scorbunny y Sobble, los iniciales de Galar",
+        "alt": "Grookey, Scorbunny y Sobble, los iniciales de Galar",
+        "juego": "Pokémon Espada y Escudo",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Pokémon_iniciales_de_Galar_EpEc.png",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Pok%C3%A9mon_iniciales_de_Galar_EpEc.png",
         "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
       }
     ],
@@ -2286,6 +2694,54 @@
         "fuente": "WikiDex",
         "archivoOriginal": "Interior_del_templo_EpEc.png",
         "origen": "https://www.wikidex.net/wiki/Archivo:Interior_del_templo_EpEc.png",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      }
+    ],
+    "906": [
+      {
+        "archivo": "/imagenes/pokemon/906-1.webp",
+        "ancho": 1024,
+        "alto": 576,
+        "pixelArt": false,
+        "pokemon": "Sprigatito",
+        "pie": "Sprigatito, Fuecoco y Quaxly, los iniciales de Paldea",
+        "alt": "Sprigatito, Fuecoco y Quaxly, los iniciales de Paldea",
+        "juego": "Pokémon Escarlata y Púrpura",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Pokémon_iniciales_de_Paldea_EP.png",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Pok%C3%A9mon_iniciales_de_Paldea_EP.png",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      }
+    ],
+    "909": [
+      {
+        "archivo": "/imagenes/pokemon/909-1.webp",
+        "ancho": 1024,
+        "alto": 576,
+        "pixelArt": false,
+        "pokemon": "Fuecoco",
+        "pie": "Sprigatito, Fuecoco y Quaxly, los iniciales de Paldea",
+        "alt": "Sprigatito, Fuecoco y Quaxly, los iniciales de Paldea",
+        "juego": "Pokémon Escarlata y Púrpura",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Pokémon_iniciales_de_Paldea_EP.png",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Pok%C3%A9mon_iniciales_de_Paldea_EP.png",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      }
+    ],
+    "912": [
+      {
+        "archivo": "/imagenes/pokemon/912-1.webp",
+        "ancho": 1024,
+        "alto": 576,
+        "pixelArt": false,
+        "pokemon": "Quaxly",
+        "pie": "Sprigatito, Fuecoco y Quaxly, los iniciales de Paldea",
+        "alt": "Sprigatito, Fuecoco y Quaxly, los iniciales de Paldea",
+        "juego": "Pokémon Escarlata y Púrpura",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Pokémon_iniciales_de_Paldea_EP.png",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Pok%C3%A9mon_iniciales_de_Paldea_EP.png",
         "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
       }
     ],
