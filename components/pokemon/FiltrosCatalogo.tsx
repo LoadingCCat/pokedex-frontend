@@ -1,7 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { useTransition, type FormEvent } from "react";
+import { useState, useTransition, type FormEvent } from "react";
 import { TIPOS_OBTENCION } from "@/lib/api/tipos";
 import {
   OPCIONES_ORDEN,
@@ -23,6 +23,8 @@ const ETIQUETA = "text-xs font-semibold text-texto-secundario";
  * volviendo a la página 1); los desplegables se aplican al cambiar y el nombre al pulsar
  * Enter o "Buscar". Sin JavaScript, el formulario funciona como un GET normal a "/".
  * Se monta con `key` = URL actual para que los valores sigan a la URL al navegar.
+ * En móvil, todo menos el buscador va tras el botón "Filtros (n)" (abierto si hay filtros
+ * activos); sin JavaScript (`html[data-js]` sin poner) el panel queda siempre a la vista.
  */
 export default function FiltrosCatalogo({
   estado,
@@ -35,6 +37,8 @@ export default function FiltrosCatalogo({
 }) {
   const router = useRouter();
   const [cargando, iniciarTransicion] = useTransition();
+  const activos = [estado.generacion, estado.tipo, estado.region, estado.obtencion].filter(Boolean).length;
+  const [abierto, setAbierto] = useState(activos > 0);
 
   function aplicar(formulario: HTMLFormElement) {
     const datos = new FormData(formulario);
@@ -90,7 +94,26 @@ export default function FiltrosCatalogo({
         </div>
       </div>
 
-      <div className="grid grid-cols-2 gap-3 md:grid-cols-5">
+      <button
+        type="button"
+        aria-expanded={abierto}
+        aria-controls="panel-filtros"
+        onClick={() => setAbierto((a) => !a)}
+        className={clasesBoton("secundario", "w-full md:hidden [html:not([data-js])_&]:hidden")}
+      >
+        <span>
+          Filtros{" "}
+          <span className="font-datos tabular-nums">({activos})</span>
+        </span>
+        <span aria-hidden="true" className={abierto ? "rotate-180" : ""}>
+          ▾
+        </span>
+      </button>
+
+      <div
+        id="panel-filtros"
+        className={`grid grid-cols-2 gap-3 md:grid-cols-5 ${abierto ? "" : "[html[data-js]_&]:max-md:hidden"}`}
+      >
         <Selector id="filtro-generacion" nombre="generacion" etiqueta="Generación" valor={estado.generacion ? String(estado.generacion) : ""}>
           <option value="">Todas</option>
           {Array.from({ length: 9 }, (_, i) => (
