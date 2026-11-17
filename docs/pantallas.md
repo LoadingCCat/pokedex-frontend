@@ -202,9 +202,9 @@ Se suma a P1–P5 sin cambiar lo que ya hacen. Reglas: "Toques de nostalgia" en 
 - **Vistas muy altas** (rutas verticales de 384 × 1280 o más): se muestran con un alto máximo de 36rem, recortando por abajo con CSS; el archivo completo se enlaza en `/creditos`. Las muy anchas usan la vista panorámica que ya existe.
 
 **Criterios de aceptación**
-- [ ] `/pokemon/133` a 1280 px: "Estadísticas base" no deja hueco bajo el total, y las condiciones de Leafeon y Sylveon ocupan 3 líneas o menos.
-- [ ] `/` a 390 px: el primer resultado asoma en la primera pantalla (844 px de alto); con `?tipo=fire` el botón dice "Filtros (1)" y el panel está abierto.
-- [ ] En "Dónde se obtiene", los lugares se ven subrayados sin pasar el ratón.
-- [ ] En `/regiones/kanto`, Four Island dice "Buscar ↗" y Bosque Verde "WikiDex ↗"; su nombre accesible no cambia.
-- [ ] El mapa de Kanto no deja bandas a los lados a 1280 px.
+- [x] `/pokemon/133` a 1280 px: "Estadísticas base" no deja hueco bajo el total, y las condiciones de Leafeon y Sylveon ocupan 3 líneas o menos.
+- [x] `/` a 390 px: el primer resultado asoma en la primera pantalla (844 px de alto); con `?tipo=fire` el botón dice "Filtros (1)" y el panel está abierto.
+- [x] En "Dónde se obtiene", los lugares se ven subrayados sin pasar el ratón.
+- [x] En `/regiones/kanto`, Four Island dice "Buscar ↗" y Bosque Verde "WikiDex ↗"; su nombre accesible no cambia.
+- [x] El mapa de Kanto no deja bandas a los lados a 1280 px.
 - [ ] Al menos 40 de los 60 lugares de Kanto restantes tienen captura; ninguna es un minimapa ni un GIF, todas aparecen en `/creditos` y ninguna página tiene scroll horizontal a 390 px.

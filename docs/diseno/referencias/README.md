@@ -43,3 +43,5 @@ Revisado otra vez al cerrar FE.22: las fases de nostalgia no tocaron estos punto
 8. **Mapa de Kanto a 1280 px: bandas grises a los lados.** El alto se acota a 34rem para que la lista de lugares no quede lejos, y el mapa (más estrecho) queda centrado sobre el fondo del bloque. Es intencional, pero el bloque podría ajustarse al ancho del mapa (`w-fit mx-auto`).
 
 Las mejoras 1–5, 7 y 8 son del front y caben en una tarea de pulido; ninguna bloquea el uso ni incumple AA.
+
+**Resueltas en FE.26 (2026-11-17):** 1 (tarjetas sin estirar), 2 y 4 (condiciones de 288–384 px y textos de 13 px: Leafeon y Sylveon en 2 y 3 líneas), 3 (filtros tras "Filtros (n)" en móvil: el primer resultado aparece a 644 px; la barra fija de escritorio se descartó), 5 (lugares subrayados), 7 ("Buscar ↗" visible) y 8 (mapa sin bandas). Queda la 6, que depende de los datos de la PokeAPI. Las capturas de esta carpeta son de antes de FE.26.
