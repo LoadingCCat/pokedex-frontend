@@ -101,7 +101,8 @@ async function ContenidoFicha({ params }: Pick<PageProps<"/pokemon/[id]">, "para
         </div>
       </Tarjeta>
 
-      <div className="grid gap-6 lg:grid-cols-2">
+      {/* items-start: cada tarjeta con su propia altura (con muchas rutas, Estadísticas quedaba con un hueco) */}
+      <div className="grid items-start gap-6 lg:grid-cols-2">
         <Seccion id="estadisticas" titulo="Estadísticas base">
           <EstadisticasBase pokemon={pokemon} />
         </Seccion>

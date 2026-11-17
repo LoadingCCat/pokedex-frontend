@@ -189,7 +189,7 @@ Se suma a P1–P5 sin cambiar lo que ya hacen. Reglas: "Toques de nostalgia" en 
 
 **FE.26 · Mejoras de la evaluación** (`docs/diseno/referencias/README.md`, puntos 1–5, 7 y 8; el 6 son datos de la PokeAPI y queda en el backend):
 1. Ficha: las tarjetas "Estadísticas base" y "Dónde se obtiene" ya no se estiran a la misma altura (`items-start`).
-2. Ficha: en la cadena evolutiva, la columna de la condición pasa de 144 a 224 px en escritorio, para que las condiciones largas (Leafeon, Sylveon) no se partan en 6–7 líneas.
+2. Ficha: en la cadena evolutiva, la columna de la condición pasa de 144 a 288 px en tableta y 384 px en escritorio, para que las condiciones largas (Leafeon, Sylveon) no se partan en 6–7 líneas.
 3. Catálogo en móvil: solo el buscador queda a la vista; el resto de filtros y el orden van en un desplegable **Filtros (n)**, con `n` = filtros activos, abierto si hay alguno. En escritorio, igual que ahora. La barra fija en escritorio que pedía la identidad se descarta (taparía resultados al desplazarse) y se quita de la identidad.
 4. Textos de 12 px de la cadena evolutiva (condiciones y número) pasan a 13–14 px.
 5. Enlaces a lugares de "Dónde se obtiene" siempre subrayados (no solo al pasar el ratón).

@@ -43,12 +43,12 @@ function Subarbol({ etapa, idActual }: { etapa: Etapa; idActual: number }) {
 
 function Flecha({ condicion }: { condicion: string | null }) {
   return (
-    <div className="flex items-center gap-2 text-texto-secundario md:w-36 md:flex-col md:items-center md:gap-0.5 md:text-center">
+    <div className="flex items-center gap-2 text-texto-secundario md:w-72 lg:w-96 md:flex-col md:items-center md:gap-0.5 md:text-center">
       <span aria-hidden="true" className="text-lg leading-none">
         <span className="md:hidden">↓</span>
         <span className="hidden md:inline">→</span>
       </span>
-      <span className="text-xs">{condicion ?? "Sin datos"}</span>
+      <span className="text-[0.8125rem] leading-snug">{condicion ?? "Sin datos"}</span>
     </div>
   );
 }
@@ -64,7 +64,7 @@ function NodoEtapa({ etapa, idActual }: { etapa: Etapa; idActual: number }) {
       <div className="w-20 rounded-md bg-fondo p-1">
         <ImagenPokemon src={etapa.imagenUrl} alt={nombre} sizes="80px" />
       </div>
-      <span className="font-datos text-xs text-texto-secundario tabular-nums">{numeroPokedex(etapa.idPokedex)}</span>
+      <span className="font-datos text-[0.8125rem] text-texto-secundario tabular-nums">{numeroPokedex(etapa.idPokedex)}</span>
       <span className="text-sm font-semibold">{nombre}</span>
     </>
   );
