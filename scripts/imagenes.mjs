@@ -50,8 +50,9 @@ async function informacion(archivos, ancho) {
 }
 
 /** Descarga la miniatura, la convierte a WebP y devuelve su ruta pública y su tamaño final. */
-async function procesar(info, anchoMaximo, rutaPublica) {
-  const fuente = info.thumburl ?? info.url;
+async function procesar(info, anchoMaximo, rutaPublica, pixelArt = false) {
+  // El pixel art se descarga del original: la miniatura de MediaWiki lo reescalaría y lo suavizaría
+  const fuente = pixelArt ? info.url : (info.thumburl ?? info.url);
   const respuesta = await fetch(fuente, { headers: CABECERAS });
   if (!respuesta.ok) throw new Error(`No se pudo descargar ${fuente} (${respuesta.status})`);
   const original = Buffer.from(await respuesta.arrayBuffer());
@@ -61,7 +62,8 @@ async function procesar(info, anchoMaximo, rutaPublica) {
     redimensionada.clone().webp({ quality: CALIDAD }).toBuffer({ resolveWithObject: true }),
     redimensionada.clone().webp({ lossless: true, effort: 6 }).toBuffer({ resolveWithObject: true }),
   ]);
-  const webp = sinPerdida.data.length <= conPerdida.data.length ? sinPerdida : conPerdida;
+  // El pixel art va siempre sin pérdida (docs/pantallas.md), aunque el WebP con pérdida pese menos
+  const webp = pixelArt || sinPerdida.data.length <= conPerdida.data.length ? sinPerdida : conPerdida;
   const destino = join(RAIZ, "public", rutaPublica);
   await mkdir(dirname(destino), { recursive: true });
   await writeFile(destino, webp.data);
@@ -102,12 +104,15 @@ for (const r of fuentes.regiones) {
 const infoLugares = await informacion(fuentes.lugares.map((l) => l.archivoWikidex), 1200);
 for (const l of fuentes.lugares) {
   const info = infoLugares.get(l.archivoWikidex);
-  const imagen = await procesar(info, l.anchoMaximo, `imagenes/lugares/${l.idPokeapi}.webp`);
+  // Pixel art de RFVH y HGSS (FE.27): a su tamaño real, sin pérdida; la página lo muestra a escala entera
+  const imagen = l.pixelArt
+    ? await procesar(info, info.width, `imagenes/lugares/${l.idPokeapi}.webp`, true)
+    : await procesar(info, l.anchoMaximo, `imagenes/lugares/${l.idPokeapi}.webp`);
   kbFinal += imagen.kb;
   kbDescarga += imagen.kbDescargados;
   const { kb, kbDescargados, ...resto } = imagen;
   const alt = l.vista === "desde arriba" ? `Vista desde arriba de ${l.lugar} en ${l.juego}` : `${l.lugar} en ${l.juego}`;
-  salida.lugares[l.idPokeapi] = { ...resto, lugar: l.lugar, alt, ...credito(info, l.archivoWikidex, l.juego) };
+  salida.lugares[l.idPokeapi] = { ...resto, ...(l.pixelArt ? { pixelArt: true } : {}), lugar: l.lugar, alt, ...credito(info, l.archivoWikidex, l.juego) };
   console.log(`  ${String(l.idPokeapi).padStart(4)} ${l.lugar.padEnd(22)} ${imagen.ancho}×${imagen.alto}  ${kbDescargados} KB → ${kb} KB`);
 }
 
@@ -119,7 +124,7 @@ const infoCapturas = await informacion(capturas.map((c) => c.archivoWikidex), 10
 for (const c of capturas) {
   const info = infoCapturas.get(c.archivoWikidex);
   const pixelArt = info.width <= PIXEL_ART;
-  const imagen = await procesar(info, pixelArt ? info.width : 1024, `imagenes/pokemon/${c.p.idPokedex}-${c.i + 1}.webp`);
+  const imagen = await procesar(info, pixelArt ? info.width : 1024, `imagenes/pokemon/${c.p.idPokedex}-${c.i + 1}.webp`, pixelArt);
   kbFinal += imagen.kb;
   kbDescarga += imagen.kbDescargados;
   const { kb, kbDescargados, ...resto } = imagen;
