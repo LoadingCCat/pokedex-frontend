@@ -300,9 +300,9 @@ Aprobada el 2026-11-17 (Fase 0). Specs en `../pokedex-backend/docs/specs/F11`–
 **Criterios de aceptación (P7 y P8)**
 - [ ] `/admin` sin sesión redirige a `/login`; tras iniciar sesión vuelve a `/admin`.
 - [ ] Una contraseña incorrecta muestra "Usuario o contraseña incorrectos." y no crea la cookie.
-- [ ] La cookie de sesión es `httpOnly` (no aparece en `document.cookie`).
+- [ ] La cookie de sesión es `httpOnly` (no aparece en `document.cookie`). (FE.34: se crea con `httpOnly`; falta comprobarlo en el navegador con el backend reiniciado.)
 - [ ] Escribir "abc" en una estadística no envía el formulario y marca el error junto al campo; lo mismo con "300".
 - [ ] Un 400 del servidor aparece junto a su campo.
 - [ ] Crear, editar y eliminar (con confirmación) funcionan en las tres secciones contra la API local.
-- [ ] En el build sin `API_URL`, `/login` y `/admin` muestran el aviso y responden sin error.
+- [x] En el build sin `API_URL`, `/login` y `/admin` muestran el aviso y responden sin error (200, sin redirigir, sin scroll horizontal a 360 y 1080 px).
 - [ ] Todo se maneja con el teclado y el foco es visible; a 360, 768 y 1080 px no hay scroll horizontal.

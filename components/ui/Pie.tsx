@@ -19,6 +19,12 @@ export default function Pie() {
           </Link>
           .
         </p>
+        <p>
+          <Link href="/admin" className="text-acento underline underline-offset-2 hover:no-underline">
+            Administración
+          </Link>{" "}
+          (solo con la API local)
+        </p>
       </div>
     </footer>
   );

@@ -2,7 +2,7 @@
 
 # CLAUDE.md — Pokedex+ Frontend
 
-Frontend de la Pokédex+ (proyecto universitario en equipo, USTA): una Pokédex web en español con los 1025 Pokémon de las 9 generaciones. Consume la API REST del backend (`../pokedex-backend`). **Solo consulta:** no hay pantallas para crear, editar ni borrar.
+Frontend de la Pokédex+ (proyecto universitario en equipo, USTA): una Pokédex web en español con los 1025 Pokémon de las 9 generaciones. Consume la API REST del backend (`../pokedex-backend`). Es de consulta, más un panel de administración (F15: `/login` y `/admin`) que solo funciona con la API local; sin `API_URL` muestra un aviso.
 
 - Next.js 16.4 (App Router, `cacheComponents` y `partialPrefetching` activos) · React 19 · TypeScript · Tailwind CSS 4 · Vitest
 - `sharp` (devDependency) solo lo usa `scripts/imagenes.mjs` para convertir las imágenes a WebP; la app no lo importa.
@@ -92,9 +92,13 @@ Reglas completas en `docs/diseno/identidad-visual.md`. **El dato manda y la nost
 ```
 app/                      # páginas y layouts (rutas en español: /pokemon/[id], /movimientos, /regiones, /rutas/[id], /creditos), error.tsx y not-found.tsx
 components/ui/            # piezas genéricas (Boton, Tarjeta, Chip, Paginacion, EstadoVacio, Esqueleto, EnlaceExterno, FiguraCreditada)
+components/admin/         # panel (F15): FormularioLogin, BotonCerrarSesion, AvisoSinApi
 components/pokemon/       # piezas del dominio (InsigniaTipo, TarjetaPokemon, SpriteAnimado, IlustracionFicha, BotonGrito,
                           #   EstadisticasBase, CapturasDelJuego, CadenaEvolutiva, TablaMovimientos, DiscoMovimiento…)
 lib/api/                  # único acceso a datos: tipos.ts, index.ts, mock.ts, http.ts
+lib/sesion.ts             # F15: lee y guarda la cookie httpOnly con el token (solo en el servidor)
+lib/sesion-comun.ts       # F15: nombre de la cookie, adminDisponible(), destinoSeguro(), datos del token
+proxy.ts                  # F15: /admin sin cookie → /login?volver=… (en Next 16, `middleware` se llama `proxy`)
 lib/formato.ts            # #025, nombre a mostrar, m / kg
 lib/tipos-pokemon.ts      # los 18 tipos: etiqueta en español y colores AA
 lib/recursos-pokemon.ts   # URL de sprite animado, sprite clásico, ilustración shiny y grito
