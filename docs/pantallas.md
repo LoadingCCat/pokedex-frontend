@@ -2,7 +2,7 @@
 
 Una spec por pantalla, con criterios de aceptación. Cada pantalla usa las funcionalidades del backend (F1–F10, en `../pokedex-backend/docs/specs/`) a través de `lib/api`. El aspecto sigue `docs/diseno/identidad-visual.md`.
 
-**Alcance:** solo consulta. Fuera de U3: crear, editar o borrar movimientos y rutas (los `POST`, `PUT` y `DELETE` de la API), la importación (uso interno), el modo oscuro, los favoritos y las cuentas.
+**Alcance:** consulta (P1–P6). Con la ampliación F11–F15 (al final) se suma un panel de administración (P7 `/login` y P8 `/admin`) que solo funciona con la API local; en el sitio publicado con mock muestra un aviso. Siguen fuera la importación (uso interno), el modo oscuro, los favoritos y el registro de cuentas.
 
 ## Comunes a todas las pantallas
 
@@ -241,3 +241,68 @@ Pedido por el usuario el 2026-11-17: junto a la ilustración oficial, el sprite 
 - [x] `/pokemon/382` (Kyogre) muestra el sprite clásico a 192 × 192, nítido, al lado de la ilustración a 1280 px y debajo a 390 px, sin scroll horizontal.
 - [x] Con "Shiny" activado, ilustración y sprite cambian a la versión shiny.
 - [x] Con `prefers-reduced-motion: reduce` el sprite se sigue viendo.
+
+---
+
+## Ampliación: requerimientos de la entrevista (F11–F15)
+
+Aprobada el 2026-11-17 (Fase 0). Specs en `../pokedex-backend/docs/specs/F11`–`F15`, y lo nuevo del contrato en la sección "Ampliación F11–F15" de `api.md`. Tareas: FE.33–FE.45. Se suma a P1–P6 sin cambiar lo que ya hacen; **sin juego elegido, todo se ve como hoy**.
+
+**Responsive (RNF-03):** todas las pantallas, incluidas P7 y P8, se revisan a **360, 768 y 1080 px** sin scroll horizontal (además de 375 y 1280, como hasta ahora). Los resultados van en `docs/mediciones.md`, junto con Lighthouse (RNF-01: interactiva en menos de 2 s).
+
+### P1 · Catálogo (F13, F14)
+1. Un segundo selector **"Tipo 2"**, desactivado hasta elegir el primero. Con los dos, la URL queda como `?tipo=fire&tipo=flying` y solo salen los Pokémon con esa combinación.
+2. Un selector **"Juego"** (de `/juegos`, con `nombreEs`, agrupado por generación) que se guarda en la URL (`?juego=heartgold`): muestra los Pokémon presentes en ese juego y se combina con los demás filtros.
+3. Cada tipo y el juego salen como chips con "×". En móvil, van dentro de "Filtros (n)" y cuentan en `n`.
+4. Las tarjetas enlazan a la ficha conservando `?juego=`.
+5. `lib/parametros-catalogo.ts` valida `tipo` (hasta 2; un tercero se ignora) y `juego` (uno inválido se ignora, como hasta ahora).
+
+**Criterios de aceptación**
+- [ ] `/?tipo=fire&tipo=flying` muestra Charizard y Moltres, ni Charmander ni Pidgey, con el mismo total que la API.
+- [ ] "Tipo 2" está desactivado sin un primer tipo; quitar el primer tipo quita también el segundo.
+- [ ] `/?juego=red&tipo=electric` muestra solo Pokémon eléctricos presentes en Rojo, con el mismo total que la API.
+- [ ] `/?juego=xyz` no rompe la página (se ignora).
+- [ ] Desde `/?juego=red`, abrir una ficha la muestra con el juego Rojo elegido.
+
+### P2 · Ficha (F11, F12, F13)
+1. Sección **"Habilidades"** (después de "Estadísticas base"): nombre en español, descripción y la etiqueta de texto **"Oculta"** en la habilidad oculta. Si la descripción está en inglés, se indica ("Texto en inglés").
+2. Un selector **"Juego"** en la cabecera de la ficha, en la URL (`?juego=`), con los juegos en los que aparece o aprende movimientos. Sin juego elegido, la ficha usa el de por defecto en los movimientos y se ve como hoy.
+3. **"Movimientos que aprende"**: la tabla suma las columnas **Método** (y nivel: "Nv. 26"), **Precisión** ("—" si es `null`) y **Etiqueta** (Aventura / Competitivo / Ambos, en texto). Se filtra por etiqueta y por método (en la URL: `etiqueta=`, `metodo=`). Sigue en el `<details>` y ordenada por el nombre que se muestra. En móvil, Método y Etiqueta van en texto pequeño bajo el nombre, como Tipo y Competitivo (Fase 6).
+4. **"Dónde se obtiene"**: con un juego elegido, los lugares de ese juego con método en español ("Hierba", "Surf", "Claro Oculto"…), probabilidad (%) y niveles ("Nv. 3–5"), enlazados a P5. Sin juego, se ve como hoy. Si no hay encuentros en ese juego: "En {juego} no aparece en estado salvaje."
+
+**Criterios de aceptación**
+- [ ] `/pokemon/25` muestra Electricidad Estática y Pararrayos, y esta última dice "Oculta".
+- [ ] `/pokemon/25` sin juego sigue mostrando 109 movimientos, con su método, nivel, precisión y etiqueta en el juego por defecto.
+- [ ] `/pokemon/25?juego=red` muestra solo los movimientos de Rojo/Azul: Impactrueno por nivel, con su nivel y la etiqueta "Aventura"; Rayo por MT/MO.
+- [ ] Filtrar por "Competitivo" deja solo movimientos con potencia mayor que 80; por "Nivel", solo los de nivel.
+- [ ] `/pokemon/41?juego=red` muestra el Mt. Moon con método, probabilidad y niveles.
+- [ ] La etiqueta, el método y "Oculta" se leen como texto, no solo por color, y a 360 px la tabla no tiene scroll horizontal.
+
+### P7 · Iniciar sesión — `/login` (F15)
+1. Formulario con usuario y contraseña (`autocomplete` correctos) y botón "Entrar". Envía a un route handler propio (`app/api/sesion`), que llama a `POST /auth/login` y guarda el token en una cookie `httpOnly`. El token nunca llega al JavaScript del navegador.
+2. Error 401: "Usuario o contraseña incorrectos." junto al formulario, sin decir cuál falló. Un campo vacío se marca antes de enviar.
+3. Tras iniciar sesión, vuelve a `?volver=` (por defecto `/admin`).
+4. **Modo mock** (sin `API_URL`): en vez del formulario, el aviso "La administración solo funciona con la API local", con un enlace al catálogo.
+5. No aparece en la navegación principal; se llega por la URL o por el enlace "Administración" del pie.
+
+### P8 · Panel — `/admin` (F15)
+1. Protegida por `proxy.ts`: sin la cookie de sesión, redirige a `/login?volver=/admin…`. Con sesión, la cabecera muestra el usuario y "Cerrar sesión".
+2. Tres secciones (pestañas o subrutas): **Pokémon**, **Movimientos** y **Rutas**. Cada una tiene un listado paginado con búsqueda, un botón "Crear", y en cada fila "Editar" y "Eliminar".
+3. **Eliminar** pide confirmación en un diálogo accesible ("¿Eliminar Pikachu? Esta acción no se puede deshacer."), con el foco en "Cancelar".
+4. **Formularios:**
+   - Pokémon: nombreEs, las 6 estadísticas, altura, peso, forma de obtención (los 9 valores), descripción de la obtención, tipos (1–2) y rutas.
+   - Movimiento: nombre, nombreEs, tipo, categoría, potencia y precisión.
+   - Ruta: nombre, región y descripción.
+5. **Validación (RF-12):** en el cliente, los campos obligatorios no vacíos, los números ≥ 0, las estadísticas enteras de 1 a 255 y la precisión de 0 a 100. El error se muestra junto al campo (`aria-invalid`, `aria-describedby`), y el foco va al primer campo con error. Además, cada 400 del servidor (`campos`) se muestra junto a su campo; si no tiene campo, arriba del formulario.
+6. Tras guardar o borrar, un mensaje de confirmación (`role="status"`) y el listado actualizado. Un 401 (sesión vencida) lleva a `/login`.
+7. **Modo mock:** el mismo aviso que P7, sin redirigir y sin errores.
+
+**Criterios de aceptación (P7 y P8)**
+- [ ] `/admin` sin sesión redirige a `/login`; tras iniciar sesión vuelve a `/admin`.
+- [ ] Una contraseña incorrecta muestra "Usuario o contraseña incorrectos." y no crea la cookie.
+- [ ] La cookie de sesión es `httpOnly` (no aparece en `document.cookie`).
+- [ ] Escribir "abc" en una estadística no envía el formulario y marca el error junto al campo; lo mismo con "300".
+- [ ] Un 400 del servidor aparece junto a su campo.
+- [ ] Crear, editar y eliminar (con confirmación) funcionan en las tres secciones contra la API local.
+- [ ] En el build sin `API_URL`, `/login` y `/admin` muestran el aviso y responden sin error.
+- [ ] Todo se maneja con el teclado y el foco es visible; a 360, 768 y 1080 px no hay scroll horizontal.
