@@ -126,6 +126,11 @@ Se suma a P1–P5 sin cambiar lo que ya hacen. Reglas: "Toques de nostalgia" en 
 - Mapas y capturas: `datos/imagenes.json` asocia cada imagen al nombre de la región o al `idPokeapi` del lugar, con su archivo en `public/imagenes/`, su tamaño, su texto alternativo, la fuente (WikiDex), el archivo original y su URL de origen. Lo genera `scripts/imagenes.mjs` a partir de la lista elegida en `scripts/imagenes-fuentes.json`.
 - Criterio de calidad de las capturas de lugares: nada de GIF ni minimapas; ancho de 700 px o más, o capturas de *Pokémon: Let's Go* de 396 × 228 (nítidas, y se muestran como mucho a ese tamaño). Primera tanda: 28 de los 88 lugares de Kanto.
 - Enlaces a WikiDex: `datos/enlaces-wikidex.json`, generado por `scripts/enlaces-wikidex.mjs`, con un enlace por Pokémon (`idPokedex`), lugar (`idPokeapi`) y región, y si es `exacto` (artículo verificado) o `busqueda`.
+  - **Exacto** solo si el artículo existe (siguiendo redirecciones), no es una desambiguación y es del tipo correcto: un Pokémon está en "Lista de Pokémon por número"; un lugar lleva su región en el título ("Ruta 1 (Alola)") o en una categoría ("Ciudades de Kanto"; las Islas Sete, en "Archi7"); una región está en "Regiones".
+  - Títulos que se prueban para un lugar: "Ruta N (Región)" y "Ruta N"; su nombre y "Nombre (Región)"; si dan una desambiguación ("Calle Victoria"), su versión con región; y, si el nombre está en inglés, una búsqueda que solo se acepta si el artículo dice "(Ilex Forest en inglés…)".
+  - **Búsqueda:** `https://www.wikidex.net/index.php?search=Nombre+Región&fulltext=1` (la página de resultados, que siempre existe). El texto del enlace dice "Buscar en WikiDex ↗" en vez de "Ver en WikiDex ↗".
+  - Los lugares creados a mano (`idPokeapi` en `null`) no están en el archivo: su enlace de búsqueda se arma en el momento.
+  - Resultado de la primera corrida: Pokémon 1025/1025 exactos; lugares 529 exactos y 91 en búsqueda; regiones 9/9.
 
 ### Qué aparece en cada pantalla
 
