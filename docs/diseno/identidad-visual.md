@@ -135,6 +135,7 @@ Un guiño a quien creció con los juegos (el sprite pixelado que se mueve, el gr
 | Recurso | De dónde sale | Disponible |
 |---|---|---|
 | Sprite animado (Pokémon Negro/Blanco) | Repo `PokeAPI/sprites`: `…/versions/generation-v/black-white/animated/{id}.gif` | #001–#649 |
+| Sprite clásico estático (normal y shiny) | Repo `PokeAPI/sprites`: `…/sprites/pokemon/{id}.png` y `…/pokemon/shiny/{id}.png` (96 × 96) | Recuadro "Sprite clásico" de la ficha a 2×, con escalado pixelado (FE.32) |
 | Ilustración shiny | Repo `PokeAPI/sprites`: `…/other/official-artwork/shiny/{id}.png` | #001–#1025 |
 | Grito | Repo `PokeAPI/cries`: `…/cries/pokemon/latest/{id}.ogg` (OGG) | #001–#1025 |
 | Mapas de región y capturas de lugares | WikiDex, descargadas a `public/imagenes/` en WebP con `scripts/imagenes.mjs` | Los 9 mapas; capturas de los lugares que pasen el criterio de calidad (Fase 2) |

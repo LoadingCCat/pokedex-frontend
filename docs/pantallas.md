@@ -226,3 +226,16 @@ Amplía "Cómo se consigue en el juego" (Fase 5) a todos los Pokémon posibles. 
 - [ ] `/pokemon/151` (Mew) sigue mostrando sus capturas propias, no las de lugares.
 - [ ] Ninguna ficha muestra más de 3 capturas ni tiene scroll horizontal a 390 px.
 - [ ] Tras FE.31, cada región tiene capturas de lugares y el número de fichas con la sección se anota aquí.
+
+## Sprite clásico en la ficha (FE.32)
+
+Pedido por el usuario el 2026-11-17: junto a la ilustración oficial, el sprite pixelado clásico en todos los Pokémon que lo tengan.
+- Fuente: `sprites/pokemon/{id}.png` del repo `PokeAPI/sprites` (96 × 96, pixel art de los juegos; el mismo de donde salen los sprites animados de FE.15) y `sprites/pokemon/shiny/{id}.png`. Se cargan desde GitHub como la ilustración, sin descargarlos.
+- Se muestra en un recuadro "Sprite clásico" a 2× exacto (192 px) con escalado pixelado: al lado de la ilustración en escritorio (≥1024 px) y debajo en pantallas más estrechas. Estático: se ve también con "reducir movimiento".
+- El interruptor "Shiny" cambia a la vez la ilustración y el sprite. El sprite tiene `alt` ("Sprite clásico de Pikachu").
+- Si el repo no tiene el sprite de un Pokémon, no hay recuadro.
+
+**Criterios de aceptación**
+- [ ] `/pokemon/382` (Kyogre) muestra el sprite clásico a 192 × 192, nítido, al lado de la ilustración a 1280 px y debajo a 390 px, sin scroll horizontal.
+- [ ] Con "Shiny" activado, ilustración y sprite cambian a la versión shiny.
+- [ ] Con `prefers-reduced-motion: reduce` el sprite se sigue viendo.
