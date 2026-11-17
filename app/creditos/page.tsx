@@ -24,7 +24,7 @@ export default async function Creditos() {
     console.error("No se pudieron cargar las rutas para los créditos", error);
   }
   const grupos = agruparCreditos(imagenes, rutas);
-  const condiciones = [...new Set([...imagenes.regiones, ...imagenes.lugares].map(([, i]) => i.licencia))];
+  const condiciones = [...new Set([...imagenes.regiones, ...imagenes.lugares, ...imagenes.pokemon].map(([, i]) => i.licencia))];
 
   return (
     <div className="flex max-w-3xl flex-col gap-10">
@@ -51,7 +51,7 @@ export default async function Creditos() {
 
       <Seccion id="mapas" titulo="Mapas y capturas">
         <p>
-          Los mapas de región y las capturas de lugares vienen de{" "}
+          Los mapas de región, las capturas de lugares y las capturas del juego de las fichas vienen de{" "}
           <Fuera href="https://www.wikidex.net">WikiDex</Fuera>. Se descargaron una vez, se convirtieron a WebP y se
           sirven desde esta web. WikiDex no indica un autor por archivo; cada imagen enlaza a su página original.
         </p>

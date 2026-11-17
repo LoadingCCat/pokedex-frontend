@@ -1,9 +1,10 @@
 /**
  * Filas de "Mapas y capturas" en /creditos (P6): una por imagen de datos/imagenes.json. Los
  * lugares se agrupan por la región de su ruta y enlazan a su página; si una captura no tiene
- * ruta en los datos, va al grupo "Otros lugares", sin enlace, pero nunca se pierde.
+ * ruta en los datos, va al grupo "Otros lugares", sin enlace, pero nunca se pierde. Las capturas
+ * del juego de la ficha (Fase 5) van al final, en "Capturas de Pokémon", enlazadas a su ficha.
  */
-import type { ImagenCreditada, ImagenLugar } from "./imagenes";
+import type { CapturaJuego, ImagenCreditada, ImagenLugar } from "./imagenes";
 
 export type FilaCredito = { muestra: string; href: string | null; imagen: ImagenCreditada };
 export type GrupoCreditos = { titulo: string; filas: FilaCredito[] };
@@ -11,7 +12,7 @@ export type GrupoCreditos = { titulo: string; filas: FilaCredito[] };
 type RutaMinima = { idRuta: number; idPokeapi: number | null; region: string };
 
 export function agruparCreditos(
-  imagenes: { regiones: [string, ImagenCreditada][]; lugares: [number, ImagenLugar][] },
+  imagenes: { regiones: [string, ImagenCreditada][]; lugares: [number, ImagenLugar][]; pokemon?: [number, CapturaJuego][] },
   rutas: RutaMinima[],
 ): GrupoCreditos[] {
   const porIdPokeapi = new Map(rutas.filter((r) => r.idPokeapi != null).map((r) => [r.idPokeapi as number, r]));
@@ -30,5 +31,9 @@ export function agruparCreditos(
   const ordenados = [...lugares.entries()]
     .sort(([a], [b]) => (a === "Otros lugares" ? 1 : b === "Otros lugares" ? -1 : a.localeCompare(b, "es")))
     .map(([titulo, filas]) => ({ titulo, filas: filas.sort((a, b) => a.muestra.localeCompare(b.muestra, "es")) }));
-  return [mapas, ...ordenados];
+  const capturas: GrupoCreditos = {
+    titulo: "Capturas de Pokémon",
+    filas: (imagenes.pokemon ?? []).map(([id, imagen]) => ({ muestra: `${imagen.pokemon}: ${imagen.pie}`, href: `/pokemon/${id}`, imagen })),
+  };
+  return [mapas, ...ordenados, capturas];
 }
