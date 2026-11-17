@@ -9,6 +9,8 @@ import EstadoVacio from "@/components/ui/EstadoVacio";
 import Paginacion from "@/components/ui/Paginacion";
 import { listarRegiones, obtenerRuta, pokemonsDeRuta } from "@/lib/api";
 import { conPagina, leerId, leerPagina } from "@/lib/parametros-url";
+import { imagenDeLugar } from "@/lib/imagenes";
+import FiguraCreditada from "@/components/ui/FiguraCreditada";
 
 const TAMANO = 20;
 
@@ -36,6 +38,9 @@ async function ContenidoRuta({ params, searchParams }: Pick<PageProps<"/rutas/[i
   const pagina = leerPagina(parametros);
   // Hay rutas de regiones que no son de origen (p. ej. Orre): sin página de región a la que enlazar
   const regionConPagina = regiones.some((r) => r.toLowerCase() === ruta.region.toLowerCase());
+  const imagen = imagenDeLugar(ruta.idPokeapi);
+  // Vistas de ruta muy apaisadas (p. ej. 1200 × 400): a todo el ancho, no en la columna lateral
+  const panoramica = imagen !== null && imagen.ancho / imagen.alto > 1.9;
 
   return (
     <div className="flex flex-col gap-6">
@@ -53,11 +58,28 @@ async function ContenidoRuta({ params, searchParams }: Pick<PageProps<"/rutas/[i
         )}{" "}
         <span aria-hidden="true">/</span> {ruta.nombre}
       </nav>
-      <header className="flex flex-col gap-2">
-        <p className="text-sm text-texto-secundario">Lugar de {ruta.region}</p>
-        <h1 className="text-3xl font-bold sm:text-4xl">{ruta.nombre}</h1>
-        {ruta.descripcion && <p className="max-w-prose text-texto-secundario">{ruta.descripcion}</p>}
-      </header>
+      <div
+        className={
+          imagen && !panoramica ? "grid items-start gap-6 md:grid-cols-[minmax(0,1fr)_minmax(0,24rem)]" : "flex flex-col gap-6"
+        }
+      >
+        <header className="flex flex-col gap-2">
+          <p className="text-sm text-texto-secundario">Lugar de {ruta.region}</p>
+          <h1 className="text-3xl font-bold sm:text-4xl">{ruta.nombre}</h1>
+          {ruta.descripcion && <p className="max-w-prose text-texto-secundario">{ruta.descripcion}</p>}
+        </header>
+        {/* Captura del lugar (Fase 2): al lado en escritorio, debajo en móvil; las vistas
+            panorámicas de ruta van a todo el ancho. Sin captura, la cabecera queda como antes */}
+        {imagen && (
+          <FiguraCreditada
+            imagen={imagen}
+            sizes={panoramica ? "(min-width: 1200px) 1150px, 100vw" : "(min-width: 768px) 384px, 100vw"}
+            // Las capturas pequeñas (Let's Go, 396 px) no se agrandan
+            imagenClassName={`h-auto w-full ${imagen.ancho < 640 ? "max-w-[396px]" : ""}`}
+            prioridad
+          />
+        )}
+      </div>
       <Suspense key={`pokemons:${pagina}`} fallback={<GrillaEsqueleto />}>
         <PokemonsDeLaRuta idRuta={ruta.idRuta} pagina={pagina} />
       </Suspense>

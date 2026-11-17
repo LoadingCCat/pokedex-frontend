@@ -143,8 +143,8 @@ Se suma a P1–P5 sin cambiar lo que ya hacen. Reglas: "Toques de nostalgia" en 
 - [x] Con `prefers-reduced-motion: reduce`, no hay sprite animado y las barras de la ficha aparecen llenas.
 - [x] En `/pokemon/25`, "Escuchar" reproduce el grito de Pikachu solo al pulsarlo; "Shiny" cambia la ilustración y su `alt`, y se puede volver atrás.
 - [x] Los controles nuevos se manejan con el teclado y tienen nombre accesible ("Escuchar el grito de Pikachu", interruptor "Shiny" con su estado).
-- [ ] `/regiones` y `/regiones/kanto` muestran el mapa de Kanto; una región sin mapa se ve como antes.
-- [ ] `/rutas/62` (Viridian Forest) muestra su captura si se consiguió; un lugar sin captura se ve como antes.
+- [x] `/regiones` y `/regiones/kanto` muestran el mapa de Kanto; una región sin mapa se ve como antes.
+- [x] `/rutas/62` (Viridian Forest) muestra su captura si se consiguió; un lugar sin captura se ve como antes.
 - [ ] Todos los enlaces a WikiDex abren en otra pestaña con `rel="noopener noreferrer"`, el lector de pantalla anuncia que salen del sitio y ninguno lleva a un artículo inexistente.
 - [ ] Ninguna imagen nueva tapa nombre, número, tipos ni estadísticas, y a 390 px no hay scroll horizontal.
 - [ ] El build sigue funcionando sin backend y no crece de forma desproporcionada (se compara antes y después).
