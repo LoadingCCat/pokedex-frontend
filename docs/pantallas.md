@@ -157,9 +157,9 @@ Se suma a P1–P5 sin cambiar lo que ya hacen. Reglas: "Toques de nostalgia" en 
 - [x] Todos los enlaces a WikiDex abren en otra pestaña con `rel="noopener noreferrer"`, el lector de pantalla anuncia que salen del sitio y ninguno lleva a un artículo inexistente.
 - [x] Ninguna imagen nueva tapa nombre, número, tipos ni estadísticas, y a 390 px no hay scroll horizontal.
 - [x] El build sigue funcionando sin backend y no crece de forma desproporcionada (se compara antes y después).
-- [ ] Fase 5: `/pokemon/151` (Mew) muestra la sección "Cómo se consigue en el juego" con sus capturas a 2×, nítidas (pixeladas, no borrosas), y cada una con pie de foto y crédito; `/pokemon/25` no tiene la sección.
-- [ ] Fase 5: a 390 px las capturas caben sin scroll horizontal y no tapan ningún dato; todas tienen `alt` igual a su pie de foto.
-- [ ] Fase 5: cada captura de la ficha aparece en `/creditos`, en un grupo "Capturas de Pokémon" con enlace a la ficha y a su archivo original.
+- [x] Fase 5: `/pokemon/151` (Mew) muestra la sección "Cómo se consigue en el juego" con sus capturas a 2×, nítidas (pixeladas, no borrosas), y cada una con pie de foto y crédito; `/pokemon/25` no tiene la sección.
+- [x] Fase 5: a 390 px las capturas caben sin scroll horizontal y no tapan ningún dato; todas tienen `alt` igual a su pie de foto.
+- [x] Fase 5: cada captura de la ficha aparece en `/creditos`, en un grupo "Capturas de Pokémon" con enlace a la ficha y a su archivo original.
 
 ## P6 · Créditos — `/creditos`
 **Historia:** como evaluador o usuario, quiero saber de dónde salen los datos, las imágenes y los enlaces, y bajo qué condiciones se usan.
