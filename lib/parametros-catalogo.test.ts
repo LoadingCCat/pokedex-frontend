@@ -49,4 +49,31 @@ describe("Parámetros del catálogo (P1)", () => {
     expect(hrefCatalogo(estado, { pagina: 3 })).toBe("/?generacion=1&tipo=fire&page=3");
     expect(hrefCatalogo({ pagina: 1, obtencion: "Sin datos" })).toBe("/?obtencion=sin-datos");
   });
+
+  describe("F14 · dos tipos", () => {
+    it("lee dos tipos repetidos en la URL y los pide juntos a la API", () => {
+      const estado = leerCatalogo({ tipo: ["fire", "WATER"] }, validos);
+      expect(estado).toEqual({ tipo: "fire", tipo2: "water", pagina: 1 });
+      expect(aFiltrosApi(estado).tipo).toEqual(["fire", "water"]);
+      expect(aFiltrosApi(leerCatalogo({ tipo: "fire" }, validos)).tipo).toBe("fire");
+    });
+
+    it("ignora repetidos, vacíos, inventados y un tercer tipo", () => {
+      expect(leerCatalogo({ tipo: ["fire", "Fire"] }, validos)).toEqual({ tipo: "fire", pagina: 1 });
+      expect(leerCatalogo({ tipo: ["", "luz", "water"] }, validos)).toEqual({ tipo: "water", pagina: 1 });
+      expect(leerCatalogo({ tipo: ["fire", "water", "electric"] }, validos)).toEqual({
+        tipo: "fire",
+        tipo2: "water",
+        pagina: 1,
+      });
+    });
+
+    it("arma la URL con tipo repetido; quitar el primero deja el segundo", () => {
+      const estado = leerCatalogo({ tipo: ["fire", "water"], generacion: "1" }, validos);
+      expect(hrefCatalogo(estado)).toBe("/?generacion=1&tipo=fire&tipo=water");
+      expect(hrefCatalogo(estado, { tipo2: undefined })).toBe("/?generacion=1&tipo=fire");
+      expect(hrefCatalogo(estado, { tipo: undefined })).toBe("/?generacion=1&tipo=water");
+      expect(hrefCatalogo(estado, { tipo2: "fire" })).toBe("/?generacion=1&tipo=fire");
+    });
+  });
 });

@@ -66,7 +66,9 @@ function FiltrosActivos({ estado, regiones }: { estado: EstadoCatalogo; regiones
   const chips: { etiqueta: string; quitar: Partial<EstadoCatalogo> }[] = [];
   if (estado.nombre) chips.push({ etiqueta: `Nombre: «${estado.nombre}»`, quitar: { nombre: undefined } });
   if (estado.generacion) chips.push({ etiqueta: `Generación ${estado.generacion}`, quitar: { generacion: undefined } });
+  // Quitar el primer tipo deja el segundo como único (hrefCatalogo lo promueve)
   if (estado.tipo) chips.push({ etiqueta: `Tipo: ${infoTipo(estado.tipo).etiqueta}`, quitar: { tipo: undefined } });
+  if (estado.tipo2) chips.push({ etiqueta: `Tipo: ${infoTipo(estado.tipo2).etiqueta}`, quitar: { tipo2: undefined } });
   if (estado.region) {
     const etiqueta = regiones.find((r) => r.valor === estado.region)?.etiqueta ?? estado.region;
     chips.push({ etiqueta: `Región: ${etiqueta}`, quitar: { region: undefined } });

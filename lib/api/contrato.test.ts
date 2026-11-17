@@ -31,6 +31,9 @@ describe.skipIf(!API_URL)("El mock responde igual que la API real", () => {
     { obtencion: "Sin datos", size: 200 },
     { tipo: "", generacion: 4 },
     { tipo: "luz" },
+    { tipo: ["fire", "flying"] },
+    { tipo: ["flying", "fire"], generacion: 1, sort: "idPokedex,desc" },
+    { tipo: ["fire", "fire"] },
   ];
 
   it.each(consultasPokemon)("listarPokemons(%o)", async (filtros) => {

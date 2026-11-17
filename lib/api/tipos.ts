@@ -82,7 +82,8 @@ export type Paginacion = {
 export type FiltrosPokemon = Paginacion & {
   nombre?: string;
   generacion?: number;
-  tipo?: string;
+  /** Uno o dos tipos (F14): con dos, solo los Pokémon que tienen ambos. Más de 2 → 400 */
+  tipo?: string | string[];
   region?: string;
   obtencion?: string;
 };

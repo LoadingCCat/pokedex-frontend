@@ -16,12 +16,15 @@ import {
   type Tipo,
 } from "./tipos";
 
-type Parametros = Record<string, string | number | boolean | undefined>;
+type Parametros = Record<string, string | number | boolean | string[] | undefined>;
 
 function consulta(parametros: Parametros): string {
   const busqueda = new URLSearchParams();
   for (const [clave, valor] of Object.entries(parametros)) {
-    if (valor !== undefined && valor !== "") busqueda.set(clave, String(valor));
+    // Un arreglo se envía como parámetro repetido (?tipo=fire&tipo=flying)
+    for (const v of Array.isArray(valor) ? valor : [valor]) {
+      if (v !== undefined && v !== "") busqueda.append(clave, String(v));
+    }
   }
   const texto = busqueda.toString();
   return texto ? `?${texto}` : "";

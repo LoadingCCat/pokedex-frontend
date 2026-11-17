@@ -151,7 +151,17 @@ export const fuenteMock: FuenteDatos = {
   async listarPokemons(filtros: FiltrosPokemon = {}) {
     const { pokemons } = datos();
     const nombre = limpiar(filtros.nombre);
-    const tipo = limpiar(filtros.tipo)?.toLowerCase();
+    // Uno o dos tipos (F14), sin vacíos ni repetidos; con dos, el Pokémon debe tener ambos
+    const tipos = [
+      ...new Set(
+        (Array.isArray(filtros.tipo) ? filtros.tipo : [filtros.tipo])
+          .map((t) => limpiar(t)?.toLowerCase())
+          .filter((t): t is string => Boolean(t)),
+      ),
+    ];
+    if (tipos.length > 2) {
+      throw new ErrorApi(400, "Se pueden filtrar como mucho 2 tipos a la vez (por ejemplo ?tipo=fire&tipo=flying)");
+    }
     const region = limpiar(filtros.region)?.toLowerCase();
     const obtencion = limpiar(filtros.obtencion);
     const { generacion } = filtros;
@@ -168,7 +178,7 @@ export const fuenteMock: FuenteDatos = {
           sinTildes(p.nombre).includes(patron) ||
           (p.nombreEs != null && sinTildes(p.nombreEs).includes(patron))) &&
         (generacion == null || p.generacion === generacion) &&
-        (!tipo || p.tipos.some((t) => t.nombre.toLowerCase() === tipo)) &&
+        tipos.every((tipo) => p.tipos.some((t) => t.nombre.toLowerCase() === tipo)) &&
         (!region ||
           p.region?.toLowerCase() === region ||
           p.rutas.some((r) => r.region.toLowerCase() === region)) &&

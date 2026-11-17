@@ -259,7 +259,7 @@ Aprobada el 2026-11-17 (Fase 0). Specs en `../pokedex-backend/docs/specs/F11`–
 
 **Criterios de aceptación**
 - [ ] `/?tipo=fire&tipo=flying` muestra Charizard y Moltres, ni Charmander ni Pidgey, con el mismo total que la API.
-- [ ] "Tipo 2" está desactivado sin un primer tipo; quitar el primer tipo quita también el segundo.
+- [x] "Tipo 2" está desactivado sin un primer tipo; quitar el primer tipo deja el segundo como único tipo (no los borra a los dos).
 - [ ] `/?juego=red&tipo=electric` muestra solo Pokémon eléctricos presentes en Rojo, con el mismo total que la API.
 - [ ] `/?juego=xyz` no rompe la página (se ignora).
 - [ ] Desde `/?juego=red`, abrir una ficha la muestra con el juego Rojo elegido.

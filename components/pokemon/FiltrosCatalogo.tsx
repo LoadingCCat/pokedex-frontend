@@ -37,17 +37,20 @@ export default function FiltrosCatalogo({
 }) {
   const router = useRouter();
   const [cargando, iniciarTransicion] = useTransition();
-  const activos = [estado.generacion, estado.tipo, estado.region, estado.obtencion].filter(Boolean).length;
+  const activos = [estado.generacion, estado.tipo, estado.tipo2, estado.region, estado.obtencion].filter(Boolean).length;
   const [abierto, setAbierto] = useState(activos > 0);
 
   function aplicar(formulario: HTMLFormElement) {
     const datos = new FormData(formulario);
     const texto = (clave: string) => String(datos.get(clave) ?? "").trim() || undefined;
     const generacion = Number(texto("generacion"));
+    // Los dos selectores de tipo se llaman "tipo" (así también funciona sin JavaScript)
+    const [tipo, tipo2] = datos.getAll("tipo").map((t) => String(t).trim() || undefined);
     const href = hrefCatalogo({
       nombre: texto("nombre"),
       generacion: generacion || undefined,
-      tipo: texto("tipo"),
+      tipo,
+      tipo2,
       region: texto("region"),
       obtencion: obtencionOficial(texto("obtencion")?.replace(/-/g, " ")),
       sort: texto("sort"),
@@ -112,7 +115,7 @@ export default function FiltrosCatalogo({
 
       <div
         id="panel-filtros"
-        className={`grid grid-cols-2 gap-3 md:grid-cols-5 ${abierto ? "" : "[html[data-js]_&]:max-md:hidden"}`}
+        className={`grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-6 ${abierto ? "" : "[html[data-js]_&]:max-md:hidden"}`}
       >
         <Selector id="filtro-generacion" nombre="generacion" etiqueta="Generación" valor={estado.generacion ? String(estado.generacion) : ""}>
           <option value="">Todas</option>
@@ -129,6 +132,24 @@ export default function FiltrosCatalogo({
               {t.etiqueta}
             </option>
           ))}
+        </Selector>
+        {/* F14: segundo tipo, solo con el primero elegido; muestra los que tienen los dos */}
+        <Selector
+          id="filtro-tipo2"
+          nombre="tipo"
+          etiqueta="Tipo 2"
+          valor={estado.tipo2 ?? ""}
+          desactivado={!estado.tipo}
+          ayuda={estado.tipo ? undefined : "Elige primero un tipo"}
+        >
+          <option value="">Ninguno</option>
+          {tipos
+            .filter((t) => t.valor !== estado.tipo)
+            .map((t) => (
+              <option key={t.valor} value={t.valor}>
+                {t.etiqueta}
+              </option>
+            ))}
         </Selector>
         <Selector id="filtro-region" nombre="region" etiqueta="Región" valor={estado.region ?? ""}>
           <option value="">Todas</option>
@@ -151,7 +172,7 @@ export default function FiltrosCatalogo({
             </option>
           ))}
         </Selector>
-        <Selector id="filtro-orden" nombre="sort" etiqueta="Ordenar por" valor={estado.sort ?? ""} className="col-span-2 md:col-span-1">
+        <Selector id="filtro-orden" nombre="sort" etiqueta="Ordenar por" valor={estado.sort ?? ""}>
           {OPCIONES_ORDEN.map((o) => (
             <option key={o.valor} value={o.valor}>
               {o.etiqueta}
@@ -169,6 +190,8 @@ function Selector({
   etiqueta,
   valor,
   className = "",
+  desactivado = false,
+  ayuda,
   children,
 }: {
   id: string;
@@ -176,16 +199,32 @@ function Selector({
   etiqueta: string;
   valor: string;
   className?: string;
+  desactivado?: boolean;
+  /** Texto que explica por qué está desactivado (lo lee el lector de pantalla) */
+  ayuda?: string;
   children: React.ReactNode;
 }) {
+  const idAyuda = ayuda ? `${id}-ayuda` : undefined;
   return (
     <div className={`flex flex-col gap-1 ${className}`}>
       <label htmlFor={id} className={ETIQUETA}>
         {etiqueta}
       </label>
-      <select id={id} name={nombre} defaultValue={valor} className={CAMPO}>
+      <select
+        id={id}
+        name={nombre}
+        defaultValue={valor}
+        disabled={desactivado}
+        aria-describedby={idAyuda}
+        className={`${CAMPO} disabled:cursor-not-allowed disabled:opacity-60`}
+      >
         {children}
       </select>
+      {ayuda && (
+        <p id={idAyuda} className="sr-only">
+          {ayuda}
+        </p>
+      )}
     </div>
   );
 }

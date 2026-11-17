@@ -103,6 +103,37 @@ describe("F2 · Filtros", () => {
   });
 });
 
+describe("F14 · Filtro por dos tipos", () => {
+  it("fuego y volador: solo los que tienen los dos (Charizard y Moltres sí; Charmander y Pidgey no)", async () => {
+    const pagina = await api.listarPokemons({ tipo: ["fire", "flying"], size: 200 });
+    const lista = ids(pagina);
+    expect(lista).toEqual(expect.arrayContaining([6, 146]));
+    expect(lista).not.toContain(4);
+    expect(lista).not.toContain(16);
+    const tipos = (p: { tipos: { nombre: string }[] }) => p.tipos.map((t) => t.nombre);
+    expect(pagina.content.every((p) => tipos(p).includes("fire") && tipos(p).includes("flying"))).toBe(true);
+  });
+
+  it("el orden no importa; repetidos y vacíos cuentan una vez; con uno, igual que antes", async () => {
+    const total = async (tipo: string | string[]) => (await api.listarPokemons({ tipo })).page.totalElements;
+    expect(await total(["flying", "FIRE"])).toBe(await total(["fire", "flying"]));
+    expect(await total(["fire", "fire"])).toBe(await total("fire"));
+    expect(await total(["", "fire"])).toBe(await total("fire"));
+  });
+
+  it("tres tipos distintos → 400", async () => {
+    await esperarError(api.listarPokemons({ tipo: ["fire", "flying", "water"] }), 400);
+  });
+
+  it("se combina con generación y orden", async () => {
+    const pagina = await api.listarPokemons({ tipo: ["fire", "flying"], generacion: 1, sort: "velocidad,desc" });
+    expect(ids(pagina)).toEqual(expect.arrayContaining([6, 146]));
+    expect(pagina.content.every((p) => p.generacion === 1)).toBe(true);
+    const velocidades = pagina.content.map((p) => p.velocidad ?? 0);
+    expect(velocidades).toEqual([...velocidades].sort((a, b) => b - a));
+  });
+});
+
 describe("F8 · Filtros combinados", () => {
   it("combina tipo y generación con Y", async () => {
     const pagina = await api.listarPokemons({ tipo: "fire", generacion: 1, size: 200 });
