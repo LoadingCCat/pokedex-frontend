@@ -65,6 +65,8 @@ async function ContenidoRegion({ params, searchParams }: Pick<PageProps<"/region
       {mapa && (
         <FiguraCreditada
           imagen={mapa}
+          // El bloque se ajusta al ancho del mapa (sin bandas a los lados) y se centra
+          className="mx-auto w-fit max-w-full"
           // Con el alto acotado a 34rem, un mapa apaisado mide como mucho ~780 px de ancho
           sizes="(min-width: 820px) 780px, 100vw"
           // Alto acotado: un mapa vertical (Galar) no empuja la lista de lugares fuera de la pantalla

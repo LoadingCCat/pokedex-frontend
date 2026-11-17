@@ -3,8 +3,9 @@ import type { EnlaceWikidex } from "@/lib/enlaces-wikidex";
 /**
  * Enlace a WikiDex (identidad, "Enlace externo"): pestaña nueva, flecha decorativa y un nombre
  * accesible que avisa de que sale del sitio. Si el artículo no se verificó, dice "Buscar".
- * `compacto` es la versión corta ("WikiDex ↗") de la lista de lugares: `de` es lo que se enlaza
- * ("Bosque Verde") y solo se lee en el nombre accesible.
+ * `compacto` es la versión corta de la lista de lugares: "WikiDex ↗" si el artículo está verificado
+ * y "Buscar ↗" si va a la búsqueda. `de` es lo que se enlaza ("Bosque Verde") y solo se lee en el
+ * nombre accesible ("Buscar Four Island en WikiDex").
  */
 export default function EnlaceExterno({
   enlace,
@@ -25,7 +26,11 @@ export default function EnlaceExterno({
       rel="noopener noreferrer"
       className={`inline-flex min-h-11 items-center gap-1 ${compacto ? "text-xs" : "text-sm"} text-acento underline underline-offset-2 hover:no-underline sm:min-h-0 ${className}`}
     >
-      {compacto ? (
+      {compacto && enlace.tipo === "busqueda" ? (
+        <>
+          Buscar<span className="sr-only"> {de} en WikiDex</span>
+        </>
+      ) : compacto ? (
         <>
           <span className="sr-only">
             {verbo} {de} en{" "}

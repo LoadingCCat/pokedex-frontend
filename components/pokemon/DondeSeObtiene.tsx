@@ -54,7 +54,7 @@ export default function DondeSeObtiene({ pokemon, regiones }: { pokemon: Pokemon
               <ul className="flex flex-wrap gap-x-1 gap-y-1 text-sm">
                 {rutas.map((ruta, i) => (
                   <li key={ruta.idRuta}>
-                    <Link href={`/rutas/${ruta.idRuta}`} className="text-acento underline-offset-2 hover:underline">
+                    <Link href={`/rutas/${ruta.idRuta}`} className="text-acento underline underline-offset-2 hover:no-underline">
                       {ruta.nombre}
                     </Link>
                     {i < rutas.length - 1 && <span aria-hidden="true">,</span>}
