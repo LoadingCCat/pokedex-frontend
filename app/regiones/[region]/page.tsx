@@ -8,6 +8,8 @@ import EstadoVacio from "@/components/ui/EstadoVacio";
 import Paginacion from "@/components/ui/Paginacion";
 import { listarRegiones, rutasDeRegion } from "@/lib/api";
 import { conPagina, leerPagina } from "@/lib/parametros-url";
+import { mapaDeRegion } from "@/lib/imagenes";
+import FiguraCreditada from "@/components/ui/FiguraCreditada";
 
 const TAMANO = 24;
 
@@ -38,6 +40,7 @@ async function ContenidoRegion({ params, searchParams }: Pick<PageProps<"/region
   const pagina = leerPagina(parametros);
   const ruta = `/regiones/${region.toLowerCase()}`;
   const generacion = regiones.indexOf(region) + 1;
+  const mapa = mapaDeRegion(region);
 
   return (
     <div className="flex flex-col gap-6">
@@ -56,6 +59,16 @@ async function ContenidoRegion({ params, searchParams }: Pick<PageProps<"/region
           Ver Pokémon de {region}
         </EnlaceBoton>
       </header>
+      {mapa && (
+        <FiguraCreditada
+          imagen={mapa}
+          // Con el alto acotado a 34rem, un mapa apaisado mide como mucho ~780 px de ancho
+          sizes="(min-width: 820px) 780px, 100vw"
+          // Alto acotado: un mapa vertical (Galar) no empuja la lista de lugares fuera de la pantalla
+          imagenClassName="h-auto max-h-[34rem] w-auto max-w-full"
+          prioridad
+        />
+      )}
       <Suspense key={`rutas:${pagina}`} fallback={<ListaEsqueleto />}>
         <RutasDeRegion region={region} pagina={pagina} ruta={ruta} />
       </Suspense>
