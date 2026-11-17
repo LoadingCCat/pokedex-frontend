@@ -150,7 +150,7 @@ Se suma a P1–P5 sin cambiar lo que ya hacen. Reglas: "Toques de nostalgia" en 
 - [x] Los controles nuevos se manejan con el teclado y tienen nombre accesible ("Escuchar el grito de Pikachu", interruptor "Shiny" con su estado).
 - [x] `/regiones` y `/regiones/kanto` muestran el mapa de Kanto; una región sin mapa se ve como antes.
 - [x] `/rutas/62` (Viridian Forest) muestra su captura si se consiguió; un lugar sin captura se ve como antes.
-- [ ] Todos los enlaces a WikiDex abren en otra pestaña con `rel="noopener noreferrer"`, el lector de pantalla anuncia que salen del sitio y ninguno lleva a un artículo inexistente.
+- [x] Todos los enlaces a WikiDex abren en otra pestaña con `rel="noopener noreferrer"`, el lector de pantalla anuncia que salen del sitio y ninguno lleva a un artículo inexistente.
 - [ ] Ninguna imagen nueva tapa nombre, número, tipos ni estadísticas, y a 390 px no hay scroll horizontal.
 - [ ] El build sigue funcionando sin backend y no crece de forma desproporcionada (se compara antes y después).
 
