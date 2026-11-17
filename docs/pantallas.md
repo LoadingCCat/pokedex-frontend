@@ -221,11 +221,12 @@ Amplía "Cómo se consigue en el juego" (Fase 5) a todos los Pokémon posibles. 
 - Sin cambios en el contrato de la API: todo sale de `datos/imagenes.json` y de las rutas que ya trae cada Pokémon.
 
 **Criterios de aceptación**
-- [ ] `/pokemon/1` (Bulbasaur) muestra una captura de la elección de los iniciales de Kanto.
-- [ ] `/pokemon/12` (Butterfree) muestra "Aparece en Bosque Verde" con la captura del Bosque Verde y un enlace a su página.
-- [ ] `/pokemon/151` (Mew) sigue mostrando sus capturas propias, no las de lugares.
-- [ ] Ninguna ficha muestra más de 3 capturas ni tiene scroll horizontal a 390 px.
+- [x] `/pokemon/1` (Bulbasaur) muestra una captura de la elección de los iniciales de Kanto.
+- [x] `/pokemon/12` (Butterfree) muestra "Aparece en Bosque Verde" con la captura del Bosque Verde y un enlace a su página.
+- [x] `/pokemon/151` (Mew) sigue mostrando sus capturas propias, no las de lugares.
+- [x] Ninguna ficha muestra más de 3 capturas ni tiene scroll horizontal a 390 px.
 - [ ] Tras FE.31, cada región tiene capturas de lugares y el número de fichas con la sección se anota aquí.
+**Resultado (FE.29–FE.30):** 25 iniciales con la captura de la elección de su región (Kanto en X e Y; Johto, Hoenn, Sinnoh y Teselia en Rubí Omega y Zafiro Alfa; Alola, Galar y Paldea en sus juegos) y Eevee con la de cuando se recibe de regalo. Chespin, Fennekin y Froakie no tienen captura del juego en WikiDex (solo del anime) y Pikachu usa la de los lugares donde aparece. Con FE.30, 290 fichas muestran la sección antes de FE.31 (77 con capturas propias y 213 con las de un lugar).
 
 ## Sprite clásico en la ficha (FE.32)
 
