@@ -210,3 +210,19 @@ Se suma a P1–P5 sin cambiar lo que ya hacen. Reglas: "Toques de nostalgia" en 
 - [x] Al menos 40 de los 60 lugares de Kanto restantes tienen captura; ninguna es un minimapa ni un GIF, todas aparecen en `/creditos` y ninguna página tiene scroll horizontal a 390 px.
 
 **Resultado (FE.27):** 46 lugares más, 74 de los 88 de Kanto con captura: 7 de *Let's Go* (Cueva Celeste, Calle Victoria —que la PokeAPI tiene dos veces—, Central de Energía, Vía Subterránea, Mansión Pokémon y Torre Pokémon), 6 pantallas de llegada de RFVH a 2× y 33 vistas desde arriba de RFVH y HGSS. Quedan sin captura los 14 que no tienen en WikiDex ni artículo ni capturas útiles: Four Island, Five Island, Canyon Entrance, Memorial Pillar, Three Isle Port (solo minimapas), las 7 cámaras de las Ruinas Sete, "Roaming Kanto" y "Kanto Pokecenter". Las pantallas de 240 px ensanchan la columna lateral a 482 px para verse a 2× exacto.
+
+## Capturas en todas las fichas (FE.29–FE.31)
+
+Amplía "Cómo se consigue en el juego" (Fase 5) a todos los Pokémon posibles. Aprobado por el usuario el 2026-11-17 ("intenta llenar todos los que puedas").
+
+- **FE.29 · Iniciales:** los 29 Pokémon con `tipoObtencion = "Inicial"` (los 27 de las 9 generaciones, Pikachu y Eevee) muestran capturas de la elección del inicial cuando WikiDex las tiene ("Elección de Pokémon inicial ROZA", "Pokémon iniciales de Kanto XY"), elegidas a mano como en FE.24, con pie de foto en español. Una misma captura de los tres iniciales de una región se usa en las tres fichas.
+- **FE.30 · Captura del lugar:** un Pokémon sin capturas propias muestra, en la misma sección, hasta 2 capturas de lugares donde aparece (las de `datos/imagenes.json`, sin descargar nada), con el pie "Aparece en Bosque Verde", enlazado a la página del lugar. Primero los lugares de su región de origen y después el resto, por orden de nombre. Las capturas propias (Fase 5 y FE.29) tienen siempre prioridad. Hoy cubre 220 Pokémon con los lugares de Kanto.
+- **FE.31 · Lugares de las demás regiones:** el mismo método que FE.27 (artículo verificado en WikiDex; *Let's Go* o captura 3D → pantalla de llegada → vista desde arriba a escala entera), región por región, para que FE.30 llegue a más Pokémon. El techo son los 846 Pokémon que aparecen en algún lugar; los 179 restantes (sin lugares en la PokeAPI) dependen de que tengan capturas propias.
+- Sin cambios en el contrato de la API: todo sale de `datos/imagenes.json` y de las rutas que ya trae cada Pokémon.
+
+**Criterios de aceptación**
+- [ ] `/pokemon/1` (Bulbasaur) muestra una captura de la elección de los iniciales de Kanto.
+- [ ] `/pokemon/12` (Butterfree) muestra "Aparece en Bosque Verde" con la captura del Bosque Verde y un enlace a su página.
+- [ ] `/pokemon/151` (Mew) sigue mostrando sus capturas propias, no las de lugares.
+- [ ] Ninguna ficha muestra más de 3 capturas ni tiene scroll horizontal a 390 px.
+- [ ] Tras FE.31, cada región tiene capturas de lugares y el número de fichas con la sección se anota aquí.
