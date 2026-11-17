@@ -184,3 +184,27 @@ Se suma a P1–P5 sin cambiar lo que ya hacen. Reglas: "Toques de nostalgia" en 
 - [x] `/creditos` lista cada mapa y captura usados, con un enlace a su origen; ninguno falta respecto a `datos/imagenes.json`.
 - [x] Aparece el aviso de Nintendo / Game Freak / Creatures y el de uso sin fines de lucro.
 - [x] El pie de todas las páginas enlaza a `/creditos`.
+
+## Pulido y lugares restantes (FE.26–FE.27)
+
+**FE.26 · Mejoras de la evaluación** (`docs/diseno/referencias/README.md`, puntos 1–5, 7 y 8; el 6 son datos de la PokeAPI y queda en el backend):
+1. Ficha: las tarjetas "Estadísticas base" y "Dónde se obtiene" ya no se estiran a la misma altura (`items-start`).
+2. Ficha: en la cadena evolutiva, la columna de la condición pasa de 144 a 224 px en escritorio, para que las condiciones largas (Leafeon, Sylveon) no se partan en 6–7 líneas.
+3. Catálogo en móvil: solo el buscador queda a la vista; el resto de filtros y el orden van en un desplegable **Filtros (n)**, con `n` = filtros activos, abierto si hay alguno. En escritorio, igual que ahora. La barra fija en escritorio que pedía la identidad se descarta (taparía resultados al desplazarse) y se quita de la identidad.
+4. Textos de 12 px de la cadena evolutiva (condiciones y número) pasan a 13–14 px.
+5. Enlaces a lugares de "Dónde se obtiene" siempre subrayados (no solo al pasar el ratón).
+7. Lista de lugares de una región: el enlace corto dice **WikiDex ↗** si el artículo está verificado y **Buscar ↗** si va a la búsqueda.
+8. Mapa de la región: el bloque se ajusta al ancho del mapa, sin bandas grises a los lados.
+
+**FE.27 · Capturas de los lugares de Kanto que faltan.** De los 60 sin captura, 45 tienen artículo verificado en WikiDex y dentro hay capturas del juego; los otros 15 no tienen artículo verificado (las cámaras de las Ruinas Sete, Torre Pokémon, Mansión Pokémon, Central Energía…) y se buscarán a mano por su nombre en español. "Roaming Kanto" y "Kanto Pokecenter" no son lugares y se quedan sin captura.
+- **Criterio de calidad ampliado** (como en la ficha, Fase 5): además de lo de la Fase 2, se aceptan la pantalla de llegada de Rojo Fuego y Verde Hoja (240 × 160, "Introducción a la Cueva Glaciada") y las vistas desde arriba de pixel art de RFVH y HGSS, guardadas sin pérdida y mostradas a escala entera con escalado pixelado. Siguen fuera los minimapas (192 × 144) y los GIF.
+- **Orden de preferencia:** captura de *Let's Go* (396 × 228) → pantalla de llegada de RFVH a 2× → vista desde arriba.
+- **Vistas muy altas** (rutas verticales de 384 × 1280 o más): se muestran con un alto máximo de 36rem, recortando por abajo con CSS; el archivo completo se enlaza en `/creditos`. Las muy anchas usan la vista panorámica que ya existe.
+
+**Criterios de aceptación**
+- [ ] `/pokemon/133` a 1280 px: "Estadísticas base" no deja hueco bajo el total, y las condiciones de Leafeon y Sylveon ocupan 3 líneas o menos.
+- [ ] `/` a 390 px: el primer resultado asoma en la primera pantalla (844 px de alto); con `?tipo=fire` el botón dice "Filtros (1)" y el panel está abierto.
+- [ ] En "Dónde se obtiene", los lugares se ven subrayados sin pasar el ratón.
+- [ ] En `/regiones/kanto`, Four Island dice "Buscar ↗" y Bosque Verde "WikiDex ↗"; su nombre accesible no cambia.
+- [ ] El mapa de Kanto no deja bandas a los lados a 1280 px.
+- [ ] Al menos 40 de los 60 lugares de Kanto restantes tienen captura; ninguna es un minimapa ni un GIF, todas aparecen en `/creditos` y ninguna página tiene scroll horizontal a 390 px.
