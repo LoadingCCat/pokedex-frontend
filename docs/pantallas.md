@@ -161,9 +161,9 @@ Se suma a P1–P5 sin cambiar lo que ya hacen. Reglas: "Toques de nostalgia" en 
 - [x] Fase 5: `/pokemon/151` (Mew) muestra la sección "Cómo se consigue en el juego" con sus capturas a 2×, nítidas (pixeladas, no borrosas), y cada una con pie de foto y crédito; `/pokemon/25` no tiene la sección.
 - [x] Fase 5: a 390 px las capturas caben sin scroll horizontal y no tapan ningún dato; todas tienen `alt` igual a su pie de foto.
 - [x] Fase 5: cada captura de la ficha aparece en `/creditos`, en un grupo "Capturas de Pokémon" con enlace a la ficha y a su archivo original.
-- [ ] Fase 6: en `/pokemon/25`, "Movimientos que aprende" muestra Rayo (`thunderbolt`) con un disco amarillo (eléctrico) y el tipo "Eléctrico" en texto; lo mismo en `/movimientos`.
-- [ ] Fase 6: a 390 px las tablas de movimientos no tienen scroll horizontal; el lector de pantalla no lee el disco y sí el tipo.
-- [ ] Fase 6: un movimiento con `tipo` en `null` muestra el disco gris y "—", sin romper la tabla.
+- [x] Fase 6: en `/pokemon/25`, "Movimientos que aprende" muestra Rayo (`thunderbolt`) con un disco amarillo (eléctrico) y el tipo "Eléctrico" en texto; lo mismo en `/movimientos`.
+- [x] Fase 6: a 390 px las tablas de movimientos no tienen scroll horizontal; el lector de pantalla no lee el disco y sí el tipo.
+- [x] Fase 6: un movimiento con `tipo` en `null` muestra el disco gris y "—", sin romper la tabla.
 
 ## P6 · Créditos — `/creditos`
 **Historia:** como evaluador o usuario, quiero saber de dónde salen los datos, las imágenes y los enlaces, y bajo qué condiciones se usan.
