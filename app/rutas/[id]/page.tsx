@@ -11,6 +11,7 @@ import { listarRegiones, obtenerRuta, pokemonsDeRuta } from "@/lib/api";
 import { conPagina, leerId, leerPagina } from "@/lib/parametros-url";
 import { imagenDeLugar } from "@/lib/imagenes";
 import FiguraCreditada from "@/components/ui/FiguraCreditada";
+import type { CSSProperties } from "react";
 import EnlaceExterno from "@/components/ui/EnlaceExterno";
 import { enlaceDeLugar } from "@/lib/enlaces-wikidex";
 
@@ -43,6 +44,12 @@ async function ContenidoRuta({ params, searchParams }: Pick<PageProps<"/rutas/[i
   const imagen = imagenDeLugar(ruta.idPokeapi);
   // Vistas de ruta muy apaisadas (p. ej. 1200 × 400): a todo el ancho, no en la columna lateral
   const panoramica = imagen !== null && imagen.ancho / imagen.alto > 1.9;
+  // Pixel art de RFVH y HGSS (FE.27): a escala entera, 2× las pantallas de 240 px y 1× el resto.
+  // La columna lateral toma ese ancho; las vistas muy altas se recortan por abajo a 36rem
+  const pixel = imagen?.pixelArt === true;
+  const anchoVista = imagen ? (pixel && imagen.ancho <= 256 ? imagen.ancho * 2 : imagen.ancho) : 0;
+  // +2 px: el borde de 1 px del bloque, para que la imagen quede a su ancho exacto
+  const columna = pixel && !panoramica ? `${anchoVista + 2}px` : "24rem";
 
   return (
     <div className="flex flex-col gap-6">
@@ -62,8 +69,11 @@ async function ContenidoRuta({ params, searchParams }: Pick<PageProps<"/rutas/[i
       </nav>
       <div
         className={
-          imagen && !panoramica ? "grid items-start gap-6 md:grid-cols-[minmax(0,1fr)_minmax(0,24rem)]" : "flex flex-col gap-6"
+          imagen && !panoramica
+            ? "grid items-start gap-6 md:grid-cols-[minmax(0,1fr)_minmax(0,var(--columna-imagen))]"
+            : "flex flex-col gap-6"
         }
+        style={{ "--columna-imagen": columna } as CSSProperties}
       >
         <header className="flex flex-col gap-2">
           <p className="text-sm text-texto-secundario">Lugar de {ruta.region}</p>
@@ -79,8 +89,14 @@ async function ContenidoRuta({ params, searchParams }: Pick<PageProps<"/rutas/[i
           <FiguraCreditada
             imagen={imagen}
             sizes={panoramica ? "(min-width: 1200px) 1150px, 100vw" : "(min-width: 768px) 384px, 100vw"}
-            // Las capturas pequeñas (Let's Go, 396 px) no se agrandan
-            imagenClassName={`h-auto w-full ${imagen.ancho < 640 ? "max-w-[396px]" : ""}`}
+            // Las capturas pequeñas (Let's Go, 396 px) no se agrandan; el pixel art va a su ancho exacto
+            imagenClassName={
+              pixel
+                ? `h-auto max-h-[36rem] max-w-full object-cover object-top ${anchoVista <= 1200 ? "[image-rendering:pixelated]" : ""}`
+                : `h-auto w-full ${imagen.ancho < 640 ? "max-w-[396px]" : ""}`
+            }
+            estiloImagen={pixel ? { width: anchoVista } : undefined}
+            sinOptimizar={pixel}
             prioridad
           />
         )}

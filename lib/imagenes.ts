@@ -17,7 +17,8 @@ export type ImagenCreditada = {
   licencia: string;
 };
 
-export type ImagenLugar = ImagenCreditada & { lugar: string };
+/** `pixelArt`: vista o pantalla de RFVH o HGSS guardada a su tamaño real (FE.27) */
+export type ImagenLugar = ImagenCreditada & { lugar: string; pixelArt?: boolean };
 
 /** Captura del juego en la ficha (Fase 5). `pixelArt`: GB, GBA o DS, guardada a su tamaño real. */
 export type CapturaJuego = ImagenCreditada & { pixelArt: boolean; pokemon: string; pie: string };
