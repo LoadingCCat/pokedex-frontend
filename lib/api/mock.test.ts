@@ -96,9 +96,9 @@ describe("F2 · Filtros", () => {
     expect((await api.listarPokemons({ region: "narnia" })).page.totalElements).toBe(0);
   });
 
-  it("los Pokémon de una ruta incluyen a Pikachu en Viridian Forest", async () => {
+  it("los Pokémon de una ruta incluyen a Pikachu en el Bosque Verde", async () => {
     const pikachu = await api.obtenerPokemon(25);
-    const bosque = pikachu!.rutas.find((r) => r.nombre === "Viridian Forest")!;
+    const bosque = pikachu!.rutas.find((r) => r.nombre === "Bosque Verde")!;
     expect(ids(await api.pokemonsDeRuta(bosque.idRuta, { size: 200 }))).toContain(25);
   });
 });

@@ -111,7 +111,7 @@ Una spec por pantalla, con criterios de aceptación. Cada pantalla usa las funci
 3. Un id inexistente muestra la página 404 propia.
 
 **Criterios de aceptación**
-- [x] La ruta "Viridian Forest" (Kanto) muestra a Pikachu entre sus Pokémon. Muchas rutas conservan el nombre en inglés porque la PokeAPI no tiene el español; se muestran tal cual.
+- [x] La ruta "Bosque Verde" (Kanto; "Viridian Forest" antes de B.28) muestra a Pikachu entre sus Pokémon. Desde B.28 los lugares van en español (de la PokeAPI o del título verificado de WikiDex); unos 90 sin artículo siguen en inglés.
 - [x] Desde la ficha de Pikachu (P2), el enlace de una ruta lleva a esta pantalla y Pikachu aparece en ella.
 - [x] `/rutas/99999` muestra la página 404 propia.
 
@@ -155,7 +155,7 @@ Se suma a P1–P5 sin cambiar lo que ya hacen. Reglas: "Toques de nostalgia" en 
 - [x] En `/pokemon/25`, "Escuchar" reproduce el grito de Pikachu solo al pulsarlo; "Shiny" cambia la ilustración y su `alt`, y se puede volver atrás.
 - [x] Los controles nuevos se manejan con el teclado y tienen nombre accesible ("Escuchar el grito de Pikachu", interruptor "Shiny" con su estado).
 - [x] `/regiones` y `/regiones/kanto` muestran el mapa de Kanto; una región sin mapa se ve como antes.
-- [x] `/rutas/62` (Viridian Forest) muestra su captura si se consiguió; un lugar sin captura se ve como antes.
+- [x] `/rutas/62` (Bosque Verde) muestra su captura si se consiguió; un lugar sin captura se ve como antes.
 - [x] Todos los enlaces a WikiDex abren en otra pestaña con `rel="noopener noreferrer"`, el lector de pantalla anuncia que salen del sitio y ninguno lleva a un artículo inexistente.
 - [x] Ninguna imagen nueva tapa nombre, número, tipos ni estadísticas, y a 390 px no hay scroll horizontal.
 - [x] El build sigue funcionando sin backend y no crece de forma desproporcionada (se compara antes y después).
