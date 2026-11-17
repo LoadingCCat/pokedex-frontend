@@ -25,7 +25,8 @@ import IlustracionFicha from "@/components/pokemon/IlustracionFicha";
 import EnlaceExterno from "@/components/ui/EnlaceExterno";
 import { enlaceDePokemon } from "@/lib/enlaces-wikidex";
 import CapturasDelJuego from "@/components/pokemon/CapturasDelJuego";
-import { capturasDePokemon } from "@/lib/imagenes";
+import { capturasDePokemon, imagenDeLugar } from "@/lib/imagenes";
+import { elegirCapturasFicha } from "@/lib/capturas-ficha";
 
 const PRIMERO = 1;
 const ULTIMO = 1025;
@@ -71,7 +72,8 @@ async function ContenidoFicha({ params }: Pick<PageProps<"/pokemon/[id]">, "para
 
   const nombre = nombreVisible(pokemon);
   const grito = gritoUrl(pokemon.idPokedex);
-  const capturas = capturasDePokemon(pokemon.idPokedex);
+  // Capturas propias o, si no tiene, las de lugares donde aparece (FE.30)
+  const capturas = elegirCapturasFicha(pokemon, capturasDePokemon(pokemon.idPokedex), imagenDeLugar);
   return (
     <article className="flex flex-col gap-6">
       <Vecinos id={id} />
@@ -111,9 +113,9 @@ async function ContenidoFicha({ params }: Pick<PageProps<"/pokemon/[id]">, "para
         </Seccion>
       </div>
 
-      {capturas.length > 0 && (
+      {capturas && (
         <Seccion id="en-el-juego" titulo="Cómo se consigue en el juego">
-          <CapturasDelJuego capturas={capturas} />
+          <CapturasDelJuego seleccion={capturas} />
         </Seccion>
       )}
 
