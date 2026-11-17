@@ -138,6 +138,7 @@ Un guiño a quien creció con los juegos (el sprite pixelado que se mueve, el gr
 | Ilustración shiny | Repo `PokeAPI/sprites`: `…/other/official-artwork/shiny/{id}.png` | #001–#1025 |
 | Grito | Repo `PokeAPI/cries`: `…/cries/pokemon/latest/{id}.ogg` (OGG) | #001–#1025 |
 | Mapas de región y capturas de lugares | WikiDex, descargadas a `public/imagenes/` en WebP con `scripts/imagenes.mjs` | Los 9 mapas; capturas de los lugares que pasen el criterio de calidad (Fase 2) |
+| Capturas del juego en la ficha | WikiDex (categoría del Pokémon y "Capturas de <juego>"), elegidas a mano y descargadas igual | Legendarios y singulares, empezando por la primera generación (Fase 5) |
 
 ### Imágenes oficiales
 
@@ -154,6 +155,7 @@ Lo que sigue fuera: el **logo de Pokémon** y su **tipografía oficial**. La mar
 - **Interruptor "Shiny":** `button` con `role="switch"` y `aria-checked`, con la etiqueta "Shiny" visible. Apagado: borde `borde`. Encendido: fondo `acento` y texto blanco. Cambia solo la ilustración grande de la ficha y su `alt` ("Pikachu shiny").
 - **Sprite animado:** encima de la ilustración, en la misma caja y con fundido de 150 ms. Solo con puntero fino (`@media (hover: hover)`), no en táctil.
 - **Mapas y capturas:** dentro de una tarjeta, con radio de 8 px, borde `borde-suave` y su crédito corto debajo ("Imagen: WikiDex"), en `texto-secundario`.
+- **Capturas del juego en la ficha:** el mismo bloque, en una fila de hasta 3 (una columna en móvil). El pixel art se muestra a 2× con `image-rendering: pixelated` (nunca borroso ni a escala no entera en escritorio); debajo, el pie de foto en `texto` y el crédito corto con el juego en `texto-secundario`. Es contenido, no un efecto: sin animación ni zoom.
 - **Enlace externo "Ver en WikiDex ↗":** enlace de texto en `acento`, subrayado. Abre en pestaña nueva con `rel="noopener noreferrer"`; la flecha es decorativa (`aria-hidden`) y el nombre accesible termina en "(se abre en otra pestaña, sitio externo)". Si el artículo no se pudo verificar, dice "Buscar en WikiDex ↗" y lleva a la búsqueda. En la lista de lugares de una región va como enlace secundario corto ("WikiDex ↗") al lado de cada lugar, con el nombre del lugar en su texto accesible.
 
 ## Fuera de esta identidad
