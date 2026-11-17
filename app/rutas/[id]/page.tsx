@@ -11,6 +11,8 @@ import { listarRegiones, obtenerRuta, pokemonsDeRuta } from "@/lib/api";
 import { conPagina, leerId, leerPagina } from "@/lib/parametros-url";
 import { imagenDeLugar } from "@/lib/imagenes";
 import FiguraCreditada from "@/components/ui/FiguraCreditada";
+import EnlaceExterno from "@/components/ui/EnlaceExterno";
+import { enlaceDeLugar } from "@/lib/enlaces-wikidex";
 
 const TAMANO = 20;
 
@@ -67,6 +69,9 @@ async function ContenidoRuta({ params, searchParams }: Pick<PageProps<"/rutas/[i
           <p className="text-sm text-texto-secundario">Lugar de {ruta.region}</p>
           <h1 className="text-3xl font-bold sm:text-4xl">{ruta.nombre}</h1>
           {ruta.descripcion && <p className="max-w-prose text-texto-secundario">{ruta.descripcion}</p>}
+          <p>
+            <EnlaceExterno enlace={enlaceDeLugar(ruta.idPokeapi, ruta.nombre, ruta.region)} />
+          </p>
         </header>
         {/* Captura del lugar (Fase 2): al lado en escritorio, debajo en móvil; las vistas
             panorámicas de ruta van a todo el ancho. Sin captura, la cabecera queda como antes */}

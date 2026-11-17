@@ -23,7 +23,7 @@ export default function EnlaceExterno({
       href={enlace.url}
       target="_blank"
       rel="noopener noreferrer"
-      className={`inline-flex min-h-11 items-center gap-1 text-sm text-acento underline underline-offset-2 hover:no-underline sm:min-h-0 ${className}`}
+      className={`inline-flex min-h-11 items-center gap-1 ${compacto ? "text-xs" : "text-sm"} text-acento underline underline-offset-2 hover:no-underline sm:min-h-0 ${className}`}
     >
       {compacto ? (
         <>

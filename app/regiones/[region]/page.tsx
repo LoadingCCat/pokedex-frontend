@@ -10,6 +10,8 @@ import { listarRegiones, rutasDeRegion } from "@/lib/api";
 import { conPagina, leerPagina } from "@/lib/parametros-url";
 import { mapaDeRegion } from "@/lib/imagenes";
 import FiguraCreditada from "@/components/ui/FiguraCreditada";
+import EnlaceExterno from "@/components/ui/EnlaceExterno";
+import { enlaceDeLugar, enlaceDeRegion } from "@/lib/enlaces-wikidex";
 
 const TAMANO = 24;
 
@@ -54,6 +56,7 @@ async function ContenidoRegion({ params, searchParams }: Pick<PageProps<"/region
         <div className="flex flex-col gap-1">
           <p className="font-datos text-sm text-texto-secundario">Generación {generacion}</p>
           <h1 className="text-3xl font-bold sm:text-4xl">{region}</h1>
+          <EnlaceExterno enlace={enlaceDeRegion(region)} className="self-start" />
         </div>
         <EnlaceBoton href={`/?region=${region.toLowerCase()}`} variante="principal">
           Ver Pokémon de {region}
@@ -119,13 +122,15 @@ async function RutasDeRegion({ region, pagina, ruta }: { region: string; pagina:
       </h2>
       <ul className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
         {resultado.content.map((r) => (
-          <li key={r.idRuta}>
+          <li key={r.idRuta} className="flex items-center gap-3 rounded-md border border-borde-suave bg-superficie pr-3">
             <Link
               href={`/rutas/${r.idRuta}`}
-              className="flex min-h-11 items-center rounded-md border border-borde-suave bg-superficie px-3 py-2 text-sm font-medium transition-colors hover:border-acento hover:text-acento"
+              className="flex min-h-11 min-w-0 flex-1 items-center rounded-md px-3 py-2 text-sm font-medium transition-colors hover:text-acento"
             >
               {r.nombre}
             </Link>
+            {/* Enlace secundario corto: el nombre del lugar va en su texto accesible */}
+            <EnlaceExterno enlace={enlaceDeLugar(r.idPokeapi, r.nombre, region)} compacto de={r.nombre} className="shrink-0" />
           </li>
         ))}
       </ul>
