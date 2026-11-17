@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-16T23:55:43.474Z",
+  "generado": "2026-11-17T04:18:01.645Z",
   "regiones": {
     "Kanto": {
       "archivo": "/imagenes/regiones/kanto.webp",
@@ -438,5 +438,227 @@
       "origen": "https://www.wikidex.net/wiki/Archivo:Torre_Desaf%C3%ADo.png",
       "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
     }
+  },
+  "pokemon": {
+    "144": [
+      {
+        "archivo": "/imagenes/pokemon/144-1.webp",
+        "ancho": 256,
+        "alto": 192,
+        "pixelArt": true,
+        "pokemon": "Articuno",
+        "pie": "Articuno espera al fondo de las Islas Espuma",
+        "alt": "Articuno espera al fondo de las Islas Espuma",
+        "juego": "Pokémon Oro HeartGold y Plata SoulSilver",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Localización_de_Articuno_HGSS.png",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Localizaci%C3%B3n_de_Articuno_HGSS.png",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      },
+      {
+        "archivo": "/imagenes/pokemon/144-2.webp",
+        "ancho": 960,
+        "alto": 540,
+        "pixelArt": false,
+        "pokemon": "Articuno",
+        "pie": "Articuno aparece tras vencer a la Liga",
+        "alt": "Articuno aparece tras vencer a la Liga",
+        "juego": "Pokémon: Let's Go, Pikachu! y Let's Go, Eevee!",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Articuno_captura_LGPE.jpg",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Articuno_captura_LGPE.jpg",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      },
+      {
+        "archivo": "/imagenes/pokemon/144-3.webp",
+        "ancho": 1024,
+        "alto": 576,
+        "pixelArt": false,
+        "pokemon": "Articuno",
+        "pie": "Articuno salvaje en la Sierra Napada",
+        "alt": "Articuno salvaje en la Sierra Napada",
+        "juego": "Pokémon Escarlata y Púrpura",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Articuno_salvaje_EP.jpg",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Articuno_salvaje_EP.jpg",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      }
+    ],
+    "145": [
+      {
+        "archivo": "/imagenes/pokemon/145-1.webp",
+        "ancho": 256,
+        "alto": 192,
+        "pixelArt": true,
+        "pokemon": "Zapdos",
+        "pie": "Combate contra Zapdos",
+        "alt": "Combate contra Zapdos",
+        "juego": "Pokémon Oro HeartGold y Plata SoulSilver",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Vs_Zapdos_HGSS.png",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Vs_Zapdos_HGSS.png",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      },
+      {
+        "archivo": "/imagenes/pokemon/145-2.webp",
+        "ancho": 620,
+        "alto": 348,
+        "pixelArt": false,
+        "pokemon": "Zapdos",
+        "pie": "Zapdos aparece tras vencer a la Liga",
+        "alt": "Zapdos aparece tras vencer a la Liga",
+        "juego": "Pokémon: Let's Go, Pikachu! y Let's Go, Eevee!",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Zapdos_captura_LGPE.jpg",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Zapdos_captura_LGPE.jpg",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      },
+      {
+        "archivo": "/imagenes/pokemon/145-3.webp",
+        "ancho": 1024,
+        "alto": 576,
+        "pixelArt": false,
+        "pokemon": "Zapdos",
+        "pie": "Zapdos salvaje en Paldea",
+        "alt": "Zapdos salvaje en Paldea",
+        "juego": "Pokémon Escarlata y Púrpura",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Zapdos_salvaje_EP.jpg",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Zapdos_salvaje_EP.jpg",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      }
+    ],
+    "146": [
+      {
+        "archivo": "/imagenes/pokemon/146-1.webp",
+        "ancho": 256,
+        "alto": 192,
+        "pixelArt": true,
+        "pokemon": "Moltres",
+        "pie": "Moltres espera en el Monte Plateado",
+        "alt": "Moltres espera en el Monte Plateado",
+        "juego": "Pokémon Oro HeartGold y Plata SoulSilver",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Localización_de_Moltres_HGSS.png",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Localizaci%C3%B3n_de_Moltres_HGSS.png",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      },
+      {
+        "archivo": "/imagenes/pokemon/146-2.webp",
+        "ancho": 256,
+        "alto": 191,
+        "pixelArt": true,
+        "pokemon": "Moltres",
+        "pie": "Combate contra Moltres",
+        "alt": "Combate contra Moltres",
+        "juego": "Pokémon Oro HeartGold y Plata SoulSilver",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Vs_Moltres_HGSS.png",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Vs_Moltres_HGSS.png",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      },
+      {
+        "archivo": "/imagenes/pokemon/146-3.webp",
+        "ancho": 1024,
+        "alto": 576,
+        "pixelArt": false,
+        "pokemon": "Moltres",
+        "pie": "Moltres salvaje en el Desierto Rostiz",
+        "alt": "Moltres salvaje en el Desierto Rostiz",
+        "juego": "Pokémon Escarlata y Púrpura",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Moltres_salvaje_EP.jpg",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Moltres_salvaje_EP.jpg",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      }
+    ],
+    "150": [
+      {
+        "archivo": "/imagenes/pokemon/150-1.webp",
+        "ancho": 256,
+        "alto": 192,
+        "pixelArt": true,
+        "pokemon": "Mewtwo",
+        "pie": "Mewtwo al fondo de la Cueva Celeste",
+        "alt": "Mewtwo al fondo de la Cueva Celeste",
+        "juego": "Pokémon Oro HeartGold y Plata SoulSilver",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Cueva_Celeste_HGSS_ante_Mewtwo.png",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Cueva_Celeste_HGSS_ante_Mewtwo.png",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      },
+      {
+        "archivo": "/imagenes/pokemon/150-2.webp",
+        "ancho": 256,
+        "alto": 192,
+        "pixelArt": true,
+        "pokemon": "Mewtwo",
+        "pie": "Combate contra Mewtwo, al nivel 70",
+        "alt": "Combate contra Mewtwo, al nivel 70",
+        "juego": "Pokémon Oro HeartGold y Plata SoulSilver",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Vs_Mewtwo_HGSS.png",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Vs_Mewtwo_HGSS.png",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      },
+      {
+        "archivo": "/imagenes/pokemon/150-3.webp",
+        "ancho": 1024,
+        "alto": 576,
+        "pixelArt": false,
+        "pokemon": "Mewtwo",
+        "pie": "Encuentro con Mewtwo en la Cueva Celeste",
+        "alt": "Encuentro con Mewtwo en la Cueva Celeste",
+        "juego": "Pokémon: Let's Go, Pikachu! y Let's Go, Eevee!",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Encuentro_con_Mewtwo_Cueva_Celeste_LGPE.jpg",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Encuentro_con_Mewtwo_Cueva_Celeste_LGPE.jpg",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      }
+    ],
+    "151": [
+      {
+        "archivo": "/imagenes/pokemon/151-1.webp",
+        "ancho": 240,
+        "alto": 160,
+        "pixelArt": true,
+        "pokemon": "Mew",
+        "pie": "Encuentro con Mew en la Isla Suprema",
+        "alt": "Encuentro con Mew en la Isla Suprema",
+        "juego": "Pokémon Esmeralda",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Mew_en_Isla_Suprema_(encuentro).png",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Mew_en_Isla_Suprema_(encuentro).png",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      },
+      {
+        "archivo": "/imagenes/pokemon/151-2.webp",
+        "ancho": 240,
+        "alto": 160,
+        "pixelArt": true,
+        "pokemon": "Mew",
+        "pie": "Mew se esconde en la hierba: hay que acorralarlo",
+        "alt": "Mew se esconde en la hierba: hay que acorralarlo",
+        "juego": "Pokémon Esmeralda",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Mew_en_Isla_Suprema_(jugando).png",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Mew_en_Isla_Suprema_(jugando).png",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      },
+      {
+        "archivo": "/imagenes/pokemon/151-3.webp",
+        "ancho": 240,
+        "alto": 160,
+        "pixelArt": true,
+        "pokemon": "Mew",
+        "pie": "Mew aparece al nivel 30",
+        "alt": "Mew aparece al nivel 30",
+        "juego": "Pokémon Esmeralda",
+        "fuente": "WikiDex",
+        "archivoOriginal": "Mew_captura_Isla_Suprema.png",
+        "origen": "https://www.wikidex.net/wiki/Archivo:Mew_captura_Isla_Suprema.png",
+        "licencia": "Uso legítimo (fair use), sin fines de lucro. Pokémon © Nintendo / Creatures / Game Freak"
+      }
+    ]
   }
 }

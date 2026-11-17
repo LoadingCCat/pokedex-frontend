@@ -1,5 +1,6 @@
-// Descarga los mapas de región y las capturas de lugares elegidos en scripts/imagenes-fuentes.json
-// (FE.19–FE.20), los convierte a WebP y escribe datos/imagenes.json.
+// Descarga los mapas de región, las capturas de lugares (FE.19–FE.20) y las capturas del juego de la
+// ficha (FE.23–FE.24) elegidos en scripts/imagenes-fuentes.json, los convierte a WebP y escribe
+// datos/imagenes.json.
 //
 // Uso: node scripts/imagenes.mjs
 //
@@ -83,7 +84,7 @@ const credito = (info, archivo, juego) => ({
 });
 
 const fuentes = JSON.parse(await readFile(join(RAIZ, "scripts", "imagenes-fuentes.json"), "utf8"));
-const salida = { generado: new Date().toISOString(), regiones: {}, lugares: {} };
+const salida = { generado: new Date().toISOString(), regiones: {}, lugares: {}, pokemon: {} };
 let kbFinal = 0;
 let kbDescarga = 0;
 
@@ -110,5 +111,21 @@ for (const l of fuentes.lugares) {
   console.log(`  ${String(l.idPokeapi).padStart(4)} ${l.lugar.padEnd(22)} ${imagen.ancho}×${imagen.alto}  ${kbDescargados} KB → ${kb} KB`);
 }
 
+// Capturas del juego en la ficha: el pixel art (GB, GBA, DS: hasta 256 px) se guarda a su tamaño, sin
+// pérdida, y la ficha lo muestra a 2× pixelado; las capturas en HD se reducen a 1024 px como mucho
+const PIXEL_ART = 256;
+const capturas = (fuentes.pokemon ?? []).flatMap((p) => p.capturas.map((c, i) => ({ ...c, p, i })));
+const infoCapturas = await informacion(capturas.map((c) => c.archivoWikidex), 1024);
+for (const c of capturas) {
+  const info = infoCapturas.get(c.archivoWikidex);
+  const pixelArt = info.width <= PIXEL_ART;
+  const imagen = await procesar(info, pixelArt ? info.width : 1024, `imagenes/pokemon/${c.p.idPokedex}-${c.i + 1}.webp`);
+  kbFinal += imagen.kb;
+  kbDescarga += imagen.kbDescargados;
+  const { kb, kbDescargados, ...resto } = imagen;
+  (salida.pokemon[c.p.idPokedex] ??= []).push({ ...resto, pixelArt, pokemon: c.p.nombre, pie: c.pie, alt: c.pie, ...credito(info, c.archivoWikidex, c.juego) });
+  console.log(`  #${String(c.p.idPokedex).padStart(4, "0")} ${c.archivoWikidex.slice(0, 40).padEnd(40)} ${imagen.ancho}×${imagen.alto}  ${kbDescargados} KB → ${kb} KB`);
+}
+
 await writeFile(join(RAIZ, "datos", "imagenes.json"), JSON.stringify(salida, null, 2) + "\n");
-console.log(`Listo: ${Object.keys(salida.regiones).length} mapas y ${Object.keys(salida.lugares).length} lugares. Descargado ${kbDescarga} KB → WebP ${kbFinal} KB.`);
+console.log(`Listo: ${Object.keys(salida.regiones).length} mapas, ${Object.keys(salida.lugares).length} lugares y ${capturas.length} capturas de ${Object.keys(salida.pokemon).length} Pokémon. Descargado ${kbDescarga} KB → WebP ${kbFinal} KB.`);

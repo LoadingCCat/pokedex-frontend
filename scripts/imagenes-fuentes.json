@@ -1,5 +1,5 @@
 {
-  "descripcion": "Imágenes elegidas para la Fase 2 (FE.19-FE.20): archivo en WikiDex y juego. scripts/imagenes.mjs las descarga, las convierte a WebP y escribe datos/imagenes.json. Criterio de calidad en docs/pantallas.md.",
+  "descripcion": "Imágenes elegidas para la Fase 2 (FE.19-FE.20) y la Fase 5 (FE.23-FE.24, capturas del juego en la ficha): archivo en WikiDex y juego. scripts/imagenes.mjs las descarga, las convierte a WebP y escribe datos/imagenes.json. Criterio de calidad en docs/pantallas.md.",
   "regiones": [
     {
       "region": "Kanto",
@@ -280,6 +280,113 @@
       "juego": "Pokémon: Let's Go, Pikachu! y Let's Go, Eevee!",
       "vista": "captura",
       "anchoMaximo": 1200
+    }
+  ],
+  "pokemon": [
+    {
+      "idPokedex": 144,
+      "nombre": "Articuno",
+      "capturas": [
+        {
+          "archivoWikidex": "Localización_de_Articuno_HGSS.png",
+          "juego": "Pokémon Oro HeartGold y Plata SoulSilver",
+          "pie": "Articuno espera al fondo de las Islas Espuma"
+        },
+        {
+          "archivoWikidex": "Articuno_captura_LGPE.jpg",
+          "juego": "Pokémon: Let's Go, Pikachu! y Let's Go, Eevee!",
+          "pie": "Articuno aparece tras vencer a la Liga"
+        },
+        {
+          "archivoWikidex": "Articuno_salvaje_EP.jpg",
+          "juego": "Pokémon Escarlata y Púrpura",
+          "pie": "Articuno salvaje en la Sierra Napada"
+        }
+      ]
+    },
+    {
+      "idPokedex": 145,
+      "nombre": "Zapdos",
+      "capturas": [
+        {
+          "archivoWikidex": "Vs_Zapdos_HGSS.png",
+          "juego": "Pokémon Oro HeartGold y Plata SoulSilver",
+          "pie": "Combate contra Zapdos"
+        },
+        {
+          "archivoWikidex": "Zapdos_captura_LGPE.jpg",
+          "juego": "Pokémon: Let's Go, Pikachu! y Let's Go, Eevee!",
+          "pie": "Zapdos aparece tras vencer a la Liga"
+        },
+        {
+          "archivoWikidex": "Zapdos_salvaje_EP.jpg",
+          "juego": "Pokémon Escarlata y Púrpura",
+          "pie": "Zapdos salvaje en Paldea"
+        }
+      ]
+    },
+    {
+      "idPokedex": 146,
+      "nombre": "Moltres",
+      "capturas": [
+        {
+          "archivoWikidex": "Localización_de_Moltres_HGSS.png",
+          "juego": "Pokémon Oro HeartGold y Plata SoulSilver",
+          "pie": "Moltres espera en el Monte Plateado"
+        },
+        {
+          "archivoWikidex": "Vs_Moltres_HGSS.png",
+          "juego": "Pokémon Oro HeartGold y Plata SoulSilver",
+          "pie": "Combate contra Moltres"
+        },
+        {
+          "archivoWikidex": "Moltres_salvaje_EP.jpg",
+          "juego": "Pokémon Escarlata y Púrpura",
+          "pie": "Moltres salvaje en el Desierto Rostiz"
+        }
+      ]
+    },
+    {
+      "idPokedex": 150,
+      "nombre": "Mewtwo",
+      "capturas": [
+        {
+          "archivoWikidex": "Cueva_Celeste_HGSS_ante_Mewtwo.png",
+          "juego": "Pokémon Oro HeartGold y Plata SoulSilver",
+          "pie": "Mewtwo al fondo de la Cueva Celeste"
+        },
+        {
+          "archivoWikidex": "Vs_Mewtwo_HGSS.png",
+          "juego": "Pokémon Oro HeartGold y Plata SoulSilver",
+          "pie": "Combate contra Mewtwo, al nivel 70"
+        },
+        {
+          "archivoWikidex": "Encuentro_con_Mewtwo_Cueva_Celeste_LGPE.jpg",
+          "juego": "Pokémon: Let's Go, Pikachu! y Let's Go, Eevee!",
+          "pie": "Encuentro con Mewtwo en la Cueva Celeste"
+        }
+      ]
+    },
+    {
+      "idPokedex": 151,
+      "nombre": "Mew",
+      "capturas": [
+        {
+          "archivoWikidex": "Mew_en_Isla_Suprema_(encuentro).png",
+          "juego": "Pokémon Esmeralda",
+          "pie": "Encuentro con Mew en la Isla Suprema"
+        },
+        {
+          "archivoWikidex": "Mew_en_Isla_Suprema_(jugando).png",
+          "juego": "Pokémon Esmeralda",
+          "pie": "Mew se esconde en la hierba: hay que acorralarlo"
+        },
+        {
+          "archivoWikidex": "Mew_captura_Isla_Suprema.png",
+          "juego": "Pokémon Esmeralda",
+          "pie": "Mew aparece al nivel 30"
+        }
+      ]
     }
   ]
 }
