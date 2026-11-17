@@ -236,6 +236,6 @@ Pedido por el usuario el 2026-11-17: junto a la ilustración oficial, el sprite 
 - Si el repo no tiene el sprite de un Pokémon, no hay recuadro.
 
 **Criterios de aceptación**
-- [ ] `/pokemon/382` (Kyogre) muestra el sprite clásico a 192 × 192, nítido, al lado de la ilustración a 1280 px y debajo a 390 px, sin scroll horizontal.
-- [ ] Con "Shiny" activado, ilustración y sprite cambian a la versión shiny.
-- [ ] Con `prefers-reduced-motion: reduce` el sprite se sigue viendo.
+- [x] `/pokemon/382` (Kyogre) muestra el sprite clásico a 192 × 192, nítido, al lado de la ilustración a 1280 px y debajo a 390 px, sin scroll horizontal.
+- [x] Con "Shiny" activado, ilustración y sprite cambian a la versión shiny.
+- [x] Con `prefers-reduced-motion: reduce` el sprite se sigue viendo.
