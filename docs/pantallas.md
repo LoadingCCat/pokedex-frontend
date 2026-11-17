@@ -225,7 +225,8 @@ Amplía "Cómo se consigue en el juego" (Fase 5) a todos los Pokémon posibles. 
 - [x] `/pokemon/12` (Butterfree) muestra "Aparece en Bosque Verde" con la captura del Bosque Verde y un enlace a su página.
 - [x] `/pokemon/151` (Mew) sigue mostrando sus capturas propias, no las de lugares.
 - [x] Ninguna ficha muestra más de 3 capturas ni tiene scroll horizontal a 390 px.
-- [ ] Tras FE.31, cada región tiene capturas de lugares y el número de fichas con la sección se anota aquí.
+- [x] Tras FE.31, cada región tiene capturas de lugares y el número de fichas con la sección se anota aquí.
+**Resultado (FE.31):** 274 lugares más en Johto (40), Hoenn (78), Sinnoh (58), Teselia (43), Kalos (24), Alola (16) y Galar (63): 348 de 620 lugares con captura (Orre, sin artículos en WikiDex, queda en 0). Solo se acepta una captura cuyo nombre de archivo contenga el nombre del lugar, y se descartaron los mapas montados para guías (los de 3DS más grandes que la pantalla), las capturas protagonizadas por un Pokémon, objetos o diálogos, y las escenas de la historia; revisadas a mano en hojas de contacto. **801 de 1025 fichas** muestran ya la sección "Cómo se consigue en el juego" (77 con capturas propias y 724 con la de un lugar). `public/imagenes` pesa 22,7 MB; cada imagen solo se descarga en su página.
 **Resultado (FE.29–FE.30):** 25 iniciales con la captura de la elección de su región (Kanto en X e Y; Johto, Hoenn, Sinnoh y Teselia en Rubí Omega y Zafiro Alfa; Alola, Galar y Paldea en sus juegos) y Eevee con la de cuando se recibe de regalo. Chespin, Fennekin y Froakie no tienen captura del juego en WikiDex (solo del anime) y Pikachu usa la de los lugares donde aparece. Con FE.30, 290 fichas muestran la sección antes de FE.31 (77 con capturas propias y 213 con las de un lugar).
 
 ## Sprite clásico en la ficha (FE.32)
