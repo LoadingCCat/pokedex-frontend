@@ -159,8 +159,14 @@ Se suma a P1–P5 sin cambiar lo que ya hacen. Reglas: "Toques de nostalgia" en 
 
 **Comportamiento**
 1. Enlazada desde el pie de todas las páginas.
-2. Secciones: **Datos** (PokeAPI, con enlace), **Imágenes** (sprites, ilustraciones y gritos de los repos de la PokeAPI; mapas y capturas con su fuente, autor si lo hay y enlace al original, generadas desde `datos/imagenes.json`), **Enlaces** (WikiDex) y el aviso "Pokémon © Nintendo / Game Freak / Creatures. Proyecto universitario sin fines de lucro".
-3. Página estática, sin efectos.
+2. Secciones, en este orden:
+   - **Datos:** la PokeAPI (con enlace), de donde salen todos los datos a través de nuestra API.
+   - **Ilustraciones, sprites y gritos:** los repositorios `PokeAPI/sprites` y `PokeAPI/cries` (con enlace), que se cargan desde GitHub.
+   - **Mapas y capturas:** generada desde `datos/imagenes.json`. Primero los 9 mapas y después los lugares, agrupados por región. Cada fila: qué muestra (región o lugar, enlazado a su página), el juego, la fuente y un enlace "Archivo original" a la página del archivo en WikiDex. WikiDex no da autor por archivo, así que no hay columna de autor. Debajo, la condición de uso que registra el archivo de datos (uso legítimo, sin fines de lucro).
+   - **Enlaces externos:** WikiDex; cómo se verifican los artículos y que lo no verificado lleva a su búsqueda.
+   - **Aviso:** "Pokémon © Nintendo / Game Freak / Creatures. Pokedex+ es un proyecto universitario sin fines de lucro, sin relación con esas empresas."
+3. Página estática, sin efectos ni imágenes (solo texto y enlaces). Los enlaces que salen del sitio siguen el estilo de "Enlace externo" de la identidad.
+4. El pie de todas las páginas cambia "Pokémon y sus nombres son marcas de sus respectivos dueños" por un enlace "Créditos y avisos".
 
 **Criterios de aceptación**
 - [ ] `/creditos` lista cada mapa y captura usados, con un enlace a su origen; ninguno falta respecto a `datos/imagenes.json`.
