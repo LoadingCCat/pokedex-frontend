@@ -145,6 +145,7 @@ Se suma a P1–P5 sin cambiar lo que ya hacen. Reglas: "Toques de nostalgia" en 
 | P4 `/regiones` | Miniatura del mapa en cada tarjeta de región, encima del nombre | Región sin mapa: la tarjeta queda como ahora |
 | P4 `/regiones/[region]` | Mapa grande de la región entre la cabecera y la lista de lugares, con su crédito corto. En cada lugar de la lista, un enlace secundario **WikiDex ↗** | Sin mapa: no hay bloque. Sin artículo verificado: el enlace va a la búsqueda |
 | P5 `/rutas/[id]` | Captura del lugar junto a la cabecera (al lado en escritorio, debajo en móvil), con su crédito corto. **Ver en WikiDex ↗** en la cabecera | Sin captura: la cabecera queda como ahora. Lugar creado a mano (`idPokeapi` en `null`): enlace a la búsqueda |
+| P2 y P3 · tablas de movimientos (Fase 6) | Delante del nombre de cada movimiento, un **disco de MT** pequeño (SVG propio, 20 px) del color de su tipo. Nueva columna **Tipo** con la insignia del tipo; en móvil, el tipo va en texto pequeño bajo el nombre para no ensanchar la tabla. El disco es decorativo: el tipo siempre se lee en texto | Movimiento sin `tipo` (creado a mano o sin reimportar): disco gris y "—" |
 | P6 `/creditos` | Página nueva (abajo) | — |
 
 ### Criterios de aceptación
@@ -160,6 +161,9 @@ Se suma a P1–P5 sin cambiar lo que ya hacen. Reglas: "Toques de nostalgia" en 
 - [x] Fase 5: `/pokemon/151` (Mew) muestra la sección "Cómo se consigue en el juego" con sus capturas a 2×, nítidas (pixeladas, no borrosas), y cada una con pie de foto y crédito; `/pokemon/25` no tiene la sección.
 - [x] Fase 5: a 390 px las capturas caben sin scroll horizontal y no tapan ningún dato; todas tienen `alt` igual a su pie de foto.
 - [x] Fase 5: cada captura de la ficha aparece en `/creditos`, en un grupo "Capturas de Pokémon" con enlace a la ficha y a su archivo original.
+- [ ] Fase 6: en `/pokemon/25`, "Movimientos que aprende" muestra Rayo (`thunderbolt`) con un disco amarillo (eléctrico) y el tipo "Eléctrico" en texto; lo mismo en `/movimientos`.
+- [ ] Fase 6: a 390 px las tablas de movimientos no tienen scroll horizontal; el lector de pantalla no lee el disco y sí el tipo.
+- [ ] Fase 6: un movimiento con `tipo` en `null` muestra el disco gris y "—", sin romper la tabla.
 
 ## P6 · Créditos — `/creditos`
 **Historia:** como evaluador o usuario, quiero saber de dónde salen los datos, las imágenes y los enlaces, y bajo qué condiciones se usan.
