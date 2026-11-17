@@ -22,6 +22,8 @@ import { leerId } from "@/lib/parametros-url";
 import { gritoUrl, ilustracionShinyUrl } from "@/lib/recursos-pokemon";
 import BotonGrito from "@/components/pokemon/BotonGrito";
 import IlustracionFicha from "@/components/pokemon/IlustracionFicha";
+import EnlaceExterno from "@/components/ui/EnlaceExterno";
+import { enlaceDePokemon } from "@/lib/enlaces-wikidex";
 
 const PRIMERO = 1;
 const ULTIMO = 1025;
@@ -90,6 +92,9 @@ async function ContenidoFicha({ params }: Pick<PageProps<"/pokemon/[id]">, "para
             <Dato etiqueta="Altura" valor={formatoAltura(pokemon.altura)} datos />
             <Dato etiqueta="Peso" valor={formatoPeso(pokemon.peso)} datos />
           </dl>
+          <p>
+            <EnlaceExterno enlace={enlaceDePokemon(pokemon.idPokedex, nombre)} />
+          </p>
         </div>
       </Tarjeta>
 
