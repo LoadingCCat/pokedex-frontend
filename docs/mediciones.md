@@ -52,7 +52,10 @@ for (const w of [360, 375, 768, 1080, 1280]) {
   await page.setViewportSize({ width: w, height: 800 });
   for (const r of rutas) {
     await page.goto("http://localhost:3100" + r, { waitUntil: "networkidle" });
-    const { scrollWidth, clientWidth } = await page.evaluate(() => document.documentElement);
+    const { scrollWidth, clientWidth } = await page.evaluate(() => ({
+      scrollWidth: document.documentElement.scrollWidth,
+      clientWidth: document.documentElement.clientWidth,
+    }));
     // scrollWidth > clientWidth → hay scroll horizontal
   }
 }
