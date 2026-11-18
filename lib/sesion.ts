@@ -3,6 +3,7 @@
  * los componentes de servidor, las server actions y los route handlers, nunca el navegador.
  */
 import "server-only";
+import { connection } from "next/server";
 import { cookies } from "next/headers";
 import { COOKIE_SESION, datosDelToken } from "./sesion-comun";
 
@@ -10,6 +11,7 @@ export type Sesion = { token: string; usuario: string };
 
 /** La sesión actual, o null si no hay cookie o el token ya venció. */
 export async function leerSesion(): Promise<Sesion | null> {
+  await connection(); // fuerza lectura en tiempo de petición (Date.now() al validar el vencimiento)
   const token = (await cookies()).get(COOKIE_SESION)?.value;
   if (!token) return null;
   const datos = datosDelToken(token);
