@@ -163,3 +163,18 @@ export function validarMovimiento(v: ValoresMovimiento): Validacion<CuerpoMovimi
     },
   };
 }
+
+// ── Rutas ────────────────────────────────────────────────────────────────────
+
+export type ValoresRuta = { nombre: string; region: string; descripcion: string };
+export type CuerpoRuta = { nombre: string; region: string; descripcion: string | null };
+
+export function validarRuta(v: ValoresRuta): Validacion<CuerpoRuta> {
+  const errores: Errores = {};
+  const nombre = v.nombre.trim();
+  const region = v.region.trim();
+  if (!nombre) errores.nombre = "Es obligatorio.";
+  if (!region) errores.region = "Elige la región.";
+  if (Object.keys(errores).length > 0) return { errores };
+  return { errores, cuerpo: { nombre, region, descripcion: v.descripcion.trim() || null } };
+}

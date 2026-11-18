@@ -76,3 +76,17 @@ export async function eliminarMovimiento(id: number): Promise<ResultadoAccion> {
   if (!esId(id)) return INVALIDO;
   return ejecutar("DELETE", `/movimientos/${id}`, undefined, "/admin/movimientos");
 }
+
+// ── Rutas (FE.37) ────────────────────────────────────────────────────────────
+
+export async function guardarRuta(id: number | null, cuerpo: unknown): Promise<ResultadoAccion> {
+  if ((id !== null && !esId(id)) || !esObjeto(cuerpo)) return INVALIDO;
+  return id === null
+    ? ejecutar("POST", "/rutas", cuerpo, "/admin/rutas/nueva")
+    : ejecutar("PUT", `/rutas/${id}`, cuerpo, `/admin/rutas/${id}`);
+}
+
+export async function eliminarRuta(id: number): Promise<ResultadoAccion> {
+  if (!esId(id)) return INVALIDO;
+  return ejecutar("DELETE", `/rutas/${id}`, undefined, "/admin/rutas");
+}

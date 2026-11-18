@@ -287,7 +287,7 @@ Aprobada el 2026-11-17 (Fase 0). Specs en `../pokedex-backend/docs/specs/F11`–
 
 ### P8 · Panel — `/admin` (F15)
 1. Protegida por `proxy.ts`: sin la cookie de sesión, redirige a `/login?volver=/admin…`. Con sesión, la cabecera muestra el usuario y "Cerrar sesión".
-2. Tres secciones (pestañas o subrutas): **Pokémon**, **Movimientos** y **Rutas**. Cada una tiene un listado paginado con búsqueda, un botón "Crear", y en cada fila "Editar" y "Eliminar".
+2. Tres secciones (subrutas `/admin/pokemon`, `/admin/movimientos`, `/admin/rutas`): **Pokémon**, **Movimientos** y **Rutas**. Cada una tiene un listado paginado con búsqueda (en Rutas, por región: la API no busca rutas por nombre), un botón "Crear", y en cada fila "Editar" y "Eliminar".
 3. **Eliminar** pide confirmación en un diálogo accesible ("¿Eliminar Pikachu? Esta acción no se puede deshacer."), con el foco en "Cancelar".
 4. **Formularios:**
    - Pokémon: nombreEs, las 6 estadísticas, altura, peso, forma de obtención (los 9 valores), descripción de la obtención, tipos (1–2) y rutas.

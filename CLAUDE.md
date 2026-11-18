@@ -92,12 +92,17 @@ Reglas completas en `docs/diseno/identidad-visual.md`. **El dato manda y la nost
 ```
 app/                      # páginas y layouts (rutas en español: /pokemon/[id], /movimientos, /regiones, /rutas/[id], /creditos), error.tsx y not-found.tsx
 components/ui/            # piezas genéricas (Boton, Tarjeta, Chip, Paginacion, EstadoVacio, Esqueleto, EnlaceExterno, FiguraCreditada)
-components/admin/         # panel (F15): FormularioLogin, BotonCerrarSesion, AvisoSinApi
+components/admin/         # panel (F15): FormularioLogin, BotonCerrarSesion, AvisoSinApi, Formulario{Pokemon,Movimiento,Ruta},
+                          #   BotonEliminar (diálogo), useEnvioFormulario, CampoSelect, CampoArea, FilaAdmin, AvisoGuardado
 components/pokemon/       # piezas del dominio (InsigniaTipo, TarjetaPokemon, SpriteAnimado, IlustracionFicha, BotonGrito,
                           #   EstadisticasBase, CapturasDelJuego, CadenaEvolutiva, TablaMovimientos, DiscoMovimiento…)
 lib/api/                  # único acceso a datos: tipos.ts, index.ts, mock.ts, http.ts
 lib/sesion.ts             # F15: lee y guarda la cookie httpOnly con el token (solo en el servidor)
 lib/sesion-comun.ts       # F15: nombre de la cookie, adminDisponible(), destinoSeguro(), datos del token
+app/admin/acciones.ts     # F15: server actions del panel (token de la cookie → Authorization; 401 → /login)
+lib/api/admin.ts          # F15: escrituras con token y GET /movimientos/{id} (solo con API_URL)
+lib/validacion-admin.ts   # F15: validación de los formularios del panel (mismas reglas que el backend)
+lib/avisos-admin.ts       # F15: ?aviso=creado|guardado|eliminado del listado
 proxy.ts                  # F15: /admin sin cookie → /login?volver=… (en Next 16, `middleware` se llama `proxy`)
 lib/formato.ts            # #025, nombre a mostrar, m / kg
 lib/tipos-pokemon.ts      # los 18 tipos: etiqueta en español y colores AA

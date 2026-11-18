@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { textoAviso, hrefConAviso } from "./avisos-admin";
-import { validarMovimiento, validarPokemon, type ValoresPokemon } from "./validacion-admin";
+import { validarMovimiento, validarPokemon, validarRuta, type ValoresPokemon } from "./validacion-admin";
 
 const pikachu: ValoresPokemon = {
   idPokedex: "",
@@ -92,4 +92,8 @@ describe("validarMovimiento y validarRuta (FE.36, FE.37)", () => {
     expect(validarMovimiento({ ...rayo, potencia: "-5" }).errores.potencia).toBe("No puede ser negativo.");
   });
 
+  it("ruta: nombre y región obligatorios; descripción vacía → null", () => {
+    expect(validarRuta({ nombre: " ", region: "", descripcion: "" }).errores).toEqual({ nombre: "Es obligatorio.", region: "Elige la región." });
+    expect(validarRuta({ nombre: "Ruta 99", region: "Kanto", descripcion: " " }).cuerpo).toEqual({ nombre: "Ruta 99", region: "Kanto", descripcion: null });
+  });
 });
