@@ -111,6 +111,8 @@ lib/imagenes.ts           # lee datos/imagenes.json (mapas, lugares, capturas de
 lib/capturas-ficha.ts     # qué capturas muestra la ficha: las propias o hasta 2 de lugares
 lib/enlaces-wikidex.ts    # enlace exacto o de búsqueda por Pokémon, lugar y región
 lib/creditos.ts           # filas de /creditos a partir de datos/imagenes.json
+lib/efectividad-tipos.ts  # F19: tabla fija de efectividad (18 × 18) y debilidades de la ficha
+lib/naturalezas.ts        # F19: las 25 naturalezas de datos/naturalezas.json (fijo, sin backend)
 datos/mock/               # volcado JSON del backend
 datos/imagenes.json       # generado por scripts/imagenes.mjs: archivo, tamaño, alt, pie, juego y origen de cada imagen
 datos/enlaces-wikidex.json  # generado por scripts/enlaces-wikidex.mjs
