@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { textoAviso, hrefConAviso } from "./avisos-admin";
-import { validarPokemon, type ValoresPokemon } from "./validacion-admin";
+import { validarMovimiento, validarPokemon, type ValoresPokemon } from "./validacion-admin";
 
 const pikachu: ValoresPokemon = {
   idPokedex: "",
@@ -73,4 +73,23 @@ describe("avisos del panel", () => {
     expect(textoAviso({ aviso: "constructor" })).toBeNull();
     expect(hrefConAviso("/admin/rutas?region=kanto", "creado", "X")).toBe("/admin/rutas?region=kanto&aviso=creado&n=X");
   });
+});
+
+describe("validarMovimiento y validarRuta (FE.36, FE.37)", () => {
+  const rayo = { nombre: "thunderbolt", nombreEs: "Rayo", tipo: "electric", categoria: "Especial", potencia: "90" };
+
+  it("movimiento válido; potencia vacía = 0; sin nombreEs ni tipo → null", () => {
+    expect(validarMovimiento(rayo).cuerpo).toEqual({ ...rayo, potencia: 90 });
+    expect(validarMovimiento({ ...rayo, nombreEs: " ", tipo: "", potencia: "" }).cuerpo).toMatchObject({ nombreEs: null, tipo: null, potencia: 0 });
+  });
+
+  it("movimiento: nombre vacío, categoría inválida y potencia 'abc' o negativa", () => {
+    expect(validarMovimiento({ ...rayo, nombre: "", categoria: "Otra", potencia: "abc" }).errores).toEqual({
+      nombre: "Es obligatorio.",
+      categoria: "Elige Físico, Especial o Estado.",
+      potencia: "Debe ser un número entero.",
+    });
+    expect(validarMovimiento({ ...rayo, potencia: "-5" }).errores.potencia).toBe("No puede ser negativo.");
+  });
+
 });

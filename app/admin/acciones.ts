@@ -62,3 +62,17 @@ export async function eliminarPokemon(id: number): Promise<ResultadoAccion> {
   if (!esId(id)) return INVALIDO;
   return ejecutar("DELETE", `/pokemons/${id}`, undefined, "/admin/pokemon");
 }
+
+// ── Movimientos (FE.36) ──────────────────────────────────────────────────────
+
+export async function guardarMovimiento(id: number | null, cuerpo: unknown): Promise<ResultadoAccion> {
+  if ((id !== null && !esId(id)) || !esObjeto(cuerpo)) return INVALIDO;
+  return id === null
+    ? ejecutar("POST", "/movimientos", cuerpo, "/admin/movimientos/nuevo")
+    : ejecutar("PUT", `/movimientos/${id}`, cuerpo, `/admin/movimientos/${id}`);
+}
+
+export async function eliminarMovimiento(id: number): Promise<ResultadoAccion> {
+  if (!esId(id)) return INVALIDO;
+  return ejecutar("DELETE", `/movimientos/${id}`, undefined, "/admin/movimientos");
+}

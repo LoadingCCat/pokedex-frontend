@@ -135,3 +135,31 @@ export function validarPokemon(v: ValoresPokemon, creando: boolean): Validacion<
 
   return Object.keys(errores).length > 0 ? { errores } : { errores, cuerpo: cuerpo as CuerpoPokemon };
 }
+
+// ── Movimientos ──────────────────────────────────────────────────────────────
+
+export type ValoresMovimiento = { nombre: string; nombreEs: string; tipo: string; categoria: string; potencia: string };
+export type CuerpoMovimiento = { nombre: string; nombreEs: string | null; tipo: string | null; categoria: string; potencia: number };
+
+const CATEGORIAS = ["Físico", "Especial", "Estado"];
+
+/** Potencia vacía = 0 (como el backend, para los de estado). */
+export function validarMovimiento(v: ValoresMovimiento): Validacion<CuerpoMovimiento> {
+  const errores: Errores = {};
+  const nombre = v.nombre.trim();
+  if (!nombre) errores.nombre = "Es obligatorio.";
+  if (!CATEGORIAS.includes(v.categoria)) errores.categoria = "Elige Físico, Especial o Estado.";
+  const potencia = v.potencia.trim() ? entero(v.potencia, 0, 999) : { valor: 0 };
+  if (potencia.error) errores.potencia = potencia.error;
+  if (Object.keys(errores).length > 0) return { errores };
+  return {
+    errores,
+    cuerpo: {
+      nombre,
+      nombreEs: v.nombreEs.trim() || null,
+      tipo: v.tipo.trim() || null,
+      categoria: v.categoria,
+      potencia: potencia.valor ?? 0,
+    },
+  };
+}
