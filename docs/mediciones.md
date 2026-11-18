@@ -31,3 +31,29 @@ Cómo repetirlo:
 npm run build; npx next start -p 3100
 npx -y lighthouse@12.8.2 http://localhost:3100/ --only-categories=performance,accessibility --preset=desktop --view
 ```
+
+## FE.45 · Playwright: sin scroll horizontal (RNF-03)
+
+Chromium con Playwright, ventana de 800 px de alto y anchos de **360, 375, 768, 1080 y 1280 px**. En cada página se compara `document.documentElement.scrollWidth` con `clientWidth` y, si se pasa, se listan los elementos que sobresalen.
+
+Páginas: catálogo `/`, búsqueda `/?nombre=pika`, fichas `/pokemon/25` y `/pokemon/94`, `/regiones`, `/regiones/kanto`, `/naturalezas`, `/movimientos`, `/creditos`, `/login` y `/admin`.
+
+**Primera pasada:** a 360 y 375 px, **todas** las páginas tenían scroll horizontal (unos 67 px). La causa era la navegación principal: con el cuarto enlace, «Naturalezas» (FE.48), los cuatro enlaces no cabían en una fila y la lista no podía bajar de línea.
+
+**Corrección:** en `NavegacionPrincipal`, la lista hace `flex-wrap` y, en móvil, cada enlace tiene menos relleno horizontal (`px-2`, `sm:px-3`); la altura táctil sigue siendo de 44 px.
+
+**Segunda pasada:** 55 de 55 combinaciones (11 páginas × 5 anchos) responden 200 y **sin scroll horizontal**.
+
+**Lo que no se pudo medir aquí:** los formularios de `/admin` con datos. Sin `API_URL`, `/login` y `/admin` muestran el aviso (medido arriba). Con la API local, los listados del panel son listas que bajan de línea (`FilaAdmin`) y los formularios usan una columna en móvil, pero falta comprobarlos con el backend arrancado.
+
+Fragmento usado (con la herramienta de Playwright, sobre `next start -p 3100`):
+```js
+for (const w of [360, 375, 768, 1080, 1280]) {
+  await page.setViewportSize({ width: w, height: 800 });
+  for (const r of rutas) {
+    await page.goto("http://localhost:3100" + r, { waitUntil: "networkidle" });
+    const { scrollWidth, clientWidth } = await page.evaluate(() => document.documentElement);
+    // scrollWidth > clientWidth → hay scroll horizontal
+  }
+}
+```
