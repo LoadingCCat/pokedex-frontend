@@ -306,3 +306,17 @@ Aprobada el 2026-11-17 (Fase 0). Specs en `../pokedex-backend/docs/specs/F11`–
 - [ ] Crear, editar y eliminar (con confirmación) funcionan en las tres secciones contra la API local.
 - [x] En el build sin `API_URL`, `/login` y `/admin` muestran el aviso y responden sin error (200, sin redirigir, sin scroll horizontal a 360 y 1080 px).
 - [ ] Todo se maneja con el teclado y el foco es visible; a 360, 768 y 1080 px no hay scroll horizontal.
+
+## F19 · Debilidades y naturalezas (FE.46–FE.48)
+Spec: `../pokedex-backend/docs/specs/F19-debilidades-naturalezas.md`. Datos fijos del frontend (sin backend ni reimportar).
+
+### P2 · Ficha
+1. Sección **«Debilidades y resistencias»** después de «Estadísticas base», calculada con `lib/efectividad-tipos.ts` a partir de los tipos del Pokémon.
+2. Grupos «Muy débil (×4)», «Débil (×2)», «Resiste (×½)», «Resiste mucho (×¼)» e «Inmune (×0)», cada uno con las insignias de sus tipos. Sin grupos vacíos; los ×1 no aparecen. Sin animación (no es un efecto: el efecto de P2 siguen siendo las barras).
+
+### P11 · Naturalezas — `/naturalezas`
+1. Título «Naturalezas» y una frase: cada naturaleza sube una estadística un 10 % y baja otra un 10 %; las neutras no cambian nada.
+2. Tabla de las 25 (`datos/naturalezas.json`): Naturaleza, Sube (+10 %), Baja (−10 %), en el orden de la tabla de los juegos. Las neutras muestran «—».
+3. Enlace **Naturalezas** en la navegación principal (Catálogo · Movimientos · Regiones · Naturalezas). Título de la página «Naturalezas · Pokedex+».
+
+**Criterios de aceptación:** los de F19.
