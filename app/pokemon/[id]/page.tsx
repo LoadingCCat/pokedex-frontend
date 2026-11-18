@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { Suspense } from "react";
 import Esqueleto from "@/components/ui/Esqueleto";
 import CadenaEvolutiva from "@/components/pokemon/CadenaEvolutiva";
+import DebilidadesTipo from "@/components/pokemon/DebilidadesTipo";
 import DondeSeObtiene from "@/components/pokemon/DondeSeObtiene";
 import EstadisticasBase from "@/components/pokemon/EstadisticasBase";
 import { ListaTipos } from "@/components/pokemon/InsigniaTipo";
@@ -114,6 +115,9 @@ async function ContenidoFicha({ params }: Pick<PageProps<"/pokemon/[id]">, "para
       <div className="grid items-start gap-6 lg:grid-cols-2">
         <Seccion id="estadisticas" titulo="Estadísticas base">
           <EstadisticasBase pokemon={pokemon} />
+        </Seccion>
+        <Seccion id="debilidades" titulo="Debilidades y resistencias">
+          <DebilidadesTipo tipos={pokemon.tipos} />
         </Seccion>
         <Seccion id="obtencion" titulo="Dónde se obtiene">
           <DondeSeObtiene pokemon={pokemon} regiones={regiones} />
