@@ -1,4 +1,5 @@
 import Link from "next/link";
+import type { ReactNode } from "react";
 import Esqueleto from "@/components/ui/Esqueleto";
 import type { Pokemon } from "@/lib/api/tipos";
 import { nombreVisible, numeroPokedex } from "@/lib/formato";
@@ -9,8 +10,19 @@ import { ListaTipos } from "./InsigniaTipo";
 
 type DatosTarjeta = Pick<Pokemon, "idPokedex" | "nombre" | "nombreEs" | "imagenUrl" | "tipos">;
 
-/** Tarjeta del catálogo: imagen, #número, nombre y tipos. Toda la tarjeta enlaza a la ficha. */
-export default function TarjetaPokemon({ pokemon, prioridad = false }: { pokemon: DatosTarjeta; prioridad?: boolean }) {
+/**
+ * Tarjeta del catálogo: imagen, #número, nombre y tipos. Toda la tarjeta enlaza a la ficha.
+ * `pie` es un texto opcional debajo de los tipos (F20: por qué se parece un Pokémon similar).
+ */
+export default function TarjetaPokemon({
+  pokemon,
+  prioridad = false,
+  pie,
+}: {
+  pokemon: DatosTarjeta;
+  prioridad?: boolean;
+  pie?: ReactNode;
+}) {
   const nombre = nombreVisible(pokemon);
   const sprite = spriteAnimadoUrl(pokemon.idPokedex);
   return (
@@ -36,6 +48,7 @@ export default function TarjetaPokemon({ pokemon, prioridad = false }: { pokemon
         </Link>
       </h3>
       <ListaTipos tipos={pokemon.tipos} />
+      {pie && <p className="text-sm text-texto-secundario">{pie}</p>}
     </article>
   );
 }

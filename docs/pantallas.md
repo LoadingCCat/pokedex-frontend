@@ -6,7 +6,7 @@ Una spec por pantalla, con criterios de aceptación. Cada pantalla usa las funci
 
 ## Comunes a todas las pantallas
 
-- Cabecera con el nombre "Pokedex+" (enlace a `/`) y la navegación **Catálogo · Movimientos · Regiones**. El enlace activo se marca con algo más que color (subrayado o peso).
+- Cabecera con el nombre "Pokedex+" (enlace a `/`) y la navegación **Catálogo · Movimientos · Regiones · Naturalezas · Identificar**. El enlace activo se marca con algo más que color (subrayado o peso).
 - Todo lo que carga datos tiene estado de **cargando** (esqueleto), **vacío** y **error**, con los textos del tono de voz.
 - El nombre que se muestra es `nombreEs` o, si es `null`, el slug formateado (`thunder-punch` → "Thunder Punch").
 - Las listas paginadas muestran "Página N de M" y botones Anterior/Siguiente, deshabilitados en los extremos.
@@ -320,3 +320,21 @@ Spec: `../pokedex-backend/docs/specs/F19-debilidades-naturalezas.md`. Datos fijo
 3. Enlace **Naturalezas** en la navegación principal (Catálogo · Movimientos · Regiones · Naturalezas). Título de la página «Naturalezas · Pokedex+».
 
 **Criterios de aceptación:** los de F19.
+
+## F20 · Identificar por foto (FE.50)
+Spec: `../pokedex-backend/docs/specs/F20-identificacion-pokemon.md`. Usa `POST /api/identificar` (route handler propio, que reenvía a la API); la pantalla nunca llama a la API ni a `lib/api` desde el navegador.
+
+### P9 · Identificar — `/identificar`
+1. Título «Identificar por foto», una frase de ayuda y el aviso permanente **«La foto no se guarda. Se analiza con un servicio de IA externo.»**
+2. `SelectorFoto`: botón «Tomar foto» (`capture="environment"`: cámara trasera del celular; en un ordenador abre el selector de archivos) y botón «Elegir de la galería», más una vista previa de la foto elegida. Todo se maneja con el teclado.
+3. Al pulsar «Identificar», el navegador reduce la foto (lado mayor de 1024 px, JPEG, menos de 1,5 MB, respetando la orientación) y la envía. Si no puede leerla (por ejemplo un HEIC que no decodifica): «No pudimos leer esta foto. Si es HEIC, prueba con otra o guárdala como JPG.»
+4. **Cargando:** botones deshabilitados (no hay segundo envío), «Analizando la foto…» y, pasados 5 s, «Despertando el servidor, puede tardar hasta un minuto…» (`role="status"`).
+5. **Resultado:** tarjeta del Pokémon identificado y 3 tarjetas de similares, cada una con su motivo (`TarjetaPokemon` con `pie`); todas enlazan a su ficha. El foco pasa al título del resultado.
+6. **Error:** el texto de `lib/identificar-mensajes.ts` (400, 422, 429, 502, conexión…), sin códigos, y un botón «Probar con otra foto». Elegir otra foto tras un resultado o un error limpia lo anterior.
+7. **Modo mock** (sin `API_URL`): el aviso «Identificar por foto no está disponible…» en vez del selector, sin errores.
+8. Enlace **Identificar** en la navegación principal (Catálogo · Movimientos · Regiones · Naturalezas · Identificar). Título «Identificar por foto · Pokedex+». A 360 px la navegación pasa a dos filas, sin scroll horizontal.
+
+**Criterios de aceptación:** los del front de F20, más:
+- [ ] Una foto de 8 MB se envía con menos de 1,5 MB, en JPEG y con el lado mayor ≤ 1024 px (`lib/reducir-foto.test.ts`).
+- [ ] Cargando, resultado, error y modo mock tienen prueba (`components/pokemon/identificar.test.tsx`).
+- [ ] A 360 px no hay scroll horizontal y todo se recorre con el teclado.

@@ -4,6 +4,7 @@ export const ENLACES_PRINCIPALES = [
   { href: "/movimientos", etiqueta: "Movimientos" },
   { href: "/regiones", etiqueta: "Regiones" },
   { href: "/naturalezas", etiqueta: "Naturalezas" },
+  { href: "/identificar", etiqueta: "Identificar" },
 ] as const;
 
 /** Una sección está activa en su ruta y en sus subrutas; el catálogo también en la ficha. */

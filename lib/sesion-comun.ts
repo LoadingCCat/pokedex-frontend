@@ -9,9 +9,14 @@ export const COOKIE_SESION = "pokedex_sesion";
 export const AVISO_SIN_API =
   "La administración solo funciona con la API local. Este sitio usa datos de ejemplo y no se pueden modificar.";
 
+/** ¿Hay API real (API_URL)? Con el mock (Vercel) no: lo que necesita la API muestra un aviso. */
+export function apiDisponible(): boolean {
+  return Boolean(process.env.API_URL);
+}
+
 /** El panel solo existe si hay API real (API_URL); en Vercel, con el mock, no. */
 export function adminDisponible(): boolean {
-  return Boolean(process.env.API_URL);
+  return apiDisponible();
 }
 
 /**

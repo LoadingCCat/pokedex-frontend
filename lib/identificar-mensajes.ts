@@ -8,6 +8,9 @@ import { MENSAJE_IDENTIFICAR_NO_DISPONIBLE } from "./api/tipos";
 /** Peso máximo que acepta /api/identificar. La pantalla (3.2) reduce la foto a menos de 1,5 MB. */
 export const MAX_BYTES_FOTO = 2 * 1024 * 1024;
 
+/** Aviso de privacidad visible en /identificar. */
+export const AVISO_PRIVACIDAD = "La foto no se guarda. Se analiza con un servicio de IA externo.";
+
 /** Los tres 400 del contrato: cada uno dice qué corregir, así que se conserva su texto. */
 const MENSAJES_400 = [
   "Envía una foto en el campo foto",

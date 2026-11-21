@@ -2,7 +2,7 @@
 
 # CLAUDE.md — Pokedex+ Frontend
 
-Frontend de la Pokédex+ (proyecto universitario en equipo, USTA): una Pokédex web en español con los 1025 Pokémon de las 9 generaciones. Consume la API REST del backend (`../pokedex-backend`). Es de consulta, más un panel de administración (F15: `/login` y `/admin`) que solo funciona con la API local; sin `API_URL` muestra un aviso.
+Frontend de la Pokédex+ (proyecto universitario en equipo, USTA): una Pokédex web en español con los 1025 Pokémon de las 9 generaciones. Consume la API REST del backend (`../pokedex-backend`). Es de consulta, más un panel de administración (F15: `/login` y `/admin`) que solo funciona con la API local; sin `API_URL` muestra un aviso. También identifica un Pokémon por foto (F20: `/identificar`), que igualmente necesita la API.
 
 - Next.js 16.4 (App Router, `cacheComponents` y `partialPrefetching` activos) · React 19 · TypeScript · Tailwind CSS 4 · Vitest
 - `sharp` (devDependency) solo lo usa `scripts/imagenes.mjs` para convertir las imágenes a WebP; la app no lo importa.
@@ -42,7 +42,7 @@ El proyecto sigue Spec-Driven Development (SDD): primero el documento, después 
 npm run dev        # http://localhost:3000
 npm run build      # build de producción (debe funcionar sin backend)
 npm run lint
-npm run test       # vitest: el mock cumple F1–F9 (lib/api/mock.test.ts) y las funciones de lib/ (parámetros, imágenes, enlaces, créditos)
+npm run test       # vitest: el mock cumple F1–F9 (lib/api/mock.test.ts) las funciones de lib/ (parámetros, imágenes, enlaces, créditos) y F20 (reducción de la foto con `sharp`, estados de la pantalla y modo mock; los componentes se prueban con `renderToStaticMarkup`, sin jsdom). `vitest.config.ts` solo define el alias `@`
 $env:API_URL = "http://localhost:8080/api"; npm run test   # además compara el mock con la API real (contrato.test.ts)
 node scripts/generar-mock.mjs        # regenera datos/mock/ desde el backend local (debe estar arrancado)
 node scripts/imagenes.mjs           # descarga de WikiDex lo de scripts/imagenes-fuentes.json → public/imagenes/*.webp y datos/imagenes.json
@@ -64,7 +64,7 @@ node scripts/nombres-lugares-es.mjs # nombres en español de los lugares → ../
   - `region` = nativos o que aparecen en sus rutas
 - Los tipos de TypeScript de las respuestas están en `lib/api/tipos.ts` y copian `api.md`. Si el contrato cambia, se actualizan los dos.
 - Todas las llamadas de `http.ts` y de `admin.ts` esperan hasta 70 s (`TIEMPO_ESPERA_MS`): el backend gratuito de Render tarda hasta un minuto en despertar.
-- F20 (`identificar(foto)`): el navegador nunca llama a la API. Sube la foto a `/api/identificar` (route handler, no server action: estas topan el cuerpo en 1 MB y Vercel rechaza los de más de 4,5 MB; la pantalla reduce la foto a menos de 1,5 MB). El handler la reenvía a `API_URL`. En modo mock `identificar()` lanza `ErrorApi` 503 ("no disponible"). Los textos de error salen de `lib/identificar-mensajes.ts`, nunca del cuerpo de la API (salvo los tres 400 del contrato).
+- F20 (`identificar(foto)`): el navegador nunca llama a la API. Sube la foto a `/api/identificar` (route handler, no server action: estas topan el cuerpo en 1 MB y Vercel rechaza los de más de 4,5 MB; la pantalla `/identificar` reduce la foto a menos de 1,5 MB antes de enviarla). El handler la reenvía a `API_URL`. En modo mock `identificar()` lanza `ErrorApi` 503 ("no disponible"). Los textos de error salen de `lib/identificar-mensajes.ts`, nunca del cuerpo de la API (salvo los tres 400 del contrato).
 - `http.ts` solo puede pedir lo que la API ofrece. Por eso `mock.ts` no debe combinar más de lo que permite el contrato (por ejemplo, en movimientos: o búsqueda, o categoría, o competitivos).
 - `nombre` es el slug en inglés (identificador). Para mostrar se usa `nombreEs` y, si viene en `null`, el slug formateado (`lib/formato.ts`).
 
@@ -100,11 +100,17 @@ components/pokemon/       # piezas del dominio (InsigniaTipo, TarjetaPokemon, Sp
                           #   EstadisticasBase, CapturasDelJuego, CadenaEvolutiva, TablaMovimientos, DiscoMovimiento…)
 lib/api/                  # único acceso a datos: tipos.ts, index.ts, mock.ts, http.ts
 lib/sesion.ts             # F15: lee y guarda la cookie httpOnly con el token (solo en el servidor)
-lib/sesion-comun.ts       # F15: nombre de la cookie, adminDisponible(), destinoSeguro(), datos del token
+lib/sesion-comun.ts       # F15: nombre de la cookie, apiDisponible() (¿hay API_URL?), adminDisponible(), destinoSeguro(), datos del token
 app/admin/acciones.ts     # F15: server actions del panel (token de la cookie → Authorization; 401 → /login)
 lib/api/admin.ts          # F15: escrituras con token y GET /movimientos/{id} (solo con API_URL)
 app/api/identificar/route.ts  # F20: POST /api/identificar. Reenvía la foto (campo `foto`) a la API desde el servidor; corta con 413 por encima de MAX_BYTES_FOTO
-lib/identificar-mensajes.ts   # F20: MAX_BYTES_FOTO (2 MB) y mensajeDeIdentificacion(status): error de la API (400, 422, 429, 502; 0, 413, 503, 504) → texto para el usuario
+lib/identificar-mensajes.ts   # F20: MAX_BYTES_FOTO (2 MB), AVISO_PRIVACIDAD y mensajeDeIdentificacion(status): error de la API (400, 422, 429, 502; 0, 413, 503, 504) → texto para el usuario
+app/identificar/page.tsx      # F20 (P9): título, aviso «la foto no se guarda» y <IdentificadorFoto/>; sin API_URL, solo el aviso de no disponible
+components/pokemon/           # F20: IdentificadorFoto (cliente: reductor, AbortController, temporizador de 5 s), PanelIdentificar (pinta según el estado),
+                              #   SelectorFoto (cámara trasera + galería + vista previa), ResultadoIdentificacion, AvisoIdentificarNoDisponible
+lib/reducir-foto.ts           # F20: reducirFoto(): canvas, lado mayor 1024 px, JPEG < 1,5 MB, orientación EXIF; ErrorFoto si no se puede leer (HEIC)
+lib/identificar-foto.ts       # F20: enviarFoto(): POST a /api/identificar (con signal) → Identificacion o ErrorIdentificar con el texto para el usuario
+lib/identificar-estado.ts     # F20: estados (inactivo, analizando, resultado, error) y su reductor; ESPERA_LENTA_MS = 5000
 lib/validacion-admin.ts   # F15: validación de los formularios del panel (mismas reglas que el backend)
 lib/avisos-admin.ts       # F15: ?aviso=creado|guardado|eliminado del listado
 proxy.ts                  # F15: /admin sin cookie → /login?volver=… (en Next 16, `middleware` se llama `proxy`)
