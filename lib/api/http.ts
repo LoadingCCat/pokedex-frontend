@@ -8,6 +8,7 @@ import {
   type FiltrosMovimiento,
   type FiltrosPokemon,
   type FuenteDatos,
+  type Identificacion,
   type Movimiento,
   type Pagina,
   type Paginacion,
@@ -36,23 +37,56 @@ function paginacion({ page, size, sort }: Paginacion): Parametros {
   return { page, size, sort };
 }
 
+/**
+ * Tiempo máximo de cada llamada a la API. El backend gratuito de Render se apaga tras 15 minutos
+ * sin peticiones y tarda hasta un minuto en despertar: 70 s dan margen sin colgar la página para siempre.
+ */
+export const TIEMPO_ESPERA_MS = 70_000;
+
+/** ErrorApi con el `mensaje` del cuerpo de error de la API; si no es JSON, "Error {status}". */
+async function errorDe(respuesta: Response): Promise<ErrorApi> {
+  let mensaje = `Error ${respuesta.status}`;
+  try {
+    const cuerpo = (await respuesta.json()) as { mensaje?: string };
+    if (cuerpo.mensaje) mensaje = cuerpo.mensaje;
+  } catch {
+    // cuerpo vacío o no JSON: se queda el mensaje genérico
+  }
+  return new ErrorApi(respuesta.status, mensaje);
+}
+
 export function crearFuenteHttp(urlBase: string): FuenteDatos {
   const base = urlBase.replace(/\/$/, "");
 
   /** GET que lanza ErrorApi si la respuesta no es 2xx. */
   async function pedir<T>(ruta: string): Promise<T> {
-    const respuesta = await fetch(`${base}${ruta}`, { headers: { Accept: "application/json" } });
-    if (!respuesta.ok) {
-      let mensaje = `Error ${respuesta.status}`;
-      try {
-        const cuerpo = (await respuesta.json()) as { mensaje?: string };
-        if (cuerpo.mensaje) mensaje = cuerpo.mensaje;
-      } catch {
-        // cuerpo vacío o no JSON: se queda el mensaje genérico
-      }
-      throw new ErrorApi(respuesta.status, mensaje);
-    }
+    const respuesta = await fetch(`${base}${ruta}`, {
+      headers: { Accept: "application/json" },
+      signal: AbortSignal.timeout(TIEMPO_ESPERA_MS),
+    });
+    if (!respuesta.ok) throw await errorDe(respuesta);
     return (await respuesta.json()) as T;
+  }
+
+  /** F20: reenvía la foto como multipart (campo `foto`). Público: sin token. */
+  async function identificar(foto: Blob): Promise<Identificacion> {
+    const formulario = new FormData();
+    formulario.append("foto", foto, "foto.jpg");
+    let respuesta: Response;
+    try {
+      respuesta = await fetch(`${base}/pokemons/identificar`, {
+        method: "POST",
+        headers: { Accept: "application/json" },
+        body: formulario,
+        cache: "no-store",
+        signal: AbortSignal.timeout(TIEMPO_ESPERA_MS),
+      });
+    } catch (error) {
+      const agotado = error instanceof Error && (error.name === "TimeoutError" || error.name === "AbortError");
+      throw new ErrorApi(agotado ? 504 : 0, agotado ? "La API no respondió a tiempo" : "No se pudo conectar con la API");
+    }
+    if (!respuesta.ok) throw await errorDe(respuesta);
+    return (await respuesta.json()) as Identificacion;
   }
 
   /** Igual que pedir, pero un 404 (o un id no válido, 400) devuelve null. */
@@ -66,6 +100,7 @@ export function crearFuenteHttp(urlBase: string): FuenteDatos {
   }
 
   return {
+    identificar,
     listarPokemons(filtros: FiltrosPokemon = {}) {
       const { nombre, generacion, tipo, region, obtencion } = filtros;
       return pedir<Pagina<Pokemon>>(

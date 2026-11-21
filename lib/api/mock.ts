@@ -7,6 +7,7 @@ import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import {
   ErrorApi,
+  MENSAJE_IDENTIFICAR_NO_DISPONIBLE,
   TIPOS_OBTENCION,
   type Etapa,
   type FiltrosMovimiento,
@@ -262,5 +263,10 @@ export const fuenteMock: FuenteDatos = {
       .map((id) => d.pokemonPorId.get(id))
       .filter((p): p is Pokemon => p !== undefined);
     return paginar(ordenar(pokemons, paginacion.sort, "idPokedex", CAMPOS_POKEMON), paginacion);
+  },
+
+  /** F20 necesita la IA del backend: el mock no puede identificar nada. */
+  async identificar() {
+    throw new ErrorApi(503, MENSAJE_IDENTIFICAR_NO_DISPONIBLE);
   },
 };

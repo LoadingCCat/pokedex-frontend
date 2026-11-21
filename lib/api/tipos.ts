@@ -60,6 +60,29 @@ export type Etapa = {
   evoluciones: Etapa[];
 };
 
+/** Pokémon identificado por foto (F20). Se lee de PostgreSQL; la IA solo aporta slug y confianza. */
+export type PokemonIdentificado = {
+  idPokedex: number;
+  nombre: string;
+  nombreEs: string | null;
+  tipos: Tipo[];
+  totalEstadisticas: number;
+  imagenUrl: string | null;
+};
+
+/** Uno de los 3 similares: lo mismo que el identificado, más por qué se parece. */
+export type PokemonSimilar = PokemonIdentificado & {
+  motivo: string;
+};
+
+/** Respuesta 200 de POST /pokemons/identificar (F20). `similares` trae siempre 3. */
+export type Identificacion = {
+  identificado: PokemonIdentificado;
+  /** 0 a 1; el backend ya descarta con un 422 lo menor que 0,6 */
+  confianza: number;
+  similares: PokemonSimilar[];
+};
+
 /** Formato fijo de las listas paginadas. */
 export type Pagina<T> = {
   content: T[];
@@ -153,4 +176,14 @@ export interface FuenteDatos {
   /** null si no existe */
   obtenerRuta(id: number): Promise<Ruta | null>;
   pokemonsDeRuta(idRuta: number, paginacion?: Paginacion): Promise<Pagina<Pokemon>>;
+  /**
+   * F20: manda la foto a POST /pokemons/identificar. Lanza ErrorApi con el status del backend
+   * (400, 422, 429, 502), 504 si no respondió a tiempo y 0 si no hubo conexión; en modo mock,
+   * 503 ("no disponible"). Solo se llama desde el servidor: el navegador usa /api/identificar.
+   */
+  identificar(foto: Blob): Promise<Identificacion>;
 }
+
+/** Texto del error 503 del modo mock (y de /api/identificar sin API_URL). */
+export const MENSAJE_IDENTIFICAR_NO_DISPONIBLE =
+  "Identificar por foto no está disponible en este sitio: solo funciona con la API conectada.";

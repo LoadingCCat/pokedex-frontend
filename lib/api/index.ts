@@ -21,6 +21,7 @@ export const {
   rutasDeRegion,
   obtenerRuta,
   pokemonsDeRuta,
+  identificar,
 } = fuente;
 
 export * from "./tipos";

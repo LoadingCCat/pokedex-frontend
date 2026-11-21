@@ -4,6 +4,7 @@
  * server actions de app/admin; nunca el navegador.
  */
 import "server-only";
+import { TIEMPO_ESPERA_MS } from "./http";
 import type { Movimiento } from "./tipos";
 
 export type RespuestaEscritura =
@@ -16,7 +17,7 @@ function base(): string {
   return url.replace(/\/$/, "");
 }
 
-/** POST, PUT o DELETE con el token. Un fallo de red se devuelve como status 0. */
+/** POST, PUT o DELETE con el token (espera hasta 70 s, como las lecturas). Un fallo de red o un tiempo agotado se devuelve como status 0. */
 export async function escribirApi(
   token: string,
   metodo: "POST" | "PUT" | "DELETE",
@@ -34,6 +35,7 @@ export async function escribirApi(
       },
       body: cuerpo === undefined ? undefined : JSON.stringify(cuerpo),
       cache: "no-store",
+      signal: AbortSignal.timeout(TIEMPO_ESPERA_MS),
     });
   } catch {
     return { ok: false, status: 0 };

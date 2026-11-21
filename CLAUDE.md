@@ -63,6 +63,8 @@ node scripts/nombres-lugares-es.mjs # nombres en español de los lugares → ../
   - filtros combinados con Y, sin importar mayúsculas ni tildes
   - `region` = nativos o que aparecen en sus rutas
 - Los tipos de TypeScript de las respuestas están en `lib/api/tipos.ts` y copian `api.md`. Si el contrato cambia, se actualizan los dos.
+- Todas las llamadas de `http.ts` y de `admin.ts` esperan hasta 70 s (`TIEMPO_ESPERA_MS`): el backend gratuito de Render tarda hasta un minuto en despertar.
+- F20 (`identificar(foto)`): el navegador nunca llama a la API. Sube la foto a `/api/identificar` (route handler, no server action: estas topan el cuerpo en 1 MB y Vercel rechaza los de más de 4,5 MB; la pantalla reduce la foto a menos de 1,5 MB). El handler la reenvía a `API_URL`. En modo mock `identificar()` lanza `ErrorApi` 503 ("no disponible"). Los textos de error salen de `lib/identificar-mensajes.ts`, nunca del cuerpo de la API (salvo los tres 400 del contrato).
 - `http.ts` solo puede pedir lo que la API ofrece. Por eso `mock.ts` no debe combinar más de lo que permite el contrato (por ejemplo, en movimientos: o búsqueda, o categoría, o competitivos).
 - `nombre` es el slug en inglés (identificador). Para mostrar se usa `nombreEs` y, si viene en `null`, el slug formateado (`lib/formato.ts`).
 
@@ -101,6 +103,8 @@ lib/sesion.ts             # F15: lee y guarda la cookie httpOnly con el token (s
 lib/sesion-comun.ts       # F15: nombre de la cookie, adminDisponible(), destinoSeguro(), datos del token
 app/admin/acciones.ts     # F15: server actions del panel (token de la cookie → Authorization; 401 → /login)
 lib/api/admin.ts          # F15: escrituras con token y GET /movimientos/{id} (solo con API_URL)
+app/api/identificar/route.ts  # F20: POST /api/identificar. Reenvía la foto (campo `foto`) a la API desde el servidor; corta con 413 por encima de MAX_BYTES_FOTO
+lib/identificar-mensajes.ts   # F20: MAX_BYTES_FOTO (2 MB) y mensajeDeIdentificacion(status): error de la API (400, 422, 429, 502; 0, 413, 503, 504) → texto para el usuario
 lib/validacion-admin.ts   # F15: validación de los formularios del panel (mismas reglas que el backend)
 lib/avisos-admin.ts       # F15: ?aviso=creado|guardado|eliminado del listado
 proxy.ts                  # F15: /admin sin cookie → /login?volver=… (en Next 16, `middleware` se llama `proxy`)
