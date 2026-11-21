@@ -16,7 +16,7 @@ export default function PanelIdentificar({
   onElegir,
   onIdentificar,
   onOtraFoto,
-  refPrimerBoton,
+  refPrimerControl,
   refTituloResultado,
   refReintento,
 }: {
@@ -26,7 +26,7 @@ export default function PanelIdentificar({
   onElegir: (archivo: File) => void;
   onIdentificar: () => void;
   onOtraFoto: () => void;
-  refPrimerBoton?: Ref<HTMLButtonElement>;
+  refPrimerControl?: Ref<HTMLInputElement>;
   refTituloResultado?: Ref<HTMLHeadingElement>;
   refReintento?: Ref<HTMLButtonElement>;
 }) {
@@ -54,7 +54,7 @@ export default function PanelIdentificar({
           vistaPrevia={vistaPrevia}
           deshabilitado={analizando}
           onElegir={onElegir}
-          refPrimerBoton={refPrimerBoton}
+          refPrimerControl={refPrimerControl}
         />
         {hayFoto && estado.fase !== "resultado" && (
           <div>

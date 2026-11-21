@@ -16,7 +16,7 @@ export default function IdentificadorFoto() {
   const [foto, setFoto] = useState<{ archivo: File; vista: string } | null>(null);
   const peticion = useRef<AbortController | null>(null);
   const vistaActual = useRef<string | null>(null);
-  const primerBoton = useRef<HTMLButtonElement>(null);
+  const primerControl = useRef<HTMLInputElement>(null);
   const tituloResultado = useRef<HTMLHeadingElement>(null);
   const botonReintento = useRef<HTMLButtonElement>(null);
 
@@ -76,8 +76,8 @@ export default function IdentificadorFoto() {
 
   function otraFoto() {
     despachar({ tipo: "reiniciar" });
-    // El selector aparece en el siguiente render: el foco vuelve a su primer botón
-    setTimeout(() => primerBoton.current?.focus(), 0);
+    // El selector aparece en el siguiente render: el foco vuelve a su primer control (el input de la cámara)
+    setTimeout(() => primerControl.current?.focus(), 0);
   }
 
   return (
@@ -88,7 +88,7 @@ export default function IdentificadorFoto() {
       onElegir={elegir}
       onIdentificar={identificar}
       onOtraFoto={otraFoto}
-      refPrimerBoton={primerBoton}
+      refPrimerControl={primerControl}
       refTituloResultado={tituloResultado}
       refReintento={botonReintento}
     />

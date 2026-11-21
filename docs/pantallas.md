@@ -326,7 +326,7 @@ Spec: `../pokedex-backend/docs/specs/F20-identificacion-pokemon.md`. Usa `POST /
 
 ### P9 · Identificar — `/identificar`
 1. Título «Identificar por foto», una frase de ayuda y el aviso permanente **«La foto no se guarda. Se analiza con un servicio de IA externo.»**
-2. `SelectorFoto`: botón «Tomar foto» (`capture="environment"`: cámara trasera del celular; en un ordenador abre el selector de archivos) y botón «Elegir de la galería», más una vista previa de la foto elegida. Todo se maneja con el teclado.
+2. `SelectorFoto`: botón «Tomar foto» (`capture="environment"`: cámara trasera del celular; en un ordenador abre el selector de archivos) y botón «Elegir de la galería», más una vista previa de la foto elegida. Cada botón es un `<label>` de su `<input type="file">` (abre el selector de forma nativa, también en iOS Safari); el input sigue siendo enfocable, así que todo se maneja con el teclado (Tab y Enter o Espacio).
 3. Al pulsar «Identificar», el navegador reduce la foto (lado mayor de 1024 px, JPEG, menos de 1,5 MB, respetando la orientación) y la envía. Si no puede leerla (por ejemplo un HEIC que no decodifica): «No pudimos leer esta foto. Si es HEIC, prueba con otra o guárdala como JPG.»
 4. **Cargando:** botones deshabilitados (no hay segundo envío), «Analizando la foto…» y, pasados 5 s, «Despertando el servidor, puede tardar hasta un minuto…» (`role="status"`).
 5. **Resultado:** tarjeta del Pokémon identificado y 3 tarjetas de similares, cada una con su motivo (`TarjetaPokemon` con `pie`); todas enlazan a su ficha. El foco pasa al título del resultado.

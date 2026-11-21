@@ -53,6 +53,7 @@ node scripts/nombres-lugares-es.mjs # nombres en español de los lugares → ../
 - Los tres scripts de WikiDex respetan la wiki: lotes de 50 títulos, como mucho una petición por segundo y un User-Agent que dice quiénes somos. Si responde otra cosa que JSON (un desafío anti-bots), paran: no se intenta saltar. Sus salidas se suben al repositorio; el build no los ejecuta.
 
 - El servidor de desarrollo se arranca en la terminal de la app, no desde el Bash del agente.
+- **Probar en el celular** (misma red wifi): `npm run dev` y abre `http://<IP del ordenador>:3000`. Next 16 bloquea `/_next/*` (JS, HMR) desde cualquier host que no sea `localhost`: la página se ve, pero no se hidrata y los botones no hacen nada (en el log, `Blocked cross-origin request to Next.js dev resource`). Solución: la variable `DEV_ORIGINS` (hosts sin puerto, separados por comas; ver `.env.example`), que `next.config.ts` pasa a `allowedDevOrigins`. Cópiala a `.env.local` (no se sube a Git) o ponla en la terminal (`$env:DEV_ORIGINS = "192.168.1.17"; npm run dev`) y **reinicia** el servidor. La IP no va escrita en el código y solo afecta a `next dev`, no a producción. La cámara del celular (`capture`) puede exigir HTTPS según el navegador: si "Tomar foto" solo abre la galería, es eso.
 
 ## Datos
 
@@ -107,7 +108,10 @@ app/api/identificar/route.ts  # F20: POST /api/identificar. Reenvía la foto (ca
 lib/identificar-mensajes.ts   # F20: MAX_BYTES_FOTO (2 MB), AVISO_PRIVACIDAD y mensajeDeIdentificacion(status): error de la API (400, 422, 429, 502; 0, 413, 503, 504) → texto para el usuario
 app/identificar/page.tsx      # F20 (P9): título, aviso «la foto no se guarda» y <IdentificadorFoto/>; sin API_URL, solo el aviso de no disponible
 components/pokemon/           # F20: IdentificadorFoto (cliente: reductor, AbortController, temporizador de 5 s), PanelIdentificar (pinta según el estado),
-                              #   SelectorFoto (cámara trasera + galería + vista previa), ResultadoIdentificacion, AvisoIdentificarNoDisponible
+                              #   SelectorFoto (cámara trasera + galería + vista previa; cada opción es un <label htmlFor> de un input file
+                              #   enfocable, no un botón con ref.click(): abre el selector nativo también en iOS Safari), ResultadoIdentificacion,
+                              #   AvisoIdentificarNoDisponible
+.env.example              # plantilla de .env.local: API_URL y DEV_ORIGINS (hosts permitidos en `next dev`, p. ej. la IP para el celular)
 lib/reducir-foto.ts           # F20: reducirFoto(): canvas, lado mayor 1024 px, JPEG < 1,5 MB, orientación EXIF; ErrorFoto si no se puede leer (HEIC)
 lib/identificar-foto.ts       # F20: enviarFoto(): POST a /api/identificar (con signal) → Identificacion o ErrorIdentificar con el texto para el usuario
 lib/identificar-estado.ts     # F20: estados (inactivo, analizando, resultado, error) y su reductor; ESPERA_LENTA_MS = 5000

@@ -44,15 +44,44 @@ function boton(html: string, texto: string) {
   return html.match(new RegExp(`<button[^>]*>${texto}</button>`))?.[0] ?? "";
 }
 
+/**
+ * La opción de foto con esa etiqueta: su `<label for>` y el `<input type="file">` al que apunta.
+ * Cada opción es un label nativo (abre el selector también en iOS Safari, sin `input.click()`).
+ */
+function opcionFoto(html: string, etiqueta: string) {
+  const label = html.match(new RegExp(`<label[^>]*\\sfor="([^"]+)"[^>]*>${etiqueta}</label>`));
+  const id = label?.[1];
+  const input = id ? html.match(new RegExp(`<input[^>]*\\sid="${id.replace(/[:]/g, "\\$&")}"[^>]*>`))?.[0] : undefined;
+  return { label: label?.[0], input: input ?? "" };
+}
+
 describe("F20 · selector de foto", () => {
-  it("ofrece cámara trasera y galería, y muestra la vista previa", () => {
+  it("ofrece cámara trasera y galería como labels nativos de un input file, y muestra la vista previa", () => {
     const html = panel({ fase: "inactivo" });
-    expect(html).toContain("Tomar foto");
-    expect(html).toContain("Elegir de la galería");
-    expect(html).toMatch(/<input[^>]*accept="image\/\*"[^>]*capture="environment"/);
+    const camara = opcionFoto(html, "Tomar foto");
+    const galeria = opcionFoto(html, "Elegir de la galería");
+
+    expect(camara.label).toBeDefined();
+    expect(camara.input).toMatch(/type="file"/);
+    expect(camara.input).toMatch(/accept="image\/\*"/);
+    expect(camara.input).toMatch(/capture="environment"/); // cámara trasera
+    expect(galeria.label).toBeDefined();
+    expect(galeria.input).toMatch(/type="file"/);
+    expect(galeria.input).toMatch(/accept="image\/\*"/);
+    expect(galeria.input).not.toMatch(/capture/); // galería: sin cámara
     expect(html.match(/type="file"/g)).toHaveLength(2);
     expect(html).toContain('alt="Vista previa de la foto elegida"');
     expect(html).toContain("Identificar");
+  });
+
+  it("los inputs siguen en el orden de tabulación (enfocables con teclado, no display:none ni tabindex -1)", () => {
+    const html = panel({ fase: "inactivo" });
+    for (const etiqueta of ["Tomar foto", "Elegir de la galería"]) {
+      const { input } = opcionFoto(html, etiqueta);
+      expect(input).toContain("sr-only");
+      expect(input).not.toMatch(/\bhidden\b/);
+      expect(input).not.toMatch(/tabindex/i);
+    }
   });
 
   it("sin foto elegida no hay vista previa ni botón Identificar", () => {
@@ -66,8 +95,9 @@ describe("F20 · estado de carga", () => {
   it("analizando: botones deshabilitados (no hay segundo envío) y texto de carga", () => {
     const html = panel({ fase: "analizando", lento: false });
     expect(boton(html, "Analizando…")).toMatch(DESHABILITADO);
-    expect(boton(html, "Tomar foto")).toMatch(DESHABILITADO);
-    expect(boton(html, "Elegir de la galería")).toMatch(DESHABILITADO);
+    // Un input deshabilitado no abre el selector aunque se pulse su label
+    expect(opcionFoto(html, "Tomar foto").input).toMatch(DESHABILITADO);
+    expect(opcionFoto(html, "Elegir de la galería").input).toMatch(DESHABILITADO);
     expect(html).toContain('aria-busy="true"');
     expect(html).toMatch(/role="status"[^>]*>Analizando la foto…/);
     expect(html).not.toContain(MENSAJE_ESPERA_LENTA);
@@ -79,8 +109,10 @@ describe("F20 · estado de carga", () => {
     expect(html).toContain(MENSAJE_ESPERA_LENTA);
   });
 
-  it("fuera de la carga, el botón Identificar está habilitado", () => {
-    expect(boton(panel({ fase: "inactivo" }), "Identificar")).not.toMatch(DESHABILITADO);
+  it("fuera de la carga, el botón Identificar y los inputs están habilitados", () => {
+    const html = panel({ fase: "inactivo" });
+    expect(boton(html, "Identificar")).not.toMatch(DESHABILITADO);
+    expect(opcionFoto(html, "Tomar foto").input).not.toMatch(DESHABILITADO);
   });
 });
 
