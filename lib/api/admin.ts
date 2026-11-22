@@ -17,7 +17,7 @@ function base(): string {
   return url.replace(/\/$/, "");
 }
 
-/** POST, PUT o DELETE con el token (espera hasta 70 s, como las lecturas). Un fallo de red o un tiempo agotado se devuelve como status 0. */
+/** POST, PUT o DELETE con el token (espera hasta 180 s, como las lecturas). Un fallo de red o un tiempo agotado se devuelve como status 0. */
 export async function escribirApi(
   token: string,
   metodo: "POST" | "PUT" | "DELETE",

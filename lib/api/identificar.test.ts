@@ -71,12 +71,12 @@ describe("F20 · identificar() en modo HTTP", () => {
     await expect(api.identificar(FOTO)).rejects.toMatchObject({ status: 413 });
   });
 
-  it("espera hasta 110 s (menos que maxDuration): pasa una señal de tiempo de espera a fetch", async () => {
+  it("espera hasta 270 s (menos que maxDuration): pasa una señal de tiempo de espera a fetch", async () => {
     const mock = simularFetch(Response.json(RESPUESTA_200));
     await api.identificar(FOTO);
     const [, init] = mock.mock.calls[0] as unknown as [string, RequestInit];
-    expect(TIEMPO_ESPERA_IDENTIFICAR_MS).toBe(110_000);
-    expect(TIEMPO_ESPERA_MS).toBe(70_000);
+    expect(TIEMPO_ESPERA_IDENTIFICAR_MS).toBe(270_000);
+    expect(TIEMPO_ESPERA_MS).toBe(180_000);
     expect(init.signal).toBeInstanceOf(AbortSignal);
   });
 

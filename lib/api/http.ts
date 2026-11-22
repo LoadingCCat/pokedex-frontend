@@ -38,17 +38,19 @@ function paginacion({ page, size, sort }: Paginacion): Parametros {
 }
 
 /**
- * Tiempo máximo de cada llamada a la API. El backend gratuito de Render se apaga tras 15 minutos
- * sin peticiones y tarda hasta un minuto en despertar: 70 s dan margen sin colgar la página para siempre.
+ * Tiempo máximo de cada llamada a la API. El backend gratuito de Render se apaga tras 15 minutos sin
+ * peticiones y su arranque en frío medido fue de 116 a 134 s (con la imagen anterior; la de ahora arranca
+ * en bastante menos, pero no se ha medido en Render): 180 s cubren un arranque completo sin colgar la página
+ * para siempre y quedan por debajo de los 300 s que Vercel (Hobby con Fluid Compute) deja vivir a la función.
  */
-export const TIEMPO_ESPERA_MS = 70_000;
+export const TIEMPO_ESPERA_MS = 180_000;
 
 /**
- * Identificar por foto: puede sumar el despertar de Render (hasta ~60 s) y la llamada a Gemini (hasta 20 s).
- * Es un poco menos que `maxDuration` (120 s) de app/api/identificar/route.ts, para que sea este tiempo
- * el que se agote y el usuario reciba un 504 con mensaje, no un corte de Vercel.
+ * Identificar por foto: puede sumar un arranque en frío completo de Render (hasta ~135 s medidos) y la llamada
+ * a Gemini (hasta 20 s). Son 30 s menos que `maxDuration` (300 s) de app/api/identificar/route.ts, para que
+ * sea este tiempo el que se agote y el usuario reciba un 504 con mensaje, no un corte de Vercel.
  */
-export const TIEMPO_ESPERA_IDENTIFICAR_MS = 110_000;
+export const TIEMPO_ESPERA_IDENTIFICAR_MS = 270_000;
 
 /** ErrorApi con el `mensaje` del cuerpo de error de la API; si no es JSON, "Error {status}". */
 async function errorDe(respuesta: Response): Promise<ErrorApi> {

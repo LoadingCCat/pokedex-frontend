@@ -7,7 +7,7 @@ import type { Identificacion } from "./api/tipos";
 /** Pasados estos ms analizando, se avisa de que el servidor puede estar despertando (Render gratuito). */
 export const ESPERA_LENTA_MS = 5000;
 
-export const MENSAJE_ESPERA_LENTA = "Despertando el servidor, puede tardar más de un minuto…";
+export const MENSAJE_ESPERA_LENTA = "Despertando el servidor. La primera vez puede tardar hasta 2–3 minutos…";
 
 export type EstadoIdentificar =
   | { fase: "inactivo" }
