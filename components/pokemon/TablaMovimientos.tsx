@@ -40,13 +40,13 @@ export default function TablaMovimientos({ movimientos, titulo }: { movimientos:
                 </span>
               </th>
               <td className="hidden px-3 py-2 sm:table-cell">
-                {m.tipo ? <InsigniaTipo tipo={m.tipo} /> : <span aria-label="Sin tipo">—</span>}
+                {m.tipo ? <InsigniaTipo tipo={m.tipo} /> : <><span className="sr-only">Sin tipo</span><span aria-hidden="true">—</span></>}
               </td>
               <td className="px-3 py-2">
                 <EtiquetaCategoria categoria={m.categoria} />
               </td>
               <td className="px-3 py-2 text-right font-datos tabular-nums">
-                {m.potencia ? m.potencia : <span aria-label="Sin potencia">—</span>}
+                {m.potencia ? m.potencia : <><span className="sr-only">Sin potencia</span><span aria-hidden="true">—</span></>}
               </td>
               <td className="hidden px-3 py-2 sm:table-cell">
                 {m.esCompetitivo ? (

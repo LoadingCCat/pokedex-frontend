@@ -42,7 +42,7 @@ export default function Naturalezas() {
                       {ETIQUETAS_ESTADISTICA[n.sube]}
                     </span>
                   ) : (
-                    <span aria-label="Ninguna">—</span>
+                    <><span className="sr-only">Ninguna</span><span aria-hidden="true">—</span></>
                   )}
                 </td>
                 <td className="px-2 py-2">
@@ -52,7 +52,7 @@ export default function Naturalezas() {
                       {ETIQUETAS_ESTADISTICA[n.baja]}
                     </span>
                   ) : (
-                    <span aria-label="Ninguna">—</span>
+                    <><span className="sr-only">Ninguna</span><span aria-hidden="true">—</span></>
                   )}
                 </td>
               </tr>

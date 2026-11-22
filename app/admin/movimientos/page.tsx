@@ -74,7 +74,7 @@ async function Listado({ searchParams }: Pick<PageProps<"/admin/movimientos">, "
                 key={m.idMovimiento}
                 acciones={
                   <>
-                    <EnlaceBoton href={`/admin/movimientos/${m.idMovimiento}`} className="min-h-9 px-3 sm:min-h-9">
+                    <EnlaceBoton href={`/admin/movimientos/${m.idMovimiento}`} className="px-3">
                       Editar<span className="sr-only"> {nombreM}</span>
                     </EnlaceBoton>
                     <BotonEliminar nombre={nombreM} accion={eliminarMovimiento.bind(null, m.idMovimiento)} listado="/admin/movimientos" />

@@ -12,13 +12,13 @@ export default function Chip({
   hrefQuitar?: string;
 }) {
   return (
-    <span className="inline-flex min-h-8 items-center gap-1 rounded-full bg-acento pl-3 pr-1 text-sm font-medium text-white">
+    <span className="inline-flex min-h-11 items-center gap-1 sm:min-h-10 rounded-full bg-acento pl-3 pr-1 text-sm font-medium text-white">
       <span className={hrefQuitar ? "" : "pr-2"}>{etiqueta}</span>
       {hrefQuitar && (
         <Link
           href={hrefQuitar}
           aria-label={`Quitar filtro: ${etiqueta}`}
-          className="inline-flex size-7 items-center justify-center rounded-full hover:bg-white/20"
+          className="inline-flex size-11 items-center sm:size-9 justify-center rounded-full hover:bg-white/20"
         >
           <span aria-hidden="true">×</span>
         </Link>

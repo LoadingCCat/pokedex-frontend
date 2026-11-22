@@ -74,7 +74,7 @@ async function Listado({ searchParams }: Pick<PageProps<"/admin/pokemon">, "sear
                 key={p.idPokedex}
                 acciones={
                   <>
-                    <EnlaceBoton href={`/admin/pokemon/${p.idPokedex}`} className="min-h-9 px-3 sm:min-h-9">
+                    <EnlaceBoton href={`/admin/pokemon/${p.idPokedex}`} className="px-3">
                       Editar<span className="sr-only"> {nombreP}</span>
                     </EnlaceBoton>
                     <BotonEliminar nombre={nombreP} accion={eliminarPokemon.bind(null, p.idPokedex)} listado="/admin/pokemon" />

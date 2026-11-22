@@ -85,7 +85,7 @@ function FiltrosActivos({ estado, regiones }: { estado: EstadoCatalogo; regiones
           </li>
         ))}
       </ul>
-      <EnlaceBoton href={hrefCatalogo({ pagina: 1, sort: estado.sort })} className="min-h-8 px-3 sm:min-h-8">
+      <EnlaceBoton href={hrefCatalogo({ pagina: 1, sort: estado.sort })} className="px-3">
         Quitar filtros
       </EnlaceBoton>
     </div>

@@ -20,7 +20,7 @@ export default function BotonCerrarSesion() {
   }
 
   return (
-    <Boton onClick={cerrar} disabled={cerrando} className="min-h-9 px-3 sm:min-h-9">
+    <Boton onClick={cerrar} disabled={cerrando} className="px-3">
       {cerrando ? "Cerrando…" : "Cerrar sesión"}
     </Boton>
   );

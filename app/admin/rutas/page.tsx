@@ -90,7 +90,7 @@ async function Listado({ searchParams }: Pick<PageProps<"/admin/rutas">, "search
               key={r.idRuta}
               acciones={
                 <>
-                  <EnlaceBoton href={`/admin/rutas/${r.idRuta}`} className="min-h-9 px-3 sm:min-h-9">
+                  <EnlaceBoton href={`/admin/rutas/${r.idRuta}`} className="px-3">
                     Editar<span className="sr-only"> {r.nombre}</span>
                   </EnlaceBoton>
                   <BotonEliminar nombre={r.nombre} accion={eliminarRuta.bind(null, r.idRuta)} listado={hrefListado(region, 1)} />

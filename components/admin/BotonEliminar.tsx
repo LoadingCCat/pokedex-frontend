@@ -48,7 +48,7 @@ export default function BotonEliminar({
 
   return (
     <>
-      <Boton onClick={abrir} className="min-h-9 px-3 text-error sm:min-h-9" aria-haspopup="dialog">
+      <Boton onClick={abrir} className="px-3 text-error" aria-haspopup="dialog">
         Eliminar<span className="sr-only"> {nombre}</span>
       </Boton>
       <dialog
