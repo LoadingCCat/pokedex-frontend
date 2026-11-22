@@ -44,6 +44,7 @@ npm run build      # build de producción (debe funcionar sin backend)
 npm run lint
 npm run test       # vitest: el mock cumple F1–F9 (lib/api/mock.test.ts) las funciones de lib/ (parámetros, imágenes, enlaces, créditos) y F20 (reducción de la foto con `sharp`, estados de la pantalla y modo mock; los componentes se prueban con `renderToStaticMarkup`, sin jsdom). `vitest.config.ts` solo define el alias `@`
 $env:API_URL = "http://localhost:8080/api"; npm run test   # además compara el mock con la API real (contrato.test.ts)
+npm run test:e2e   # Playwright (Chromium) contra el sitio real; NO es Vitest. Ver «Pruebas E2E» abajo
 node scripts/generar-mock.mjs        # regenera datos/mock/ desde el backend local (debe estar arrancado)
 node scripts/imagenes.mjs           # descarga de WikiDex lo de scripts/imagenes-fuentes.json → public/imagenes/*.webp y datos/imagenes.json
 node scripts/enlaces-wikidex.mjs    # verifica los artículos de WikiDex → datos/enlaces-wikidex.json
@@ -54,6 +55,16 @@ node scripts/nombres-lugares-es.mjs # nombres en español de los lugares → ../
 
 - El servidor de desarrollo se arranca en la terminal de la app, no desde el Bash del agente.
 - **Probar en el celular** (misma red wifi): `npm run dev` y abre `http://<IP del ordenador>:3000`. Next 16 bloquea `/_next/*` (JS, HMR) desde cualquier host que no sea `localhost`: la página se ve, pero no se hidrata y los botones no hacen nada (en el log, `Blocked cross-origin request to Next.js dev resource`). Solución: la variable `DEV_ORIGINS` (hosts sin puerto, separados por comas; ver `.env.example`), que `next.config.ts` pasa a `allowedDevOrigins`. Cópiala a `.env.local` (no se sube a Git) o ponla en la terminal (`$env:DEV_ORIGINS = "192.168.1.17"; npm run dev`) y **reinicia** el servidor. La IP no va escrita en el código y solo afecta a `next dev`, no a producción. La cámara del celular (`capture`) puede exigir HTTPS según el navegador: si "Tomar foto" solo abre la galería, es eso.
+
+## Pruebas E2E (FE.51)
+
+- `npm run test:e2e` (`playwright.config.ts`, pruebas en `e2e/*.e2e.ts`). Se llaman `.e2e.ts` y no `.spec.ts` para que Vitest (`npm run test`) no las recoja: son dos suites separadas.
+- Requisitos: el backend corriendo con el **perfil `e2e`** (`.mvnw.cmd spring-boot:run "-Dspring-boot.run.profiles=e2e"` en `../pokedex-backend`; la visión va simulada, siempre responde Charmander, y no se gasta cuota de Gemini) y la BD con datos. El front lo levanta `webServer` con `API_URL=http://localhost:8080/api`, o reutiliza el que ya corra así (si corre sin `API_URL`, `/identificar` solo muestra el aviso y las pruebas fallan).
+- `workers: 1`: el backend limita a 10 fotos por minuto por IP; una corrida envía 3.
+- Recorridos: catálogo (buscar y abrir ficha), identificar (camino feliz, archivo que no es imagen, foto grande < 1,5 MB), 360 px sin scroll horizontal (`/identificar` y `/`) y login del admin (credenciales malas; las buenas solo si hay `.env.test`).
+- Las credenciales del admin local van en `.env.test` (`E2E_ADMIN_USUARIO`, `E2E_ADMIN_CONTRASENA`; ignorado por Git, plantilla en `.env.example`), nunca en el código; sin ellas esa prueba se salta.
+- Las fotos de `e2e/fixtures/` son pequeñas; la foto grande se genera dentro de la prueba (`e2e/ayudas.ts`, con `sharp`). No subir fotos pesadas al repositorio.
+- Primera vez: `npx playwright install chromium` (solo Chromium).
 
 ## Datos
 
@@ -114,6 +125,7 @@ components/pokemon/           # F20: IdentificadorFoto (cliente: reductor, Abort
 .env.example              # plantilla de .env.local: API_URL y DEV_ORIGINS (hosts permitidos en `next dev`, p. ej. la IP para el celular)
 lib/reducir-foto.ts           # F20: reducirFoto(): canvas, lado mayor 1024 px, JPEG < 1,5 MB, orientación EXIF; ErrorFoto si no se puede leer (HEIC)
 lib/identificar-foto.ts       # F20: enviarFoto(): POST a /api/identificar (con signal) → Identificacion o ErrorIdentificar con el texto para el usuario
+e2e/                      # FE.51: pruebas Playwright (*.e2e.ts), ayudas.ts y fixtures/ (fotos pequeñas)
 lib/identificar-estado.ts     # F20: estados (inactivo, analizando, resultado, error) y su reductor; ESPERA_LENTA_MS = 5000
 lib/validacion-admin.ts   # F15: validación de los formularios del panel (mismas reglas que el backend)
 lib/avisos-admin.ts       # F15: ?aviso=creado|guardado|eliminado del listado
