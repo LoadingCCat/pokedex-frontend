@@ -39,9 +39,10 @@ function paginacion({ page, size, sort }: Paginacion): Parametros {
 
 /**
  * Tiempo máximo de cada llamada a la API. El backend gratuito de Render se apaga tras 15 minutos sin
- * peticiones y su arranque en frío medido fue de 116 a 134 s (con la imagen anterior; la de ahora arranca
- * en bastante menos, pero no se ha medido en Render): 180 s cubren un arranque completo sin colgar la página
- * para siempre y quedan por debajo de los 300 s que Vercel (Hobby con Fluid Compute) deja vivir a la función.
+ * peticiones. Su arranque en frío, medido en Render producción (`Started PokedexBackendApplication`), pasó de
+ * 122,3 s a 47,9 s con el CDS y `TieredStopAtLevel=1` (116 y 134 s en dev, antes). 180 s cubren ese arranque más
+ * el despertar de Neon sin colgar la página para siempre, con margen si volviera a tardar como antes, y quedan
+ * por debajo de los 300 s que Vercel (Hobby con Fluid Compute) deja vivir a la función.
  */
 export const TIEMPO_ESPERA_MS = 180_000;
 
