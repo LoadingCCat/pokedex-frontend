@@ -2,7 +2,8 @@ import { expect, test } from "@playwright/test";
 
 test.use({ viewport: { width: 360, height: 640 } });
 
-for (const ruta of ["/identificar", "/"]) {
+// T-13 (interventoría 4.2) · F19: también la ficha (con debilidades; el #6 tiene dos tipos) y /naturalezas
+for (const ruta of ["/identificar", "/", "/pokemon/25", "/pokemon/6", "/naturalezas"]) {
   test(`360 px: ${ruta} sin scroll horizontal`, async ({ page }) => {
     await page.goto(ruta);
     await expect(page.getByRole("heading", { level: 1 })).toBeVisible();

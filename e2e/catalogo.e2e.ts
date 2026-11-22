@@ -18,6 +18,45 @@ test("catálogo: buscar un Pokémon por nombre y abrir su ficha", async ({ page 
   await expect(page.getByRole("heading", { level: 1, name: "Charmander" })).toBeVisible();
 });
 
+// T-11 (interventoría 4.2) · F14: dos tipos en el catálogo. Necesita el backend con datos (como todos los E2E).
+test("catálogo F14: /?tipo=fire&tipo=flying muestra a Charizard y Moltres, no a Charmander ni Pidgey, con dos chips y el total de la API", async ({
+  page,
+  request,
+}) => {
+  await page.goto("/?tipo=fire&tipo=flying");
+  const grilla = page.getByRole("heading", { level: 3 });
+  await expect(grilla.getByRole("link", { name: /Charizard/ })).toBeVisible();
+  await expect(grilla.getByRole("link", { name: /Moltres/ })).toBeVisible();
+  await expect(grilla.getByRole("link", { name: /Charmander/ })).toHaveCount(0);
+  await expect(grilla.getByRole("link", { name: /Pidgey/ })).toHaveCount(0);
+
+  // Los dos tipos salen como chips
+  const chips = page.getByText("Filtros activos:").locator("..");
+  await expect(chips.getByText("Tipo: Fuego")).toBeVisible();
+  await expect(chips.getByText("Tipo: Volador")).toBeVisible();
+
+  // El total de la pantalla es el de la API
+  const urlApi = process.env.API_URL ?? "http://localhost:8080/api";
+  const respuesta = await request.get(`${urlApi}/pokemons?tipo=fire&tipo=flying`);
+  expect(respuesta.ok()).toBe(true);
+  const { page: paginaApi } = (await respuesta.json()) as { page: { totalElements: number } };
+  await expect(page.getByRole("status").filter({ hasText: "Pokémon" })).toContainText(String(paginaApi.totalElements));
+});
+
+test("catálogo F14: «Tipo 2» está desactivado hasta elegir un tipo y, al elegir el segundo, la URL lleva los dos", async ({ page }) => {
+  await page.goto("/");
+  await esperarHidratacion(page, 'form[role="search"]');
+  const buscador = page.getByRole("search", { name: "Buscar y filtrar Pokémon" });
+  await expect(buscador.getByLabel("Tipo 2")).toBeDisabled();
+
+  await buscador.getByLabel("Tipo", { exact: true }).selectOption("fire");
+  await expect(page).toHaveURL(/tipo=fire/);
+  await expect(buscador.getByLabel("Tipo 2")).toBeEnabled();
+
+  await buscador.getByLabel("Tipo 2").selectOption("flying");
+  await expect(page).toHaveURL(/tipo=fire&tipo=flying/);
+});
+
 test("catálogo: «Identificar por foto» junto al buscador lleva a /identificar", async ({ page }) => {
   await page.goto("/");
   await esperarHidratacion(page, 'form[role="search"]');
