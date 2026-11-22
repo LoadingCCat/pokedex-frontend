@@ -4,8 +4,8 @@
  * server actions de app/admin; nunca el navegador.
  */
 import "server-only";
-import { TIEMPO_ESPERA_MS } from "./http";
-import type { Movimiento } from "./tipos";
+import { pedirApi, TIEMPO_ESPERA_MS } from "./http";
+import { ErrorApi, type Movimiento } from "./tipos";
 
 export type RespuestaEscritura =
   | { ok: true; status: number }
@@ -49,10 +49,12 @@ export async function escribirApi(
   }
 }
 
-/** GET /movimientos/{id} (el resto de pantallas no lo necesita). null si no existe. */
+/** GET /movimientos/{id} (el resto de pantallas no lo necesita). null si no existe. Mismo tope de espera y ErrorApi que lib/api/http.ts (S-07). */
 export async function obtenerMovimiento(id: number): Promise<Movimiento | null> {
-  const respuesta = await fetch(`${base()}/movimientos/${id}`, { headers: { Accept: "application/json" }, cache: "no-store" });
-  if (respuesta.status === 404 || respuesta.status === 400) return null;
-  if (!respuesta.ok) throw new Error(`Error ${respuesta.status}`);
-  return (await respuesta.json()) as Movimiento;
+  try {
+    return await pedirApi<Movimiento>(base(), `/movimientos/${id}`);
+  } catch (error) {
+    if (error instanceof ErrorApi && (error.status === 404 || error.status === 400)) return null;
+    throw error;
+  }
 }

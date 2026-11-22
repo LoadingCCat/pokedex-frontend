@@ -65,17 +65,25 @@ async function errorDe(respuesta: Response): Promise<ErrorApi> {
   return new ErrorApi(respuesta.status, mensaje);
 }
 
+/**
+ * GET a la API con tope de espera (`TIEMPO_ESPERA_MS`) que lanza ErrorApi si la respuesta no es 2xx.
+ * Lo usan las lecturas de `crearFuenteHttp` y `obtenerMovimiento` del panel (S-07).
+ */
+export async function pedirApi<T>(urlBase: string, ruta: string): Promise<T> {
+  const respuesta = await fetch(`${urlBase.replace(/\/$/, "")}${ruta}`, {
+    headers: { Accept: "application/json" },
+    signal: AbortSignal.timeout(TIEMPO_ESPERA_MS),
+  });
+  if (!respuesta.ok) throw await errorDe(respuesta);
+  return (await respuesta.json()) as T;
+}
+
 export function crearFuenteHttp(urlBase: string): FuenteDatos {
   const base = urlBase.replace(/\/$/, "");
 
   /** GET que lanza ErrorApi si la respuesta no es 2xx. */
-  async function pedir<T>(ruta: string): Promise<T> {
-    const respuesta = await fetch(`${base}${ruta}`, {
-      headers: { Accept: "application/json" },
-      signal: AbortSignal.timeout(TIEMPO_ESPERA_MS),
-    });
-    if (!respuesta.ok) throw await errorDe(respuesta);
-    return (await respuesta.json()) as T;
+  function pedir<T>(ruta: string): Promise<T> {
+    return pedirApi<T>(base, ruta);
   }
 
   /** F20: reenvía la foto como multipart (campo `foto`). Público: sin token. */

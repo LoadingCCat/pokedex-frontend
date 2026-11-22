@@ -44,7 +44,13 @@ export async function POST(request: Request) {
   if (respuesta.status === 401) return error(401, "Usuario o contraseña incorrectos.");
   if (!respuesta.ok) return error(502, "No se pudo iniciar sesión. Vuelve a intentarlo.");
 
-  const datos = (await respuesta.json()) as { token?: string; expiraEn?: string; usuario?: string };
+  // S-06: un 200 con un cuerpo que no es JSON (p. ej. HTML de un proxy) no puede acabar en un 500 sin mensaje
+  let datos: { token?: string; expiraEn?: string; usuario?: string };
+  try {
+    datos = (await respuesta.json()) as typeof datos;
+  } catch {
+    return error(502, "No se pudo iniciar sesión. Vuelve a intentarlo.");
+  }
   const expiraEn = new Date(datos.expiraEn ?? "");
   if (!datos.token || Number.isNaN(expiraEn.getTime())) {
     return error(502, "No se pudo iniciar sesión. Vuelve a intentarlo.");
