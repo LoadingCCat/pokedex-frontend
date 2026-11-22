@@ -2,11 +2,11 @@
 
 # CLAUDE.md — Pokedex+ Frontend
 
-Frontend de la Pokédex+ (proyecto universitario en equipo, USTA): una Pokédex web en español con los 1025 Pokémon de las 9 generaciones. Consume la API REST del backend (`../pokedex-backend`). Es de consulta, más un panel de administración (F15: `/login` y `/admin`) que solo funciona con la API local; sin `API_URL` muestra un aviso. También identifica un Pokémon por foto (F20: `/identificar`), que igualmente necesita la API.
+Frontend de la Pokédex+ (proyecto universitario en equipo, USTA): una Pokédex web en español con los 1025 Pokémon de las 9 generaciones. Consume la API REST del backend (`../pokedex-backend`). Es de consulta, más un panel de administración (F15: `/login` y `/admin`) que funciona con la API real (en local o en producción); sin `API_URL` muestra un aviso. También identifica un Pokémon por foto (F20: `/identificar`), que igualmente necesita la API.
 
 - Next.js 16.4 (App Router, `cacheComponents` y `partialPrefetching` activos) · React 19 · TypeScript · Tailwind CSS 4 · Vitest
 - `sharp` (devDependency) solo lo usa `scripts/imagenes.mjs` para convertir las imágenes a WebP; la app no lo importa.
-- Publicado en Vercel con datos mock con la misma forma que la API. El backend de producción corre en Render y la base en Neon (ver `../pokedex-backend/docs/despliegue.md`); sin `API_URL`, el sitio usa el mock.
+- Publicado en Vercel (<https://pokedex-frontend-seven.vercel.app>), conectado a la API de producción en Render (<https://pokedex-backend-5bcq.onrender.com>; Preview usa <https://pokedex-backend-dev.onrender.com>) y la base en Neon (ver `../pokedex-backend/docs/despliegue.md`); sin `API_URL`, el sitio usa el mock.
 
 ## Documentación (léela antes de cualquier cambio)
 

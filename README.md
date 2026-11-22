@@ -4,9 +4,9 @@ Pokédex web en español con los 1025 Pokémon de las 9 generaciones: catálogo 
 
 Sobre esa base «Laboratorio», unos **toques de nostalgia** sacados de los juegos: el sprite animado de Negro/Blanco al pasar el ratón, el grito y la versión shiny en la ficha, el sprite clásico pixelado junto a la ilustración, los mapas de las 9 regiones, capturas del juego de 348 lugares y de cómo se consiguen 801 Pokémon, discos de MT del color de cada tipo y enlaces verificados a WikiDex.
 
-Proyecto universitario en equipo (Universidad Santo Tomás, USTA). Consume la API REST de [`pokedex-backend`](https://github.com/LoadingCCat/pokedex-backend). La versión publicada usa datos mock con la misma forma que la API.
+Proyecto universitario en equipo (Universidad Santo Tomás, USTA). Consume la API REST de [`pokedex-backend`](https://github.com/LoadingCCat/pokedex-backend). La versión publicada está conectada a la API de producción en Render (base de datos en Neon); sin `API_URL`, el sitio usa datos mock con la misma forma que la API.
 
-**Publicado en Vercel:** <https://pokedex-frontend-seven.vercel.app/> (cada push a `master` vuelve a desplegar; hoy en modo mock). La conexión con el backend de Render y las variables (`API_URL` en Production y en Preview) están en [`pokedex-backend/docs/despliegue.md`](https://github.com/LoadingCCat/pokedex-backend/blob/main/docs/despliegue.md). El CI de GitHub Actions corre lint, pruebas y build en cada push a `master`.
+**Publicado en Vercel:** <https://pokedex-frontend-seven.vercel.app/> (cada push a `master` vuelve a desplegar). Production usa la API de producción, <https://pokedex-backend-5bcq.onrender.com>, y Preview la de desarrollo, <https://pokedex-backend-dev.onrender.com> (`API_URL`). El plan gratuito de Render se duerme tras 15 minutos: la primera visita puede tardar hasta un minuto. El panel de administración (`/login`, `/admin`) y la identificación por foto funcionan en producción. Paso a paso y variables en [`pokedex-backend/docs/despliegue.md`](https://github.com/LoadingCCat/pokedex-backend/blob/main/docs/despliegue.md). El CI de GitHub Actions corre lint, pruebas y build en cada push a `master`.
 
 Next.js 16 · React 19 · TypeScript · Tailwind CSS 4 · Vitest · sharp (solo para preparar imágenes)
 

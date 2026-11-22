@@ -7,7 +7,7 @@
 export const COOKIE_SESION = "pokedex_sesion";
 
 export const AVISO_SIN_API =
-  "La administración solo funciona con la API local. Este sitio usa datos de ejemplo y no se pueden modificar.";
+  "La administración solo funciona cuando el sitio está conectado a la API. Esta copia usa datos de ejemplo y no se pueden modificar.";
 
 /** ¿Hay API real (API_URL)? Con el mock (Vercel) no: lo que necesita la API muestra un aviso. */
 export function apiDisponible(): boolean {

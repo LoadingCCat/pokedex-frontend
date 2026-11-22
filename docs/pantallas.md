@@ -2,7 +2,7 @@
 
 Una spec por pantalla, con criterios de aceptación. Cada pantalla usa las funcionalidades del backend (F1–F10, en `../pokedex-backend/docs/specs/`) a través de `lib/api`. El aspecto sigue `docs/diseno/identidad-visual.md`.
 
-**Alcance:** consulta (P1–P6). Con la ampliación F11–F15 (al final) se suma un panel de administración (P7 `/login` y P8 `/admin`) que solo funciona con la API local; en el sitio publicado con mock muestra un aviso. Siguen fuera la importación (uso interno), el modo oscuro, los favoritos y el registro de cuentas.
+**Alcance:** consulta (P1–P6). Con la ampliación F11–F15 (al final) se suma un panel de administración (P7 `/login` y P8 `/admin`) que solo funciona con la API real (en producción, la de Render; sin `API_URL` muestra un aviso). Siguen fuera la importación (uso interno), el modo oscuro, los favoritos y el registro de cuentas.
 
 ## Comunes a todas las pantallas
 
@@ -282,7 +282,7 @@ Aprobada el 2026-11-17 (Fase 0). Specs en `../pokedex-backend/docs/specs/F11`–
 1. Formulario con usuario y contraseña (`autocomplete` correctos) y botón "Entrar". Envía a un route handler propio (`app/api/sesion`), que llama a `POST /auth/login` y guarda el token en una cookie `httpOnly`. El token nunca llega al JavaScript del navegador.
 2. Error 401: "Usuario o contraseña incorrectos." junto al formulario, sin decir cuál falló. Un campo vacío se marca antes de enviar.
 3. Tras iniciar sesión, vuelve a `?volver=` (por defecto `/admin`).
-4. **Modo mock** (sin `API_URL`): en vez del formulario, el aviso "La administración solo funciona con la API local", con un enlace al catálogo.
+4. **Modo mock** (sin `API_URL`): en vez del formulario, el aviso "La administración solo funciona cuando el sitio está conectado a la API", con un enlace al catálogo.
 5. No aparece en la navegación principal; se llega por la URL o por el enlace "Administración" del pie.
 
 ### P8 · Panel — `/admin` (F15)
