@@ -179,9 +179,10 @@ export interface FuenteDatos {
   /**
    * F20: manda la foto a POST /pokemons/identificar. Lanza ErrorApi con el status del backend
    * (400, 422, 429, 502), 504 si no respondió a tiempo y 0 si no hubo conexión; en modo mock,
-   * 503 ("no disponible"). Solo se llama desde el servidor: el navegador usa /api/identificar.
+   * 503 ("no disponible"). solo se llama desde el servidor: el navegador usa /api/identificar.
+   * `cabeceras` (N-01): X-Cliente-IP y X-Proxy-Secreto, ver lib/cliente-proxy.ts.
    */
-  identificar(foto: Blob): Promise<Identificacion>;
+  identificar(foto: Blob, cabeceras?: Record<string, string>): Promise<Identificacion>;
 }
 
 /** Texto del error 503 del modo mock (y de /api/identificar sin API_URL). */

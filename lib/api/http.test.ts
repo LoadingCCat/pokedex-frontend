@@ -176,6 +176,15 @@ describe("crearFuenteHttp · identificar (F20)", () => {
     expect(opciones.headers).not.toHaveProperty("Authorization"); // es público: sin token
   });
 
+  it("las cabeceras de proxy (N-01) viajan al backend junto con las de siempre", async () => {
+    const fetchSimulado = simularFetch(() => Response.json({ confianza: 0.93 }));
+
+    await crearFuenteHttp(URL_BASE).identificar(foto, { "X-Cliente-IP": "203.0.113.7", "X-Proxy-Secreto": "s" });
+
+    const opciones = (fetchSimulado.mock.calls[0] as LlamadaFetch)[1]!;
+    expect(opciones.headers).toMatchObject({ Accept: "application/json", "X-Cliente-IP": "203.0.113.7", "X-Proxy-Secreto": "s" });
+  });
+
   it("un error de la API (422) se lanza como ErrorApi con su status", async () => {
     simularFetch(() => Response.json({ mensaje: "No reconocimos un Pokémon" }, { status: 422 }));
 

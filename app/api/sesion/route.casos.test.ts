@@ -85,8 +85,8 @@ describe("POST /api/sesion · casos que faltaban", () => {
     expect(sesion.guardarSesion).not.toHaveBeenCalled();
   });
 
-  it("un error del backend distinto de 401 (p. ej. 429 o 500) responde 502 con mensaje", async () => {
-    for (const status of [429, 500]) {
+  it("un error del backend distinto de 401 y 429 (p. ej. 500) responde 502 con mensaje", async () => {
+    for (const status of [500, 503]) {
       vi.stubGlobal("fetch", vi.fn(async () => Response.json({ mensaje: "x" }, { status })));
 
       const r = await POST(peticion(credenciales));
@@ -95,6 +95,38 @@ describe("POST /api/sesion · casos que faltaban", () => {
       expect((await r.json()).mensaje).toBe("No se pudo iniciar sesión. Vuelve a intentarlo.");
     }
     expect(sesion.guardarSesion).not.toHaveBeenCalled();
+  });
+
+  // N-02 (interventoría 4.3): el 429 del límite de intentos no es un fallo del servidor
+  it("el 429 del backend responde 429 con «Demasiados intentos. Espera un minuto» y no guarda sesión", async () => {
+    vi.stubGlobal("fetch", vi.fn(async () => Response.json({ mensaje: "x" }, { status: 429, headers: { "Retry-After": "60" } })));
+
+    const r = await POST(peticion(credenciales));
+
+    expect(r.status).toBe(429);
+    expect((await r.json()).mensaje).toBe("Demasiados intentos. Espera un minuto");
+    expect(sesion.guardarSesion).not.toHaveBeenCalled();
+  });
+
+  // N-01: la IP real del cliente viaja al backend con el secreto del proxy
+  it("con PROXY_SECRETO reenvía X-Cliente-IP y X-Proxy-Secreto; sin él, ninguna de las dos", async () => {
+    const expiraEn = new Date(Date.now() + 3_600_000).toISOString();
+    const fetchSimulado = vi.fn<typeof fetch>(async () => Response.json({ token: "t", expiraEn, usuario: "admin" }));
+    vi.stubGlobal("fetch", fetchSimulado);
+    const conIp = () =>
+      new Request("http://localhost/api/sesion", { method: "POST", body: credenciales, headers: { "x-real-ip": "203.0.113.7" } });
+
+    vi.stubEnv("PROXY_SECRETO", "secreto-del-proxy-0123456789");
+    await POST(conIp());
+    const con = (fetchSimulado.mock.calls[0][1] as RequestInit).headers as Record<string, string>;
+    expect(con["X-Cliente-IP"]).toBe("203.0.113.7");
+    expect(con["X-Proxy-Secreto"]).toBe("secreto-del-proxy-0123456789");
+
+    vi.stubEnv("PROXY_SECRETO", "");
+    await POST(conIp());
+    const sin = (fetchSimulado.mock.calls[1][1] as RequestInit).headers as Record<string, string>;
+    expect(sin).not.toHaveProperty("X-Cliente-IP");
+    expect(sin).not.toHaveProperty("X-Proxy-Secreto");
   });
 
   it("el 401 del backend responde «Usuario o contraseña incorrectos.» y no guarda sesión", async () => {

@@ -11,6 +11,7 @@
  * Respuestas: 200 con la identificación, o { mensaje } con el status del error y un texto para el usuario.
  */
 import { ErrorApi, identificar } from "@/lib/api";
+import { cabecerasDeProxy } from "@/lib/cliente-proxy";
 import { MAX_BYTES_FOTO, mensajeDeIdentificacion } from "@/lib/identificar-mensajes";
 
 /**
@@ -38,7 +39,7 @@ export async function POST(request: Request) {
   if (foto.size > MAX_BYTES_FOTO) return error(413);
 
   try {
-    return Response.json(await identificar(foto), { headers: { "Cache-Control": "no-store" } });
+    return Response.json(await identificar(foto, cabecerasDeProxy(request)), { headers: { "Cache-Control": "no-store" } });
   } catch (e) {
     if (e instanceof ErrorApi) return error(e.status, e.message);
     return error(502);

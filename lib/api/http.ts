@@ -93,14 +93,14 @@ export function crearFuenteHttp(urlBase: string): FuenteDatos {
   }
 
   /** F20: reenvía la foto como multipart (campo `foto`). Público: sin token. */
-  async function identificar(foto: Blob): Promise<Identificacion> {
+  async function identificar(foto: Blob, cabeceras: Record<string, string> = {}): Promise<Identificacion> {
     const formulario = new FormData();
     formulario.append("foto", foto, "foto.jpg");
     let respuesta: Response;
     try {
       respuesta = await fetch(`${base}/pokemons/identificar`, {
         method: "POST",
-        headers: { Accept: "application/json" },
+        headers: { Accept: "application/json", ...cabeceras },
         body: formulario,
         cache: "no-store",
         signal: AbortSignal.timeout(TIEMPO_ESPERA_IDENTIFICAR_MS),
