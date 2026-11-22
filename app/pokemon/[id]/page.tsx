@@ -31,10 +31,16 @@ import { elegirCapturasFicha } from "@/lib/capturas-ficha";
 
 const PRIMERO = 1;
 const ULTIMO = 1025;
+/** Fichas que se generan al compilar (Kanto). Las demás se generan en la primera visita y quedan en caché. */
+const PRERENDERIZADAS = 151;
 
-/** Las 1025 fichas se generan al compilar (datos del mock); un id inválido da 404. */
+/**
+ * Solo las 151 de Kanto se generan al compilar: las 1025 pesaban ~840 MB por despliegue (cuenta contra
+ * el almacenamiento de Vercel). El resto se renderiza en la primera visita y queda en la caché de
+ * ISR (cacheComponents + partialPrefetching); un id inválido da 404.
+ */
 export function generateStaticParams() {
-  return Array.from({ length: ULTIMO }, (_, i) => ({ id: String(i + PRIMERO) }));
+  return Array.from({ length: PRERENDERIZADAS }, (_, i) => ({ id: String(i + PRIMERO) }));
 }
 
 export async function generateMetadata({ params }: PageProps<"/pokemon/[id]">): Promise<Metadata> {
@@ -49,7 +55,7 @@ export async function generateMetadata({ params }: PageProps<"/pokemon/[id]">): 
 
 /**
  * P2 · Ficha (docs/pantallas.md). `params` se lee dentro de Suspense (cacheComponents): la
- * navegación muestra el esqueleto al instante. Las 1025 fichas válidas son estáticas; un id
+ * navegación muestra el esqueleto al instante. Las de Kanto son estáticas y el resto se genera en la primera visita; un id
  * inválido muestra el 404 propio con estado HTTP 200 + noindex (ya empezó el streaming).
  */
 export default function Ficha({ params }: PageProps<"/pokemon/[id]">) {
