@@ -31,6 +31,7 @@ Una spec por pantalla, con criterios de aceptación. Cada pantalla usa las funci
 5. Los filtros activos se ven como chips con "×" para quitarlos, y hay un botón "Quitar filtros".
 6. Parámetros de la URL: `nombre`, `generacion`, `tipo`, `region`, `obtencion`, `sort`, `page` (los mismos nombres que la API). En la URL `page` empieza en 1 (`page=2` es la segunda página), `region` va en minúsculas y `obtencion` sin tildes y con guiones (`fosil`, `sin-datos`). Se leen y validan en `lib/parametros-catalogo.ts`.
 7. Una página fuera de rango (`?page=99`) muestra "La página 99 no existe" con un enlace a la página 1.
+8. **Identificar por foto** (F20) es otra forma de buscar, así que va pegado al buscador: un botón-enlace **secundario** (el principal de la vista es «Buscar») con ícono de cámara y el texto «Identificar por foto», que lleva a `/identificar`. En ≥ 640 px a la derecha de «Buscar»; a 360 px debajo del campo, a todo el ancho. El ícono nunca va solo, el alto mínimo es de 44 px, el foco se ve y el nombre accesible es el texto. El enlace «Identificar» de la cabecera se mantiene. El rediseño visual de la vista queda para la Fase 6.
 
 **Criterios de aceptación**
 - [x] `/` muestra 20 Pokémon empezando por Bulbasaur (#001) y "Página 1 de 52".
@@ -40,6 +41,7 @@ Una spec por pantalla, con criterios de aceptación. Cada pantalla usa las funci
 - [x] Un filtro sin resultados muestra el estado vacío con la sugerencia de quitar un filtro.
 - [x] Recargar `/?region=kanto&page=2` muestra la misma página con el filtro de Kanto marcado.
 - [x] Un valor inválido en la URL (`?generacion=12`) no rompe la página: se ignora o se muestra el estado vacío.
+- [x] Junto al buscador hay un enlace «Identificar por foto» (ícono de cámara + texto) a `/identificar`: a la derecha de «Buscar» en escritorio, debajo y a todo el ancho a 360 px, de 44 px de alto como mínimo, con foco visible y sin scroll horizontal (`components/pokemon/EnlaceIdentificarFoto.test.tsx`, `e2e/catalogo.e2e.ts` y `e2e/responsive.e2e.ts`).
 
 ## P2 · Ficha — `/pokemon/[id]`
 **Usa:** F1, F4, F5, F6, F7 · `obtenerPokemon`, `evolucionesDe`, `movimientosDePokemon`
@@ -332,7 +334,7 @@ Spec: `../pokedex-backend/docs/specs/F20-identificacion-pokemon.md`. Usa `POST /
 5. **Resultado:** tarjeta del Pokémon identificado y 3 tarjetas de similares, cada una con su motivo (`TarjetaPokemon` con `pie`); todas enlazan a su ficha. El foco pasa al título del resultado.
 6. **Error:** el texto de `lib/identificar-mensajes.ts` (400, 422, 429, 502, conexión…), sin códigos, y un botón «Probar con otra foto». Elegir otra foto tras un resultado o un error limpia lo anterior.
 7. **Modo mock** (sin `API_URL`): el aviso «Identificar por foto no está disponible…» en vez del selector, sin errores.
-8. Enlace **Identificar** en la navegación principal (Catálogo · Movimientos · Regiones · Naturalezas · Identificar). Título «Identificar por foto · Pokedex+». A 360 px la navegación pasa a dos filas, sin scroll horizontal.
+8. Se llega desde el enlace **Identificar** de la navegación principal (Catálogo · Movimientos · Regiones · Naturalezas · Identificar) y desde el botón «Identificar por foto» junto al buscador del catálogo (P1). Título «Identificar por foto · Pokedex+». A 360 px la navegación pasa a dos filas, sin scroll horizontal.
 
 **Criterios de aceptación:** los del front de F20, más:
 - [ ] Una foto de 8 MB se envía con menos de 1,5 MB, en JPEG y con el lado mayor ≤ 1024 px (`lib/reducir-foto.test.ts`).

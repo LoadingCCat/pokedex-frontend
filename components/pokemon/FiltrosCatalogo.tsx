@@ -11,6 +11,7 @@ import {
   type EstadoCatalogo,
 } from "@/lib/parametros-catalogo";
 import { clasesBoton } from "@/components/ui/Boton";
+import EnlaceIdentificarFoto from "./EnlaceIdentificarFoto";
 
 type Opcion = { valor: string; etiqueta: string };
 
@@ -81,19 +82,23 @@ export default function FiltrosCatalogo({
         <label htmlFor="filtro-nombre" className={ETIQUETA}>
           Nombre
         </label>
-        <div className="flex gap-2">
-          <input
-            id="filtro-nombre"
-            name="nombre"
-            type="search"
-            defaultValue={estado.nombre ?? ""}
-            placeholder="Ej.: pikachu, charmander…"
-            autoComplete="off"
-            className={CAMPO}
-          />
-          <button type="submit" className={clasesBoton("principal", "shrink-0")}>
-            {cargando ? "Buscando…" : "Buscar"}
-          </button>
+        {/* Debajo del campo a 360 px y a su derecha desde sm; «Identificar por foto» es otra forma de buscar (F20) */}
+        <div className="flex flex-col gap-2 sm:flex-row">
+          <div className="flex min-w-0 flex-1 gap-2">
+            <input
+              id="filtro-nombre"
+              name="nombre"
+              type="search"
+              defaultValue={estado.nombre ?? ""}
+              placeholder="Ej.: pikachu, charmander…"
+              autoComplete="off"
+              className={CAMPO}
+            />
+            <button type="submit" className={clasesBoton("principal", "shrink-0")}>
+              {cargando ? "Buscando…" : "Buscar"}
+            </button>
+          </div>
+          <EnlaceIdentificarFoto />
         </div>
       </div>
 
