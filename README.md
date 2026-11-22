@@ -6,7 +6,7 @@ Sobre esa base «Laboratorio», unos **toques de nostalgia** sacados de los jueg
 
 Proyecto universitario en equipo (Universidad Santo Tomás, USTA). Consume la API REST de [`pokedex-backend`](https://github.com/LoadingCCat/pokedex-backend). La versión publicada usa datos mock con la misma forma que la API.
 
-**Publicado en Vercel:** <https://pokedex-frontend-seven.vercel.app/> (cada push a `master` vuelve a desplegar).
+**Publicado en Vercel:** <https://pokedex-frontend-seven.vercel.app/> (cada push a `master` vuelve a desplegar; hoy en modo mock). La conexión con el backend de Render y las variables (`API_URL` en Production y en Preview) están en [`pokedex-backend/docs/despliegue.md`](https://github.com/LoadingCCat/pokedex-backend/blob/main/docs/despliegue.md). El CI de GitHub Actions corre lint, pruebas y build en cada push a `master`.
 
 Next.js 16 · React 19 · TypeScript · Tailwind CSS 4 · Vitest · sharp (solo para preparar imágenes)
 
@@ -34,7 +34,7 @@ $env:API_URL = "http://localhost:8080/api"; npm run dev
 | Comando | Qué hace |
 |---|---|
 | `npm run dev` | Servidor de desarrollo en el puerto 3000 |
-| `npm run build` | Build de producción (genera las 1025 fichas; funciona sin backend) |
+| `npm run build` | Build de producción (genera las 151 fichas de Kanto; las demás, en la primera visita; funciona sin backend y con `API_URL`, sin llamar a la API) |
 | `npm run start` | Sirve el build de producción |
 | `npm run lint` | ESLint |
 | `npm run test` | Pruebas con Vitest: el mock cumple los criterios de las specs y los parámetros de la URL se leen bien |

@@ -6,7 +6,7 @@ Frontend de la Pokédex+ (proyecto universitario en equipo, USTA): una Pokédex 
 
 - Next.js 16.4 (App Router, `cacheComponents` y `partialPrefetching` activos) · React 19 · TypeScript · Tailwind CSS 4 · Vitest
 - `sharp` (devDependency) solo lo usa `scripts/imagenes.mjs` para convertir las imágenes a WebP; la app no lo importa.
-- Publicado en Vercel con datos mock con la misma forma que la API. El backend corre solo en `localhost` hasta la U6.
+- Publicado en Vercel con datos mock con la misma forma que la API. El backend de producción corre en Render y la base en Neon (ver `../pokedex-backend/docs/despliegue.md`); sin `API_URL`, el sitio usa el mock.
 
 ## Documentación (léela antes de cualquier cambio)
 
@@ -20,6 +20,7 @@ El proyecto sigue Spec-Driven Development (SDD): primero el documento, después 
   - `../pokedex-backend/docs/producto.md`
   - `../pokedex-backend/docs/specs/`
   - `../pokedex-backend/docs/contratos/api.md`
+- Despliegue (Vercel + Render + Neon, variables, rollback): `../pokedex-backend/docs/despliegue.md`
 - Tareas, decisiones y bitácora (compartidas con el backend):
   - `../pokedex-backend/docs/tareas.md` (sección "Front (U3)")
   - `../pokedex-backend/docs/decisiones.md`
@@ -58,6 +59,7 @@ node scripts/nombres-lugares-es.mjs # nombres en español de los lugares → ../
 
 ## Pruebas E2E (FE.51)
 
+- **No corren en el CI** (necesitan el backend con perfil `e2e` y la base con los 1025 Pokémon): el CI (`.github/workflows/ci.yml`) hace `npm ci`, lint, test y build sin `API_URL`.
 - `npm run test:e2e` (`playwright.config.ts`, pruebas en `e2e/*.e2e.ts`). Se llaman `.e2e.ts` y no `.spec.ts` para que Vitest (`npm run test`) no las recoja: son dos suites separadas.
 - Requisitos: el backend corriendo con el **perfil `e2e`** (`.mvnw.cmd spring-boot:run "-Dspring-boot.run.profiles=e2e"` en `../pokedex-backend`; la visión va simulada, siempre responde Charmander, y no se gasta cuota de Gemini) y la BD con datos. El front lo levanta `webServer` con `API_URL=http://localhost:8080/api`, o reutiliza el que ya corra así (si corre sin `API_URL`, `/identificar` solo muestra el aviso y las pruebas fallan).
 - `workers: 1`: el backend limita a 10 fotos por minuto por IP; una corrida envía 3.
