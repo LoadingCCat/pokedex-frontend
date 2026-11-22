@@ -43,6 +43,13 @@ function paginacion({ page, size, sort }: Paginacion): Parametros {
  */
 export const TIEMPO_ESPERA_MS = 70_000;
 
+/**
+ * Identificar por foto: puede sumar el despertar de Render (hasta ~60 s) y la llamada a Gemini (hasta 20 s).
+ * Es un poco menos que `maxDuration` (120 s) de app/api/identificar/route.ts, para que sea este tiempo
+ * el que se agote y el usuario reciba un 504 con mensaje, no un corte de Vercel.
+ */
+export const TIEMPO_ESPERA_IDENTIFICAR_MS = 110_000;
+
 /** ErrorApi con el `mensaje` del cuerpo de error de la API; si no es JSON, "Error {status}". */
 async function errorDe(respuesta: Response): Promise<ErrorApi> {
   let mensaje = `Error ${respuesta.status}`;
@@ -79,7 +86,7 @@ export function crearFuenteHttp(urlBase: string): FuenteDatos {
         headers: { Accept: "application/json" },
         body: formulario,
         cache: "no-store",
-        signal: AbortSignal.timeout(TIEMPO_ESPERA_MS),
+        signal: AbortSignal.timeout(TIEMPO_ESPERA_IDENTIFICAR_MS),
       });
     } catch (error) {
       const agotado = error instanceof Error && (error.name === "TimeoutError" || error.name === "AbortError");

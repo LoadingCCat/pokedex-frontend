@@ -3,7 +3,7 @@
  * tiempo de espera largo) y modo mock ("no disponible"). `fetch` se simula: no se llama a la API real.
  */
 import { afterEach, describe, expect, it, vi } from "vitest";
-import { TIEMPO_ESPERA_MS, crearFuenteHttp } from "./http";
+import { TIEMPO_ESPERA_IDENTIFICAR_MS, TIEMPO_ESPERA_MS, crearFuenteHttp } from "./http";
 import { fuenteMock } from "./mock";
 import { ErrorApi, MENSAJE_IDENTIFICAR_NO_DISPONIBLE, type Identificacion } from "./tipos";
 
@@ -71,10 +71,11 @@ describe("F20 · identificar() en modo HTTP", () => {
     await expect(api.identificar(FOTO)).rejects.toMatchObject({ status: 413 });
   });
 
-  it("espera hasta 70 s: pasa una señal de tiempo de espera a fetch", async () => {
+  it("espera hasta 110 s (menos que maxDuration): pasa una señal de tiempo de espera a fetch", async () => {
     const mock = simularFetch(Response.json(RESPUESTA_200));
     await api.identificar(FOTO);
     const [, init] = mock.mock.calls[0] as unknown as [string, RequestInit];
+    expect(TIEMPO_ESPERA_IDENTIFICAR_MS).toBe(110_000);
     expect(TIEMPO_ESPERA_MS).toBe(70_000);
     expect(init.signal).toBeInstanceOf(AbortSignal);
   });

@@ -32,9 +32,9 @@ export default function CapturasDelJuego({ seleccion }: { seleccion: CapturasFic
                     alt={c.alt}
                     width={c.ancho}
                     height={c.alto}
-                    // El pixel art se sirve tal cual (pocos KB): el optimizador lo suavizaría al escalarlo
-                    unoptimized={c.pixelArt}
-                    sizes={c.pixelArt ? undefined : "(min-width: 640px) 512px, 100vw"}
+                    // Todo se sirve tal cual: son WebP ya preparados (el optimizador de Vercel cuenta
+                    // transformaciones) y el pixel art se suavizaría al escalarlo
+                    unoptimized
                     style={{ width: ancho }}
                     className={`h-auto max-w-full ${c.pixelArt ? "max-h-[24rem] object-cover object-top" : ""} ${pixelado ? "[image-rendering:pixelated]" : ""}`}
                   />

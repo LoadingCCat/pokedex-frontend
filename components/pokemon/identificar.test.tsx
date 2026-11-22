@@ -103,9 +103,9 @@ describe("F20 · estado de carga", () => {
     expect(html).not.toContain(MENSAJE_ESPERA_LENTA);
   });
 
-  it("pasados 5 s: «Despertando el servidor, puede tardar hasta un minuto…»", () => {
+  it("pasados 5 s: «Despertando el servidor, puede tardar más de un minuto…»", () => {
     const html = panel({ fase: "analizando", lento: true });
-    expect(MENSAJE_ESPERA_LENTA).toBe("Despertando el servidor, puede tardar hasta un minuto…");
+    expect(MENSAJE_ESPERA_LENTA).toBe("Despertando el servidor, puede tardar más de un minuto…");
     expect(html).toContain(MENSAJE_ESPERA_LENTA);
   });
 

@@ -13,6 +13,13 @@
 import { ErrorApi, identificar } from "@/lib/api";
 import { MAX_BYTES_FOTO, mensajeDeIdentificacion } from "@/lib/identificar-mensajes";
 
+/**
+ * Segundos que Vercel deja vivir a esta función (plan Hobby con Fluid Compute: hasta 300). Con Render dormido,
+ * la llamada puede sumar ~60 s de despertar y ~20 s de visión; el fetch de lib/api/http.ts se corta a los
+ * 110 s para responder un 504 propio antes de este límite.
+ */
+export const maxDuration = 120;
+
 const error = (status: number, mensajeApi?: string) =>
   Response.json({ mensaje: mensajeDeIdentificacion(status, mensajeApi) }, { status });
 

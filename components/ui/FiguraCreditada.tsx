@@ -12,7 +12,7 @@ export default function FiguraCreditada({
   className = "",
   imagenClassName = "",
   estiloImagen,
-  sinOptimizar = false,
+  sinOptimizar = true,
   prioridad = false,
 }: {
   imagen: ImagenCreditada;
@@ -22,7 +22,11 @@ export default function FiguraCreditada({
   imagenClassName?: string;
   /** Ancho exacto de la imagen (pixel art a escala entera) */
   estiloImagen?: CSSProperties;
-  /** Pixel art: se sirve tal cual; el optimizador de Next lo suavizaría al reescalarlo */
+  /**
+   * Se sirve tal cual (por defecto): los WebP de public/imagenes ya están preparados con sharp y cada
+   * transformación del optimizador de Vercel cuenta contra el plan (5 000/mes). El pixel art además
+   * se suavizaría al reescalarlo. Pasa false solo para una imagen grande que valga la transformación.
+   */
   sinOptimizar?: boolean;
   prioridad?: boolean;
 }) {
