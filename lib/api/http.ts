@@ -43,12 +43,18 @@ function paginacion({ page, size, sort }: Paginacion): Parametros {
  * 122,3 s a 47,9 s con el CDS y `TieredStopAtLevel=1` (116 y 134 s en dev, antes). 180 s cubren ese arranque más
  * el despertar de Neon sin colgar la página para siempre, con margen si volviera a tardar como antes, y quedan
  * por debajo de los 300 s que Vercel (Hobby con Fluid Compute) deja vivir a la función.
+ *
+ * Es el tope de UNA llamada. Las pantallas encadenan como mucho dos en serie (`/regiones`, `/creditos` y
+ * `/regiones/[region]`: primero `listarRegiones`, luego las rutas; el resto las pide en paralelo con
+ * `Promise.all`). Con la API despierta el total es de segundos; solo si la API se colgara del todo, dos
+ * esperas de 180 s (360 s) pasarían los 300 s de Vercel, y entonces corta Vercel, no este tope.
  */
 export const TIEMPO_ESPERA_MS = 180_000;
 
 /**
- * Identificar por foto: puede sumar un arranque en frío completo de Render (hasta ~135 s medidos) y la llamada
- * a Gemini (hasta 20 s). Son 30 s menos que `maxDuration` (300 s) de app/api/identificar/route.ts, para que
+ * Identificar por foto: puede sumar un arranque en frío completo de Render y la llamada a Gemini (hasta 20 s).
+ * Los ~135 s que se medían antes eran del arranque anterior al CDS (116–134 s en dev); el arranque medido hoy en
+ * producción es de 47,9 s, así que 270 s dan mucho margen (se deja así a propósito). Son 30 s menos que `maxDuration` (300 s) de app/api/identificar/route.ts, para que
  * sea este tiempo el que se agote y el usuario reciba un 504 con mensaje, no un corte de Vercel.
  */
 export const TIEMPO_ESPERA_IDENTIFICAR_MS = 270_000;
